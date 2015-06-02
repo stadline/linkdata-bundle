@@ -1,0 +1,15 @@
+{
+    "operations": {
+        "GetSession": {
+            "httpMethod": "GET",
+            "uri": "session/{token}.xml",
+            "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetSession\\Response",
+            "parameters": {
+                "token": { "location": "uri", "required": true }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
+        }
+    }
+}

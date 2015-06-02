@@ -1,0 +1,8 @@
+{
+    "name": "Linkdata",
+    "description": "Linkdata REST API client",
+    "includes": [
+        "operations/reference.json",
+        "operations/training.json"
+    ]
+}

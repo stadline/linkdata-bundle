@@ -1,6 +1,8 @@
 {
     "name": "geonaute/linkdata-bundle",
     "description": "A Symfony2 bundle for Linkdata",
+    "type":         "symfony-bundle",
+    "license":      "MIT",
     "authors": [
         {
             "name": "alex-pex",
@@ -9,5 +11,8 @@
     ],
     "require": {
         "misd/guzzle-bundle": "~1.0"
+    },
+    "autoload": {
+        "psr-4": { "Geonaute\\LinkdataBundle\\": "" }
     }
 }

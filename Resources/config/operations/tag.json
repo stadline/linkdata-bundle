@@ -1,0 +1,39 @@
+{
+    "operations": {
+        "DeleteTag": {
+            "httpMethod": "DELETE",
+            "uri": "/tag/{name}.xml",
+            "parameters": {
+                "name": { "location": "uri", "required": true }
+            }
+        },
+        "GetTagTotalYear": {
+            "httpMethod": "GET",
+            "uri": "/tag/{name}/totalyear.xml",
+            "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetTagTotalYear\\Response",
+            "parameters": {
+                "name": { "location": "uri", "required": true },
+                "year": { "location": "query", "required": false }
+            }
+            
+        },
+        "GetTagTotalWeek": {
+            "httpMethod": "GET",
+            "uri": "/tag/{name}/totalweek.xml",
+            "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetTagTotalWeek\\Response",
+            "parameters": {
+                "name": { "location": "uri", "required": true }
+            }
+            
+        },
+        "GetTagWeeklyAverage": {
+            "httpMethod": "GET",
+            "uri": "/tag/{name}/weekly_average.xml",
+            "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetTagWeeklyAverage\\Response",
+            "parameters": {
+                "name": { "location": "uri", "required": true }
+            }
+            
+        }
+    }
+}

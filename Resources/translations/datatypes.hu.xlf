@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="datatype_1" resname="datatype_1">
+        <source>datatype_1</source>
+        <target>Szívritmus</target>
+      </trans-unit>
+      <trans-unit id="datatype_4" resname="datatype_4">
+        <source>datatype_4</source>
+        <target>Átlagos szívritmus.</target>
+      </trans-unit>
+      <trans-unit id="datatype_5" resname="datatype_5">
+        <source>datatype_5</source>
+        <target>Távolság</target>
+      </trans-unit>
+      <trans-unit id="datatype_6" resname="datatype_6">
+        <source>datatype_6</source>
+        <target>Sebesség</target>
+      </trans-unit>
+      <trans-unit id="datatype_9" resname="datatype_9">
+        <source>datatype_9</source>
+        <target>Átlagsebesség.</target>
+      </trans-unit>
+      <trans-unit id="datatype_14" resname="datatype_14">
+        <source>datatype_14</source>
+        <target>Magasság</target>
+      </trans-unit>
+      <trans-unit id="datatype_15" resname="datatype_15">
+        <source>datatype_15</source>
+        <target>Max. magasság</target>
+      </trans-unit>
+      <trans-unit id="datatype_16" resname="datatype_16">
+        <source>datatype_16</source>
+        <target>Min. magasság</target>
+      </trans-unit>
+      <trans-unit id="datatype_18" resname="datatype_18">
+        <source>datatype_18</source>
+        <target>Szintkülönbség emelkedésnél</target>
+      </trans-unit>
+      <trans-unit id="datatype_19" resname="datatype_19">
+        <source>datatype_19</source>
+        <target>Szintkülönbség ereszkedésnél </target>
+      </trans-unit>
+      <trans-unit id="datatype_20" resname="datatype_20">
+        <source>datatype_20</source>
+        <target>Szakasz</target>
+      </trans-unit>
+      <trans-unit id="datatype_23" resname="datatype_23">
+        <source>datatype_23</source>
+        <target>Elégetett kalóriák</target>
+      </trans-unit>
+      <trans-unit id="datatype_24" resname="datatype_24">
+        <source>datatype_24</source>
+        <target>Időtartam</target>
+      </trans-unit>
+      <trans-unit id="datatype_25" resname="datatype_25">
+        <source>datatype_25</source>
+        <target>Min. kardio százalék </target>
+      </trans-unit>
+      <trans-unit id="datatype_26" resname="datatype_26">
+        <source>datatype_26</source>
+        <target>Max. kardio százalék</target>
+      </trans-unit>
+      <trans-unit id="datatype_29" resname="datatype_29">
+        <source>datatype_29</source>
+        <target>Lépésszám</target>
+      </trans-unit>
+      <trans-unit id="datatype_30" resname="datatype_30">
+        <source>datatype_30</source>
+        <target>Tevékenységi idők</target>
+      </trans-unit>
+      <trans-unit id="datatype_98" resname="datatype_98">
+        <source>datatype_98</source>
+        <target>Edzések száma</target>
+      </trans-unit>
+      <trans-unit id="datatype_99" resname="datatype_99">
+        <source>datatype_99</source>
+        <target>Nyert pontok</target>
+      </trans-unit>
+      <trans-unit id="datatype_100" resname="datatype_100">
+        <source>datatype_100</source>
+        <target>RPM</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

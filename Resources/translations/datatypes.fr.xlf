@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="datatype_1" resname="datatype_1">
+        <source>datatype_1</source>
+        <target>Rythme cardiaque</target>
+      </trans-unit>
+      <trans-unit id="datatype_4" resname="datatype_4">
+        <source>datatype_4</source>
+        <target>Cardio moy.</target>
+      </trans-unit>
+      <trans-unit id="datatype_5" resname="datatype_5">
+        <source>datatype_5</source>
+        <target>Distance</target>
+      </trans-unit>
+      <trans-unit id="datatype_6" resname="datatype_6">
+        <source>datatype_6</source>
+        <target>Vitesse</target>
+      </trans-unit>
+      <trans-unit id="datatype_9" resname="datatype_9">
+        <source>datatype_9</source>
+        <target>Vitesse moy.</target>
+      </trans-unit>
+      <trans-unit id="datatype_14" resname="datatype_14">
+        <source>datatype_14</source>
+        <target>Altitude</target>
+      </trans-unit>
+      <trans-unit id="datatype_15" resname="datatype_15">
+        <source>datatype_15</source>
+        <target>Altitude max</target>
+      </trans-unit>
+      <trans-unit id="datatype_16" resname="datatype_16">
+        <source>datatype_16</source>
+        <target>Altitude min</target>
+      </trans-unit>
+      <trans-unit id="datatype_18" resname="datatype_18">
+        <source>datatype_18</source>
+        <target>Dénivelé en montée</target>
+      </trans-unit>
+      <trans-unit id="datatype_19" resname="datatype_19">
+        <source>datatype_19</source>
+        <target>Dénivelé en descente</target>
+      </trans-unit>
+      <trans-unit id="datatype_20" resname="datatype_20">
+        <source>datatype_20</source>
+        <target>Lap</target>
+      </trans-unit>
+      <trans-unit id="datatype_23" resname="datatype_23">
+        <source>datatype_23</source>
+        <target>Calories brûlées</target>
+      </trans-unit>
+      <trans-unit id="datatype_24" resname="datatype_24">
+        <source>datatype_24</source>
+        <target>Durée</target>
+      </trans-unit>
+      <trans-unit id="datatype_25" resname="datatype_25">
+        <source>datatype_25</source>
+        <target>Pourcentage cardio min.</target>
+      </trans-unit>
+      <trans-unit id="datatype_26" resname="datatype_26">
+        <source>datatype_26</source>
+        <target>Pourcentage cardio max.</target>
+      </trans-unit>
+      <trans-unit id="datatype_29" resname="datatype_29">
+        <source>datatype_29</source>
+        <target>Nombre de pas</target>
+      </trans-unit>
+      <trans-unit id="datatype_30" resname="datatype_30">
+        <source>datatype_30</source>
+        <target>Temps d'activité</target>
+      </trans-unit>
+      <trans-unit id="datatype_98" resname="datatype_98">
+        <source>datatype_98</source>
+        <target>Nombre de séances</target>
+      </trans-unit>
+      <trans-unit id="datatype_99" resname="datatype_99">
+        <source>datatype_99</source>
+        <target>Points gagnés</target>
+      </trans-unit>
+      <trans-unit id="datatype_100" resname="datatype_100">
+        <source>datatype_100</source>
+        <target>RPM</target>
+      </trans-unit>
+      
+      <trans-unit id="datatype_1_with_unit" resname="datatype_1_with_unit">
+        <source>datatype_1_with_unit</source>
+        <target>Rythme cardiaque</target>
+      </trans-unit>
+      <trans-unit id="datatype_4_with_unit" resname="datatype_4_with_unit">
+        <source>datatype_4_with_unit</source>
+        <target>Cardio moy.</target>
+      </trans-unit>
+      <trans-unit id="datatype_5_with_unit" resname="datatype_5_with_unit">
+        <source>datatype_5_with_unit</source>
+        <target>Distance</target>
+      </trans-unit>
+      <trans-unit id="datatype_6_with_unit" resname="datatype_6_with_unit">
+        <source>datatype_6_with_unit</source>
+        <target>Vitesse</target>
+      </trans-unit>
+      <trans-unit id="datatype_9_with_unit" resname="datatype_9_with_unit">
+        <source>datatype_9_with_unit</source>
+        <target>Vitesse moy.</target>
+      </trans-unit>
+      <trans-unit id="datatype_14_with_unit" resname="datatype_14_with_unit">
+        <source>datatype_14_with_unit</source>
+        <target>Altitude</target>
+      </trans-unit>
+      <trans-unit id="datatype_15_with_unit" resname="datatype_15_with_unit">
+        <source>datatype_15_with_unit</source>
+        <target>Altitude max</target>
+      </trans-unit>
+      <trans-unit id="datatype_16_with_unit" resname="datatype_16_with_unit">
+        <source>datatype_16_with_unit</source>
+        <target>Altitude min</target>
+      </trans-unit>
+      <trans-unit id="datatype_18_with_unit" resname="datatype_18_with_unit">
+        <source>datatype_18_with_unit</source>
+        <target>Dénivelé en montée</target>
+      </trans-unit>
+      <trans-unit id="datatype_19_with_unit" resname="datatype_19_with_unit">
+        <source>datatype_19_with_unit</source>
+        <target>Dénivelé en descente</target>
+      </trans-unit>
+      <trans-unit id="datatype_20_with_unit" resname="datatype_20_with_unit">
+        <source>datatype_20_with_unit</source>
+        <target>Lap</target>
+      </trans-unit>
+      <trans-unit id="datatype_23_with_unit" resname="datatype_23_with_unit">
+        <source>datatype_23_with_unit</source>
+        <target>Calories brûlées</target>
+      </trans-unit>
+      <trans-unit id="datatype_24_with_unit" resname="datatype_24_with_unit">
+        <source>datatype_24_with_unit</source>
+        <target>Durée</target>
+      </trans-unit>
+      <trans-unit id="datatype_25_with_unit" resname="datatype_25_with_unit">
+        <source>datatype_25_with_unit</source>
+        <target>Pourcentage cardio min.</target>
+      </trans-unit>
+      <trans-unit id="datatype_26_with_unit" resname="datatype_26_with_unit">
+        <source>datatype_26_with_unit</source>
+        <target>Pourcentage cardio max.</target>
+      </trans-unit>
+      <trans-unit id="datatype_29_with_unit" resname="datatype_29_with_unit">
+        <source>datatype_29_with_unit</source>
+        <target>Nombre de pas</target>
+      </trans-unit>
+      <trans-unit id="datatype_30_with_unit" resname="datatype_30_with_unit">
+        <source>datatype_30_with_unit</source>
+        <target>Temps d'activité</target>
+      </trans-unit>
+      <trans-unit id="datatype_98_with_unit" resname="datatype_98_with_unit">
+        <source>datatype_98_with_unit</source>
+        <target>Nombre de séances</target>
+      </trans-unit>
+      <trans-unit id="datatype_99_with_unit" resname="datatype_99_with_unit">
+        <source>datatype_99_with_unit</source>
+        <target>Points gagnés</target>
+      </trans-unit>
+      <trans-unit id="datatype_100_with_unit" resname="datatype_100_with_unit">
+        <source>datatype_100_with_unit</source>
+        <target>RPM</target>
+      </trans-unit>
+      <trans-unit id="datatype_120_with_unit" resname="datatype_120_with_unit">
+        <source>datatype_120_with_unit</source>
+        <target>Vitesse pilotée (m/h)</target>
+      </trans-unit>
+      <trans-unit id="datatype_121_with_unit" resname="datatype_121_with_unit">
+        <source>datatype_121_with_unit</source>
+        <target>Inclinaison (deg)</target>
+      </trans-unit>
+      <trans-unit id="datatype_175_with_unit" resname="datatype_175_with_unit">
+        <source>datatype_175_with_unit</source>
+        <target>Vitesse (%VMA)</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

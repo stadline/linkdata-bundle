@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="datatype_1" resname="datatype_1">
+        <source>datatype_1</source>
+        <target>心率</target>
+      </trans-unit>
+      <trans-unit id="datatype_4" resname="datatype_4">
+        <source>datatype_4</source>
+        <target>平均心率.</target>
+      </trans-unit>
+      <trans-unit id="datatype_5" resname="datatype_5">
+        <source>datatype_5</source>
+        <target>距离</target>
+      </trans-unit>
+      <trans-unit id="datatype_6" resname="datatype_6">
+        <source>datatype_6</source>
+        <target>速度</target>
+      </trans-unit>
+      <trans-unit id="datatype_9" resname="datatype_9">
+        <source>datatype_9</source>
+        <target>平均速度</target>
+      </trans-unit>
+      <trans-unit id="datatype_14" resname="datatype_14">
+        <source>datatype_14</source>
+        <target>海拔</target>
+      </trans-unit>
+      <trans-unit id="datatype_15" resname="datatype_15">
+        <source>datatype_15</source>
+        <target>最大海拔</target>
+      </trans-unit>
+      <trans-unit id="datatype_16" resname="datatype_16">
+        <source>datatype_16</source>
+        <target>最小海拔</target>
+      </trans-unit>
+      <trans-unit id="datatype_18" resname="datatype_18">
+        <source>datatype_18</source>
+        <target>上升高程差</target>
+      </trans-unit>
+      <trans-unit id="datatype_19" resname="datatype_19">
+        <source>datatype_19</source>
+        <target>下降高程差</target>
+      </trans-unit>
+      <trans-unit id="datatype_20" resname="datatype_20">
+        <source>datatype_20</source>
+        <target>圈数</target>
+      </trans-unit>
+      <trans-unit id="datatype_23" resname="datatype_23">
+        <source>datatype_23</source>
+        <target>卡路里消耗值</target>
+      </trans-unit>
+      <trans-unit id="datatype_24" resname="datatype_24">
+        <source>datatype_24</source>
+        <target>时长</target>
+      </trans-unit>
+      <trans-unit id="datatype_25" resname="datatype_25">
+        <source>datatype_25</source>
+        <target>最小心率百分比</target>
+      </trans-unit>
+      <trans-unit id="datatype_26" resname="datatype_26">
+        <source>datatype_26</source>
+        <target>最大心率百分比</target>
+      </trans-unit>
+      <trans-unit id="datatype_29" resname="datatype_29">
+        <source>datatype_29</source>
+        <target>步数</target>
+      </trans-unit>
+      <trans-unit id="datatype_30" resname="datatype_30">
+        <source>datatype_30</source>
+        <target>活动时间</target>
+      </trans-unit>
+      <trans-unit id="datatype_98" resname="datatype_98">
+        <source>datatype_98</source>
+        <target>训练次数</target>
+      </trans-unit>
+      <trans-unit id="datatype_99" resname="datatype_99">
+        <source>datatype_99</source>
+        <target>获得点数</target>
+      </trans-unit>
+      <trans-unit id="datatype_100" resname="datatype_100">
+        <source>datatype_100</source>
+        <target>RPM</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

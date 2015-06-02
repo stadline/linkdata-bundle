@@ -1,0 +1,27 @@
+{
+    "operations": {
+        "PostPrograms": {
+            "httpMethod": "POST",
+            "uri": "/programs.xml",
+            "parameters": {
+                "xml": { "location": "body", "required": true },
+                "goal_id": { "location": "query", "required": true },
+                "weeks": { "location": "query", "required": true },
+                "title": { "location": "query", "required": true },
+                "lang": { "location": "query", "required": true }
+            }
+        },
+        "PutPrograms": {
+            "httpMethod": "PUT",
+            "uri": "/programs/{modelId}.xml",
+            "parameters": {
+                "xml": { "location": "body", "required": true },
+                "goal_id": { "location": "query", "required": true },
+                "weeks": { "location": "query", "required": true },
+                "title": { "location": "query", "required": true },
+                "lang": { "location": "query", "required": true },
+                "modelId": { "location": "uri", "required": true }
+            }
+        }
+    }
+}

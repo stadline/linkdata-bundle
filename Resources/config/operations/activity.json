@@ -1,0 +1,104 @@
+{
+    "operations": {
+        "GetActivitySummary": {
+            "httpMethod": "GET",
+            "uri": "/activity/{id}/summary.xml",
+            "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetActivitySummary\\Response",
+            "parameters": {
+                "id": { "location": "uri", "required": true }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
+        },
+        "GetActivityDataSummary": {
+            "httpMethod": "GET",
+            "uri": "/activity/{id}/datasummary.xml",
+            "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetActivityDataSummary\\Response",
+            "parameters": {
+                "id": { "location": "uri", "required": true }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
+        },
+        "GetActivitySimilar": {
+            "httpMethod": "GET",
+            "uri": "/activity/{id}/similar/{datatype}.xml",
+            "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetActivitySimilar\\Response",
+            "parameters": {
+                "id":       { "location": "uri", "required": true },
+                "datatype": { "location": "uri", "required": true }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
+        },
+        "GetActivityDataStreams": {
+            "httpMethod": "GET",
+            "uri": "/activity/{id}/datastreams.xml",
+            "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetActivityDataStreams\\Response",
+            "parameters": {
+                "id":    { "location": "uri", "required": true }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
+        },
+        "PostActivityImport": {
+            "httpMethod": "POST",
+            "uri": "/activity/import.xml",
+            "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\PostActivityImport\\Response",
+            "parameters": {
+                "xml": { "location": "body", "required": true }
+            }
+        },
+        "PutActivityImport": {
+            "httpMethod": "PUT",
+            "uri": "/activity/{id}/import.xml",
+            "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\PutActivityImport\\Response",
+            "parameters": {
+                "id":    { "location": "uri", "required": true },
+                "xml": { "location": "body", "required": true }
+            }
+        },
+        "DeleteActivitySummary": {
+            "httpMethod": "DELETE",
+            "uri": "/activity/{id}/summary.xml",
+            "parameters": {
+                "id":    { "location": "uri", "required": true }
+            }
+        },
+        "PutActivityComment": {
+            "httpMethod": "PUT",
+            "uri": "/activity/{id}/comment.xml",
+            "parameters": {
+                "id":      { "location": "uri", "required": true },
+                "comment": { "location": "postField", "required": true }
+            }
+        },
+        "PutActivityTag": {
+            "httpMethod": "PUT",
+            "uri": "/activity/{id}/tag.xml",
+            "parameters": {
+                "id":      { "location": "uri", "required": true },
+                "tag": { "location": "postField", "required": true }
+            }
+        },
+        "DeleteActivityTag": {
+            "httpMethod": "DELETE",
+            "uri": "/activity/{id}/tag.xml",
+            "parameters": {
+                "id":      { "location": "uri", "required": true },
+                "tag": { "location": "postField", "required": true }
+            }
+        },
+        "DeleteActivityTrack": {
+            "httpMethod": "DELETE",
+            "uri": "/activity/{id}/track.xml",
+            "parameters": {
+                "id":      { "location": "uri", "required": true }
+            }
+        }
+    }
+}
