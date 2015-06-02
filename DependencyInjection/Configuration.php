@@ -22,7 +22,7 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-                ->scalarNode('linkdata_url')->cannotBeEmpty()->end()
+                ->scalarNode('base_url')->cannotBeEmpty()->end()
             ->end();
 
         return $treeBuilder;

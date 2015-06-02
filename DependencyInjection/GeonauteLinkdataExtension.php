@@ -27,8 +27,8 @@ class GeonauteLinkdataExtension extends Extension
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
 
-        if ($config['linkdata_url']) {
-            $container->setParameter('geonaute_linkdata.linkdata_url', $config['linkdata_url']);
+        if ($config['base_url']) {
+            $container->setParameter('geonaute_linkdata.base_url', $config['base_url']);
         }
     }
 }
