@@ -26,7 +26,7 @@ class AuthPlugin implements EventSubscriberInterface
     }
 
     /**
-     * Request before-send event handler
+     * Request before-send event handler.
      *
      * @param Event $event Event received
      */
@@ -37,7 +37,6 @@ class AuthPlugin implements EventSubscriberInterface
 
         // add HTTP authentification header
         if ($securityToken = $this->securityContext->getToken()) {
-        	
             if ($securityToken instanceof AuthPluginInterface) {
                 $requestKey = $securityToken->getSwarmRequestKey();
 

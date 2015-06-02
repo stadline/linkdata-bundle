@@ -5,7 +5,7 @@ namespace Geonaute\LinkdataBundle\Injector;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Description of RequestInjector
+ * Description of RequestInjector.
  *
  * @author alexandre
  */
@@ -22,8 +22,7 @@ class LocaleInjector implements LocaleInjectorInterface
     {
         if ($request = $this->container->get('request')) {
             return $request->getLocale();
-        }
-        else {
+        } else {
             return $this->container->getParameter('locale');
         }
     }

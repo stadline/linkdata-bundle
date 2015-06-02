@@ -11,49 +11,53 @@ use JMS\Serializer\Annotation\SerializedName;
  */
 class Exercise
 {
-    
     /**
      * @Serializer\Expose
      * @Type("integer")
-     * @SerializedName("ID")     
+     * @SerializedName("ID")
      */
     protected $ID;
-    
+
     /**
      * @Serializer\Expose
      * @Type("string")
-     * @SerializedName("TITLE")     
+     * @SerializedName("TITLE")
      */
     protected $TITLE;
-   
+
     /**
      * @Serializer\Expose
      * @Type("integer")
-     * @SerializedName("SPORTID")     
+     * @SerializedName("SPORTID")
      */
     protected $SPORTID;
-    
-    public function getID() {
+
+    public function getID()
+    {
         return $this->ID;
     }
 
-    public function setID($ID) {
+    public function setID($ID)
+    {
         $this->ID = $ID;
     }
 
-    public function getTITLE() {
+    public function getTITLE()
+    {
         return $this->TITLE;
     }
 
-    public function setTITLE($TITLE) {
+    public function setTITLE($TITLE)
+    {
         $this->TITLE = $TITLE;
     }
-    public function getSPORTID() {
+    public function getSPORTID()
+    {
         return $this->SPORTID;
     }
 
-    public function setSPORTID($SPORTID) {
+    public function setSPORTID($SPORTID)
+    {
         $this->SPORTID = $SPORTID;
     }
-
 }

@@ -23,7 +23,7 @@ class LanguagePlugin implements EventSubscriberInterface
     }
 
     /**
-     * Request before-send event handler
+     * Request before-send event handler.
      *
      * @param Event $event Event received
      */
@@ -31,7 +31,7 @@ class LanguagePlugin implements EventSubscriberInterface
     {
         // get request object
         $request = $event['request'];
-        
+
         // add language to query parameter
         if (!$request->getQuery()->hasKey('language')) {
             $request->getQuery()->add('language', $this->localeInjector->getLocale());

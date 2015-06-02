@@ -12,18 +12,17 @@ use JMS\Serializer\Annotation\XmlList;
  */
 class Smartdevice
 {
-    
     /**
      * @Serializer\Expose
      * @Type("integer")
-     * @SerializedName("ID")     
+     * @SerializedName("ID")
      */
     protected $ID;
-    
+
     /**
      * @Serializer\Expose
      * @Type("string")
-     * @SerializedName("TITLE")     
+     * @SerializedName("TITLE")
      */
     protected $TITLE;
 
@@ -33,43 +32,49 @@ class Smartdevice
      * @XmlList(entry="UNIT_ID")
      */
     protected $UNITS;
-   
-   
-    public function getID() {
+
+    public function getID()
+    {
         return $this->ID;
     }
 
-    public function setID($ID) {
+    public function setID($ID)
+    {
         $this->ID = $ID;
     }
 
-    public function getTITLE() {
+    public function getTITLE()
+    {
         return $this->TITLE;
     }
 
-    public function setTITLE($TITLE) {
+    public function setTITLE($TITLE)
+    {
         $this->TITLE = $TITLE;
     }
 
-     public function __construct() {
+    public function __construct()
+    {
         $this->smartdevices = new ArrayCollection();
     }
 
-    public function getUNITS() {
+    public function getUNITS()
+    {
         return $this->UNITS;
     }
 
-    public function setUNITS($UNITS) {
+    public function setUNITS($UNITS)
+    {
         $this->UNITS = $UNITS;
     }
 
-    public function getDatatypeIds() {
+    public function getDatatypeIds()
+    {
         $ids = array();
-        foreach($this->getUNITS() as $unit) {
+        foreach ($this->getUNITS() as $unit) {
             $ids[] = $unit->getUNIT_ID();
         }
-        
+
         return $ids;
     }
-    
 }

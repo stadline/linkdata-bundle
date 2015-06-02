@@ -11,21 +11,20 @@ use JMS\Serializer\Annotation\SerializedName;
  */
 class Datatype
 {
-    
     /**
      * @Serializer\Expose
      * @Type("integer")
      * @SerializedName("ID")
      */
     protected $ID;
-    
+
     /**
      * @Serializer\Expose
      * @Type("string")
      * @SerializedName("NAME")
      */
     protected $NAME;
-   
+
     /**
      * @Serializer\Expose
      * @Type("string")
@@ -38,38 +37,44 @@ class Datatype
      * @SerializedName("CUMULABLE")
      */
     protected $CUMULABLE = 0;
-    
-    public function getID() {
+
+    public function getID()
+    {
         return $this->ID;
     }
 
-    public function setID($ID) {
+    public function setID($ID)
+    {
         $this->ID = $ID;
     }
-    
-    public function getNAME() {
+
+    public function getNAME()
+    {
         return $this->NAME;
     }
 
-    public function getUNIT() {
+    public function getUNIT()
+    {
         return $this->UNIT;
     }
 
-    public function getCUMULABLE() {
+    public function getCUMULABLE()
+    {
         return $this->CUMULABLE;
     }
 
-    public function setNAME($NAME) {
+    public function setNAME($NAME)
+    {
         $this->NAME = $NAME;
     }
 
-    public function setUNIT($UNIT) {
+    public function setUNIT($UNIT)
+    {
         $this->UNIT = $UNIT;
     }
 
-    public function setCUMULABLE($CUMULABLE) {
+    public function setCUMULABLE($CUMULABLE)
+    {
         $this->CUMULABLE = $CUMULABLE;
     }
-
-
 }

@@ -11,51 +11,54 @@ use JMS\Serializer\Annotation\SerializedName;
  */
 class Sensor
 {
-    
     /**
      * @Serializer\Expose
      * @Type("integer")
-     * @SerializedName("ID")     
+     * @SerializedName("ID")
      */
     protected $ID;
-    
+
     /**
      * @Serializer\Expose
      * @Type("string")
-     * @SerializedName("TITLE")     
+     * @SerializedName("TITLE")
      */
     protected $TITLE;
-   
+
     /**
      * @Serializer\Expose
      * @Type("string")
-     * @SerializedName("UNIT_ID")     
+     * @SerializedName("UNIT_ID")
      */
     protected $UNIT_ID;
-   
-   
-    public function getID() {
+
+    public function getID()
+    {
         return $this->ID;
     }
 
-    public function setID($ID) {
+    public function setID($ID)
+    {
         $this->ID = $ID;
     }
 
-    public function getTITLE() {
+    public function getTITLE()
+    {
         return $this->TITLE;
     }
 
-    public function setTITLE($TITLE) {
+    public function setTITLE($TITLE)
+    {
         $this->TITLE = $TITLE;
     }
-    
-    public function getUNIT_ID() {
+
+    public function getUNIT_ID()
+    {
         return $this->UNIT_ID;
     }
 
-    public function setUNIT_ID($UNIT_ID) {
+    public function setUNIT_ID($UNIT_ID)
+    {
         $this->UNIT_ID = $UNIT_ID;
     }
-
 }

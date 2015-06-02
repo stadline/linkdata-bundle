@@ -8,57 +8,59 @@ use JMS\Serializer\Annotation\SerializedName;
 
 /**
  * Sport
+ *
  * @Serializer\XmlRoot("SPORT")
- * 
  */
 class Sport
 {
-    
     /**
      * @Serializer\Expose
      * @Type("integer")
-     * @SerializedName("ID")     
+     * @SerializedName("ID")
      */
     protected $ID;
-    
+
     /**
      * @Serializer\Expose
      * @Type("string")
-     * @SerializedName("NAME")     
+     * @SerializedName("NAME")
      */
     protected $NAME;
-    
+
     /**
      * @Serializer\Expose
      * @Type("integer")
-     * @SerializedName("UNIVERSID")     
+     * @SerializedName("UNIVERSID")
      */
     protected $UNIVERSID;
-   
-    public function getID() {
+
+    public function getID()
+    {
         return $this->ID;
     }
 
-    public function getNAME() {
+    public function getNAME()
+    {
         return $this->NAME;
     }
 
-    public function getUNIVERSID() {
+    public function getUNIVERSID()
+    {
         return $this->UNIVERSID;
     }
 
-    public function setID($ID) {
+    public function setID($ID)
+    {
         $this->ID = $ID;
     }
 
-    public function setNAME($NAME) {
+    public function setNAME($NAME)
+    {
         $this->NAME = $NAME;
     }
 
-    public function setUNIVERSID($UNIVERSID) {
+    public function setUNIVERSID($UNIVERSID)
+    {
         $this->UNIVERSID = $UNIVERSID;
     }
-
-
-    
 }

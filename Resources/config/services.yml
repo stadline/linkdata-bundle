@@ -1,6 +1,6 @@
 parameters:
     request_injector.class:                      Geonaute\LinkdataBundle\Injector\RequestInjector
-    locale_injector.class:                       Geonaute\LinkdataBundle\Injector\LocaleInjector   
+    locale_injector.class:                       Geonaute\LinkdataBundle\Injector\LocaleInjector
     geonaute_linkdata.auth_plugin.class:         Geonaute\LinkdataBundle\Plugin\AuthPlugin
     geonaute_linkdata.language_plugin.class:     Geonaute\LinkdataBundle\Plugin\LanguagePlugin
     geonaute_linkdata.result_cache_plugin.class: Geonaute\LinkdataBundle\Plugin\ResultCachePlugin
@@ -13,26 +13,26 @@ services:
     geonaute_linkdata.formatter:
         class: %geonaute_linkdata.formatter.class%
         arguments: [ @translator ]
-        
+
     geonaute_linkdata.datatype.utils:
         class: %linkdata.datatype.utils.class%
         arguments: [ @geonaute_linkdata.formatter ]
 
-    #Type 
+    #Type
     geonaute_linkdata.type.linkdata_choice:
         class: Geonaute\LinkdataBundle\Form\Type\LinkdataChoiceType
-        calls: 
+        calls:
             - [setClient, [ @linkdata_rest_client ]]
         tags:
             - { name: form.type, alias: linkdata_choice }
-            
+
     geonaute_linkdata.type.filter_linkdata_choice:
         class: Geonaute\LinkdataBundle\Form\Type\FilterLinkdataChoiceType
-        calls: 
+        calls:
             - [setClient, [ @linkdata_rest_client ]]
         tags:
             - { name: form.type, alias: filter_linkdata_choice }
-        
+
     # Rest client
     geonaute_linkdata.client:
         class: %geonaute_linkdata.client.class%
@@ -68,11 +68,11 @@ services:
     request_injector:
         class: %request_injector.class%
         arguments: [ @service_container ]
-        
+
     locale_injector:
         class: %locale_injector.class%
-        arguments: [ @service_container ]        
-        
+        arguments: [ @service_container ]
+
     # cache
     geonaute_linkdata.cache.doctrine_cache_adapter:
         class: %guzzle.cache.doctrine.class%
@@ -82,7 +82,7 @@ services:
         arguments: [ @geonaute_linkdata.cache.doctrine_cache_adapter ]
     geonaute_linkdata.cache.can_cache_strategy:
         class: Geonaute\LinkdataBundle\Plugin\CanCacheStrategy
-        
+
     geonaute_linkdata.cache.memcache:
         class: %guzzle.plugin.cache.class%
         arguments: [ { storage: @geonaute_linkdata.cache.doctrine_cache_storage, can_cache: @geonaute_linkdata.cache.can_cache_strategy } ]

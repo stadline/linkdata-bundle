@@ -7,14 +7,13 @@ use Doctrine\Common\Collections\Criteria;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\XmlList;
-use JMS\Serializer\Annotation\XmlRoot;
 use Geonaute\LinkdataBundle\Entity\LinkdataTransversableEntity;
 
 /**
  * Sports
  */
-class Sports implements LinkdataTransversableEntity {
-
+class Sports implements LinkdataTransversableEntity
+{
     /**
      * @Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Reference\Sport>")
      * @SerializedName("SPORTS");
@@ -22,33 +21,37 @@ class Sports implements LinkdataTransversableEntity {
      */
     protected $sports;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->sports = new ArrayCollection();
     }
 
-    public function getSports() {
+    public function getSports()
+    {
         return $this->sports;
     }
 
-    public function setSports($sports) {
+    public function setSports($sports)
+    {
         $this->sports = $sports;
     }
 
-    public function getSport($id) {
-        
+    public function getSport($id)
+    {
         $criteria = Criteria::create()
-                ->where(Criteria::expr()->eq("ID", $id));
-                
+                ->where(Criteria::expr()->eq('ID', $id));
+
         $sports = $this->sports->matching($criteria);
-        
-        if(count($sports) > 0) {
+
+        if (count($sports) > 0) {
             return $sports->first();
         } else {
             return false;
         }
     }
-        
-    public function getElements() {
+
+    public function getElements()
+    {
         return $this->sports;
     }
 }

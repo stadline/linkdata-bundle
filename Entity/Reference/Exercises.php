@@ -7,14 +7,13 @@ use Doctrine\Common\Collections\Criteria;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\XmlList;
-use JMS\Serializer\Annotation\XmlRoot;
 use Geonaute\LinkdataBundle\Entity\LinkdataTransversableEntity;
 
 /**
  * Exercices
  */
-class Exercises implements LinkdataTransversableEntity {
-
+class Exercises implements LinkdataTransversableEntity
+{
     /**
      * @Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Reference\Exercise>")
      * @SerializedName("EXERCISES");
@@ -22,22 +21,25 @@ class Exercises implements LinkdataTransversableEntity {
      */
     protected $exercises;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->exercises = new ArrayCollection();
     }
 
-    public function getExercises() {
+    public function getExercises()
+    {
         return $this->exercises;
     }
 
-    public function setExercises($goals) {
+    public function setExercises($goals)
+    {
         $this->exercises = $exercises;
     }
 
-    public function getExercise($id) {
-
+    public function getExercise($id)
+    {
         $criteria = Criteria::create()
-                ->where(Criteria::expr()->eq("ID", $id));
+                ->where(Criteria::expr()->eq('ID', $id));
 
         $exercises = $this->exercises->matching($criteria);
 
@@ -48,8 +50,8 @@ class Exercises implements LinkdataTransversableEntity {
         }
     }
 
-    public function getElements() {
+    public function getElements()
+    {
         return $this->exercises;
     }
-
 }

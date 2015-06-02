@@ -15,8 +15,9 @@ class FormatterManager
 
     public function __call($name, $arguments)
     {
-        if (substr($name, 0, 3) == "get") {
-            $class = __NAMESPACE__ . '\\' . substr($name, 3);
+        if (substr($name, 0, 3) == 'get') {
+            $class = __NAMESPACE__.'\\'.substr($name, 3);
+
             return new $class($this->translator);
         }
     }

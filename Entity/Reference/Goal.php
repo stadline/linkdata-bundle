@@ -11,36 +11,37 @@ use JMS\Serializer\Annotation\SerializedName;
  */
 class Goal
 {
-    
     /**
      * @Serializer\Expose
      * @Type("integer")
-     * @SerializedName("ID")     
+     * @SerializedName("ID")
      */
     protected $ID;
-    
+
     /**
      * @Serializer\Expose
      * @Type("string")
-     * @SerializedName("TITLE")     
+     * @SerializedName("TITLE")
      */
     protected $TITLE;
-   
-   
-    public function getID() {
+
+    public function getID()
+    {
         return $this->ID;
     }
 
-    public function setID($ID) {
+    public function setID($ID)
+    {
         $this->ID = $ID;
     }
 
-    public function getTITLE() {
+    public function getTITLE()
+    {
         return $this->TITLE;
     }
 
-    public function setTITLE($TITLE) {
+    public function setTITLE($TITLE)
+    {
         $this->TITLE = $TITLE;
     }
-
 }

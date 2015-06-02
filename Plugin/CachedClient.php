@@ -25,6 +25,7 @@ class CachedClient extends Client
             return $this->fetchCachedCommand($command, $args);
         } else {
             $this->purgeCache();
+
             return $command;
         }
     }

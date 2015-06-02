@@ -28,14 +28,15 @@ class DeviceModel
     const GARMIN_COMMUNICATOR = 47;
 
     /**
-     * Try to get deviceId from deviceName
+     * Try to get deviceId from deviceName.
      *
      * Something like: "myGeonaute mobile Android"
      * Will be converted to: "MYGEONAUTE_MOBILE_ANDROID"
      * And should match defined constants
      *
      * @param string $fullDeviceName
-     * @return integer
+     *
+     * @return int
      */
     public static function getIdFromName($fullDeviceName)
     {

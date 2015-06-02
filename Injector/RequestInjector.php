@@ -5,7 +5,7 @@ namespace Geonaute\LinkdataBundle\Injector;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Description of RequestInjector
+ * Description of RequestInjector.
  *
  * @author alexandre
  */

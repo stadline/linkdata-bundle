@@ -7,14 +7,13 @@ use Doctrine\Common\Collections\Criteria;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\XmlList;
-use JMS\Serializer\Annotation\XmlRoot;
 use Geonaute\LinkdataBundle\Entity\LinkdataTransversableEntity;
 
 /**
  * Datatypes
  */
-class Datatypes implements LinkdataTransversableEntity {
-
+class Datatypes implements LinkdataTransversableEntity
+{
     /**
      * @Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Reference\Datatype>")
      * @SerializedName("DATATYPES");
@@ -22,22 +21,25 @@ class Datatypes implements LinkdataTransversableEntity {
      */
     protected $datatypes;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->datatypes = new ArrayCollection();
     }
 
-    public function getDatatypes() {
+    public function getDatatypes()
+    {
         return $this->datatypes;
     }
 
-    public function setDatatypes($goals) {
+    public function setDatatypes($goals)
+    {
         $this->datatypes = $datatypes;
     }
 
-    public function getDatatype($id) {
-
+    public function getDatatype($id)
+    {
         $criteria = Criteria::create()
-                ->where(Criteria::expr()->eq("ID", $id));
+                ->where(Criteria::expr()->eq('ID', $id));
 
         $datatypes = $this->datatypes->matching($criteria);
 
@@ -48,8 +50,8 @@ class Datatypes implements LinkdataTransversableEntity {
         }
     }
 
-    public function getElements() {
+    public function getElements()
+    {
         return $this->datatypes;
     }
-
 }
