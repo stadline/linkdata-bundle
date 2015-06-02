@@ -22,14 +22,14 @@ services:
     geonaute_linkdata.type.linkdata_choice:
         class: Geonaute\LinkdataBundle\Form\Type\LinkdataChoiceType
         calls:
-            - [setClient, [ @linkdata_rest_client ]]
+            - [ setClient, [ @linkdata_rest_client ]]
         tags:
             - { name: form.type, alias: linkdata_choice }
 
     geonaute_linkdata.type.filter_linkdata_choice:
         class: Geonaute\LinkdataBundle\Form\Type\FilterLinkdataChoiceType
         calls:
-            - [setClient, [ @linkdata_rest_client ]]
+            - [ setClient, [ @linkdata_rest_client ]]
         tags:
             - { name: form.type, alias: filter_linkdata_choice }
 
@@ -39,12 +39,12 @@ services:
         tags:
             - { name: guzzle.client }
         calls:
-            - [ setBaseUrl,       [ %geonaute_linkdata.base_url% ] ]
-            - [ setDefaultOption, [ 'params/cache.override_ttl', 3600 ] ]
-            - [ setDescription,   [ @geonaute_linkdata.service_description ] ]
-            - [ addSubscriber,    [ @geonaute_linkdata.cache.memcache ] ]
-            - [ addSubscriber,    [ @geonaute_linkdata.auth_plugin ] ]
-            - [ addSubscriber,    [ @geonaute_linkdata.language_plugin ] ]
+            - [ setBaseUrl,       [ %geonaute_linkdata.base_url% ]]
+            - [ setDefaultOption, [ 'params/cache.override_ttl', 3600 ]]
+            - [ setDescription,   [ @geonaute_linkdata.service_description ]]
+            - [ addSubscriber,    [ @geonaute_linkdata.cache.memcache ]]
+            - [ addSubscriber,    [ @geonaute_linkdata.auth_plugin ]]
+            - [ addSubscriber,    [ @geonaute_linkdata.language_plugin ]]
     linkdata_rest_client:
         alias: geonaute_linkdata.client
 
@@ -56,7 +56,7 @@ services:
 
     geonaute_linkdata.auth_plugin:
         class: %geonaute_linkdata.auth_plugin.class%
-        arguments: [ @security.context, @request_injector ]
+        arguments: [ @?security.context, @request_injector ]
 
     geonaute_linkdata.language_plugin:
         class: %geonaute_linkdata.language_plugin.class%
