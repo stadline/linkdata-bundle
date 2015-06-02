@@ -1,0 +1,13 @@
+{
+    "name": "geonaute/linkdata-bundle",
+    "description": "A Symfony2 bundle for Linkdata",
+    "authors": [
+        {
+            "name": "alex-pex",
+            "email": "alexandre.paixao@stadline.com"
+        }
+    ],
+    "require": {
+        "misd/guzzle-bundle": "~1.0"
+    }
+}
