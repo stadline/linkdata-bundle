@@ -6,6 +6,7 @@ parameters:
     geonaute_linkdata.result_cache_plugin.class: Geonaute\LinkdataBundle\Plugin\ResultCachePlugin
     geonaute_linkdata.formatter.class:           Geonaute\LinkdataBundle\Formatter\FormatterManager
     linkdata.datatype.utils.class:               Geonaute\LinkdataBundle\Utils\Datatype
+    geonaute_linkdata.client.class:              %guzzle.client.class%
 
 services:
     # Utils
@@ -34,16 +35,17 @@ services:
         
     # Rest client
     geonaute_linkdata.client:
-        class: %guzzle.client.class%
+        class: %geonaute_linkdata.client.class%
         tags:
             - { name: guzzle.client }
         calls:
-            - [ setBaseUrl,     [ %geonaute_linkdata.linkdata_url% ] ]
-            - [ setDescription, [ @geonaute_linkdata.service_description ] ]
-            - [ addSubscriber,  [ @geonaute_linkdata.cache.memcache ] ]
-            - [ addSubscriber,  [ @geonaute_linkdata.auth_plugin ] ]
-            - [ addSubscriber,  [ @geonaute_linkdata.language_plugin ] ]
-            - [ addSubscriber,  [ @geonaute_linkdata.result_cache_plugin ] ]
+            - [ setBaseUrl,       [ %linkdata_rest_client.base_url% ] ]
+            - [ setDefaultOption, [ 'params/cache.override_ttl', 3600 ] ]
+            - [ setDescription,   [ @geonaute_linkdata.service_description ] ]
+            - [ addSubscriber,    [ @geonaute_linkdata.cache.memcache ] ]
+            - [ addSubscriber,    [ @geonaute_linkdata.auth_plugin ] ]
+            - [ addSubscriber,    [ @geonaute_linkdata.language_plugin ] ]
+            - [ addSubscriber,    [ @geonaute_linkdata.result_cache_plugin ] ]
     linkdata_rest_client:
         alias: geonaute_linkdata.client
 

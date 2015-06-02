@@ -41,16 +41,12 @@ class AuthPlugin implements EventSubscriberInterface
             if ($securityToken instanceof AuthPluginInterface) {
                 $requestKey = $securityToken->getSwarmRequestKey();
 
-                $request->addHeaders(array(
-                    'x-linkdata-requestkey' => $requestKey,
-                ));
+                $request->setHeader('X-Linkdata-RequestKey', $requestKey);
             }
         } else {
             $user = $this->requestInjector->getRequest()->get('user');
 
-            $request->addHeaders(array(
-                'x-linkdata-requestkey' => isset($user['token']) ? $user['token'] : null,
-            ));
+            $request->setHeader('X-Linkdata-RequestKey', isset($user['token']) ? $user['token'] : null);
         }
     }
 }
