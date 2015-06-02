@@ -39,7 +39,7 @@ services:
         tags:
             - { name: guzzle.client }
         calls:
-            - [ setBaseUrl,       [ %linkdata_rest_client.base_url% ] ]
+            - [ setBaseUrl,       [ %geonaute_linkdata.linkdata_url% ] ]
             - [ setDefaultOption, [ 'params/cache.override_ttl', 3600 ] ]
             - [ setDescription,   [ @geonaute_linkdata.service_description ] ]
             - [ addSubscriber,    [ @geonaute_linkdata.cache.memcache ] ]
