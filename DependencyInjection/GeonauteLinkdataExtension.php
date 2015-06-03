@@ -19,12 +19,8 @@ class GeonauteLinkdataExtension extends SimpleExtension
     /**
      * {@inheritDoc}
      */
-    public function load(array $configs, ContainerBuilder $container)
+    protected function loadConfig(array $config)
     {
-        $configuration = new Configuration();
-        $config = $this->processConfiguration($configuration, $configs);
-
-        $this->container = $container;
         $this->loadRestClient($config);
     }
 
@@ -45,7 +41,7 @@ class GeonauteLinkdataExtension extends SimpleExtension
             'calls' => array(
                 array( 'setBaseUrl',       array( $config['base_url'] )),
                 array( 'setDefaultOption', array( 'params/cache.override_ttl', 3600 )),
-                array( 'setDescription',   array( $this->container->getDefinition('geonaute_linkdata.service_description') )),
+                array( 'setDescription',   array( $this->get('geonaute_linkdata.service_description') )),
             )
         ));
 

@@ -22,6 +22,35 @@ abstract class SimpleExtension extends Extension
     protected $container;
 
     /**
+     * {@inheritDoc}
+     */
+    final public function load(array $configs, ContainerBuilder $container)
+    {
+        $this->container = $container;
+
+        $configuration = new Configuration();
+        $config = $this->processConfiguration($configuration, $configs);
+
+        $this->loadConfig($config);
+    }
+
+    /**
+     * Easier way to load container configuration
+     */
+    abstract protected function loadConfig(array $config);
+
+    /**
+     * Easier way to retrieve a service
+     *
+     * @param string $id
+     * @return Definition
+     */
+    protected function get($id)
+    {
+        return $this->container->getDefinition($id);
+    }
+
+    /**
      * Easier way to register a service
      *
      * @param string $id
@@ -30,10 +59,6 @@ abstract class SimpleExtension extends Extension
      */
     protected function register($id, array $options)
     {
-        if (!$this->container instanceof ContainerBuilder) {
-            throw new \RuntimeException('"$this->container" should be set before calling "register"');
-        }
-
         $definition = new Definition();
 
         if (isset($options['class'])) {
