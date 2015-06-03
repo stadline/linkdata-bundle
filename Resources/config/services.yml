@@ -42,7 +42,7 @@ services:
             - [ setBaseUrl,       [ %geonaute_linkdata.base_url% ]]
             - [ setDefaultOption, [ 'params/cache.override_ttl', 3600 ]]
             - [ setDescription,   [ @geonaute_linkdata.service_description ]]
-#            - [ addSubscriber,    [ @geonaute_linkdata.cache.memcache ]]
+            - [ addSubscriber,    [ @geonaute_linkdata.cache.memcache ]]
 #            - [ addSubscriber,    [ @geonaute_linkdata.auth_plugin ]]
 #            - [ addSubscriber,    [ @geonaute_linkdata.language_plugin ]]
     linkdata_rest_client:
@@ -73,16 +73,17 @@ services:
 #        class: %locale_injector.class%
 #        arguments: [ @service_container ]
 #
-#    # cache
-#    geonaute_linkdata.cache.doctrine_cache_adapter:
-#        class: %guzzle.cache.doctrine.class%
-#        arguments: [ @doctrine.orm.default_result_cache ]
-#    geonaute_linkdata.cache.doctrine_cache_storage:
-#        class: Guzzle\Plugin\Cache\DefaultCacheStorage
-#        arguments: [ @geonaute_linkdata.cache.doctrine_cache_adapter ]
-#    geonaute_linkdata.cache.can_cache_strategy:
-#        class: Geonaute\LinkdataBundle\Plugin\CanCacheStrategy
-#
-#    geonaute_linkdata.cache.memcache:
-#        class: %guzzle.plugin.cache.class%
-#        arguments: [ { storage: @geonaute_linkdata.cache.doctrine_cache_storage, can_cache: @geonaute_linkdata.cache.can_cache_strategy } ]
+    # cache
+    geonaute_linkdata.cache.doctrine_adapter:
+        class: %guzzle.cache.doctrine.class%
+        arguments: [ @misd_guzzle.cache.doctrine.filesystem.adapter ]
+    geonaute_linkdata.cache.storage:
+        class: Guzzle\Plugin\Cache\DefaultCacheStorage
+        arguments: [ @geonaute_linkdata.cache.doctrine_adapter ]
+
+    geonaute_linkdata.cache.can_cache:
+        class: Geonaute\LinkdataBundle\Plugin\CanCacheStrategy
+
+    geonaute_linkdata.cache.memcache:
+        class: %guzzle.plugin.cache.class%
+        arguments: [ { storage: @geonaute_linkdata.cache.storage, can_cache: @geonaute_linkdata.cache.can_cache } ]

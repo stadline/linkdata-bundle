@@ -2,13 +2,6 @@
 
 namespace Geonaute\LinkdataBundle\DependencyInjection;
 
-use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\Config\FileLocator;
-use Symfony\Component\HttpKernel\DependencyInjection\Extension;
-use Symfony\Component\DependencyInjection\Loader;
-use Symfony\Component\DependencyInjection\Definition;
-use Symfony\Component\DependencyInjection\Reference;
-
 /**
  * This is the class that loads and manages your bundle configuration.
  *
@@ -40,7 +33,7 @@ class GeonauteLinkdataExtension extends SimpleExtension
             ),
             'calls' => array(
                 array( 'setBaseUrl',       array( $config['base_url'] )),
-                array( 'setDefaultOption', array( 'params/cache.override_ttl', 3600 )),
+                array( 'setDefaultOption', array( 'params/cache.override_ttl', 3600 )), // @FIXME move this parameter to PluginsCompilerPass
                 array( 'setDescription',   array( $this->get('geonaute_linkdata.service_description') )),
             )
         ));
