@@ -48,11 +48,11 @@ services:
     linkdata_rest_client:
         alias: geonaute_linkdata.client
 #
-#    geonaute_linkdata.service_description:
-#        class: %guzzle.service_description.class%
-#        factory_class: %guzzle.service_description.class%
-#        factory_method: factory
-#        arguments: [ %geonaute_linkdata.service_description.config_path% ]
+    geonaute_linkdata.service_description:
+        class: %guzzle.service_description.class%
+        factory_class: %guzzle.service_description.class%
+        factory_method: factory
+        arguments: [ %geonaute_linkdata.service_description.config_path% ]
 #
 #    geonaute_linkdata.auth_plugin:
 #        class: %geonaute_linkdata.auth_plugin.class%

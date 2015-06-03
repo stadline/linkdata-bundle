@@ -34,7 +34,7 @@ class GeonauteLinkdataExtension extends SimpleExtension
             'class' => '%guzzle.service_description.class%',
             'factory_class' => '%guzzle.service_description.class%',
             'factory_method' => 'factory',
-            'arguments' => array( __DIR__.'/../Resources/config/client.json' ),
+            'arguments' => array( $config['service_description'] ),
         ));
 
         $this->register('geonaute_linkdata.client', array(
@@ -45,7 +45,7 @@ class GeonauteLinkdataExtension extends SimpleExtension
             'calls' => array(
                 array( 'setBaseUrl',       array( $config['base_url'] )),
                 array( 'setDefaultOption', array( 'params/cache.override_ttl', 3600 )),
-                array( 'setDescription',   array( '@geonaute_linkdata.service_description' )),
+                array( 'setDescription',   array( $this->container->getDefinition('geonaute_linkdata.service_description') )),
             )
         ));
 

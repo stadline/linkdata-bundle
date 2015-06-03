@@ -23,6 +23,7 @@ class Configuration implements ConfigurationInterface
         $rootNode
             ->children()
                 ->scalarNode('base_url')->cannotBeEmpty()->end()
+                ->scalarNode('service_description')->defaultValue(__DIR__.'/../Resources/config/client.json')->end()
             ->end();
 
         return $treeBuilder;
