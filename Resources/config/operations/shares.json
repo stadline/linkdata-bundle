@@ -1,8 +1,8 @@
 {
     "operations": {
-        "GetShares": {
+        "getShares": {
             "httpMethod": "GET",
-            "uri": "/shares/{token}.xml",
+            "uri": "shares/{token}.xml",
             "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetShares\\Response",
             "parameters": {
                 "token": { "location": "uri", "required": true }
@@ -11,16 +11,16 @@
                 "location": "query"
             }
         },
-        "DeleteShares": {
+        "deleteShares": {
             "httpMethod": "DELETE",
-            "uri": "/shares/{token}.xml",
+            "uri": "shares/{token}.xml",
             "parameters": {
                 "token": { "location": "uri", "required": true }
             }
         },
-        "PutSharesAdd": {
+        "putSharesAdd": {
             "httpMethod": "PUT",
-            "uri": "/shares/add.xml",
+            "uri": "shares/add.xml",
             "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\PutSharesAdd\\Response",
             "additionalParameters": {
                 "location": "postField"

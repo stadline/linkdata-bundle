@@ -1,8 +1,8 @@
 {
     "operations": {
-        "GetActivitySummary": {
+        "getActivitySummary": {
             "httpMethod": "GET",
-            "uri": "/activity/{id}/summary.xml",
+            "uri": "activity/{id}/summary.xml",
             "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetActivitySummary\\Response",
             "parameters": {
                 "id": { "location": "uri", "required": true }
@@ -11,9 +11,9 @@
                 "location": "query"
             }
         },
-        "GetActivityDataSummary": {
+        "getActivityDataSummary": {
             "httpMethod": "GET",
-            "uri": "/activity/{id}/datasummary.xml",
+            "uri": "activity/{id}/datasummary.xml",
             "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetActivityDataSummary\\Response",
             "parameters": {
                 "id": { "location": "uri", "required": true }
@@ -22,9 +22,9 @@
                 "location": "query"
             }
         },
-        "GetActivitySimilar": {
+        "getActivitySimilar": {
             "httpMethod": "GET",
-            "uri": "/activity/{id}/similar/{datatype}.xml",
+            "uri": "activity/{id}/similar/{datatype}.xml",
             "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetActivitySimilar\\Response",
             "parameters": {
                 "id":       { "location": "uri", "required": true },
@@ -34,9 +34,9 @@
                 "location": "query"
             }
         },
-        "GetActivityDataStreams": {
+        "getActivityDataStreams": {
             "httpMethod": "GET",
-            "uri": "/activity/{id}/datastreams.xml",
+            "uri": "activity/{id}/datastreams.xml",
             "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetActivityDataStreams\\Response",
             "parameters": {
                 "id":    { "location": "uri", "required": true }
@@ -45,57 +45,57 @@
                 "location": "query"
             }
         },
-        "PostActivityImport": {
+        "postActivityImport": {
             "httpMethod": "POST",
-            "uri": "/activity/import.xml",
+            "uri": "activity/import.xml",
             "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\PostActivityImport\\Response",
             "parameters": {
                 "xml": { "location": "body", "required": true }
             }
         },
-        "PutActivityImport": {
+        "putActivityImport": {
             "httpMethod": "PUT",
-            "uri": "/activity/{id}/import.xml",
+            "uri": "activity/{id}/import.xml",
             "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\PutActivityImport\\Response",
             "parameters": {
                 "id":    { "location": "uri", "required": true },
                 "xml": { "location": "body", "required": true }
             }
         },
-        "DeleteActivitySummary": {
+        "deleteActivitySummary": {
             "httpMethod": "DELETE",
-            "uri": "/activity/{id}/summary.xml",
+            "uri": "activity/{id}/summary.xml",
             "parameters": {
                 "id":    { "location": "uri", "required": true }
             }
         },
-        "PutActivityComment": {
+        "putActivityComment": {
             "httpMethod": "PUT",
-            "uri": "/activity/{id}/comment.xml",
+            "uri": "activity/{id}/comment.xml",
             "parameters": {
                 "id":      { "location": "uri", "required": true },
                 "comment": { "location": "postField", "required": true }
             }
         },
-        "PutActivityTag": {
+        "putActivityTag": {
             "httpMethod": "PUT",
-            "uri": "/activity/{id}/tag.xml",
+            "uri": "activity/{id}/tag.xml",
             "parameters": {
                 "id":      { "location": "uri", "required": true },
                 "tag": { "location": "postField", "required": true }
             }
         },
-        "DeleteActivityTag": {
+        "deleteActivityTag": {
             "httpMethod": "DELETE",
-            "uri": "/activity/{id}/tag.xml",
+            "uri": "activity/{id}/tag.xml",
             "parameters": {
                 "id":      { "location": "uri", "required": true },
                 "tag": { "location": "postField", "required": true }
             }
         },
-        "DeleteActivityTrack": {
+        "deleteActivityTrack": {
             "httpMethod": "DELETE",
-            "uri": "/activity/{id}/track.xml",
+            "uri": "activity/{id}/track.xml",
             "parameters": {
                 "id":      { "location": "uri", "required": true }
             }

@@ -1,24 +1,24 @@
 {
     "operations": {
-        "PostFriends": {
+        "postFriends": {
             "httpMethod": "POST",
-            "uri": "/users/{ldid}/friends.xml",
+            "uri": "users/{ldid}/friends.xml",
             "parameters": {
                 "ldid": { "location": "uri", "required": true },
                 "friend": { "location": "postField", "required": true }
             }
         },
-        "DeleteFriends": {
+        "deleteFriends": {
             "httpMethod": "DELETE",
-            "uri": "/users/{ldid}/friends/{friend}.xml",
+            "uri": "users/{ldid}/friends/{friend}.xml",
             "parameters": {
                 "ldid": { "location": "uri", "required": true },
                 "friend": { "location": "uri", "required": true }
             }
         },
-        "GetFriends": {
+        "getFriends": {
             "httpMethod": "GET",
-            "uri": "/users/{ldid}/friends.xml",
+            "uri": "users/{ldid}/friends.xml",
 			"responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetFriends\\Response",
             "parameters": {
                 "ldid": { "location": "uri", "required": true }

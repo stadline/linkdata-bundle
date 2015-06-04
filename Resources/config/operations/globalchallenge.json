@@ -1,8 +1,8 @@
 {
     "operations": {
-        "GetGlobalChallenges": {
+        "getGlobalChallenges": {
             "httpMethod": "GET",
-            "uri": "/globalchallenges.xml",
+            "uri": "globalchallenges.xml",
             "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetGlobalChallenges\\Response",
             "additionalParameters": {
                 "location": "query"

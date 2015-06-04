@@ -1,8 +1,8 @@
 {
     "operations": {
-        "PostPrograms": {
+        "postPrograms": {
             "httpMethod": "POST",
-            "uri": "/programs.xml",
+            "uri": "programs.xml",
             "parameters": {
                 "xml": { "location": "body", "required": true },
                 "goal_id": { "location": "query", "required": true },
@@ -11,9 +11,9 @@
                 "lang": { "location": "query", "required": true }
             }
         },
-        "PutPrograms": {
+        "putPrograms": {
             "httpMethod": "PUT",
-            "uri": "/programs/{modelId}.xml",
+            "uri": "programs/{modelId}.xml",
             "parameters": {
                 "xml": { "location": "body", "required": true },
                 "goal_id": { "location": "query", "required": true },

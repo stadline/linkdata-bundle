@@ -1,72 +1,72 @@
 {
     "operations": {
-        "GetReferenceDatatypes": {
+        "getReferenceDatatypes": {
             "httpMethod": "GET",
-            "uri": "/reference/datatypes.xml",
+            "uri": "reference/datatypes.xml",
             "responseClass": "Geonaute\\LinkdataBundle\\Entity\\Reference\\Datatypes", 
             "additionalParameters": {
                 "location": "query"
             }
         },
-        "GetReferenceSports": {
+        "getReferenceSports": {
             "httpMethod": "GET",
-            "uri": "/reference/sports.xml",
+            "uri": "reference/sports.xml",
             "responseClass": "Geonaute\\LinkdataBundle\\Entity\\Reference\\Sports", 
             "additionalParameters": {
                 "location": "query"
             }
         },
-        "GetReferenceExercises": {
+        "getReferenceExercises": {
             "httpMethod": "GET",
-            "uri": "/reference/exercises.xml",
+            "uri": "reference/exercises.xml",
             "responseClass": "Geonaute\\LinkdataBundle\\Entity\\Reference\\Exercises", 
             "additionalParameters": {
                 "location": "query"
             }
         },
-        "GetReferenceCoachingGoals": {
+        "getReferenceCoachingGoals": {
             "httpMethod": "GET",
-            "uri": "/reference/coachinggoals.xml",
+            "uri": "reference/coachinggoals.xml",
             "responseClass": "Geonaute\\LinkdataBundle\\Entity\\Reference\\Goals",
             "additionalParameters": {
                 "location": "query"
             }
         },
-        "GetReferenceGoals": {
+        "getReferenceGoals": {
             "httpMethod": "GET",
-            "uri": "/reference/goals.xml",
+            "uri": "reference/goals.xml",
             "responseClass": "Geonaute\\LinkdataBundle\\Entity\\Reference\\Goals",
             "additionalParameters": {
                 "location": "query"
             }
         },
-        "GetReferenceUnivers": {
+        "getReferenceUnivers": {
             "httpMethod": "GET",
-            "uri": "/reference/univers.xml",
+            "uri": "reference/univers.xml",
             "responseClass": "Geonaute\\LinkdataBundle\\Entity\\Reference\\UniversList",
             "additionalParameters": {
                 "location": "query"
             }
         },
-        "GetReferenceSensors": {
+        "getReferenceSensors": {
             "httpMethod": "GET",
-            "uri": "/reference/sensors.xml",
+            "uri": "reference/sensors.xml",
             "responseClass": "Geonaute\\LinkdataBundle\\Entity\\Reference\\Sensors",
             "additionalParameters": {
                 "location": "query"
             }
         },
-        "GetReferenceAccessories": {
+        "getReferenceAccessories": {
             "httpMethod": "GET",
-            "uri": "/reference/accessories.xml",
+            "uri": "reference/accessories.xml",
             "responseClass": "Geonaute\\LinkdataBundle\\Entity\\Reference\\Accessories",
             "additionalParameters": {
                 "location": "query"
             }
         },
-        "GetReferenceSmartdevices": {
+        "getReferenceSmartdevices": {
             "httpMethod": "GET",
-            "uri": "/reference/smartdevices.xml",
+            "uri": "reference/smartdevices.xml",
             "responseClass": "Geonaute\\LinkdataBundle\\Entity\\Reference\\Smartdevices",
             "additionalParameters": {
                 "location": "query"

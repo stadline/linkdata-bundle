@@ -1,6 +1,6 @@
 {
     "operations": {
-        "GetSession": {
+        "getSession": {
             "httpMethod": "GET",
             "uri": "session/{token}.xml",
             "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetSession\\Response",

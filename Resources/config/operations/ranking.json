@@ -1,8 +1,8 @@
 {
     "operations": {
-        "GetUsersRankingFriends": {
+        "getUsersRankingFriends": {
             "httpMethod": "GET",
-            "uri": "/users/{ldid}/ranking_friends.xml",
+            "uri": "users/{ldid}/ranking_friends.xml",
             "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetUsersRankingFriends\\Response",
             "parameters": {
                 "ldid": { "location": "uri", "required": true },
@@ -13,9 +13,9 @@
                 "country": { "location": "query", "required": false }
             }
         },
-        "GetUsersRanking": {
+        "getUsersRanking": {
             "httpMethod": "GET",
-            "uri": "/users/{ldid}/ranking.xml",
+            "uri": "users/{ldid}/ranking.xml",
             "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetUsersRanking\\Response",
             "parameters": {
                 "ldid": { "location": "uri", "required": true },

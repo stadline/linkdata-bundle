@@ -1,8 +1,8 @@
 {
     "operations": {
-        "GetUsersProfile": {
+        "getUsersProfile": {
             "httpMethod": "GET",
-            "uri": "/users/{ldid}/profile.xml",
+            "uri": "users/{ldid}/profile.xml",
             "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetUsersProfile\\Response",
             "parameters": {
                 "ldid": { "location": "uri", "required": true }
@@ -11,9 +11,9 @@
                 "location": "query"
             }
         },
-        "GetUsersChallenges": {
+        "getUsersChallenges": {
             "httpMethod": "GET",
-            "uri": "/users/{ldid}/challenges.xml",
+            "uri": "users/{ldid}/challenges.xml",
             "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetUsersChallenges\\Response",
             "parameters": {
                 "ldid": { "location": "uri", "required": true }
@@ -22,9 +22,9 @@
                 "location": "query"
             }
         },
-        "GetUsersGlobalChallenge": {
+        "getUsersGlobalChallenge": {
             "httpMethod": "GET",
-            "uri": "/users/{ldid}/globalchallenge.xml",
+            "uri": "users/{ldid}/globalchallenge.xml",
             "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetUsersGlobalChallenge\\Response",
             "parameters": {
                 "ldid": { "location": "uri", "required": true }
@@ -33,9 +33,9 @@
                 "location": "query"
             }
         },
-        "GetUsersActivities": {
+        "getUsersActivities": {
             "httpMethod": "GET",
-            "uri": "/users/{ldid}/activities.xml",
+            "uri": "users/{ldid}/activities.xml",
             "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetUsersActivities\\Response",
             "parameters": {
                 "ldid":    { "location": "uri", "required": true },
@@ -45,51 +45,51 @@
                 "location": "query"
             }
         },
-        "GetUsersActivitiesSports": {
+        "getUsersActivitiesSports": {
             "httpMethod": "GET",
-            "uri": "/users/{ldid}/activities/sports.xml",
+            "uri": "users/{ldid}/activities/sports.xml",
             "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetUsersActivitiesSports\\Response",
             "parameters": {
                 "ldid":    { "location": "uri", "required": true }
             }
         },
-        "GetUsersActivitiesTags": {
+        "getUsersActivitiesTags": {
             "httpMethod": "GET",
-            "uri": "/users/{ldid}/activities/tags.xml",
+            "uri": "users/{ldid}/activities/tags.xml",
             "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetUsersActivitiesTags\\Response",
             "parameters": {
                 "ldid":    { "location": "uri", "required": true }
             }
         },
-        "PutUsersTag": {
-            "httpMethod": "Put",
-            "uri": "/users/{ldid}/tag.xml",
+        "putUsersTag": {
+            "httpMethod": "PUT",
+            "uri": "users/{ldid}/tag.xml",
             "parameters": {
                 "ldid": { "location": "uri", "required": true },
                 "tag": { "location": "postField", "required": true }
             }
         },
-        "GetUsersTags": {
-            "httpMethod": "Get",
-            "uri": "/users/{ldid}/tags.xml",
+        "getUsersTags": {
+            "httpMethod": "GET",
+            "uri": "users/{ldid}/tags.xml",
             "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetUsersTags\\Response",
             "parameters": {
                 "ldid": { "location": "uri" },
                 "keycache": { "location": "query" }
             }
         },
-        "DeleteUsersTag": {
-            "httpMethod": "Delete",
-            "uri": "/users/{ldid}/tag.xml",
+        "deleteUsersTag": {
+            "httpMethod": "DELETE",
+            "uri": "users/{ldid}/tag.xml",
             "parameters": {
                 "ldid": { "location": "uri" },
                 "tag": { "location": "postField", "required": true }
             }
             
         },
-        "GetUsersRoutes": {
+        "getUsersRoutes": {
             "httpMethod": "GET",
-            "uri": "/users/{ldid}/routes.xml",
+            "uri": "users/{ldid}/routes.xml",
             "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetUsersRoutes\\Response",
             "parameters": {
                 "ldid": { "location": "uri", "required": true }
@@ -98,9 +98,9 @@
                 "location": "query"
             }
         },
-        "GetUsersTotalYear": {
+        "getUsersTotalYear": {
             "httpMethod": "GET",
-            "uri": "/users/{ldid}/totalyear.xml",
+            "uri": "users/{ldid}/totalyear.xml",
             "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetUsersTotalYear\\Response",
             "parameters": {
                 "ldid": { "location": "uri", "required": true }
@@ -109,18 +109,18 @@
                 "location": "query"
             }
         },
-        "GetUsersTotalMonths": {
+        "getUsersTotalMonths": {
             "httpMethod": "GET",
-            "uri": "/users/{ldid}/totalmonths.xml",
+            "uri": "users/{ldid}/totalmonths.xml",
             "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetUsersTotalMonths\\Response",
             "parameters": {
                 "ldid": { "location": "uri", "required": true },
                 "year": { "location": "query", "required": true }
             }
         },
-        "GetUsersMeasures": {
+        "getUsersMeasures": {
             "httpMethod": "GET",
-            "uri": "/users/{ldid}/measures.xml",
+            "uri": "users/{ldid}/measures.xml",
             "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetUsersMeasures\\Response",
             "parameters": {
                 "ldid": { "location": "uri", "required": true }
@@ -129,18 +129,18 @@
                 "location": "query"
             }
         },
-        "GetUsersRecords": {
+        "getUsersRecords": {
             "httpMethod": "GET",
-            "uri": "/users/{ldid}/records.xml",
+            "uri": "users/{ldid}/records.xml",
             "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetUsersRecords\\Response",
             "parameters": {
                 "ldid": { "location": "uri", "required": true },
                 "sportid": { "location": "query", "required": false }
             }
         },
-        "GetUsersConnectedDevices": {
+        "getUsersConnectedDevices": {
             "httpMethod": "GET",
-            "uri": "/users/{ldid}/connecteddevices.xml",
+            "uri": "users/{ldid}/connecteddevices.xml",
             "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetUsersConnectedDevices\\Response",
             "parameters": {
                 "ldid": { "location": "uri", "required": true }
@@ -149,9 +149,9 @@
                 "location": "query"
             }
         },
-        "PutUsersMeasures": {
+        "putUsersMeasures": {
             "httpMethod": "PUT",
-            "uri": "/users/{ldid}/measures.xml",
+            "uri": "users/{ldid}/measures.xml",
             "parameters": {
                 "ldid": { "location": "uri" },
                 "unitid": { "location": "postField", "required": true },
@@ -161,26 +161,26 @@
                 "location": "postField"
             }
         },
-        "PutUsersLocalization": {
+        "putUsersLocalization": {
             "httpMethod": "PUT",
-            "uri": "/users/{ldid}/localization.xml",
+            "uri": "users/{ldid}/localization.xml",
             "parameters": {
                 "ldid": { "location": "uri" },
                 "country": { "location": "postField", "required": false },
                 "lang": { "location": "postField", "required": false }
             }
         },
-        "GetUsersTotalProfile": {
+        "getUsersTotalProfile": {
             "httpMethod": "GET",
-            "uri": "/users/{ldid}/total_profile.xml",
+            "uri": "users/{ldid}/total_profile.xml",
             "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetUsersTotalProfile\\Response",
             "parameters": {
                 "ldid": { "location": "uri" }
             }
         },
-        "GetUsersSharedActivities": {
+        "getUsersSharedActivities": {
             "httpMethod": "GET",
-            "uri": "/users/{ldid}/shared_activities.xml",
+            "uri": "users/{ldid}/shared_activities.xml",
             "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetUsersSharedActivities\\Response",
             "parameters": {
                 "ldid": { "location": "uri" }

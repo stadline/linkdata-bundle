@@ -1,8 +1,8 @@
 {
     "operations": {
-        "GetRoute": {
+        "getRoute": {
             "httpMethod": "GET",
-            "uri": "/route/{token}.xml",
+            "uri": "route/{token}.xml",
             "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetRoute\\Response",
             "parameters": {
                 "token": { "location": "uri", "required": true }
@@ -11,9 +11,9 @@
                 "location": "query"
             }
         },
-        "PostRouteCreate": {
+        "postRouteCreate": {
             "httpMethod": "POST",
-            "uri": "/route/create.xml",
+            "uri": "route/create.xml",
             "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\PostRouteCreate\\Response",
             "parameters": {
                 "ldid":       { "location": "postField", "required": true },
