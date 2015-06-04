@@ -15,10 +15,15 @@ trait RegistratorTrait
      * Easier way to retrieve a service
      *
      * @param string $id
+     * @param boolean $exceptionIfInvalid
      * @return Definition
      */
-    public function get($id)
+    public function get($id, $exceptionIfInvalid = true)
     {
+        if (!$exceptionIfInvalid && !$this->container->hasDefinition($id)) {
+            return null;
+        }
+
         return $this->container->getDefinition($id);
     }
 

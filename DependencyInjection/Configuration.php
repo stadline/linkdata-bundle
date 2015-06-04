@@ -26,6 +26,7 @@ class Configuration implements ConfigurationInterface
                 ->scalarNode('service_description')->defaultValue(__DIR__.'/../Resources/config/client.json')->end()
                 ->arrayNode('plugins')
                     ->append($this->getCachePluginNode())
+                    ->append($this->getAuthPluginNode())
                 ->end()
             ->end();
 
@@ -65,6 +66,19 @@ class Configuration implements ConfigurationInterface
                 ->end()
             ->end()
         ->end();
+
+        return $node;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getAuthPluginNode()
+    {
+        $builder = new TreeBuilder();
+        $node = $builder->root('auth');
+
+        $node->canBeEnabled()->end();
 
         return $node;
     }

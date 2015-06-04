@@ -13,8 +13,15 @@ class PluginsCompilerPass extends SimpleCompilerPass
 {
     protected function processConfig(array $config)
     {
-        if ($config['plugins']['cache']['enabled']) {
-            $this->loadCachePlugin($config['plugins']['cache']);
+        $plugins = array(
+            'cache' => 'loadCachePlugin',
+            'auth' => 'loadAuthPlugin',
+        );
+
+        foreach ($plugins as $key => $method) {
+            if ($config['plugins'][$key]['enabled']) {
+                $this->$method($config['plugins'][$key]);
+            }
         }
     }
 
@@ -65,5 +72,15 @@ class PluginsCompilerPass extends SimpleCompilerPass
         // connect the plugin
         $this->get('geonaute_linkdata.client')->addMethodCall('setDefaultOption', array('params/cache.override_ttl', $config['default_ttl']));
         $this->get('geonaute_linkdata.client')->addMethodCall('addSubscriber', array($this->get('geonaute_linkdata.plugin.cache')));
+    }
+
+    protected function loadAuthPlugin(array $config)
+    {
+        $this->register('geonaute_linkdata.plugin.auth', array(
+            'class' => 'Geonaute\LinkdataBundle\Plugin\AuthPlugin',
+            'arguments' => array($this->get('security.context', false), $this->get('request_injector')),
+        ));
+
+        $this->get('geonaute_linkdata.client')->addMethodCall('addSubscriber', array($this->get('geonaute_linkdata.plugin.auth')));
     }
 }
