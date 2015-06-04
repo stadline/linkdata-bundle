@@ -23,8 +23,92 @@ class Configuration implements ConfigurationInterface
         $rootNode
             ->children()
                 ->scalarNode('base_url')->cannotBeEmpty()->end()
-            ->end();
+                ->scalarNode('service_description')->defaultValue(__DIR__.'/../Resources/config/client.json')->end()
+                ->append($this->getFormatterNode())
+                ->arrayNode('plugins')
+                    ->append($this->getCachePluginNode())
+                    ->append($this->getAuthPluginNode())
+                    ->append($this->getLanguagePluginNode())
+                ->end()
+            ->end()
+        ->end();
 
         return $treeBuilder;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getFormatterNode()
+    {
+        $builder = new TreeBuilder();
+        $node = $builder->root('formatter');
+
+        $node->canBeEnabled()->end();
+
+        return $node;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getCachePluginNode()
+    {
+        $builder = new TreeBuilder();
+        $node = $builder->root('cache');
+
+        $node
+            ->canBeEnabled()
+            ->children()
+                ->scalarNode('default_ttl')->defaultValue(3600)->end()
+                ->arrayNode('storage')
+                    ->canBeDisabled()
+                    ->children()
+                        ->scalarNode('service')->defaultValue('geonaute_linkdata.cache.storage')->end()
+                        ->scalarNode('adapter')->defaultValue('misd_guzzle.cache.doctrine.filesystem.adapter')->end()
+                    ->end()
+                ->end()
+                ->arrayNode('can_cache')
+                    ->canBeEnabled()
+                    ->children()
+                        ->scalarNode('service')->defaultValue('geonaute_linkdata.cache.can_cache')->end()
+                    ->end()
+                ->end()
+                ->arrayNode('revalidation')
+                    ->canBeEnabled()
+                    ->children()
+                        ->scalarNode('service')->defaultValue('geonaute_linkdata.cache.revalidation')->end()
+                    ->end()
+                ->end()
+            ->end()
+        ->end();
+
+        return $node;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getAuthPluginNode()
+    {
+        $builder = new TreeBuilder();
+        $node = $builder->root('auth');
+
+        $node->canBeEnabled()->end();
+
+        return $node;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getLanguagePluginNode()
+    {
+        $builder = new TreeBuilder();
+        $node = $builder->root('language');
+
+        $node->canBeEnabled()->end();
+
+        return $node;
     }
 }

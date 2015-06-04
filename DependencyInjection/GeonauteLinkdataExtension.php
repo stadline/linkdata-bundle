@@ -2,33 +2,59 @@
 
 namespace Geonaute\LinkdataBundle\DependencyInjection;
 
-use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\Config\FileLocator;
-use Symfony\Component\HttpKernel\DependencyInjection\Extension;
-use Symfony\Component\DependencyInjection\Loader;
+use Geonaute\LinkdataBundle\DependencyInjection\Helpers\SimpleExtension;
 
 /**
  * This is the class that loads and manages your bundle configuration.
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class GeonauteLinkdataExtension extends Extension
+class GeonauteLinkdataExtension extends SimpleExtension
 {
     /**
      * {@inheritDoc}
      */
-    public function load(array $configs, ContainerBuilder $container)
+    protected function loadConfig(array $config)
     {
-        $container->setParameter('geonaute_linkdata.service_description.config_path', __DIR__.'/../Resources/config/client.json');
+        // rest client
+        $this->define('geonaute_linkdata.service_description', array(
+            'class' => '%guzzle.service_description.class%',
+            'factory' => array('%guzzle.service_description.class%', 'factory'),
+            'arguments' => array($config['service_description']),
+        ));
 
-        $configuration = new Configuration();
-        $config = $this->processConfiguration($configuration, $configs);
+        $this->define('geonaute_linkdata.client', array(
+            'class' => 'Geonaute\LinkdataBundle\Plugin\CachedClient',
+            'tags' => array(
+                array('name' => 'guzzle.client'),
+            ),
+            'calls' => array(
+                array('setBaseUrl', array($config['base_url'])),
+                array('setDescription', array($this->get('geonaute_linkdata.service_description'))),
+            )
+        ));
 
-        $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
-        $loader->load('services.yml');
+        $this->alias('linkdata_rest_client', 'geonaute_linkdata.client');
 
-        if ($config['base_url']) {
-            $container->setParameter('geonaute_linkdata.base_url', $config['base_url']);
-        }
+        // form types
+        $this->define('geonaute_linkdata.type.linkdata_choice', array(
+            'class' => 'Geonaute\LinkdataBundle\Form\Type\LinkdataChoiceType',
+            'tags' => array(
+                array('name' => 'form.type', 'alias' => 'linkdata_choice'),
+            ),
+            'calls' => array(
+                array('setClient', array($this->get('linkdata_rest_client'))),
+            )
+        ));
+
+        $this->define('geonaute_linkdata.type.filter_linkdata_choice', array(
+            'class' => 'Geonaute\LinkdataBundle\Form\Type\FilterLinkdataChoiceType',
+            'tags' => array(
+                array('name' => 'form.type', 'alias' => 'filter_linkdata_choice'),
+            ),
+            'calls' => array(
+                array('setClient', array($this->get('linkdata_rest_client'))),
+            )
+        ));
     }
 }

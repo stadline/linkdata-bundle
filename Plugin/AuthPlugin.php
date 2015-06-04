@@ -12,7 +12,7 @@ class AuthPlugin implements EventSubscriberInterface
     private $securityContext;
     private $requestInjector;
 
-    public function __construct(SecurityContextInterface $securityContext, RequestInjectorInterface $requestInjector)
+    public function __construct(SecurityContextInterface $securityContext = null, RequestInjectorInterface $requestInjector)
     {
         $this->securityContext = $securityContext;
         $this->requestInjector = $requestInjector;
@@ -36,7 +36,7 @@ class AuthPlugin implements EventSubscriberInterface
         $request = $event['request'];
 
         // add HTTP authentification header
-        if ($securityToken = $this->securityContext->getToken()) {
+        if ($this->securityContext && ($securityToken = $this->securityContext->getToken())) {
             if ($securityToken instanceof AuthPluginInterface) {
                 $requestKey = $securityToken->getSwarmRequestKey();
 
