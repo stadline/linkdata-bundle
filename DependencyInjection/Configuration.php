@@ -24,14 +24,29 @@ class Configuration implements ConfigurationInterface
             ->children()
                 ->scalarNode('base_url')->cannotBeEmpty()->end()
                 ->scalarNode('service_description')->defaultValue(__DIR__.'/../Resources/config/client.json')->end()
+                ->append($this->getFormatterNode())
                 ->arrayNode('plugins')
                     ->append($this->getCachePluginNode())
                     ->append($this->getAuthPluginNode())
                     ->append($this->getLanguagePluginNode())
                 ->end()
-            ->end();
+            ->end()
+        ->end();
 
         return $treeBuilder;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getFormatterNode()
+    {
+        $builder = new TreeBuilder();
+        $node = $builder->root('formatter');
+
+        $node->canBeEnabled()->end();
+
+        return $node;
     }
 
     /**

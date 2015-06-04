@@ -9,15 +9,15 @@ parameters:
     geonaute_linkdata.client.class:              Geonaute\LinkdataBundle\Plugin\CachedClient
 
 services:
-#    # Utils
-#    geonaute_linkdata.formatter:
-#        class: %geonaute_linkdata.formatter.class%
-#        arguments: [ @translator ]
-#
-#    geonaute_linkdata.datatype.utils:
-#        class: %linkdata.datatype.utils.class%
-#        arguments: [ @geonaute_linkdata.formatter ]
-#
+    # Utils
+    geonaute_linkdata.formatter:
+        class: %geonaute_linkdata.formatter.class%
+        arguments: [ @translator ]
+
+    geonaute_linkdata.datatype.utils:
+        class: %linkdata.datatype.utils.class%
+        arguments: [ @geonaute_linkdata.formatter ]
+
 #    #Type
 #    geonaute_linkdata.type.linkdata_choice:
 #        class: Geonaute\LinkdataBundle\Form\Type\LinkdataChoiceType
