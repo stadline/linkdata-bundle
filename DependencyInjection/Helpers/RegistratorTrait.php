@@ -1,11 +1,6 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-namespace Geonaute\LinkdataBundle\DependencyInjection;
+namespace Geonaute\LinkdataBundle\DependencyInjection\Helpers;
 
 use Symfony\Component\DependencyInjection\Definition;
 
@@ -26,7 +21,7 @@ trait RegistratorTrait
     {
         return $this->container->getDefinition($id);
     }
-    
+
     /**
      * Easier way to register a service
      *
@@ -39,14 +34,20 @@ trait RegistratorTrait
         $definition = new Definition();
 
         if (isset($options['class'])) {
-            $this->container->setParameter($id.'.class', $options['class']);
-            $definition->setClass('%'.$id.'.class%');
+            $this->container->setParameter($id . '.class', $options['class']);
+            $definition->setClass('%' . $id . '.class%');
         }
 
+        if (isset($options['factory'])) {
+            $definition->setFactory($options['factory']);
+        }
+
+        // @deprecated
         if (isset($options['factory_class'])) {
             $definition->setFactoryClass($options['factory_class']);
         }
 
+        // @deprecated
         if (isset($options['factory_method'])) {
             $definition->setFactoryMethod($options['factory_method']);
         }

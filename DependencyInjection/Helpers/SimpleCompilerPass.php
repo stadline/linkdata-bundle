@@ -1,12 +1,10 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\DependencyInjection\Compiler;
+namespace Geonaute\LinkdataBundle\DependencyInjection\Helpers;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
-use Geonaute\LinkdataBundle\DependencyInjection\SimpleExtension;
-use Geonaute\LinkdataBundle\DependencyInjection\RegistratorTrait;
 
 /**
  * Description of SimpleCompilerPass
@@ -16,7 +14,7 @@ use Geonaute\LinkdataBundle\DependencyInjection\RegistratorTrait;
 abstract class SimpleCompilerPass implements CompilerPassInterface
 {
     use RegistratorTrait;
-
+    
     /**
      * @type ContainerBuilder
      */

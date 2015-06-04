@@ -1,9 +1,10 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\DependencyInjection;
+namespace Geonaute\LinkdataBundle\DependencyInjection\Helpers;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
+use Geonaute\LinkdataBundle\DependencyInjection\Configuration;
 
 /**
  * Description of SimpleExtension
@@ -13,7 +14,7 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 abstract class SimpleExtension extends Extension
 {
     use RegistratorTrait;
-
+    
     /**
      * @type ContainerBuilder
      */

@@ -2,6 +2,8 @@
 
 namespace Geonaute\LinkdataBundle\DependencyInjection;
 
+use Geonaute\LinkdataBundle\DependencyInjection\Helpers\SimpleExtension;
+
 /**
  * This is the class that loads and manages your bundle configuration.
  *
@@ -14,16 +16,10 @@ class GeonauteLinkdataExtension extends SimpleExtension
      */
     protected function loadConfig(array $config)
     {
-        $this->loadRestClient($config);
-    }
-
-    protected function loadRestClient(array $config)
-    {
         $this->register('geonaute_linkdata.service_description', array(
             'class' => '%guzzle.service_description.class%',
-            'factory_class' => '%guzzle.service_description.class%',
-            'factory_method' => 'factory',
-            'arguments' => array( $config['service_description'] ),
+            'factory' => array('%guzzle.service_description.class%', 'factory'),
+            'arguments' => array($config['service_description']),
         ));
 
         $this->register('geonaute_linkdata.client', array(
@@ -32,9 +28,9 @@ class GeonauteLinkdataExtension extends SimpleExtension
                 'guzzle.client' => array(),
             ),
             'calls' => array(
-                array( 'setBaseUrl',       array( $config['base_url'] )),
-                array( 'setDefaultOption', array( 'params/cache.override_ttl', 3600 )), // @FIXME move this parameter to PluginsCompilerPass
-                array( 'setDescription',   array( $this->get('geonaute_linkdata.service_description') )),
+                array('setBaseUrl', array($config['base_url'])),
+                array('setDefaultOption', array('params/cache.override_ttl', 3600)), // @FIXME move this parameter to PluginsCompilerPass
+                array('setDescription', array($this->get('geonaute_linkdata.service_description'))),
             )
         ));
 
