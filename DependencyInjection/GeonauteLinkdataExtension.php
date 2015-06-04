@@ -29,7 +29,6 @@ class GeonauteLinkdataExtension extends SimpleExtension
             ),
             'calls' => array(
                 array('setBaseUrl', array($config['base_url'])),
-                array('setDefaultOption', array('params/cache.override_ttl', 3600)), // @FIXME move this parameter to PluginsCompilerPass
                 array('setDescription', array($this->get('geonaute_linkdata.service_description'))),
             )
         ));
