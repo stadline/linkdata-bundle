@@ -62,17 +62,14 @@ services:
 #        class: %geonaute_linkdata.language_plugin.class%
 #        arguments: [ @locale_injector ]
 #
-#    geonaute_linkdata.result_cache_plugin:
-#        class: %geonaute_linkdata.result_cache_plugin.class%
-#
-#    request_injector:
-#        class: %request_injector.class%
-#        arguments: [ @service_container ]
-#
-#    locale_injector:
-#        class: %locale_injector.class%
-#        arguments: [ @service_container ]
-#
+    request_injector:
+        class: %request_injector.class%
+        arguments: [ @service_container ]
+
+    locale_injector:
+        class: %locale_injector.class%
+        arguments: [ @service_container ]
+
     # cache
     geonaute_linkdata.cache.doctrine_adapter:
         class: %guzzle.cache.doctrine.class%
