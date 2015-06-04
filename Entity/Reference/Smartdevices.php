@@ -10,7 +10,7 @@ use JMS\Serializer\Annotation\XmlList;
 use Geonaute\LinkdataBundle\Entity\LinkdataTransversableEntity;
 
 /**
- * Smartdevices
+ * Smartdevices entity.
  */
 class Smartdevices implements LinkdataTransversableEntity
 {

@@ -10,7 +10,7 @@ use JMS\Serializer\Annotation\XmlList;
 use Geonaute\LinkdataBundle\Entity\LinkdataTransversableEntity;
 
 /**
- * Sports
+ * Sports entity.
  */
 class Sports implements LinkdataTransversableEntity
 {

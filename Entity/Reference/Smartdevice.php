@@ -8,7 +8,7 @@ use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\XmlList;
 
 /**
- * Smartdevice
+ * Smartdevice entity.
  */
 class Smartdevice
 {

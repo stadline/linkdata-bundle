@@ -7,7 +7,7 @@ use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\SerializedName;
 
 /**
- * Goal
+ * Goal entity.
  */
 class Goal
 {

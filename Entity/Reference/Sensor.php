@@ -7,7 +7,7 @@ use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\SerializedName;
 
 /**
- * Sensor
+ * Sensor entity.
  */
 class Sensor
 {

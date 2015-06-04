@@ -7,7 +7,7 @@ use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\SerializedName;
 
 /**
- * Sport
+ * Sport entity.
  *
  * @Serializer\XmlRoot("SPORT")
  */

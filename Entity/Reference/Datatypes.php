@@ -10,9 +10,9 @@ use JMS\Serializer\Annotation\XmlList;
 use Geonaute\LinkdataBundle\Entity\LinkdataTransversableEntity;
 
 /**
- * Datatypes
+ * Datatypes entity.
  */
-class Datatypes implements LinkdataTransversableEntity
+class Datatypes
 {
     /**
      * @Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Reference\Datatype>")

@@ -7,7 +7,7 @@ use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlValue;
 
 /**
- * Smartdevice
+ * Smartdevice entity.
  */
 class SmartdeviceUnit
 {

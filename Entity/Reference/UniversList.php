@@ -9,7 +9,7 @@ use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\XmlList;
 
 /**
- * Sports
+ * Sports entity.
  */
 class UniversList
 {
