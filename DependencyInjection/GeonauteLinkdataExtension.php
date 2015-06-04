@@ -16,6 +16,7 @@ class GeonauteLinkdataExtension extends SimpleExtension
      */
     protected function loadConfig(array $config)
     {
+        // rest client
         $this->define('geonaute_linkdata.service_description', array(
             'class' => '%guzzle.service_description.class%',
             'factory' => array('%guzzle.service_description.class%', 'factory'),
@@ -25,7 +26,7 @@ class GeonauteLinkdataExtension extends SimpleExtension
         $this->define('geonaute_linkdata.client', array(
             'class' => 'Geonaute\LinkdataBundle\Plugin\CachedClient',
             'tags' => array(
-                'guzzle.client' => array(),
+                array('name' => 'guzzle.client'),
             ),
             'calls' => array(
                 array('setBaseUrl', array($config['base_url'])),
@@ -34,5 +35,26 @@ class GeonauteLinkdataExtension extends SimpleExtension
         ));
 
         $this->alias('linkdata_rest_client', 'geonaute_linkdata.client');
+
+        // form types
+        $this->define('geonaute_linkdata.type.linkdata_choice', array(
+            'class' => 'Geonaute\LinkdataBundle\Form\Type\LinkdataChoiceType',
+            'tags' => array(
+                array('name' => 'form.type', 'alias' => 'linkdata_choice'),
+            ),
+            'calls' => array(
+                array('setClient', array($this->get('linkdata_rest_client'))),
+            )
+        ));
+
+        $this->define('geonaute_linkdata.type.filter_linkdata_choice', array(
+            'class' => 'Geonaute\LinkdataBundle\Form\Type\FilterLinkdataChoiceType',
+            'tags' => array(
+                array('name' => 'form.type', 'alias' => 'filter_linkdata_choice'),
+            ),
+            'calls' => array(
+                array('setClient', array($this->get('linkdata_rest_client'))),
+            )
+        ));
     }
 }

@@ -89,7 +89,9 @@ trait RegistratorTrait
         }
 
         if (isset($options['tags'])) {
-            $definition->setTags($options['tags']);
+            foreach ($options['tags'] as $tag) {
+                $definition->addTag($tag['name'], array_diff_key($tag, array('name' => true)));
+            }
         }
 
         if (isset($options['public'])) {
