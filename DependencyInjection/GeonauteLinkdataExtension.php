@@ -16,13 +16,13 @@ class GeonauteLinkdataExtension extends SimpleExtension
      */
     protected function loadConfig(array $config)
     {
-        $this->register('geonaute_linkdata.service_description', array(
+        $this->define('geonaute_linkdata.service_description', array(
             'class' => '%guzzle.service_description.class%',
             'factory' => array('%guzzle.service_description.class%', 'factory'),
             'arguments' => array($config['service_description']),
         ));
 
-        $this->register('geonaute_linkdata.client', array(
+        $this->define('geonaute_linkdata.client', array(
             'class' => 'Geonaute\LinkdataBundle\Plugin\CachedClient',
             'tags' => array(
                 'guzzle.client' => array(),
@@ -33,6 +33,6 @@ class GeonauteLinkdataExtension extends SimpleExtension
             )
         ));
 
-        $this->container->setAlias('linkdata_rest_client', 'geonaute_linkdata.client');
+        $this->alias('linkdata_rest_client', 'geonaute_linkdata.client');
     }
 }

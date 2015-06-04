@@ -2,7 +2,10 @@
 
 namespace Geonaute\LinkdataBundle\DependencyInjection\Helpers;
 
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\DependencyInjection\Definition;
+use Symfony\Component\DependencyInjection\Alias;
 
 /**
  * Description of RegistratorTrait
@@ -12,29 +15,45 @@ use Symfony\Component\DependencyInjection\Definition;
 trait RegistratorTrait
 {
     /**
-     * Easier way to retrieve a service
+     * Easier way to retrieve a reference
      *
-     * @param string $id
+     * @param string  $id
      * @param boolean $exceptionIfInvalid
-     * @return Definition
+     * @return Reference
      */
     public function get($id, $exceptionIfInvalid = true)
     {
-        if (!$exceptionIfInvalid && !$this->container->hasDefinition($id)) {
-            return null;
+        if ($exceptionIfInvalid) {
+            $invalidBehavior = ContainerInterface::EXCEPTION_ON_INVALID_REFERENCE;
+        } else {
+            $invalidBehavior = ContainerInterface::NULL_ON_INVALID_REFERENCE;
         }
 
-        return $this->container->getDefinition($id);
+        return new Reference($id, $invalidBehavior);
     }
 
     /**
-     * Easier way to register a service
+     * Easier way to alias a service
+     *
+     * @param string $alias
+     * @param string $id
+     * @return Alias
+     */
+    public function alias($alias, $id)
+    {
+        $this->container->setAlias($alias, $id);
+
+        return $this->container->getAlias($alias);
+    }
+
+    /**
+     * Easier way to define a service
      *
      * @param string $id
      * @param array  $options
      * @return Definition
      */
-    public function register($id, array $options)
+    public function define($id, array $options)
     {
         $definition = new Definition();
 
