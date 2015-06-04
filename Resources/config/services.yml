@@ -44,10 +44,10 @@ services:
             - [ setDescription,   [ @geonaute_linkdata.service_description ]]
             - [ addSubscriber,    [ @geonaute_linkdata.cache.memcache ]]
             - [ addSubscriber,    [ @geonaute_linkdata.auth_plugin ]]
-#            - [ addSubscriber,    [ @geonaute_linkdata.language_plugin ]]
+            - [ addSubscriber,    [ @geonaute_linkdata.language_plugin ]]
     linkdata_rest_client:
         alias: geonaute_linkdata.client
-#
+
     geonaute_linkdata.service_description:
         class: %guzzle.service_description.class%
         factory_class: %guzzle.service_description.class%
@@ -58,10 +58,10 @@ services:
         class: %geonaute_linkdata.auth_plugin.class%
         arguments: [ @?security.context, @request_injector ]
 
-#    geonaute_linkdata.language_plugin:
-#        class: %geonaute_linkdata.language_plugin.class%
-#        arguments: [ @locale_injector ]
-#
+    geonaute_linkdata.language_plugin:
+        class: %geonaute_linkdata.language_plugin.class%
+        arguments: [ @locale_injector ]
+
     request_injector:
         class: %request_injector.class%
         arguments: [ @service_container ]

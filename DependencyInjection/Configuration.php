@@ -27,6 +27,7 @@ class Configuration implements ConfigurationInterface
                 ->arrayNode('plugins')
                     ->append($this->getCachePluginNode())
                     ->append($this->getAuthPluginNode())
+                    ->append($this->getLanguagePluginNode())
                 ->end()
             ->end();
 
@@ -77,6 +78,19 @@ class Configuration implements ConfigurationInterface
     {
         $builder = new TreeBuilder();
         $node = $builder->root('auth');
+
+        $node->canBeEnabled()->end();
+
+        return $node;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getLanguagePluginNode()
+    {
+        $builder = new TreeBuilder();
+        $node = $builder->root('language');
 
         $node->canBeEnabled()->end();
 

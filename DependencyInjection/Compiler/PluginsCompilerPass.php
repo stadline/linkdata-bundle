@@ -16,6 +16,7 @@ class PluginsCompilerPass extends SimpleCompilerPass
         $plugins = array(
             'cache' => 'loadCachePlugin',
             'auth' => 'loadAuthPlugin',
+            'language' => 'loadLanguagePlugin',
         );
 
         foreach ($plugins as $key => $method) {
@@ -82,5 +83,15 @@ class PluginsCompilerPass extends SimpleCompilerPass
         ));
 
         $this->get('geonaute_linkdata.client')->addMethodCall('addSubscriber', array($this->get('geonaute_linkdata.plugin.auth')));
+    }
+
+    protected function loadLanguagePlugin(array $config)
+    {
+        $this->register('geonaute_linkdata.plugin.language', array(
+            'class' => 'Geonaute\LinkdataBundle\Plugin\LanguagePlugin',
+            'arguments' => array($this->get('locale_injector')),
+        ));
+
+        $this->get('geonaute_linkdata.client')->addMethodCall('addSubscriber', array($this->get('geonaute_linkdata.plugin.language')));
     }
 }
