@@ -2,6 +2,7 @@
     "name": "Linkdata",
     "description": "Linkdata REST API client",
     "includes": [
+        "operations/activity.json",
         "operations/reference.json",
         "operations/training.json"
     ]

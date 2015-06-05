@@ -1,103 +1,11 @@
 {
     "operations": {
-        "getActivitySummary": {
+        "getActivityFullActivity": {
             "httpMethod": "GET",
-            "uri": "activity/{id}/summary.xml",
-            "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetActivitySummary\\Response",
+            "uri": "activity/{id}/fullactivity.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Entity\\Activity\\FullActivity",
             "parameters": {
                 "id": { "location": "uri", "required": true }
-            },
-            "additionalParameters": {
-                "location": "query"
-            }
-        },
-        "getActivityDataSummary": {
-            "httpMethod": "GET",
-            "uri": "activity/{id}/datasummary.xml",
-            "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetActivityDataSummary\\Response",
-            "parameters": {
-                "id": { "location": "uri", "required": true }
-            },
-            "additionalParameters": {
-                "location": "query"
-            }
-        },
-        "getActivitySimilar": {
-            "httpMethod": "GET",
-            "uri": "activity/{id}/similar/{datatype}.xml",
-            "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetActivitySimilar\\Response",
-            "parameters": {
-                "id":       { "location": "uri", "required": true },
-                "datatype": { "location": "uri", "required": true }
-            },
-            "additionalParameters": {
-                "location": "query"
-            }
-        },
-        "getActivityDataStreams": {
-            "httpMethod": "GET",
-            "uri": "activity/{id}/datastreams.xml",
-            "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetActivityDataStreams\\Response",
-            "parameters": {
-                "id":    { "location": "uri", "required": true }
-            },
-            "additionalParameters": {
-                "location": "query"
-            }
-        },
-        "postActivityImport": {
-            "httpMethod": "POST",
-            "uri": "activity/import.xml",
-            "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\PostActivityImport\\Response",
-            "parameters": {
-                "xml": { "location": "body", "required": true }
-            }
-        },
-        "putActivityImport": {
-            "httpMethod": "PUT",
-            "uri": "activity/{id}/import.xml",
-            "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\PutActivityImport\\Response",
-            "parameters": {
-                "id":    { "location": "uri", "required": true },
-                "xml": { "location": "body", "required": true }
-            }
-        },
-        "deleteActivitySummary": {
-            "httpMethod": "DELETE",
-            "uri": "activity/{id}/summary.xml",
-            "parameters": {
-                "id":    { "location": "uri", "required": true }
-            }
-        },
-        "putActivityComment": {
-            "httpMethod": "PUT",
-            "uri": "activity/{id}/comment.xml",
-            "parameters": {
-                "id":      { "location": "uri", "required": true },
-                "comment": { "location": "postField", "required": true }
-            }
-        },
-        "putActivityTag": {
-            "httpMethod": "PUT",
-            "uri": "activity/{id}/tag.xml",
-            "parameters": {
-                "id":      { "location": "uri", "required": true },
-                "tag": { "location": "postField", "required": true }
-            }
-        },
-        "deleteActivityTag": {
-            "httpMethod": "DELETE",
-            "uri": "activity/{id}/tag.xml",
-            "parameters": {
-                "id":      { "location": "uri", "required": true },
-                "tag": { "location": "postField", "required": true }
-            }
-        },
-        "deleteActivityTrack": {
-            "httpMethod": "DELETE",
-            "uri": "activity/{id}/track.xml",
-            "parameters": {
-                "id":      { "location": "uri", "required": true }
             }
         }
     }
