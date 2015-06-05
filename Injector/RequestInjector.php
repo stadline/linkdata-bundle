@@ -20,6 +20,8 @@ class RequestInjector implements RequestInjectorInterface
 
     public function getRequest()
     {
-        return $this->container->get('request');
+        if ($this->container->isScopeActive('request')) {
+            return $this->container->get('request');
+        }
     }
 }

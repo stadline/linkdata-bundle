@@ -2,22 +2,45 @@
 
 namespace Geonaute\LinkdataBundle\Plugin;
 
-use Geonaute\LinkdataBundle\Injector\RequestInjectorInterface;
+use Geonaute\LinkdataBundle\Auth\RequestKeyProvider;
 use Guzzle\Common\Event;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Symfony\Component\Security\Core\SecurityContextInterface;
 
 class AuthPlugin implements EventSubscriberInterface
 {
-    private $securityContext;
-    private $requestInjector;
+    /**
+     * @var RequestKeyProvider[]
+     */
+    private $providers;
 
-    public function __construct(SecurityContextInterface $securityContext = null, RequestInjectorInterface $requestInjector)
+    public function __construct()
     {
-        $this->securityContext = $securityContext;
-        $this->requestInjector = $requestInjector;
+        $this->providers = array();
     }
 
+    /**
+     * @param array $providers
+     */
+    public function setProviders($providers)
+    {
+        $this->providers = array();
+
+        foreach ($providers as $provider) {
+            $this->addProvider($provider);
+        }
+    }
+
+    /**
+     * @param RequestKeyProvider $provider
+     */
+    public function addProvider(RequestKeyProvider $provider)
+    {
+        $this->providers[] = $provider;
+    }
+
+    /**
+     * @return array
+     */
     public static function getSubscribedEvents()
     {
         return array(
@@ -32,20 +55,19 @@ class AuthPlugin implements EventSubscriberInterface
      */
     public function onRequestBeforeSend(Event $event)
     {
-        // get request object
+        /** @var \Guzzle\Http\Message\Request $request */
         $request = $event['request'];
 
-        // add HTTP authentification header
-        if ($this->securityContext && ($securityToken = $this->securityContext->getToken())) {
-            if ($securityToken instanceof AuthPluginInterface) {
-                $requestKey = $securityToken->getSwarmRequestKey();
+        // add HTTP authentication header
+        foreach ($this->providers as $provider) {
+            $requestKey = $provider->getRequestKey();
 
+            if (!empty($requestKey)) {
                 $request->setHeader('X-Linkdata-RequestKey', $requestKey);
+                break;
             }
-        } else {
-            $user = $this->requestInjector->getRequest()->get('user');
-
-            $request->setHeader('X-Linkdata-RequestKey', isset($user['token']) ? $user['token'] : null);
         }
+
+        $request->setHeader('X-Linkdata-RequestKey', null);
     }
 }

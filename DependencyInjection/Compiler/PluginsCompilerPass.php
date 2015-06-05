@@ -78,9 +78,24 @@ class PluginsCompilerPass extends SimpleCompilerPass
 
     protected function loadAuthPlugin(array $config)
     {
+        // request-key providers
+        $this->define('geonaute_linkdata.auth.request_provider', array(
+            'class' => 'Geonaute\LinkdataBundle\Auth\RequestProvider',
+            'arguments' => array($this->get('request_injector')),
+        ));
+
+        $this->define('geonaute_linkdata.auth.security_context_provider', array(
+            'class' => 'Geonaute\LinkdataBundle\Auth\SecurityContextProvider',
+            'arguments' => array($this->get('security.context', false)),
+        ));
+
+        // plugin
         $this->define('geonaute_linkdata.plugin.auth', array(
             'class' => 'Geonaute\LinkdataBundle\Plugin\AuthPlugin',
-            'arguments' => array($this->get('security.context', false), $this->get('request_injector')),
+            'calls' => array(
+                array('addProvider', array($this->get('geonaute_linkdata.auth.request_provider'))),
+                array('addProvider', array($this->get('geonaute_linkdata.auth.security_context_provider'))),
+            )
         ));
 
         $client = $this->container->getDefinition('geonaute_linkdata.client');
