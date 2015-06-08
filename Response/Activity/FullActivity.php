@@ -2,18 +2,17 @@
 
 namespace Geonaute\LinkdataBundle\Response\Activity;
 
+use Geonaute\LinkdataBundle\Response\Response;
 use JMS\Serializer\Annotation as Serializer;
-use JMS\Serializer\Annotation\Type;
-use JMS\Serializer\Annotation\SerializedName;
 
 /**
  * FullActivity entity.
  */
-class FullActivity
+class FullActivity extends Response
 {
     /**
-     * @Type("Geonaute\LinkdataBundle\Entity\Activity\FullActivity")
-     * @SerializedName("ACTIVITY")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Activity\FullActivity")
+     * @Serializer\SerializedName("ACTIVITY")
      */
     protected $activity;
 }

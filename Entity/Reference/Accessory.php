@@ -3,8 +3,6 @@
 namespace Geonaute\LinkdataBundle\Entity\Reference;
 
 use JMS\Serializer\Annotation as Serializer;
-use JMS\Serializer\Annotation\Type;
-use JMS\Serializer\Annotation\SerializedName;
 
 /**
  * Accessory entity.
@@ -13,15 +11,15 @@ class Accessory
 {
     /**
      * @Serializer\Expose
-     * @Type("integer")
-     * @SerializedName("ID")
+     * @Serializer\Type("integer")
+     * @Serializer\SerializedName("ID")
      */
     protected $ID;
 
     /**
      * @Serializer\Expose
-     * @Type("string")
-     * @SerializedName("TITLE")
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("TITLE")
      */
     protected $TITLE;
 

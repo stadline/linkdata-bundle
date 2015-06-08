@@ -4,20 +4,19 @@ namespace Geonaute\LinkdataBundle\Response\Reference;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Criteria;
-use JMS\Serializer\Annotation\Type;
-use JMS\Serializer\Annotation\SerializedName;
-use JMS\Serializer\Annotation\XmlList;
+use Geonaute\LinkdataBundle\Response\Response;
 use Geonaute\LinkdataBundle\Entity\LinkdataTransversableEntity;
+use JMS\Serializer\Annotation as Serializer;
 
 /**
  * Smartdevices entity.
  */
-class Smartdevices implements LinkdataTransversableEntity
+class Smartdevices extends Response implements LinkdataTransversableEntity
 {
     /**
-     * @Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Reference\Smartdevice>")
-     * @SerializedName("SMARTDEVICES")
-     * @XmlList(entry="SMARTDEVICE")
+     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Reference\Smartdevice>")
+     * @Serializer\SerializedName("SMARTDEVICES")
+     * @Serializer\XmlList(entry="SMARTDEVICE")
      */
     protected $smartdevices;
 

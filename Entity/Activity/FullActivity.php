@@ -3,8 +3,6 @@
 namespace Geonaute\LinkdataBundle\Entity\Activity;
 
 use JMS\Serializer\Annotation as Serializer;
-use JMS\Serializer\Annotation\Type;
-use JMS\Serializer\Annotation\SerializedName;
 
 /**
  * FullActivity entity.
@@ -13,15 +11,15 @@ class FullActivity
 {
     /**
      * @Serializer\Expose
-     * @Type("string")
-     * @SerializedName("ID")
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("ID")
      */
     private $id;
 
     /**
      * @Serializer\Expose
-     * @Type("string")
-     * @SerializedName("USERID")
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("USERID")
      */
     protected $userId;
 

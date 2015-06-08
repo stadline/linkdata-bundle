@@ -4,19 +4,18 @@ namespace Geonaute\LinkdataBundle\Response\Reference;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Criteria;
-use JMS\Serializer\Annotation\Type;
-use JMS\Serializer\Annotation\SerializedName;
-use JMS\Serializer\Annotation\XmlList;
+use Geonaute\LinkdataBundle\Response\Response;
+use JMS\Serializer\Annotation as Serializer;
 
 /**
- * Sports entity.
+ * Univers entity.
  */
-class UniversList
+class Univers extends Response
 {
     /**
-     * @Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Reference\Univers>")
-     * @SerializedName("UNIVERS_LIST")
-     * @XmlList(entry="UNIVERS")
+     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Reference\Univers>")
+     * @Serializer\SerializedName("UNIVERS_LIST")
+     * @Serializer\XmlList(entry="UNIVERS")
      */
     protected $univers_list;
 

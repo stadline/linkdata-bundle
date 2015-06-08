@@ -3,9 +3,6 @@
 namespace Geonaute\LinkdataBundle\Entity\Reference;
 
 use JMS\Serializer\Annotation as Serializer;
-use JMS\Serializer\Annotation\Type;
-use JMS\Serializer\Annotation\SerializedName;
-use JMS\Serializer\Annotation\XmlList;
 
 /**
  * Smartdevice entity.
@@ -14,22 +11,22 @@ class Smartdevice
 {
     /**
      * @Serializer\Expose
-     * @Type("integer")
-     * @SerializedName("ID")
+     * @Serializer\Type("integer")
+     * @Serializer\SerializedName("ID")
      */
     protected $ID;
 
     /**
      * @Serializer\Expose
-     * @Type("string")
-     * @SerializedName("TITLE")
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("TITLE")
      */
     protected $TITLE;
 
     /**
-     * @Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Reference\SmartdeviceUnit>")
-     * @SerializedName("UNITS");
-     * @XmlList(entry="UNIT_ID")
+     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Reference\SmartdeviceUnit>")
+     * @Serializer\SerializedName("UNITS");
+     * @Serializer\XmlList(entry="UNIT_ID")
      */
     protected $UNITS;
 

@@ -43,7 +43,7 @@
         "getReferenceUnivers": {
             "httpMethod": "GET",
             "uri": "reference/univers.xml",
-            "responseClass": "Geonaute\\LinkdataBundle\\Response\\Reference\\UniversList",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\Reference\\Univers",
             "additionalParameters": {
                 "location": "query"
             }

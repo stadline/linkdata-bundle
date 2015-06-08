@@ -3,8 +3,6 @@
 namespace Geonaute\LinkdataBundle\Entity\Reference;
 
 use JMS\Serializer\Annotation as Serializer;
-use JMS\Serializer\Annotation\Type;
-use JMS\Serializer\Annotation\SerializedName;
 
 /**
  * Sport entity.
@@ -15,15 +13,15 @@ class Univers
 {
     /**
      * @Serializer\Expose
-     * @Type("integer")
-     * @SerializedName("ID")
+     * @Serializer\Type("integer")
+     * @Serializer\SerializedName("ID")
      */
     protected $ID;
 
     /**
      * @Serializer\Expose
-     * @Type("string")
-     * @SerializedName("NAME")
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("NAME")
      */
     protected $NAME;
 

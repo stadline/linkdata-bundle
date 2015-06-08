@@ -3,8 +3,6 @@
 namespace Geonaute\LinkdataBundle\Entity\Reference;
 
 use JMS\Serializer\Annotation as Serializer;
-use JMS\Serializer\Annotation\Type;
-use JMS\Serializer\Annotation\XmlValue;
 
 /**
  * Smartdevice entity.
@@ -13,8 +11,8 @@ class SmartdeviceUnit
 {
     /**
      * @Serializer\Expose
-     * @Type("integer")
-     * @XmlValue()
+     * @Serializer\Type("integer")
+     * @Serializer\XmlValue()
      */
     protected $UNIT_ID;
 

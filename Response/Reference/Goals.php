@@ -4,20 +4,19 @@ namespace Geonaute\LinkdataBundle\Response\Reference;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Criteria;
-use JMS\Serializer\Annotation\Type;
-use JMS\Serializer\Annotation\SerializedName;
-use JMS\Serializer\Annotation\XmlList;
+use Geonaute\LinkdataBundle\Response\Response;
 use Geonaute\LinkdataBundle\Entity\LinkdataTransversableEntity;
+use JMS\Serializer\Annotation as Serializer;
 
 /**
  * Goals entity.
  */
-class Goals implements LinkdataTransversableEntity
+class Goals extends Response implements LinkdataTransversableEntity
 {
     /**
-     * @Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Reference\Goal>")
-     * @SerializedName("GOALS")
-     * @XmlList(entry="GOAL")
+     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Reference\Goal>")
+     * @Serializer\SerializedName("GOALS")
+     * @Serializer\XmlList(entry="GOAL")
      */
     protected $goals;
 

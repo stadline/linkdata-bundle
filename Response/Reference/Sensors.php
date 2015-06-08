@@ -4,20 +4,19 @@ namespace Geonaute\LinkdataBundle\Response\Reference;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Criteria;
-use JMS\Serializer\Annotation\Type;
-use JMS\Serializer\Annotation\SerializedName;
-use JMS\Serializer\Annotation\XmlList;
+use Geonaute\LinkdataBundle\Response\Response;
 use Geonaute\LinkdataBundle\Entity\LinkdataTransversableEntity;
+use JMS\Serializer\Annotation as Serializer;
 
 /**
  * Sensors entity.
  */
-class Sensors implements LinkdataTransversableEntity
+class Sensors extends Response implements LinkdataTransversableEntity
 {
     /**
-     * @Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Reference\Sensor>")
-     * @SerializedName("SENSORS")
-     * @XmlList(entry="SENSOR")
+     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Reference\Sensor>")
+     * @Serializer\SerializedName("SENSORS")
+     * @Serializer\XmlList(entry="SENSOR")
      */
     protected $sensors;
 

@@ -4,20 +4,19 @@ namespace Geonaute\LinkdataBundle\Response\Reference;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Criteria;
-use JMS\Serializer\Annotation\Type;
-use JMS\Serializer\Annotation\SerializedName;
-use JMS\Serializer\Annotation\XmlList;
+use Geonaute\LinkdataBundle\Response\Response;
 use Geonaute\LinkdataBundle\Entity\LinkdataTransversableEntity;
+use JMS\Serializer\Annotation as Serializer;
 
 /**
  * Sports entity.
  */
-class Sports implements LinkdataTransversableEntity
+class Sports extends Response implements LinkdataTransversableEntity
 {
     /**
-     * @Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Reference\Sport>")
-     * @SerializedName("SPORTS")
-     * @XmlList(entry="SPORT")
+     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Reference\Sport>")
+     * @Serializer\SerializedName("SPORTS")
+     * @Serializer\XmlList(entry="SPORT")
      */
     protected $sports;
 
