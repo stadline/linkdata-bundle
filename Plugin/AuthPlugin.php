@@ -64,7 +64,7 @@ class AuthPlugin implements EventSubscriberInterface
 
             if (!empty($requestKey)) {
                 $request->setHeader('X-Linkdata-RequestKey', $requestKey);
-                break;
+                return;
             }
         }
 
