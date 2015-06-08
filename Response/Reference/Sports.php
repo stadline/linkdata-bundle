@@ -1,6 +1,6 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Entity\Reference;
+namespace Geonaute\LinkdataBundle\Response\Reference;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Criteria;
@@ -16,7 +16,7 @@ class Sports implements LinkdataTransversableEntity
 {
     /**
      * @Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Reference\Sport>")
-     * @SerializedName("SPORTS");
+     * @SerializedName("SPORTS")
      * @XmlList(entry="SPORT")
      */
     protected $sports;

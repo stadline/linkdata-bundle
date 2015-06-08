@@ -1,6 +1,6 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Entity\Reference;
+namespace Geonaute\LinkdataBundle\Response\Reference;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Criteria;
@@ -16,7 +16,7 @@ class Smartdevices implements LinkdataTransversableEntity
 {
     /**
      * @Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Reference\Smartdevice>")
-     * @SerializedName("SMARTDEVICES");
+     * @SerializedName("SMARTDEVICES")
      * @XmlList(entry="SMARTDEVICE")
      */
     protected $smartdevices;
