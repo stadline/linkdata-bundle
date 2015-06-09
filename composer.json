@@ -1,8 +1,8 @@
 {
     "name": "geonaute/linkdata-bundle",
     "description": "A Symfony2 bundle for Linkdata",
-    "type":         "symfony-bundle",
-    "license":      "MIT",
+    "type": "symfony-bundle",
+    "license": "MIT",
     "authors": [
         {
             "name": "alex-pex",
