@@ -9,8 +9,8 @@
                 "weeks": { "location": "query", "required": true },
                 "title": { "location": "query", "required": true },
                 "lang": { "location": "query", "required": true },
-                "frequency": { "location": "uri", "required": true },
-                "level": { "location": "uri", "required": true }
+                "frequency": { "location": "query", "required": true },
+                "level": { "location": "query", "required": true }
             }
         },
         "putPrograms": {
@@ -18,13 +18,13 @@
             "uri": "programs/{modelId}.xml",
             "parameters": {
                 "xml": { "location": "body", "required": true },
+                "modelId": { "location": "uri", "required": true },
                 "goal_id": { "location": "query", "required": true },
                 "weeks": { "location": "query", "required": true },
                 "title": { "location": "query", "required": true },
                 "lang": { "location": "query", "required": true },
-                "modelId": { "location": "uri", "required": true },
-                "frequency": { "location": "uri", "required": true },
-                "level": { "location": "uri", "required": true }
+                "frequency": { "location": "query", "required": true },
+                "level": { "location": "query", "required": true }
             }
         }
     }
