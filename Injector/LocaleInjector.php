@@ -20,8 +20,8 @@ class LocaleInjector implements LocaleInjectorInterface
 
     public function getLocale()
     {
-        if ($request = $this->container->get('request')) {
-            return $request->getLocale();
+        if ($this->container->isScopeActive('request')) {
+            return $this->container->get('request')->getLocale();
         } else {
             return $this->container->getParameter('locale');
         }
