@@ -744,7 +744,7 @@
 			</trans-unit>
 			<trans-unit id="datatype_1_with_unit" resname="datatype_1_with_unit">
 				<source>datatype_1_with_unit</source>
-				<target>Rythme cardiaque</target>
+				<target>Rythme cardiaque (bpm)</target>
 			</trans-unit>
 			<trans-unit id="datatype_2_with_unit" resname="datatype_2_with_unit">
 				<source>datatype_2_with_unit</source>
@@ -756,15 +756,15 @@
 			</trans-unit>
 			<trans-unit id="datatype_4_with_unit" resname="datatype_4_with_unit">
 				<source>datatype_4_with_unit</source>
-				<target>Cardio moy.</target>
+				<target>Cardio moy. (bpm)</target>
 			</trans-unit>
 			<trans-unit id="datatype_5_with_unit" resname="datatype_5_with_unit">
 				<source>datatype_5_with_unit</source>
-				<target>Distance</target>
+				<target>Distance (m)</target>
 			</trans-unit>
 			<trans-unit id="datatype_6_with_unit" resname="datatype_6_with_unit">
 				<source>datatype_6_with_unit</source>
-				<target>Vitesse</target>
+				<target>Vitesse (m/h)</target>
 			</trans-unit>
 			<trans-unit id="datatype_7_with_unit" resname="datatype_7_with_unit">
 				<source>datatype_7_with_unit</source>
@@ -796,15 +796,15 @@
 			</trans-unit>
 			<trans-unit id="datatype_14_with_unit" resname="datatype_14_with_unit">
 				<source>datatype_14_with_unit</source>
-				<target>Altitude</target>
+				<target>Altitude (m)</target>
 			</trans-unit>
 			<trans-unit id="datatype_15_with_unit" resname="datatype_15_with_unit">
 				<source>datatype_15_with_unit</source>
-				<target>Altitude max</target>
+				<target>Altitude max (m)</target>
 			</trans-unit>
 			<trans-unit id="datatype_16_with_unit" resname="datatype_16_with_unit">
 				<source>datatype_16_with_unit</source>
-				<target>Altitude min</target>
+				<target>Altitude min (m)</target>
 			</trans-unit>
 			<trans-unit id="datatype_17_with_unit" resname="datatype_17_with_unit">
 				<source>datatype_17_with_unit</source>
@@ -812,11 +812,11 @@
 			</trans-unit>
 			<trans-unit id="datatype_18_with_unit" resname="datatype_18_with_unit">
 				<source>datatype_18_with_unit</source>
-				<target>Dénivelé en montée</target>
+				<target>Dénivelé en montée (m)</target>
 			</trans-unit>
 			<trans-unit id="datatype_19_with_unit" resname="datatype_19_with_unit">
 				<source>datatype_19_with_unit</source>
-				<target>Dénivelé en descente</target>
+				<target>Dénivelé en descente (m)</target>
 			</trans-unit>
 			<trans-unit id="datatype_20_with_unit" resname="datatype_20_with_unit">
 				<source>datatype_20_with_unit</source>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="d4687aef9a6ba7ca841adeecc3d4ff12" resname="unit.point.on">
+        <source>unit.point.on</source>
+        <target>ON</target>
+      </trans-unit>
+      <trans-unit id="b476f5f2a76ef602ddef9f9fa0000c1a" resname="unit.healthrate">
+        <source>unit.healthrate</source>
+        <target>bpm</target>
+      </trans-unit>
+      <trans-unit id="95581051e2cc7bf85a075e4f6f9ebf6a" resname="unit.healthrate.help">
+        <source>unit.healthrate.help</source>
+        <target>pulsations/min</target>
+      </trans-unit>
+      <trans-unit id="588722b95b2009592417727e176ecf68" resname="unit.centimeter">
+        <source>unit.centimeter</source>
+        <target>cm</target>
+      </trans-unit>
+      <trans-unit id="ef52050c07609423f1868ac31a7a54a9" resname="unit.kilogram">
+        <source>unit.kilogram</source>
+        <target>kg</target>
+      </trans-unit>
+      <trans-unit id="7b9a22f5cb824a6721916150ee0cf475" resname="unit.meter">
+        <source>unit.meter</source>
+        <target>m</target>
+      </trans-unit>
+      <trans-unit id="39fb48cabbd4c8294dfef9ab182082b0" resname="unit.kilometer">
+        <source>unit.kilometer</source>
+        <target>km</target>
+      </trans-unit>
+      <trans-unit id="9b841b31904b6414cecdf0ae1c451c94" resname="unit.percent">
+        <source>unit.percent</source>
+        <target>%</target>
+      </trans-unit>
+      <trans-unit id="1320e065a38ad460f463df1b5e4c141f" resname="unit.speed">
+        <source>unit.speed</source>
+        <target>km/h</target>
+      </trans-unit>
+      <trans-unit id="d1ccd4304849fad947334b40f56cc472" resname="unit.kilocalories">
+        <source>unit.kilocalories</source>
+        <target>kcal</target>
+      </trans-unit>
+      <trans-unit id="c675a64abc5fb044a384905a66e00457" resname="unit.rpm">
+        <source>unit.rpm</source>
+        <target>rpm</target>
+      </trans-unit>
+      <trans-unit id="f40ca30f7b593f001ed8923b3450a7f5" resname="unit.cadence">
+        <source>unit.cadence</source>
+        <target>/min</target>
+      </trans-unit>
+      <trans-unit id="a49e1c7d8ce5683f189de34a49cdc1c2" resname="unit.vertical_speed">
+        <source>unit.vertical_speed</source>
+        <target>m/h</target>
+      </trans-unit>
+      <trans-unit id="3c982e23f01b9216a762580ae38787a7" resname="unit.speed_rate">
+        <source>unit.speed_rate</source>
+        <target>min/km</target>
+      </trans-unit>
+      <trans-unit id="7559894529122d2d187f18cc4c45198d" resname="unit.percent.hrm">
+        <source>unit.percent.hrm</source>
+        <target>% FCM</target>
+      </trans-unit>
+      <trans-unit id="unit.activity_number" resname="unit.activity_number">
+        <source>unit.activity_number</source>
+        <target>séances</target>
+      </trans-unit>
+      <trans-unit id="unit.step_number" resname="unit.step_number">
+        <source>unit.step_number</source>
+        <target>pas</target>
+      </trans-unit>
+      <trans-unit id="unit.second" resname="unit.second">
+        <source>unit.second</source>
+        <target>s</target>
+      </trans-unit>
+      <trans-unit id="unit.minute" resname="unit.minute">
+        <source>unit.minute</source>
+        <target>min</target>
+      </trans-unit>
+      <trans-unit id="unit.watt" resname="unit.watt">
+        <source>unit.watt</source>
+        <target>W</target>
+      </trans-unit>
+      <trans-unit id="d5143d65087a30151c1e0d775df39998" resname="unit.body_fat_percentage">
+        <source>unit.body_fat_percentage</source>
+        <target>% mg</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
