@@ -40,6 +40,7 @@ class Datatype
     const ACTIVITY_NUMBER = 98;
     const POINTS_EARNED = 99;
     const RPM_CURRENT = 100;
+    const PERCENTAGE_OF_VMA = 175;
 
     // special cases : datatypes that doesn't exist
     const ELAPSED_TIME = 10000;
