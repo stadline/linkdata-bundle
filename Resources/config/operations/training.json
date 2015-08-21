@@ -26,6 +26,13 @@
                 "frequency": { "location": "query", "required": true },
                 "level": { "location": "query", "required": true }
             }
+        },
+        "putProgramsUnpublish": {
+            "httpMethod": "PUT",
+            "uri": "programs/{modelId}/unpublish.xml",
+            "parameters": {
+                "modelId": { "location": "uri", "required": true }
+            }
         }
     }
 }
