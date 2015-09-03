@@ -1,0 +1,22 @@
+{
+    "operations": {
+        "getStatistics": {
+            "httpMethod": "GET",
+            "uri": "statistics.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\Statistic\\Statistics",
+            "parameters": {
+                "xml": { "location": "body", "required": true }
+            }
+        },
+        "getStatisticsPrograms": {
+            "httpMethod": "GET",
+            "uri": "statistics/{statisticId}/programs/{partnerId}.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\Statistic\\ProgramsStatistics",
+            "parameters": {
+                "xml": { "location": "body", "required": true },
+                "statisticId": { "location": "uri", "required": true },
+                "partnerId": { "location": "uri", "required": true }
+            }
+        }
+    }
+}
