@@ -25,5 +25,8 @@ class Month
         return $this->totalStarted;
     }
 
-
+    public function getPeriodId()
+    {
+        return $this->periodId;
+    }
 }
