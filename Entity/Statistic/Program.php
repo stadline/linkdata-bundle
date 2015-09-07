@@ -26,6 +26,12 @@ class Program
      * @Serializer\SerializedName("MONTHLY_STARTED")
      */
     protected $monthlyStarted;
+
+    /**
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Statistic\Sessions")
+     * @Serializer\SerializedName("SESSIONS")
+     */
+    protected $sessions;
     
 
     public function __construct()
@@ -46,6 +52,11 @@ class Program
     public function getModelId()
     {
         return $this->modelId;
+    }
+
+    public function getSessions()
+    {
+        return $this->sessions;
     }
 
 }
