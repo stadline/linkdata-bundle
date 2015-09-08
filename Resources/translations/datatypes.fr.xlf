@@ -1440,7 +1440,7 @@
 			</trans-unit>
 			<trans-unit id="datatype_176_with_unit" resname="datatype_176_with_unit">
 				<source>datatype_176_with_unit</source>
-				<target>Percentage of HRMAX current (%)</target>
+				<target>Cardio (%HRM)</target>
 			</trans-unit>
 			<trans-unit id="datatype_177_with_unit" resname="datatype_177_with_unit">
 				<source>datatype_177_with_unit</source>

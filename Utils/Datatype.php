@@ -41,6 +41,7 @@ class Datatype
     const POINTS_EARNED = 99;
     const RPM_CURRENT = 100;
     const PERCENTAGE_OF_VMA = 175;
+    const PERCENTAGE_OF_HRMAX_CURRENT = 176;
 
     // special cases : datatypes that doesn't exist
     const ELAPSED_TIME = 10000;
