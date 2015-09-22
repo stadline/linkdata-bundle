@@ -17,12 +17,13 @@ class SecurityContextProvider implements RequestKeyProvider
     public function getRequestKey()
     {
         if ($this->securityContext && ($securityToken = $this->securityContext->getToken())) {
+
             if ($securityToken instanceof RequestKeyProvider) {
                 return $securityToken->getRequestKey();
             }
 
             // old interface
-            if ($securityToken instanceof AuthPluginInterface) {
+            if ($securityToken instanceof AuthPluginInterface || method_exists($securityToken, 'getSwarmRequestKey')) {
                 return $securityToken->getSwarmRequestKey();
             }
         }
