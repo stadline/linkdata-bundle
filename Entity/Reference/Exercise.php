@@ -3,12 +3,19 @@
 namespace Geonaute\LinkdataBundle\Entity\Reference;
 
 use JMS\Serializer\Annotation as Serializer;
+use Geonaute\LinkdataBundle\Entity\ClientAwareInterface;
+use Guzzle\Http\ClientInterface;
 
 /**
  * Exercise entity.
  */
-class Exercise
+class Exercise implements ClientAwareInterface
 {
+    /**
+     * @Serializer\Exclude
+     */
+    protected $client;
+
     /**
      * @Serializer\Expose
      * @Serializer\Type("integer")
@@ -29,6 +36,22 @@ class Exercise
      * @Serializer\SerializedName("SPORTID")
      */
     protected $SPORTID;
+
+
+    public function __toString()
+    {
+        return $this->getSport()->getNAME().' > '.$this->getTITLE();
+    }
+
+    public function setClient(ClientInterface $client)
+    {
+        $this->client = $client;
+    }
+
+    public function getClient()
+    {
+        return $this->client;
+    }
 
     public function getID()
     {
@@ -57,5 +80,12 @@ class Exercise
     public function setSPORTID($SPORTID)
     {
         $this->SPORTID = $SPORTID;
+    }
+
+    public function getSport()
+    {
+        $referenceSports = $this->client->getReferenceSports();
+
+        return $referenceSports->getSport($this->getSPORTID());
     }
 }

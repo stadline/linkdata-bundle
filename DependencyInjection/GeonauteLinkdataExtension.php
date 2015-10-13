@@ -16,6 +16,17 @@ class GeonauteLinkdataExtension extends SimpleExtension
      */
     protected function loadConfig(array $config)
     {
+        // serializer listener
+        $this->define('geonaute_linkdata_bundle.serializer_listener', array(
+            'class' => 'Geonaute\LinkdataBundle\Listener\SerializerEventSubscriber',
+            'tags' => array(
+                array('name' => 'jms_serializer.event_subscriber'),
+            ),
+            'calls' => array(
+                array('setClient', array($this->get('linkdata_rest_client'))),
+            )
+        ));
+
         // rest client
         $this->define('geonaute_linkdata.service_description', array(
             'class' => '%guzzle.service_description.class%',
