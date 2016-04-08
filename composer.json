@@ -12,7 +12,7 @@
     "require": {
         "symfony/dependency-injection": "~2.6",
         "misd/guzzle-bundle": "~1.0",
-        "jms/serializer-bundle": "~0.13"
+        "jms/serializer-bundle": "^1.1"
     },
     "require-dev": {
         "fabpot/php-cs-fixer": "~1.8"
@@ -22,7 +22,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0.x-dev"
+            "dev-master": "1.1.x-dev"
         }
     }
 }
