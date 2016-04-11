@@ -3,7 +3,7 @@
         "getActivityFullActivity": {
             "httpMethod": "GET",
             "uri": "activity/{id}/fullactivity.xml",
-            "responseClass": "Geonaute\\LinkdataBundle\\Response\\Activity\\FullActivity",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetActivityFullactivity\\Response",
             "parameters": {
                 "id": { "location": "uri", "required": true }
             }
