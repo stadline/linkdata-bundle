@@ -1,0 +1,15 @@
+{
+  "operations": {
+    "getUsersProfile": {
+      "httpMethod": "GET",
+      "uri": "users/{ldid}/profile.xml",
+      "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetUsersProfile\\Response",
+      "parameters": {
+        "ldid": { "location": "uri", "required": true }
+      },
+      "additionalParameters": {
+        "location": "query"
+      }
+    }
+  }
+}

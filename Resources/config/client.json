@@ -5,6 +5,7 @@
         "operations/activity.json",
         "operations/reference.json",
         "operations/training.json",
-        "operations/statistic.json"
+        "operations/statistic.json",
+        "operations/users.json"
     ]
 }
