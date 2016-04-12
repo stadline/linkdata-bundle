@@ -161,7 +161,7 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
     private $createdAt;
 
     /**
-     * @Serializer\SerializedName("UPDATEATIME")
+     * @Serializer\SerializedName("UPDATETIME")
      * @Serializer\Type("integer")
      * @var string
      */
