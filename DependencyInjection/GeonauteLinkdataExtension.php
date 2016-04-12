@@ -67,5 +67,27 @@ class GeonauteLinkdataExtension extends SimpleExtension
                 array('setClient', array($this->get('linkdata_rest_client'))),
             )
         ));
+
+        // mock client
+        $this->define('geonaute_linkdata.mocked_client', array(
+            'class' => 'Geonaute\LinkdataBundle\Plugin\MockedClient',
+            'calls' => array(
+                array('setDescription', array($this->get('geonaute_linkdata.service_description'))),
+                array('setBuilder', array($this->get('geonaute_linkdata.mock_builder')))
+            )
+        ));
+
+        // mock resolver
+        $this->define('geonaute_linkdata.mock_resolver', array(
+            'class' => 'Geonaute\LinkdataBundle\Mock\Resolver\LinkdataMockResolver',
+        ));
+
+        // mock builder
+        $this->define('geonaute_linkdata.mock_builder', array(
+            'class' => 'Geonaute\LinkdataBundle\Mock\Builder\LinkdataMockBuilder',
+            'calls' => array(
+                array('setResolver', array($this->get('geonaute_linkdata.mock_resolver')))
+            )
+        ));
     }
 }

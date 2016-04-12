@@ -34,9 +34,9 @@ You can get Linkdata Reference here : dev.linkdata.geonaute.com/backend_inte.php
 
 First of all, you need to add this line in your <code>app/config/config_test.yml</code>.
 
-    services:
-        linkdata_rest_client:
-            alias: geonaute_module_linkdata.client_mock
+        services:
+            linkdata_rest_client:
+                alias: geonaute_linkdata.mocked_client
 
 This will replace your linkdata service by a mocked linkdata service in test environement.
 

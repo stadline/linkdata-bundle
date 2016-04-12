@@ -32,4 +32,3 @@ class SerializerEventSubscriber implements EventSubscriberInterface
         }
     }
 }
-

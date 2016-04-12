@@ -1,6 +1,6 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Response\GetActivityFullactivity;
+namespace Geonaute\LinkdataBundle\Response\GetActivityFullActivity;
 
 use DateTime;
 use Geonaute\LinkdataBundle\Response\Common\ActivityWidgetProviderInterface;

@@ -14,9 +14,10 @@ class PluginsCompilerPass extends SimpleCompilerPass
     protected function processConfig(array $config)
     {
         $plugins = array(
-            'cache' => 'loadCachePlugin',
-            'auth' => 'loadAuthPlugin',
+            'cache'    => 'loadCachePlugin',
+            'auth'     => 'loadAuthPlugin',
             'language' => 'loadLanguagePlugin',
+            'http'     => 'loadHttpPlugin',
         );
 
         foreach ($plugins as $key => $method) {
@@ -111,5 +112,17 @@ class PluginsCompilerPass extends SimpleCompilerPass
 
         $client = $this->container->getDefinition('geonaute_linkdata.client');
         $client->addMethodCall('addSubscriber', array($this->get('geonaute_linkdata.plugin.language')));
+    }
+
+    protected function loadHttpPlugin(array $config)
+    {
+        $this->define('geonaute_linkdata.plugin.http', array(
+            'class' => 'Geonaute\LinkdataBundle\Plugin\HttpPlugin'
+        ));
+
+        $mockedClient = $this->container->getDefinition('geonaute_linkdata.mocked_client');
+
+        $mockedClient->addMethodCall('addSubscriber', array($this->get('geonaute_linkdata.plugin.language')));
+        $mockedClient->addMethodCall('addSubscriber', array($this->get('geonaute_linkdata.plugin.http')));
     }
 }
