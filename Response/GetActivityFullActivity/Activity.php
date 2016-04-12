@@ -19,28 +19,28 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
 {
     /**
      * @Serializer\SerializedName("ID")
-     * @Serializer\Type("integer")
+     * @Serializer\Type("string")
      * @var integer
      */
     private $id;
 
     /**
      * @Serializer\SerializedName("USERID")
-     * @Serializer\Type("integer")
+     * @Serializer\Type("string")
      * @var integer
      */
     private $userId;
 
     /**
      * @Serializer\SerializedName("SPORTID")
-     * @Serializer\Type("integer")
+     * @Serializer\Type("string")
      * @var integer
      */
     private $sportId;
 
     /**
      * @Serializer\SerializedName("DEVICEID")
-     * @Serializer\Type("integer")
+     * @Serializer\Type("string")
      * @var integer
      */
     private $deviceId;
@@ -55,7 +55,7 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
 
     /**
      * @Serializer\SerializedName("DEVICEMODELID")
-     * @Serializer\Type("integer")
+     * @Serializer\Type("string")
      * @var integer
      */
     private $deviceModelId;
@@ -76,7 +76,7 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
 
     /**
      * @Serializer\SerializedName("DURATION")
-     * @Serializer\Type("integer")
+     * @Serializer\Type("string")
      * @var integer
      */
     private $duration;
@@ -111,14 +111,14 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
 
     /**
      * @Serializer\SerializedName("ELEVATION")
-     * @Serializer\Type("integer")
+     * @Serializer\Type("string")
      * @var integer
      */
     private $elevation;
 
     /**
      * @Serializer\SerializedName("TRACKID")
-     * @Serializer\Type("integer")
+     * @Serializer\Type("string")
      * @var integer
      */
     private $trackId;
@@ -148,21 +148,21 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
 
     /**
      * @Serializer\SerializedName("MANUAL")
-     * @Serializer\Type("integer")
+     * @Serializer\Type("string")
      * @var integer
      */
     private $manual;
 
     /**
      * @Serializer\SerializedName("CREATEDAT")
-     * @Serializer\Type("integer")
+     * @Serializer\Type("string")
      * @var string
      */
     private $createdAt;
 
     /**
      * @Serializer\SerializedName("UPDATETIME")
-     * @Serializer\Type("integer")
+     * @Serializer\Type("string")
      * @var string
      */
     private $updateTime;
