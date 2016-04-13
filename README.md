@@ -28,6 +28,80 @@ On your composer.json add the following :
 
 You can get Linkdata Reference here : dev.linkdata.geonaute.com/backend_inte.php
 
-## Tests
+## Mocking linkdata in tests
 
-TODO
+#### Configuration
+
+First of all, you need to add this line in your <code>app/config/config_test.yml</code>.
+
+    services:
+        linkdata_rest_client:
+            alias: geonaute_module_linkdata.client_mock
+
+This will replace your linkdata service by a mocked linkdata service in test environement.
+
+#### Usage
+
+Considering you're trying to test an HomeController.php which is calling a linkdata service, like this:
+
+    $this->get('linkdata_rest_client')->getUsersMeasures();
+    
+Your test must looks like this:
+
+    public function testHomepage()
+    {
+        $client = static::createClient();
+        
+        // Load all models you need with the mock resolver.
+        $client->getContainer()->get('geonaute_linkdata.mock_resolver')->loadModels(array(
+            new GetUsersMeasuresMock()
+        ));
+        
+        $client->request('GET', '/homepage');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+    }
+
+All available mocked services are located into <code>Mock/Model</code> directory.
+
+To add a Mock Model, it's easy.
+
+You just have to create your {commandName}Mock.php file into <code>Mock/Model</code> file, like this:
+
+    <?php
+        namespace Geonaute\Module\LinkdataBundle\Mock\Model;
+        
+        use Geonaute\Module\LinkdataBundle\Mock\LinkdataMockInterface;
+        use Geonaute\Module\LinkdataBundle\Service\GetActivityDataSummary\Response;
+        use Mockery as m;
+        
+        class GetActivityDataSummaryMock implements LinkdataMockInterface
+        {
+            /**
+             * {@inheritdoc}
+             */
+            public function getCommandName()
+            {
+                return 'getActivityDataSummary';
+            }
+            
+            /**
+             * {@inheritdoc}
+             */
+            public function getResponse($data)
+            {
+                $response = new Response(new \SimpleXMLElement('
+                <RESPONSE>
+                    <ACTIVITY>
+                        <DATASUMMARY>
+                            <VALUE id="1">10</VALUE>
+                            <VALUE id="2">20</VALUE>
+                            <VALUE id="3">30</VALUE>
+                            <VALUE id="4">40</VALUE>
+                        </DATASUMMARY>
+                    </ACTIVITY>
+                </RESPONSE>
+                '));
+                
+                return $response;
+            }
+        }
