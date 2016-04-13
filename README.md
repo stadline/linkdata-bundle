@@ -79,7 +79,7 @@ You just have to create your {commandName}Mock.php file into <code>Mock/Model</c
         use Geonaute\Module\LinkdataBundle\Service\GetActivityDataSummary\Response;
         use Mockery as m;
         
-        class GetActivityDataSummaryMock implements LinkdataMockInterface
+        class GetActivityDataSummaryMock extends BaseMock implements LinkdataMockInterface
         {
             /**
              * {@inheritdoc}
@@ -94,19 +94,23 @@ You just have to create your {commandName}Mock.php file into <code>Mock/Model</c
              */
             public function getResponse($data)
             {
-                $response = new Response(new \SimpleXMLElement('
+                $data = ' 
                 <RESPONSE>
-                    <ACTIVITY>
-                        <DATASUMMARY>
-                            <VALUE id="1">10</VALUE>
-                            <VALUE id="2">20</VALUE>
-                            <VALUE id="3">30</VALUE>
-                            <VALUE id="4">40</VALUE>
-                        </DATASUMMARY>
-                    </ACTIVITY>
-                </RESPONSE>
-                '));
+                        <ACTIVITY>
+                            <DATASUMMARY>
+                                <VALUE id="1">10</VALUE>
+                                <VALUE id="2">20</VALUE>
+                                <VALUE id="3">30</VALUE>
+                                <VALUE id="4">40</VALUE>
+                            </DATASUMMARY>
+                        </ACTIVITY>
+                    </RESPONSE>
+                ';
                 
-                return $response;
+                return $this->serializer->deserialize(
+                    'Geonaute\Module\LinkdataBundle\Service\GetActivityDataSummary\Response',
+                    $data,
+                    'xml
+                ');
             }
         }
