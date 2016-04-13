@@ -42,9 +42,14 @@ This will replace your linkdata service by a mocked linkdata service in test env
 
 #### Usage
 
-Considering you're trying to test an HomeController.php which is calling a linkdata service, like this:
-
-    $this->get('linkdata_rest_client')->getUsersMeasures();
+Considering you're trying to test an your <code>homepageAction</code> which is calling a linkdata service, like this:
+    
+        public function homepageAction()
+        {
+            $this->get('linkdata_rest_client')->getUsersMeasures();
+            
+            // do your stuff here.
+        }
     
 Your test must looks like this:
 
