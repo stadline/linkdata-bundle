@@ -2,21 +2,21 @@
 
 namespace Geonaute\LinkdataBundle\Auth;
 
-use Symfony\Component\Security\Core\SecurityContextInterface;
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorage;
 use Geonaute\LinkdataBundle\Plugin\AuthPluginInterface;
 
 class SecurityContextProvider implements RequestKeyProvider
 {
-    private $securityContext;
+    private $tokenStorage;
 
-    public function __construct(SecurityContextInterface $securityContext = null)
+    public function __construct(TokenStorage $tokenStorage = null)
     {
-        $this->securityContext = $securityContext;
+        $this->tokenStorage = $tokenStorage;
     }
 
     public function getRequestKey()
     {
-        if ($this->securityContext && ($securityToken = $this->securityContext->getToken())) {
+        if ($this->tokenStorage && ($securityToken = $this->tokenStorage->getToken())) {
 
             if ($securityToken instanceof RequestKeyProvider) {
                 return $securityToken->getRequestKey();

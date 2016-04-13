@@ -86,7 +86,7 @@ class PluginsCompilerPass extends SimpleCompilerPass
 
         $this->define('geonaute_linkdata.auth.security_context_provider', array(
             'class' => 'Geonaute\LinkdataBundle\Auth\SecurityContextProvider',
-            'arguments' => array($this->get('security.context', false)),
+            'arguments' => array($this->get('security.token_storage', false)),
         ));
 
         // plugin
