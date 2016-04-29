@@ -4,13 +4,22 @@ namespace Geonaute\LinkdataBundle\Response\GetUsersTotalMonth;
 
 use JMS\Serializer\Annotation as Serializer;
 
-class Sports extends \ArrayObject
+class Sports
 {
     /**
-     * @Serializer\SerializedName("SPORTS")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetUsersTotalMonth\Sport")
+     * @Serializer\SerializedName("SPORT")
+     * @Serializer\XmlList(entry="SPORT", inline=true)
+     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetUsersTotalMonth\Sport>")
      *
-     * @var string
+     * @var Sport
      */
-    protected $sport;
+    protected $sports;
+
+    /**
+     * @return Sport
+     */
+    public function getSports()
+    {
+        return $this->sports;
+    }
 }

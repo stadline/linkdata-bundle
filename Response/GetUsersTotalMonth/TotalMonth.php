@@ -37,7 +37,7 @@ class TotalMonth
     }
 
     /**
-     * @return integer
+     * @return string
      */
     public function getMonth()
     {
@@ -154,13 +154,10 @@ class TotalMonth
     }
 
     /**
-     * @return integer
+     * @return array
      */
     public function getSports()
     {
-        if ($this->sports == null) {
-            $this->sports = new Sports($this->response, $this->xml->SPORTS[0]);
-        }
         return $this->sports;
     }
 

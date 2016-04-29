@@ -28,7 +28,7 @@ class Response extends ClientAwareXmlResponse
     /**
      * @return TotalMonth
      */
-    public function getTotalMonths()
+    public function getTotalMonth()
     {
         return $this->totalMonth;
     }

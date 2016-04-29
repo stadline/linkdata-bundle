@@ -6,11 +6,16 @@ use JMS\Serializer\Annotation as Serializer;
 
 class Sport
 {
+    /**
+     * @Serializer\XmlAttribute()
+     * @Serializer\Type("string")
+     */
     private $id;
 
     /**
      * @Serializer\SerializedName("VALUE")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetUsersTotalMonth\Value")
+     * @Serializer\XmlList(entry="VALUE", inline=true)
+     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetUsersTotalMonth\Value>")
      *
      * @var string
      */
@@ -25,17 +30,10 @@ class Sport
     }
 
     /**
-     * Return the value of the total Years for the sport
-     * @param unknown $id
+     * @return string
      */
-    public function getValue($id)
+    public function getValues()
     {
-        if(key_exists($id, $this->values))
-        {
-            return ($this->values[$id]>0)?$this->values[$id]:null;
-        }
-        else {
-            return null;
-        }
+        return $this->values;
     }
 }

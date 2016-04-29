@@ -6,8 +6,17 @@ use JMS\Serializer\Annotation as Serializer;
 
 class Value
 {
+    /**
+     * @Serializer\XmlAttribute
+     * @Serializer\Type("string")
+     */
     private $id;
-    private $values;
+
+    /**
+     * @Serializer\XmlList(inline=true, entry="VALUE")
+     * @Serializer\Type("string")
+     */
+    private $value;
 
     /**
      * @return integer
@@ -18,17 +27,10 @@ class Value
     }
 
     /**
-     * Return the value of the total Years for the sport
-     * @param unknown $id
+     * @return mixed
      */
-    public function getValue($id)
+    public function getValue()
     {
-        if(key_exists($id, $this->values))
-        {
-            return ($this->values[$id]>0)?$this->values[$id]:null;
-        }
-        else {
-            return null;
-        }
+        return $this->value;
     }
 }
