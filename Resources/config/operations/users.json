@@ -10,6 +10,15 @@
       "additionalParameters": {
         "location": "query"
       }
+    },
+    "getUsersTotalMonth": {
+      "httpMethod": "GET",
+      "uri": "users/{ldid}/totalmonth.xml",
+      "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetUsersTotalMonth\\Response",
+      "parameters": {
+        "ldid": { "location": "uri", "required": true },
+        "month": { "location": "query", "required": true }
+      }
     }
   }
 }
