@@ -2,11 +2,10 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetTracksDetails;
 
-use Geonaute\LinkdataBundle\Response\XmlResponse;
-
+use Geonaute\LinkdataBundle\Response\ClientAwareXmlResponse;
 use JMS\Serializer\Annotation as Serializer;
 
-class Response extends XmlResponse
+class Response extends ClientAwareXmlResponse
 {
     /**
      * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetTracksDetails\Track")

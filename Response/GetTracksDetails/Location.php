@@ -3,22 +3,38 @@
 namespace Geonaute\LinkdataBundle\Response\GetTracksDetails;
 
 use Geonaute\LinkdataBundle\Algorithme\DouglasPeuker\VectorInterface;
+use JMS\Serializer\Annotation as Serializer;
 
 class Location implements VectorInterface
 {
+    /**
+     * @Serializer\XmlAttribute()
+     * @Serializer\Type("string")
+     * @var integer
+     */
     private $elapsedTime;
+
+    /**
+     * @Serializer\SerializedName("LATITUDE")
+     * @Serializer\Type("string")
+     * @var integer
+     */
     private $latitude;
+
+    /**
+     * @Serializer\SerializedName("LONGITUDE")
+     * @Serializer\Type("string")
+     * @var integer
+     */
     private $longitude;
+
+    /**
+     * @Serializer\SerializedName("ELEVATION")
+     * @Serializer\Type("string")
+     * @var integer
+     */
     private $elevation;
-    
-    public function __construct(\SimpleXMLElement $LOCATION)
-    {
-        $this->elapsedTime = (int)   $LOCATION['elapsed_time'];
-        $this->latitude    = (float) $LOCATION->LATITUDE;
-        $this->longitude   = (float) $LOCATION->LONGITUDE;
-        $this->elevation   = (float) $LOCATION->ELEVATION;
-    }
-    
+
     /**
      * @return integer
      */

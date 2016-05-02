@@ -2,26 +2,58 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetUsersConnectedDevices;
 
-use Guzzle\Service\Command\ResponseClassInterface;
+use JMS\Serializer\Annotation as Serializer;
 
 class ConnectedDevice
 {
-    private $response;
+    /**
+     * @Serializer\SerializedName("ID")
+     * @Serializer\Type("string")
+     * @var string
+     */
     private $id;
+
+    /**
+     * @Serializer\SerializedName("MODELID")
+     * @Serializer\Type("string")
+     * @var string
+     */
     private $modelId;
+
+    /**
+     * @Serializer\SerializedName("SERIAL")
+     * @Serializer\Type("string")
+     * @var string
+     */
     private $serial;
+
+    /**
+     * @Serializer\SerializedName("FIRMWAREID")
+     * @Serializer\Type("string")
+     * @var string
+     */
     private $firmwareId;
+
+    /**
+     * @Serializer\SerializedName("CREATED_AT")
+     * @Serializer\Type("string")
+     * @var string
+     */
     private $createdAt;
-    
-    public function __construct(ResponseClassInterface $response, \SimpleXMLElement $CONNECTEDDEVICE)
-    {
-        $this->response    = $response;
-        $this->id          = (string) $CONNECTEDDEVICE->ID;
-        $this->modelId     = (int)    $CONNECTEDDEVICE->MODELID;
-        $this->serial      = (string) $CONNECTEDDEVICE->SERIAL;
-        $this->firmwareId  = (string) $CONNECTEDDEVICE->FIRMWAREID;
-        $this->createdAt   = (string) $CONNECTEDDEVICE->CREATED_AT;
-    }
+
+    /**
+     * @Serializer\SerializedName("LASTCONNECT")
+     * @Serializer\Type("string")
+     * @var string
+     */
+    private $lastConnect;
+
+    /**
+     * @Serializer\SerializedName("OWNERSHIP")
+     * @Serializer\Type("string")
+     * @var string
+     */
+    private $ownership;
     
     /**
      * @return string
@@ -62,16 +94,20 @@ class ConnectedDevice
     {
         return $this->createdAt;
     }
-    
+
     /**
-     * @return DeviceModel
+     * @return string
      */
-    public function getDeviceModel()
+    public function getLastConnect()
     {
-        $response = $this->response->getClient()->getReferenceDeviceModels();
-        $devicesModels = $response->getDeviceModels();
-    
-        return $devicesModels[$this->getModelId()];
+        return $this->lastConnect;
     }
-    
+
+    /**
+     * @return string
+     */
+    public function getOwnership()
+    {
+        return $this->ownership;
+    }
 }

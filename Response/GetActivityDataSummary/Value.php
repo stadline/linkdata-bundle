@@ -2,32 +2,22 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetActivityDataSummary;
 
-use Guzzle\Service\Command\ResponseClassInterface;
-use Geonaute\LinkdataBundle\Utils\Datatype;
+use JMS\Serializer\Annotation as Serializer;
 
 class Value
 {
-    protected $response;
-    protected $_value;
-    protected $id;
-    
-    public function __construct(ResponseClassInterface $response, \SimpleXMLElement $VALUE)
-    {
-        $this->response = $response;
-        $this->_value   = (int) $VALUE;
-        $this->id       = (int) $VALUE['id'];
-    }
-    
     /**
-     * Returns raw value as a string
-     * 
-     * @return string
+     * @Serializer\XmlAttribute
+     * @Serializer\Type("string")
      */
-    public function __toString()
-    {
-        return (string) $this->_value;
-    }
-    
+    private $id;
+
+    /**
+     * @Serializer\XmlList(inline=true, entry="VALUE")
+     * @Serializer\Type("string")
+     */
+    private $value;
+
     /**
      * @return integer
      */
@@ -37,13 +27,10 @@ class Value
     }
 
     /**
-     * @return Datatype
+     * @return mixed
      */
-    public function getDataType()
+    public function getValue()
     {
-        $client   = $this->response->getClient();
-        $response = $client->getReferenceDatatypes();
-        
-        return $response->getDatatypes()->offsetGet($this->id);
+        return $this->value;
     }
 }

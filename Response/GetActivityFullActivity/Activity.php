@@ -46,8 +46,8 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
     private $deviceId;
 
     /**
-     * @Serializer\SerializedName("DEVICE")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetUsersConnectedDevices")
+     * @Serializer\SerializedName("CONNECTEDDEVICE")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetUsersConnectedDevices\ConnectedDevice")
      *
      * @var ConnectedDevice
      */
@@ -124,7 +124,6 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
     private $trackId;
 
     /**
-     * @todo Virtual Property.
      * @Serializer\SerializedName("TRACK")
      * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetTracksDetails\Track")
      *
@@ -168,7 +167,6 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
     private $updateTime;
 
     /**
-     * @todo Virtual Property.
      * @Serializer\SerializedName("ABOUT")
      * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetActivitySummary\About")
      *
@@ -185,22 +183,20 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
     private $tags = array();
 
     /**
-     * @todo Virtual Property.
      * @Serializer\SerializedName("DATASUMMARY")
      * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetActivityDataSummary\DataSummary")
      *
      * @var DataSummary
      */
-    private $summary = null;
+    private $summary;
 
     /**
-     * @todo Virtual Property.
      * @Serializer\SerializedName("DATASTREAM")
      * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetActivityDataStreams\DataStream")
      *
      * @var DataStream
      */
-    private $datastream = null;
+    private $datastream;
 
     public function __toString()
     {
@@ -232,17 +228,6 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
     }
 
     /**
-     * @return Sport
-     */
-    public function getSport()
-    {
-        $client   = $this->response->getClient();
-        $response = $client->getReferenceSports();
-
-        return $response->getSports()->offsetGet($this->sportId);
-    }
-
-    /**
      * @return string
      */
     public function getDeviceId()
@@ -258,15 +243,8 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
         return $this->deviceModelId;
     }
 
-    /**
-     * @return Device
-     */
     public function getDevice()
     {
-        if ($this->device == null) {
-            $this->device = new ConnectedDevice($this->response, $this->xml->CONNECTEDDEVICE[0]);
-        }
-
         return $this->device;
     }
 
@@ -366,33 +344,24 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
         return $this->tags;
     }
 
+    /**
+     * @return DataSummary
+     */
     public function getSummary()
     {
-        if($this->summary == null)
-        {
-            $this->summary = new DataSummary($this->response, $this->xml->DATASUMMARY[0]);
-        }
-
         return $this->summary;
     }
 
+    /**
+     * @return DataStream
+     */
     public function getDataStream()
     {
-        if($this->datastream == null)
-        {
-            $this->datastream = new DataStream($this->response, $this->xml->DATASTREAM[0]);
-        }
-
         return $this->datastream;
     }
 
     public function getTrack()
     {
-        if($this->track == null && $this->trackId != "")
-        {
-            $this->track = new Track($this->xml->TRACK[0]);
-        }
-
         return $this->track;
     }
 
@@ -437,19 +406,6 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
     }
 
     /**
-     * @return Session
-     */
-    public function getSession()
-    {
-        $client   = $this->response->getClient();
-        $response = $client->getSession(array(
-            'token' => $this->sessionToken,
-        ));
-
-        return $response->getSession();
-    }
-
-    /**
      * @return string
      */
     public function getShareToken()
@@ -482,40 +438,11 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
     }
 
     /**
-     * @return mixed
+     * @param null $key
+     * @return About
      */
     public function getAbout($key = null)
     {
-        // return null if about is undefined
-        if (!$this->about) {
-            return null;
-        }
-
-        // return requested value
-        if ($key) {
-            return $this->about->offsetGet($key);
-        }
-        else {
-            return $this->about;
-        }
-    }
-
-    /**
-     * @Serializer\VirtualProperty
-     * @Serializer\Groups({"context"})
-     * @Serializer\SerializedName("about")
-     */
-    public function getAboutArray()
-    {
-        if (!$this->about) {
-            return array();
-        }
-
-        return $this->about->getArrayCopy();
-    }
-
-    public function getHashXml()
-    {
-        return md5($this->xml->saveXML());
+        return $this->about;
     }
 }

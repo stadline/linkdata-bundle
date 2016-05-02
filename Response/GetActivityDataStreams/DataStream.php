@@ -2,44 +2,17 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetActivityDataStreams;
 
-use Guzzle\Service\Command\ResponseClassInterface;
 use JMS\Serializer\Annotation as Serializer;
 
 class DataStream
 {
     /**
-     * @Serializer\Exclude
+     * @Serializer\XmlList(inline=true, entry="MEASURE")
+     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetActivityDataStreams\Measure>")
      *
-     * @var array
+     * @var integer
      */
     private $measures;
-
-    /**
-     * @Serializer\Exclude
-     *
-     * @var array
-     */
-    private $datatypes;
-
-    public function __construct(ResponseClassInterface $response, \SimpleXMLElement $DATASTREAM)
-    {
-        $this->measures = array();
-        $this->datatypes = array();
-
-        foreach ($DATASTREAM->MEASURE as $MEASURE) {
-            $measure = new Measure($response, $MEASURE);
-            $this->addMeasure($measure);
-        }
-
-        // add measure at elapsed_time = 0 (if not set)
-        if (!isset($this->measures[0]) && !isset($this->measures[1])) {
-            $measure = new FakeMeasure($response);
-            $this->addMeasure($measure);
-        }
-
-        // just in case elapsed time are not in chronological order
-        ksort($this->measures);
-    }
 
     public function addMeasure($measure)
     {

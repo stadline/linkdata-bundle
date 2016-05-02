@@ -3,17 +3,16 @@
 namespace Geonaute\LinkdataBundle\Response\GetUsersConnectedDevices;
 
 use Geonaute\LinkdataBundle\Response\ClientAwareXmlResponse;
+use JMS\Serializer\Annotation as Serializer;
 
 class Response extends ClientAwareXmlResponse
 {
+    /**
+     * @Serializer\SerializedName("CONNECTEDDEVICE")
+     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetTracksDetails\Location>")
+     * @var integer
+     */
     private $devices;
-    
-    public function __construct(\SimpleXMLElement $XML)
-    {
-        parent::__construct($XML);
-        
-        $this->devices = new ConnectedDevices($this, $XML->CONNECTEDDEVICES[0]);
-    }
     
     /**
      * @return connectedDevices

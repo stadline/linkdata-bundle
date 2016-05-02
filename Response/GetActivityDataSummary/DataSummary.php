@@ -2,21 +2,19 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetActivityDataSummary;
 
-use Guzzle\Service\Command\ResponseClassInterface;
 use Geonaute\LinkdataBundle\Utils\Datatype;
 use JMS\Serializer\Annotation as Serializer;
 
 class DataSummary
 {
     /**
-     * @Serializer\Exclude
+     * @Serializer\SerializedName("VALUE")
+     * @Serializer\XmlList(entry="VALUE", inline=true)
+     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetUsersTotalMonth\Value>")
+     *
+     * @var string
      */
     private $values;
-
-    /**
-     * @Serializer\Exclude
-     */
-    private $response;
 
     /**
      * @Serializer\Exclude
@@ -51,19 +49,17 @@ class DataSummary
         // points
         Datatype::POINTS_EARNED,
     );
-    
-    public function __construct(ResponseClassInterface $response, \SimpleXMLElement $DATASUMMARY)
-    {
-        $this->response = $response;
-        
-        foreach ($DATASUMMARY->VALUE as $VALUE) {
-            $value = new Value($response, $VALUE);
-            $this->values[$value->getId()] = $value;
-        }
-    }
-    
+
     /**
-     * @return array
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return string
      */
     public function getValues()
     {
@@ -76,9 +72,11 @@ class DataSummary
     public function getValuesAsArray()
     {
         $flatArray = array();
-        foreach($this->getValues() as $id => $value) {
-            $flatArray[$id] = (string) $value;
+
+        foreach($this->getValues() as $value) {
+            $flatArray[$value->getId()] = (string) $value->getValue();
         }
+
         return $flatArray;
     }
 

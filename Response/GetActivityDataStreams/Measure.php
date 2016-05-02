@@ -2,28 +2,31 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetActivityDataStreams;
 
-use Guzzle\Service\Command\ResponseClassInterface;
 use Geonaute\LinkdataBundle\Utils\Datatype;
 use Geonaute\LinkdataBundle\Response\GetActivityDataSummary\Value;
+use JMS\Serializer\Annotation as Serializer;
 
 class Measure
 {
+    /**
+     * @Serializer\XmlAttribute()
+     * @Serializer\Type("string")
+     * @var integer
+     */
     private $elapsedTime;
+
+    /**
+     * @Serializer\SerializedName("VALUE")
+     * @Serializer\Type("string")
+     * @var integer
+     */
     private $values;
-    private $datatypes;
 
-    public function __construct(ResponseClassInterface $response, \SimpleXMLElement $MEASURE)
-    {
-        $this->elapsedTime = (int) $MEASURE['elapsed_time'];
-        $this->values = array();
-        $this->datatypes = array();
-
-        foreach ($MEASURE->VALUE as $VALUE) {
-            $value = new Value($response, $VALUE);
-            $this->values[$value->getId()] = $value;
-            $this->datatypes[$value->getId()] = $value->getId();
-        }
-    }
+    /**
+     * @Serializer\Type("string")
+     * @Serializer\XmlAttribute()
+     */
+    private $id;
 
     /**
      * @return integer
@@ -95,4 +98,14 @@ class Measure
 
         return true;
     }
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+
 }

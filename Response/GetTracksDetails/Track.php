@@ -7,21 +7,11 @@ use JMS\Serializer\Annotation as Serializer;
 class Track
 {
     /**
-     * @Serializer\Type("array")
-     * @var array
+     * @Serializer\XmlList(inline=true, entry="LOCATION")
+     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetTracksDetails\Location>")
+     * @var integer
      */
-    protected $locations;
-    
-    public function __construct(\SimpleXMLElement $TRACK)
-    {
-        $this->locations = array();
-        foreach ($TRACK->LOCATION as $LOCATION) {
-            $location = new Location($LOCATION);
-            if($location->isValid()){
-                $this->locations[$location->getElapsedTime()] = $location;
-            }
-        }
-    }
+    private $locations;
     
     /**
      * @return array
