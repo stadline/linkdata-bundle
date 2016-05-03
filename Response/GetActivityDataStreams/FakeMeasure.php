@@ -15,7 +15,7 @@ class FakeMeasure extends Measure
     }
 
     /**
-     * @return array<Geonaute\LinkdataBundle\Response\GetActivityDataStreams\FakeValue>
+     * @return array
      */
     public function getValues()
     {
