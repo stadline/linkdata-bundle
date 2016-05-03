@@ -2,21 +2,28 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetActivityDataStreams;
 
-use Guzzle\Service\Command\ResponseClassInterface;
+use JMS\Serializer\Annotation as Serializer;
 
 class Activity
 {
+    /**
+     * @Serializer\SerializedName("ID")
+     * @Serializer\Type("integer")
+     *
+     * @var integer
+     */
     private $id;
+
+    /**
+     * @Serializer\SerializedName("DATASTREAM")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetActivityDataStreams\DataStream")
+     *
+     * @var DataStream
+     */
     private $dataStream;
     
-    public function __construct(ResponseClassInterface $response, \SimpleXMLElement $ACTIVITY)
-    {
-        $this->id          = (string) $ACTIVITY->ID;
-        $this->dataStream = new DataStream($response, $ACTIVITY->DATASTREAM[0]);
-    }
-    
     /**
-     * @return string
+     * @return int
      */
     public function getId()
     {
@@ -24,7 +31,7 @@ class Activity
     }
     
     /**
-     * @return DataSummary
+     * @return DataStream
      */
     public function getDataStream()
     {

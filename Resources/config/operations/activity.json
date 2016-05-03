@@ -1,5 +1,13 @@
 {
     "operations": {
+        "getActivityDataStreams": {
+            "httpMethod": "GET",
+            "uri": "activity/{id}/datastreams.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetActivityDataStreams\\Response",
+            "parameters": {
+                "id": { "location": "uri", "required": true }
+            }
+        },
         "getActivityFullActivity": {
             "httpMethod": "GET",
             "uri": "activity/{id}/fullactivity.xml",

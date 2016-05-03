@@ -3,17 +3,17 @@
 namespace Geonaute\LinkdataBundle\Response\GetActivityDataStreams;
 
 use Geonaute\LinkdataBundle\Response\ClientAwareXmlResponse;
+use JMS\Serializer\Annotation as Serializer;
 
 class Response extends ClientAwareXmlResponse
 {
+    /**
+     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetActivityDataStreams\Activity")
+     * @Serializer\SerializedName("ACTIVITY")
+     *
+     * @var Activity
+     */
     private $activity;
-    
-    public function __construct(\SimpleXMLElement $XML)
-    {
-        parent::__construct($XML);
-        
-        $this->activity = new Activity($this, $XML->ACTIVITY[0]);
-    }
     
     /**
      * @return Activity
