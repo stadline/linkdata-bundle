@@ -8,6 +8,14 @@
                 "id": { "location": "uri", "required": true }
             }
         },
+        "getActivityDataSummary": {
+            "httpMethod": "GET",
+            "uri": "activity/{id}/datasummary.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetActivityDataSummary\\Response",
+            "parameters": {
+                "id": { "location": "uri", "required": true }
+            }
+        },
         "getActivityFullActivity": {
             "httpMethod": "GET",
             "uri": "activity/{id}/fullactivity.xml",
