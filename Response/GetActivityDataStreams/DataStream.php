@@ -4,13 +4,9 @@ namespace Geonaute\LinkdataBundle\Response\GetActivityDataStreams;
 
 use JMS\Serializer\Annotation as Serializer;
 
-/**
- * @Serializer\ExclusionPolicy("all")
- */
 class DataStream
 {
     /**
-     * @Serializer\Expose
      * @Serializer\XmlList(inline=true, entry="MEASURE")
      * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetActivityDataStreams\Measure>")
      * @Serializer\Accessor(getter="getMeasuresForSerialization")
@@ -20,6 +16,8 @@ class DataStream
     private $measures;
 
     /**
+     * @Serializer\Exclude
+     *
      * @var array
      */
     private $datatypes;
