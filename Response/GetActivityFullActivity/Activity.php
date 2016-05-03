@@ -438,7 +438,7 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
     }
 
     /**
-     * @return integer
+     * @return boolean
      */
     public function getManual()
     {
