@@ -12,42 +12,45 @@ use Geonaute\LinkdataBundle\Response\GetUsersConnectedDevices\ConnectedDevice;
 use Geonaute\LinkdataBundle\Utils\Activity as UtilsActivity;
 use Geonaute\LinkdataBundle\Utils\ActivityToStringInterface;
 use Geonaute\LinkdataBundle\Utils\Datatype;
-use Symfony\Component\HttpFoundation\Session\Session;
 use JMS\Serializer\Annotation as Serializer;
 
 class Activity implements ActivityToStringInterface, ActivityWidgetProviderInterface
 {
+
     /**
      * @Serializer\SerializedName("ID")
-     * @Serializer\Type("string")
+     * @Serializer\Type("integer")
+     *
      * @var integer
      */
     private $id;
 
     /**
      * @Serializer\SerializedName("USERID")
-     * @Serializer\Type("string")
+     * @Serializer\Type("integer")
+     *
      * @var integer
      */
     private $userId;
 
     /**
      * @Serializer\SerializedName("SPORTID")
-     * @Serializer\Type("string")
+     * @Serializer\Type("integer")
+     *
      * @var integer
      */
     private $sportId;
 
     /**
      * @Serializer\SerializedName("DEVICEID")
-     * @Serializer\Type("string")
+     * @Serializer\Type("integer")
+     *
      * @var integer
      */
     private $deviceId;
 
     /**
-     * @Serializer\SerializedName("CONNECTEDDEVICE")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetUsersConnectedDevices\ConnectedDevice")
+     * @Serializer\Exclude
      *
      * @var ConnectedDevice
      */
@@ -55,7 +58,8 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
 
     /**
      * @Serializer\SerializedName("DEVICEMODELID")
-     * @Serializer\Type("string")
+     * @Serializer\Type("integer")
+     *
      * @var integer
      */
     private $deviceModelId;
@@ -63,6 +67,7 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
     /**
      * @Serializer\SerializedName("STARTDATE")
      * @Serializer\Type("string")
+     *
      * @var string
      */
     private $startDate;
@@ -70,6 +75,7 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
     /**
      * @Serializer\SerializedName("TIMEZONE")
      * @Serializer\Type("string")
+     *
      * @var string
      */
     private $timezone;
@@ -77,6 +83,7 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
     /**
      * @Serializer\SerializedName("DURATION")
      * @Serializer\Type("string")
+     *
      * @var integer
      */
     private $duration;
@@ -84,6 +91,7 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
     /**
      * @Serializer\SerializedName("LIBELLE")
      * @Serializer\Type("string")
+     *
      * @var string
      */
     private $libelle;
@@ -91,41 +99,45 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
     /**
      * @Serializer\SerializedName("COMMENT")
      * @Serializer\Type("string")
+     *
      * @var string
      */
     private $comment;
 
     /**
      * @Serializer\SerializedName("LATITUDE")
-     * @Serializer\Type("float")
+     * @Serializer\Type("double")
+     *
      * @var float
      */
     private $latitude;
 
     /**
      * @Serializer\SerializedName("LONGITUDE")
-     * @Serializer\Type("float")
+     * @Serializer\Type("double")
+     *
      * @var float
      */
     private $longitude;
 
     /**
      * @Serializer\SerializedName("ELEVATION")
-     * @Serializer\Type("string")
-     * @var integer
+     * @Serializer\Type("double")
+     *
+     * @var float
      */
     private $elevation;
 
     /**
      * @Serializer\SerializedName("TRACKID")
      * @Serializer\Type("string")
-     * @var integer
+     *
+     * @var string
      */
     private $trackId;
 
     /**
-     * @Serializer\SerializedName("TRACK")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetTracksDetails\Track")
+     * @Serializer\Exclude
      *
      * @var Track
      */
@@ -134,6 +146,7 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
     /**
      * @Serializer\SerializedName("SESSION_TOKEN")
      * @Serializer\Type("string")
+     *
      * @var string
      */
     private $sessionToken;
@@ -141,20 +154,23 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
     /**
      * @Serializer\SerializedName("SHARE_TOKEN")
      * @Serializer\Type("string")
+     *
      * @var string
      */
     private $shareToken;
 
     /**
      * @Serializer\SerializedName("MANUAL")
-     * @Serializer\Type("string")
-     * @var integer
+     * @Serializer\Type("boolean")
+     *
+     * @var boolean
      */
     private $manual;
 
     /**
      * @Serializer\SerializedName("CREATEDAT")
      * @Serializer\Type("string")
+     *
      * @var string
      */
     private $createdAt;
@@ -162,6 +178,7 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
     /**
      * @Serializer\SerializedName("UPDATETIME")
      * @Serializer\Type("string")
+     *
      * @var string
      */
     private $updateTime;
@@ -178,6 +195,7 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
      *
      * @Serializer\SerializedName("TAGS")
      * @Serializer\Type("array")
+     *
      * @var array
      */
     private $tags = array();
@@ -220,7 +238,7 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
     }
 
     /**
-     * @return int
+     * @return integer
      */
     public function getSportId()
     {
@@ -236,13 +254,16 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
     }
 
     /**
-     * @return int
+     * @return integer
      */
     public function getDeviceModelId()
     {
         return $this->deviceModelId;
     }
 
+    /**
+     * @return ConnectedDevice
+     */
     public function getDevice()
     {
         return $this->device;
@@ -360,6 +381,9 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
         return $this->datastream;
     }
 
+    /**
+     * @return Track
+     */
     public function getTrack()
     {
         return $this->track;
@@ -414,7 +438,7 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
     }
 
     /**
-     * @return boolean
+     * @return integer
      */
     public function getManual()
     {
@@ -445,4 +469,5 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
     {
         return $this->about;
     }
+
 }
