@@ -15,7 +15,7 @@ class Sport
     /**
      * @Serializer\SerializedName("VALUE")
      * @Serializer\XmlList(entry="VALUE", inline=true)
-     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetUsersTotalMonth\Value>")
+     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\Common\Value>")
      *
      * @var string
      */
