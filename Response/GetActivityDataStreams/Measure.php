@@ -94,14 +94,4 @@ class Measure
 
         return true;
     }
-
-    /**
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-
 }
