@@ -1,6 +1,6 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Response\GetActivityDataSummary;
+namespace Geonaute\LinkdataBundle\Response\Common;
 
 use JMS\Serializer\Annotation as Serializer;
 
