@@ -10,7 +10,7 @@ class DataStream
      * @Serializer\XmlList(inline=true, entry="MEASURE")
      * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetActivityDataStreams\Measure>")
      *
-     * @var integer
+     * @var array
      */
     private $measures;
 
