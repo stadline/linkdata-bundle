@@ -31,6 +31,16 @@
             "httpMethod": "PUT",
             "uri": "programs/{modelId}/unpublish.xml",
             "parameters": {
+                "modelId": {
+                    "location": "uri",
+                    "required": true
+                }
+            }
+        },
+        "getProgram": {
+            "httpMethod": "GET",
+            "uri": "programs/{modelId}.xml",
+            "parameters": {
                 "modelId": { "location": "uri", "required": true }
             }
         }
