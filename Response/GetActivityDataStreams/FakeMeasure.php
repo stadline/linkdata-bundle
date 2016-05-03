@@ -2,8 +2,6 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetActivityDataStreams;
 
-use Geonaute\LinkdataBundle\Response\GetActivityDataStreams\FakeValue;
-
 class FakeMeasure extends Measure
 {
     /**
