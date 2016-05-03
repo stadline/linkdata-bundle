@@ -23,7 +23,7 @@ class Activity
     private $dataSummary;
 
     /**
-     * @return string
+     * @return int
      */
     public function getId()
     {
