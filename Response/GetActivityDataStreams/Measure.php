@@ -3,30 +3,26 @@
 namespace Geonaute\LinkdataBundle\Response\GetActivityDataStreams;
 
 use Geonaute\LinkdataBundle\Utils\Datatype;
-use Geonaute\LinkdataBundle\Response\GetActivityDataSummary\Value;
+use Geonaute\LinkdataBundle\Response\Common\Value;
 use JMS\Serializer\Annotation as Serializer;
 
 class Measure
 {
     /**
      * @Serializer\XmlAttribute()
-     * @Serializer\Type("string")
+     * @Serializer\Type("integer")
+     *
      * @var integer
      */
     private $elapsedTime;
 
     /**
      * @Serializer\SerializedName("VALUE")
-     * @Serializer\Type("string")
-     * @var integer
+     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\Common\Value>")
+     *
+     * @var array
      */
     private $values;
-
-    /**
-     * @Serializer\Type("string")
-     * @Serializer\XmlAttribute()
-     */
-    private $id;
 
     /**
      * @return integer

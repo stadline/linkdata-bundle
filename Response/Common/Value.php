@@ -8,13 +8,17 @@ class Value
 {
     /**
      * @Serializer\XmlAttribute
-     * @Serializer\Type("string")
+     * @Serializer\Type("integer")
+     *
+     * @var integer
      */
     private $id;
 
     /**
      * @Serializer\XmlList(inline=true, entry="VALUE")
      * @Serializer\Type("string")
+     *
+     * @var mixed
      */
     private $value;
 

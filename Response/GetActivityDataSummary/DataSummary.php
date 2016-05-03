@@ -59,7 +59,7 @@ class DataSummary
     }
 
     /**
-     * @return string
+     * @return array
      */
     public function getValues()
     {

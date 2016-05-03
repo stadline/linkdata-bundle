@@ -2,18 +2,23 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetActivityDataStreams;
 
-use Guzzle\Service\Command\ResponseClassInterface;
+use Geonaute\LinkdataBundle\Response\GetActivityDataStreams\FakeValue;
 
 class FakeMeasure extends Measure
 {
-    public function __construct(ResponseClassInterface $response, \SimpleXMLElement $REAL_MEASURE = null)
+    /**
+     * @return integer
+     */
+    public function getElapsedTime()
     {
-        $FAKE_MEASURE = new \SimpleXMLElement('
-            <MEASURE elapsed_time="0">
-                <VALUE id="5">0</VALUE>
-            </MEASURE>
-        ');
+        return 0;
+    }
 
-        return parent::__construct($response, $REAL_MEASURE ?: $FAKE_MEASURE);
+    /**
+     * @return array<Geonaute\LinkdataBundle\Response\GetActivityDataStreams\FakeValue>
+     */
+    public function getValues()
+    {
+        return [new FakeValue()];
     }
 }

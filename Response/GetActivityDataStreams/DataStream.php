@@ -4,15 +4,25 @@ namespace Geonaute\LinkdataBundle\Response\GetActivityDataStreams;
 
 use JMS\Serializer\Annotation as Serializer;
 
+/**
+ * @Serializer\ExclusionPolicy("all")
+ */
 class DataStream
 {
     /**
+     * @Serializer\Expose
      * @Serializer\XmlList(inline=true, entry="MEASURE")
      * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetActivityDataStreams\Measure>")
+     * @Serializer\Accessor(getter="getMeasuresForSerialization")
      *
      * @var array
      */
     private $measures;
+
+    /**
+     * @var array
+     */
+    private $datatypes;
 
     public function addMeasure($measure)
     {
@@ -35,6 +45,31 @@ class DataStream
      */
     public function getMeasures()
     {
+        return $this->measures;
+    }
+
+    /**
+     * @return array
+     */
+    public function getMeasuresForSerialization()
+    {
+        $measures = $this->getMeasures();
+
+        $this->measures = array();
+
+        foreach ($measures as $measure) {
+            $this->addMeasure($measure);
+        }
+
+        // add measure at elapsed_time = 0 (if not set)
+        if (!isset($this->measures[0]) && !isset($this->measures[1])) {
+            $measure = new FakeMeasure();
+            $this->addMeasure($measure);
+        }
+
+        // just in case elapsed time are not in chronological order
+        ksort($this->measures);
+
         return $this->measures;
     }
 
