@@ -7,6 +7,7 @@ use JMS\Serializer\Annotation as Serializer;
 
 class DataSummary
 {
+
     /**
      * @Serializer\SerializedName("VALUE")
      * @Serializer\XmlList(entry="VALUE", inline=true)
@@ -19,7 +20,7 @@ class DataSummary
     /**
      * @Serializer\Exclude
      */
-    public static $publicDatatypes = array(
+    public static $publicDatatypes = [
         // distance
         Datatype::DISTANCE,
         // speed
@@ -48,7 +49,7 @@ class DataSummary
         Datatype::RPM_AVG,
         // points
         Datatype::POINTS_EARNED,
-    );
+    ];
 
     /**
      * @return integer
@@ -73,7 +74,7 @@ class DataSummary
     {
         $flatArray = array();
 
-        foreach($this->getValues() as $value) {
+        foreach ($this->getValues() as $value) {
             $flatArray[$value->getId()] = (string) $value->getValue();
         }
 
@@ -97,33 +98,36 @@ class DataSummary
     {
         return isset($this->values[$id]);
     }
-    
+
     /**
      * Return only the public value present in the table
-     * @param boolean preloadElevationValue
+     *
+     * @param boolean preloadElevation|false
      * @return array
      */
     public function getPublicValues($preloadElevation = false)
     {
         //Preload Elevation values for templating purpose
         $elevationIds = array(Datatype::ASCENT, Datatype::DESCENT);
-        
+
         if ($preloadElevation && count(array_intersect(array_keys($this->values), $elevationIds)) != 2) {
-            foreach($elevationIds as $id) {
+            foreach ($elevationIds as $id) {
                 $xml = simplexml_load_string("<VALUE id='$id'>0</VALUE>");
-                $value = new Value($this->response,$xml);
+                $value = new Value($this->response, $xml);
                 $this->values[$value->getId()] = $value;
             }
         }
-        
+
         // filter and sort values
-        $publicValues = array();
+        $publicValues = [];
+
         foreach (self::$publicDatatypes as $datatypeId) {
             if (isset($this->values[$datatypeId])) {
                 $publicValues[$datatypeId] = $this->values[$datatypeId];
             }
         }
-        
+
         return $publicValues;
     }
+
 }

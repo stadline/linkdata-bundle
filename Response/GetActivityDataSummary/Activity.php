@@ -6,11 +6,12 @@ use JMS\Serializer\Annotation as Serializer;
 
 class Activity
 {
+
     /**
      * @Serializer\SerializedName("ID")
-     * @Serializer\Type("integer")
+     * @Serializer\Type("string")
      *
-     * @var integer
+     * @var string
      */
     private $id;
 
@@ -23,13 +24,13 @@ class Activity
     private $dataSummary;
 
     /**
-     * @return int
+     * @return string
      */
     public function getId()
     {
         return $this->id;
     }
-    
+
     /**
      * @return DataSummary
      */
@@ -37,4 +38,5 @@ class Activity
     {
         return $this->dataSummary;
     }
+
 }
