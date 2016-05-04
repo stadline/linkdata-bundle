@@ -50,7 +50,8 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
     private $deviceId;
 
     /**
-     * @Serializer\Exclude
+     * @Serializer\SerializedName("CONNECTEDDEVICE")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetUsersConnectedDevices\ConnectedDevice")
      *
      * @var ConnectedDevice
      */
@@ -137,7 +138,8 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
     private $trackId;
 
     /**
-     * @Serializer\Exclude
+     * @Serializer\SerializedName("TRACK")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetTracksDetails\Track")
      *
      * @var Track
      */
