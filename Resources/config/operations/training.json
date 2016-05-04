@@ -10,7 +10,8 @@
                 "title": { "location": "query", "required": true },
                 "lang": { "location": "query", "required": true },
                 "frequency": { "location": "query", "required": true },
-                "level": { "location": "query", "required": true }
+                "level": { "location": "query", "required": true },
+                "model_id": { "location": "query", "required": false }
             }
         },
         "putPrograms": {
