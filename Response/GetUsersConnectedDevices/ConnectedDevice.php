@@ -6,23 +6,27 @@ use JMS\Serializer\Annotation as Serializer;
 
 class ConnectedDevice
 {
+
     /**
      * @Serializer\SerializedName("ID")
      * @Serializer\Type("string")
+     *
      * @var string
      */
     private $id;
 
     /**
      * @Serializer\SerializedName("MODELID")
-     * @Serializer\Type("string")
-     * @var string
+     * @Serializer\Type("integer")
+     *
+     * @var integer
      */
     private $modelId;
 
     /**
      * @Serializer\SerializedName("SERIAL")
      * @Serializer\Type("string")
+     *
      * @var string
      */
     private $serial;
@@ -30,6 +34,7 @@ class ConnectedDevice
     /**
      * @Serializer\SerializedName("FIRMWAREID")
      * @Serializer\Type("string")
+     *
      * @var string
      */
     private $firmwareId;
@@ -37,6 +42,7 @@ class ConnectedDevice
     /**
      * @Serializer\SerializedName("CREATED_AT")
      * @Serializer\Type("string")
+     *
      * @var string
      */
     private $createdAt;
@@ -44,6 +50,7 @@ class ConnectedDevice
     /**
      * @Serializer\SerializedName("LASTCONNECT")
      * @Serializer\Type("string")
+     *
      * @var string
      */
     private $lastConnect;
@@ -51,10 +58,11 @@ class ConnectedDevice
     /**
      * @Serializer\SerializedName("OWNERSHIP")
      * @Serializer\Type("string")
+     *
      * @var string
      */
     private $ownership;
-    
+
     /**
      * @return string
      */
@@ -62,7 +70,7 @@ class ConnectedDevice
     {
         return $this->id;
     }
-    
+
     /**
      * @return integer
      */
@@ -70,23 +78,23 @@ class ConnectedDevice
     {
         return $this->modelId;
     }
-    
+
     /**
-     * @return integer
+     * @return string
      */
     public function getSerial()
     {
         return $this->serial;
     }
-    
+
     /**
-     * @return integer
+     * @return string
      */
     public function getFirmwareId()
     {
         return $this->firmwareId;
     }
-    
+
     /**
      * @return string
      */
@@ -110,4 +118,5 @@ class ConnectedDevice
     {
         return $this->ownership;
     }
+
 }
