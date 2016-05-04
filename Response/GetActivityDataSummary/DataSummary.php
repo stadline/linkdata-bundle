@@ -19,6 +19,8 @@ class DataSummary
 
     /**
      * @Serializer\Exclude
+     *
+     * @var array
      */
     public static $publicDatatypes = [
         // distance
@@ -50,14 +52,6 @@ class DataSummary
         // points
         Datatype::POINTS_EARNED,
     ];
-
-    /**
-     * @return integer
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
 
     /**
      * @return array
