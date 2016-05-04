@@ -7,6 +7,7 @@ use JMS\Serializer\Annotation as Serializer;
 
 class Response extends ClientAwareXmlResponse
 {
+
     /**
      * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetActivityDataStreams\Activity")
      * @Serializer\SerializedName("ACTIVITY")
@@ -14,7 +15,7 @@ class Response extends ClientAwareXmlResponse
      * @var Activity
      */
     private $activity;
-    
+
     /**
      * @return Activity
      */
@@ -22,4 +23,5 @@ class Response extends ClientAwareXmlResponse
     {
         return $this->activity;
     }
+
 }

@@ -8,6 +8,7 @@ use JMS\Serializer\Annotation as Serializer;
 
 class Measure
 {
+
     /**
      * @Serializer\XmlAttribute()
      * @Serializer\Type("integer")
@@ -23,6 +24,29 @@ class Measure
      * @var array
      */
     private $values;
+
+    /**
+     * @Serializer\Type("array")
+     *
+     * @var array
+     */
+    private $datatypes;
+
+    /**
+     * @Serializer\PreSerialize
+     */
+    public function defineValuesAndDatatypesForSerialization()
+    {
+        $values = $this->getValues();
+
+        $this->values = [];
+        $this->datatypes = [];
+
+        foreach ($values as $value) {
+            $this->values[$value->getId()] = $value;
+            $this->datatypes[$value->getId()] = $value->getId();
+        }
+    }
 
     /**
      * @return integer
@@ -54,6 +78,8 @@ class Measure
 
     /**
      * Merge values
+     *
+     * @param array $values
      */
     public function mergeValues(array $values)
     {
@@ -62,8 +88,10 @@ class Measure
         }
     }
 
-    /**
-     * @return boolean
+    /** Check if has value
+     *
+     * @param integer $id
+     * @return Value
      */
     public function hasValue($id)
     {
@@ -83,7 +111,9 @@ class Measure
     }
 
     /**
-     * Check if a measure seems wrong to exclude it 
+     * Check if a measure seems wrong to exclude it
+     *
+     * @return boolean
      */
     public function isValid()
     {
@@ -94,4 +124,5 @@ class Measure
 
         return true;
     }
+
 }

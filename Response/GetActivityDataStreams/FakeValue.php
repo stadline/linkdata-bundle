@@ -6,6 +6,7 @@ use Geonaute\LinkdataBundle\Response\Common\Value;
 
 class FakeValue extends Value
 {
+
     /**
      * @return integer
      */
@@ -21,4 +22,5 @@ class FakeValue extends Value
     {
         return 0;
     }
+
 }

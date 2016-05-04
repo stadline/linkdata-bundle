@@ -4,6 +4,7 @@ namespace Geonaute\LinkdataBundle\Response\GetActivityDataStreams;
 
 class FakeMeasure extends Measure
 {
+
     /**
      * @return integer
      */
@@ -19,4 +20,5 @@ class FakeMeasure extends Measure
     {
         return [new FakeValue()];
     }
+
 }

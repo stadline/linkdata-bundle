@@ -6,22 +6,50 @@ use JMS\Serializer\Annotation as Serializer;
 
 class DataStream
 {
+
     /**
      * @Serializer\XmlList(inline=true, entry="MEASURE")
      * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetActivityDataStreams\Measure>")
-     * @Serializer\Accessor(getter="getMeasuresForSerialization")
      *
      * @var array
      */
     private $measures;
 
     /**
-     * @Serializer\Exclude
+     * @Serializer\Type("array")
      *
      * @var array
      */
     private $datatypes;
 
+    /**
+     * @Serializer\PreSerialize
+     */
+    public function defineMeasuresAndDatatypesForSerialization()
+    {
+        $measures = $this->getMeasures();
+
+        $this->measures = [];
+
+        foreach ($measures as $measure) {
+            $this->addMeasure($measure);
+        }
+
+        // add measure at elapsed_time = 0 (if not set)
+        if (!isset($this->measures[0]) && !isset($this->measures[1])) {
+            $measure = new FakeMeasure();
+            $this->addMeasure($measure);
+        }
+
+        // just in case elapsed time are not in chronological order
+        ksort($this->measures);
+    }
+
+    /**
+     * Function to add measure
+     *
+     * @param Measure $measure
+     */
     public function addMeasure($measure)
     {
         // skip invalid measure
@@ -47,31 +75,6 @@ class DataStream
     }
 
     /**
-     * @return array
-     */
-    public function getMeasuresForSerialization()
-    {
-        $measures = $this->getMeasures();
-
-        $this->measures = array();
-
-        foreach ($measures as $measure) {
-            $this->addMeasure($measure);
-        }
-
-        // add measure at elapsed_time = 0 (if not set)
-        if (!isset($this->measures[0]) && !isset($this->measures[1])) {
-            $measure = new FakeMeasure();
-            $this->addMeasure($measure);
-        }
-
-        // just in case elapsed time are not in chronological order
-        ksort($this->measures);
-
-        return $this->measures;
-    }
-
-    /**
      * @return Value
      */
     public function getMeasure($elapsedTime)
@@ -82,7 +85,7 @@ class DataStream
     }
 
     /**
-     * @return Value
+     * @return boolean
      */
     public function hasMeasure($elapsedTime)
     {
@@ -107,10 +110,10 @@ class DataStream
         foreach ($this->measures as $measure) {
             foreach ($measure->getValues() as $value) {
                 if (isset($datatypesValues[$value->getId()])) {
-                    $datatypesValues[$value->getId()][$measure->getElapsedTime()] = (int)(string) $value;
+                    $datatypesValues[$value->getId()][$measure->getElapsedTime()] = (int) (string) $value;
                 } else {
                     $datatypesValues[$value->getId()] = array(
-                        $measure->getElapsedTime() => (int)(string) $value,
+                        $measure->getElapsedTime() => (int) (string) $value,
                     );
                 }
             }
@@ -118,4 +121,5 @@ class DataStream
 
         return $datatypesValues;
     }
+
 }
