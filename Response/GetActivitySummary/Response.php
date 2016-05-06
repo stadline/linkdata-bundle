@@ -6,15 +6,15 @@ use Geonaute\LinkdataBundle\Response\ClientAwareXmlResponse;
 
 class Response extends ClientAwareXmlResponse
 {
+
+    /**
+     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetActivitySummary\Activity")
+     * @Serializer\SerializedName("ACTIVITY")
+     *
+     * @var Activity
+     */
     private $activity;
-    
-    public function __construct(\SimpleXMLElement $XML)
-    {
-        parent::__construct($XML);
-        
-        $this->activity = new Activity($this, $XML->ACTIVITY[0]);
-    }
-    
+
     /**
      * @return Activity
      */
@@ -22,4 +22,5 @@ class Response extends ClientAwareXmlResponse
     {
         return $this->activity;
     }
+
 }
