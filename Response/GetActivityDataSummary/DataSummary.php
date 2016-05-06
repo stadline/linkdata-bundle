@@ -54,6 +54,20 @@ class DataSummary
     ];
 
     /**
+     * @Serializer\PostDeserialize
+     */
+    public function defineValuesForDeserialization()
+    {
+        $values = $this->getValues();
+
+        $this->values = [];
+
+        foreach ($values as $value) {
+            $this->values[$value->getId()] = $value;
+        }
+    }
+
+    /**
      * @return array
      */
     public function getValues()
