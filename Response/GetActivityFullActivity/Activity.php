@@ -19,17 +19,17 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
 
     /**
      * @Serializer\SerializedName("ID")
-     * @Serializer\Type("integer")
+     * @Serializer\Type("string")
      *
-     * @var integer
+     * @var string
      */
     private $id;
 
     /**
      * @Serializer\SerializedName("USERID")
-     * @Serializer\Type("integer")
+     * @Serializer\Type("string")
      *
-     * @var integer
+     * @var string
      */
     private $userId;
 
@@ -43,9 +43,9 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
 
     /**
      * @Serializer\SerializedName("DEVICEID")
-     * @Serializer\Type("integer")
+     * @Serializer\Type("string")
      *
-     * @var integer
+     * @var string
      */
     private $deviceId;
 
@@ -200,7 +200,7 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
      *
      * @var array
      */
-    private $tags = array();
+    private $tags = [];
 
     /**
      * @Serializer\SerializedName("DATASUMMARY")

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace Geonaute\LinkdataBundle\Response\GetActivitySummary;
 
@@ -6,9 +6,11 @@ use JMS\Serializer\Annotation as Serializer;
 
 class About
 {
+
     /**
      * @Serializer\SerializedName("TRACK")
      * @Serializer\Type("string")
+     *
      * @var string
      */
     private $track;
@@ -16,6 +18,7 @@ class About
     /**
      * @Serializer\SerializedName("DATASTREAM")
      * @Serializer\Type("string")
+     *
      * @var string
      */
     private $datastream;
@@ -23,6 +26,7 @@ class About
     /**
      * @Serializer\SerializedName("LAP")
      * @Serializer\Type("string")
+     *
      * @var string
      */
     private $lap;
@@ -30,6 +34,7 @@ class About
     /**
      * @Serializer\SerializedName("ELEVATION")
      * @Serializer\Type("string")
+     *
      * @var string
      */
     private $elevation;
@@ -37,6 +42,7 @@ class About
     /**
      * @Serializer\SerializedName("HEARTRATE")
      * @Serializer\Type("string")
+     *
      * @var string
      */
     private $heartrate;
@@ -44,6 +50,7 @@ class About
     /**
      * @Serializer\SerializedName("SPEED")
      * @Serializer\Type("string")
+     *
      * @var string
      */
     private $speed;
@@ -51,6 +58,7 @@ class About
     /**
      * @Serializer\SerializedName("CHALLENGE")
      * @Serializer\Type("string")
+     *
      * @var string
      */
     private $challenge;
@@ -110,4 +118,5 @@ class About
     {
         return $this->challenge;
     }
+
 }

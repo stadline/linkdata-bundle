@@ -11,6 +11,10 @@ use JMS\Serializer\Annotation as Serializer;
  */
 class ClientAwareXmlResponse extends XmlResponse implements ClientAwareInterface
 {
+
+    /**
+     * @var ClientInterface
+     */
     private $client;
 
     /**
@@ -23,13 +27,17 @@ class ClientAwareXmlResponse extends XmlResponse implements ClientAwareInterface
         $this->client = $client;
     }
 
+    /**
+     * @return ClientInterface
+     * @throws ParameterNotFoundException
+     */
     public function getClient()
     {
         if ($this->client instanceof ClientInterface) {
             return $this->client;
-        }
-        else {
+        } else {
             throw new ParameterNotFoundException('client');
         }
     }
+
 }
