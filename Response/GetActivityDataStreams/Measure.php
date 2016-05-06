@@ -19,6 +19,7 @@ class Measure
 
     /**
      * @Serializer\SerializedName("VALUE")
+     * @Serializer\XmlList(entry="VALUE", inline=true)
      * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\Common\Value>")
      *
      * @var array
@@ -33,7 +34,7 @@ class Measure
     private $datatypes;
 
     /**
-     * @Serializer\PreSerialize
+     * @Serializer\PostDeserialize
      */
     public function defineValuesAndDatatypesForSerialization()
     {
@@ -57,12 +58,29 @@ class Measure
     }
 
     /**
+     * @param integer $elapsedTime
+     */
+    public function setElapsedTime($elapsedTime)
+    {
+        $this->elapsedTime = $elapsedTime;
+    }
+
+    /**
      * @return array
      */
     public function getValues()
     {
         return $this->values;
     }
+
+    /**
+     * @param array $values
+     */
+    public function setValues($values)
+    {
+        $this->values = $values;
+    }
+
 
     /**
      * @return Value

@@ -8,6 +8,7 @@ class DataStream
 {
 
     /**
+     * @Serializer\SerializedName("MEASURE")
      * @Serializer\XmlList(inline=true, entry="MEASURE")
      * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetActivityDataStreams\Measure>")
      *
@@ -23,9 +24,9 @@ class DataStream
     private $datatypes;
 
     /**
-     * @Serializer\PreSerialize
+     * @Serializer\PostDeserialize
      */
-    public function defineMeasuresAndDatatypesForSerialization()
+    public function defineMeasuresAndDatatypesForDeserialization()
     {
         $measures = $this->getMeasures();
 
@@ -62,7 +63,7 @@ class DataStream
             $this->measures[$measure->getElapsedTime()]->mergeValues($measure->getValues());
         } else {
             $this->measures[$measure->getElapsedTime()] = $measure;
-            $this->datatypes += $measure->getDatatypes();
+            //$this->datatypes += $measure->getDatatypes();
         }
     }
 
@@ -105,16 +106,16 @@ class DataStream
      */
     public function getDatatypesValues()
     {
-        $datatypesValues = array();
+        $datatypesValues = [];
 
         foreach ($this->measures as $measure) {
             foreach ($measure->getValues() as $value) {
                 if (isset($datatypesValues[$value->getId()])) {
                     $datatypesValues[$value->getId()][$measure->getElapsedTime()] = (int) (string) $value;
                 } else {
-                    $datatypesValues[$value->getId()] = array(
+                    $datatypesValues[$value->getId()] = [
                         $measure->getElapsedTime() => (int) (string) $value,
-                    );
+                    ];
                 }
             }
         }

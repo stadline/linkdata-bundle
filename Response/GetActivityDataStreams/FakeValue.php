@@ -8,19 +8,12 @@ class FakeValue extends Value
 {
 
     /**
-     * @return integer
+     * Construct
      */
-    public function getId()
+    public function __construct()
     {
-        return 5;
-    }
-
-    /**
-     * @return integer
-     */
-    public function getValue()
-    {
-        return 0;
+        parent::setId(5);
+        parent::setValue(0);
     }
 
 }

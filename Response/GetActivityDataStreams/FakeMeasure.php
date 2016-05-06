@@ -6,19 +6,12 @@ class FakeMeasure extends Measure
 {
 
     /**
-     * @return integer
+     * Construct
      */
-    public function getElapsedTime()
+    public function __construct()
     {
-        return 0;
-    }
-
-    /**
-     * @return array
-     */
-    public function getValues()
-    {
-        return [new FakeValue()];
+        parent::setElapsedTime(0);
+        parent::setValues([new FakeValue()]);
     }
 
 }

@@ -31,10 +31,26 @@ class Value
     }
 
     /**
+     * @param integer
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
      * @return mixed
      */
     public function getValue()
     {
         return $this->value;
+    }
+
+    /**
+     * @param mixed
+     */
+    public function setValue($value)
+    {
+        $this->value = $value;
     }
 }
