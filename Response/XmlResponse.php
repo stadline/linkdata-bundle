@@ -4,7 +4,7 @@ namespace Geonaute\LinkdataBundle\Response;
 
 use Guzzle\Service\Command\ResponseClassInterface;
 use Guzzle\Service\Command\OperationCommand;
-use SimpleXMLElement;
+use JMS\Serializer\SerializerBuilder;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
@@ -12,12 +12,20 @@ use JMS\Serializer\Annotation as Serializer;
  */
 class XmlResponse implements ResponseClassInterface
 {
+
     protected $rawResponse;
 
     public static function fromCommand(OperationCommand $command)
     {
-        $xml = $command->getResponse()->xml();
-        $response = new static($xml);
+        $xml = $command->getResponse()->xml()->asXML();
+        $operationName = ucfirst($command->getName());
+
+        $builder = SerializerBuilder::create();
+        $builder->addDefaultHandlers();
+
+        $serializer = $builder->build();
+
+        $response = $serializer->deserialize($xml, 'Geonaute\LinkdataBundle\Response\\' . $operationName . '\Response', 'xml');
 
         $response->rawResponse = $command->getResponse();
 
@@ -29,11 +37,6 @@ class XmlResponse implements ResponseClassInterface
         return $response;
     }
 
-    public function __construct(\SimpleXMLElement $xml)
-    {
-        $this->xml = $xml;
-    }
-
     /**
      * Access the raw response from command
      */
@@ -41,4 +44,5 @@ class XmlResponse implements ResponseClassInterface
     {
         return $this->rawResponse();
     }
+
 }
