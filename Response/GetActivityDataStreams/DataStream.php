@@ -31,6 +31,7 @@ class DataStream
         $measures = $this->getMeasures();
 
         $this->measures = [];
+        $this->datatypes = [];
 
         foreach ($measures as $measure) {
             $this->addMeasure($measure);
@@ -63,7 +64,7 @@ class DataStream
             $this->measures[$measure->getElapsedTime()]->mergeValues($measure->getValues());
         } else {
             $this->measures[$measure->getElapsedTime()] = $measure;
-            //$this->datatypes += $measure->getDatatypes(); @todo FIX IT
+            $this->datatypes += $measure->getDatatypes();
         }
     }
 
