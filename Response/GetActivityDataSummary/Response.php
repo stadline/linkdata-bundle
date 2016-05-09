@@ -9,8 +9,8 @@ class Response extends ClientAwareXmlResponse
 {
 
     /**
-     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetActivityDataSummary\Activity")
      * @Serializer\SerializedName("ACTIVITY")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetActivityDataSummary\Activity")
      *
      * @var Activity
      */

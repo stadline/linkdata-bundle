@@ -10,18 +10,18 @@ class Response extends ClientAwareXmlResponse
 
     /**
      * @Serializer\SerializedName("CONNECTEDDEVICES")
-     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetUsersConnectedDevices\ConnectedDevice>")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetUsersConnectedDevices\ConnectedDevices")
      *
-     * @var array
+     * @var ConnectedDevices
      */
-    private $devices;
+    private $connectedDevices;
 
     /**
-     * @return connectedDevices
+     * @return ConnectedDevices
      */
     public function getConnectedDevices()
     {
-        return $this->devices;
+        return $this->connectedDevices;
     }
 
 }

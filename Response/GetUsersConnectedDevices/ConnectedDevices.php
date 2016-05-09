@@ -6,31 +6,41 @@ use Guzzle\Service\Command\ResponseClassInterface;
 
 class ConnectedDevices extends \ArrayObject
 {
-    public function __construct(ResponseClassInterface $response, \SimpleXMLElement $CONNECTEDDEVICES)
-    {
-        // browse through list
-        $collection = array();
-        
-        foreach ($CONNECTEDDEVICES as $CONNECTEDDEVICE) {
-            $connectedDevice = new ConnectedDevice($response, $CONNECTEDDEVICE);
-            $collection[$connectedDevice->getId()] = $connectedDevice;
-        }
-        
-        // build ArrayObject using collection
-        return parent::__construct($collection);
-    }
-    
+
     /**
+     * @Serializer\SerializedName("CONNECTEDDEVICE")
+     * @Serializer\XmlList(entry="CONNECTEDDEVICE", inline=true)
+     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Response\GetUsersConnectedDevices\ConnectedDevice>")
+     */
+    private $devices;
+
+    /**
+     * @Serializer\PostDeserialize
+     */
+    public function defineDevicesForDeserialization()
+    {
+        $devices = $this->devices;
+
+        $this->devices = [];
+
+        foreach ($devices as $connectedDevice) {
+            $this->devices[$connectedDevice->getId()] = $connectedDevice;
+        }
+    }
+
+    /*
+     *
      * @return ConnectedDevice
      */
+
     public function getConnectedDevice($id)
     {
         if ($this->offsetExists($id))
             return $this->offsetGet($id);
-        
+
         return false;
     }
-    
+
     /**
      * @return ConnectedDevice
      */
@@ -38,7 +48,7 @@ class ConnectedDevices extends \ArrayObject
     {
         return reset($this);
     }
-    
+
     /**
      * Get all the distinct models ids of the collection
      * 
@@ -46,13 +56,12 @@ class ConnectedDevices extends \ArrayObject
      */
     public function getModelIds()
     {
-        $output = array();
-        
-        foreach ($this as $connectedDevice)
-        {
+        $output = [];
+
+        foreach ($this as $connectedDevice) {
             $output[] = $connectedDevice->getModelId();
         }
-        
+
         return array_unique($output);
     }
 
@@ -64,14 +73,13 @@ class ConnectedDevices extends \ArrayObject
     public function getLastCreatedAt()
     {
         $output = "";
-    
-        foreach ($this as $connectedDevice)
-        {
+
+        foreach ($this as $connectedDevice) {
             if ($connectedDevice->getCreatedAt() > $output)
                 $output = $connectedDevice->getCreatedAt();
         }
-    
+
         return $output;
     }
-    
+
 }

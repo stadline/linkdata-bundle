@@ -7,9 +7,10 @@ use JMS\Serializer\Annotation as Serializer;
 
 class Response extends ClientAwareXmlResponse
 {
+
     /**
-     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetTracksDetails\Track")
      * @Serializer\SerializedName("TRACK")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetTracksDetails\Track")
      *
      * @var Track
      */
@@ -22,4 +23,5 @@ class Response extends ClientAwareXmlResponse
     {
         return $this->track;
     }
+
 }
