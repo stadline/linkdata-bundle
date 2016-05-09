@@ -7,31 +7,36 @@ use JMS\Serializer\Annotation as Serializer;
 
 class Location implements VectorInterface
 {
+
     /**
      * @Serializer\XmlAttribute()
-     * @Serializer\Type("string")
+     * @Serializer\Type("integer")
+     *
      * @var integer
      */
     private $elapsedTime;
 
     /**
      * @Serializer\SerializedName("LATITUDE")
-     * @Serializer\Type("string")
-     * @var integer
+     * @Serializer\Type("double")
+     *
+     * @var float
      */
     private $latitude;
 
     /**
      * @Serializer\SerializedName("LONGITUDE")
-     * @Serializer\Type("string")
-     * @var integer
+     * @Serializer\Type("double")
+     *
+     * @var float
      */
     private $longitude;
 
     /**
      * @Serializer\SerializedName("ELEVATION")
-     * @Serializer\Type("string")
-     * @var integer
+     * @Serializer\Type("double")
+     *
+     * @var float
      */
     private $elevation;
 
@@ -42,7 +47,7 @@ class Location implements VectorInterface
     {
         return $this->elapsedTime;
     }
-    
+
     /**
      * @return float
      */
@@ -50,7 +55,7 @@ class Location implements VectorInterface
     {
         return $this->latitude;
     }
-    
+
     /**
      * @return float
      */
@@ -58,7 +63,7 @@ class Location implements VectorInterface
     {
         return $this->longitude;
     }
-    
+
     /**
      * @return float
      */
@@ -66,11 +71,11 @@ class Location implements VectorInterface
     {
         return $this->elevation;
     }
-    
+
     /**
      * Returns creation/modification timestamp for element
      * @see http://www.topografix.com/gpx_manual.asp#time
-     * 
+     *
      * @param  string $date (format: Y-m-d H:i:s P)
      * @return string
      */
@@ -80,12 +85,12 @@ class Location implements VectorInterface
 
         $startDate->setTimezone(new \DateTimeZone('UTC'));
 
-        $elapsedTime  = $this->elapsedTime;
+        $elapsedTime = $this->elapsedTime;
         $creationDate = $startDate->modify("+ $elapsedTime seconds");
 
         return $creationDate->format('Y-m-d\TH:i:s\Z');
     }
-    
+
     /**
      * Check if a measure seems wrong to exclude it
      */
@@ -99,18 +104,28 @@ class Location implements VectorInterface
         return true;
     }
 
+    /**
+     * @return float
+     */
     public function getX()
     {
         return $this->getLatitude();
     }
 
+    /**
+     * @return float
+     */
     public function getY()
     {
         return $this->getLongitude();
     }
 
+    /**
+     * @return integer
+     */
     public function getIndex()
     {
         return $this->getElapsedTime();
     }
+
 }

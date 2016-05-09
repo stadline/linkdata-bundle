@@ -5,7 +5,10 @@
             "uri": "activity/{id}/datastreams.xml",
             "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetActivityDataStreams\\Response",
             "parameters": {
-                "id": { "location": "uri", "required": true }
+                "id": {
+                    "location": "uri",
+                    "required": true
+                }
             }
         },
         "getActivityDataSummary": {
@@ -13,7 +16,10 @@
             "uri": "activity/{id}/datasummary.xml",
             "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetActivityDataSummary\\Response",
             "parameters": {
-                "id": { "location": "uri", "required": true }
+                "id": {
+                    "location": "uri",
+                    "required": true
+                }
             }
         },
         "getActivityFullActivity": {
@@ -21,7 +27,10 @@
             "uri": "activity/{id}/fullactivity.xml",
             "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetActivityFullActivity\\Response",
             "parameters": {
-                "id": { "location": "uri", "required": true }
+                "id": {
+                    "location": "uri",
+                    "required": true
+                }
             }
         },
         "getActivitySummary": {
@@ -29,7 +38,10 @@
             "uri": "activity/{id}/summary.xml",
             "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetActivityFullActivity\\Response",
             "parameters": {
-                "id": { "location": "uri", "required": true }
+                "id": {
+                    "location": "uri",
+                    "required": true
+                }
             }
         }
     }

@@ -2,17 +2,20 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetTracksDetails;
 
+use Geonaute\LinkdataBundle\Response\GetTracksDetails\Location;
 use JMS\Serializer\Annotation as Serializer;
 
 class Track
 {
+
     /**
      * @Serializer\XmlList(inline=true, entry="LOCATION")
      * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetTracksDetails\Location>")
-     * @var integer
+     *
+     * @var array
      */
     private $locations;
-    
+
     /**
      * @return array
      */
@@ -20,7 +23,7 @@ class Track
     {
         return $this->locations;
     }
-    
+
     /**
      * @return Location
      */
@@ -28,15 +31,16 @@ class Track
     {
         return $this->locations[$elapsedTime];
     }
-    
+
     /**
      * Returns a location array suitable for gmaps js plugin
+     *
      * @return array
      */
     public function getLocationsAsArray()
     {
         $locations = array();
-        
+
         foreach ($this->locations as $location) {
             $locations[] = array(
                 $location->getLatitude(),
@@ -50,6 +54,7 @@ class Track
 
     /**
      * Returns a location array suitable for route creation
+     *
      * @return array
      */
     public function getLocationsAsRoute()
@@ -66,4 +71,5 @@ class Track
 
         return $locations;
     }
+
 }

@@ -10,7 +10,10 @@
             "uri": "statistics/{statisticId}/programs.xml",
             "responseClass": "Geonaute\\LinkdataBundle\\Response\\Statistic\\ProgramsStatistics",
             "parameters": {
-                "statisticId": { "location": "uri", "required": true }
+                "statisticId": {
+                    "location": "uri",
+                    "required": true
+                }
             }
         }
     }

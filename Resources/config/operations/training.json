@@ -4,34 +4,82 @@
             "httpMethod": "POST",
             "uri": "programs.xml",
             "parameters": {
-                "xml": { "location": "body", "required": true },
-                "goal_id": { "location": "query", "required": true },
-                "weeks": { "location": "query", "required": true },
-                "title": { "location": "query", "required": true },
-                "lang": { "location": "query", "required": true },
-                "frequency": { "location": "query", "required": true },
-                "level": { "location": "query", "required": true }
+                "xml": {
+                    "location": "body",
+                    "required": true
+                },
+                "goal_id": {
+                    "location": "query",
+                    "required": true
+                },
+                "weeks": {
+                    "location": "query",
+                    "required": true
+                },
+                "title": {
+                    "location": "query",
+                    "required": true
+                },
+                "lang": {
+                    "location": "query",
+                    "required": true
+                },
+                "frequency": {
+                    "location": "query",
+                    "required": true
+                },
+                "level": {
+                    "location": "query",
+                    "required": true
+                }
             }
         },
         "putPrograms": {
             "httpMethod": "PUT",
             "uri": "programs/{modelId}.xml",
             "parameters": {
-                "xml": { "location": "body", "required": true },
-                "modelId": { "location": "uri", "required": true },
-                "goal_id": { "location": "query", "required": true },
-                "weeks": { "location": "query", "required": true },
-                "title": { "location": "query", "required": true },
-                "lang": { "location": "query", "required": true },
-                "frequency": { "location": "query", "required": true },
-                "level": { "location": "query", "required": true }
+                "xml": {
+                    "location": "body",
+                    "required": true
+                },
+                "modelId": {
+                    "location": "uri",
+                    "required": true
+                },
+                "goal_id": {
+                    "location": "query",
+                    "required": true
+                },
+                "weeks": {
+                    "location": "query",
+                    "required": true
+                },
+                "title": {
+                    "location": "query",
+                    "required": true
+                },
+                "lang": {
+                    "location": "query",
+                    "required": true
+                },
+                "frequency": {
+                    "location": "query",
+                    "required": true
+                },
+                "level": {
+                    "location": "query",
+                    "required": true
+                }
             }
         },
         "putProgramsUnpublish": {
             "httpMethod": "PUT",
             "uri": "programs/{modelId}/unpublish.xml",
             "parameters": {
-                "modelId": { "location": "uri", "required": true }
+                "modelId": {
+                    "location": "uri",
+                    "required": true
+                }
             }
         }
     }
