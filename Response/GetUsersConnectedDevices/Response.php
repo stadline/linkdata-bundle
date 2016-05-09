@@ -7,13 +7,15 @@ use JMS\Serializer\Annotation as Serializer;
 
 class Response extends ClientAwareXmlResponse
 {
+
     /**
      * @Serializer\SerializedName("CONNECTEDDEVICE")
-     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetTracksDetails\Location>")
-     * @var integer
+     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetUsersConnectedDevices\ConnectedDevice>")
+     *
+     * @var array
      */
     private $devices;
-    
+
     /**
      * @return connectedDevices
      */
@@ -21,4 +23,5 @@ class Response extends ClientAwareXmlResponse
     {
         return $this->devices;
     }
+
 }
