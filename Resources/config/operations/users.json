@@ -1,5 +1,19 @@
 {
     "operations": {
+        "getUsersConnectedDevices": {
+            "httpMethod": "GET",
+            "uri": "users/{ldid}/connecteddevices.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetUsersConnectedDevices\\Response",
+            "parameters": {
+                "ldid": {
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
+        },
         "getUsersProfile": {
             "httpMethod": "GET",
             "uri": "users/{ldid}/profile.xml",

@@ -9,6 +9,9 @@
                     "location": "uri",
                     "required": true
                 }
+            },
+            "additionalParameters": {
+                "location": "query"
             }
         }
     }
