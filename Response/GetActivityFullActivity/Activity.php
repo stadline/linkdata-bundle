@@ -163,9 +163,10 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
 
     /**
      * @Serializer\SerializedName("MANUAL")
-     * @Serializer\Type("boolean")
+     * @Serializer\Type("integer")
+     * @Serializer\Accessor(setter="setManualForDeserialization")
      *
-     * @var boolean
+     * @var integer
      */
     private $manual;
 
@@ -217,6 +218,14 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
      * @var DataStream
      */
     private $datastream;
+
+    /**
+     * Deserialization setter
+     */
+    public function setManualForDeserialization()
+    {
+        $this->manual = (bool)(int) $this->manual;
+    }
 
     /**
      * @return string
@@ -443,7 +452,7 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
     }
 
     /**
-     * @return boolean
+     * @return integer
      */
     public function getManual()
     {
@@ -468,11 +477,22 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
 
     /**
      * @param null $key
-     * @return About
+     * @return mixed
      */
     public function getAbout($key = null)
     {
-        return $this->about;
+        // return null if about is undefined
+        if (!$this->about) {
+            return null;
+        }
+
+        // return requested value
+        if ($key) {
+            return $this->about->offsetGet($key);
+        }
+        else {
+            return $this->about;
+        }
     }
 
 }
