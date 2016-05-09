@@ -6,20 +6,31 @@ use JMS\Serializer\Annotation as Serializer;
 
 class Sports
 {
+
     /**
      * @Serializer\SerializedName("SPORT")
      * @Serializer\XmlList(entry="SPORT", inline=true)
      * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetUsersTotalMonth\Sport>")
-     *
-     * @var Sport
      */
-    protected $sports;
+    private $sports;
 
     /**
-     * @return Sport
+     * @Serializer\PostDeserialize
      */
-    public function getSports()
+    public function generateCollectionForDeserialization()
     {
-        return $this->sports;
+        $sports = $this->sports;
+        $collection = [];
+
+        // Used $sports only to facilitate deserialization
+        unset($this->sports);
+
+        foreach ($sports as $sport) {
+            $collection[$sport->getId()] = $sport;
+        }
+
+        // build ArrayObject using collection
+        return parent::__construct($collection);
     }
+
 }

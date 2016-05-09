@@ -7,6 +7,7 @@ use JMS\Serializer\Annotation as Serializer;
 
 class TotalMonth
 {
+
     /**
      * @Serializer\SerializedName("MONTH")
      * @Serializer\Type("string")
@@ -31,6 +32,9 @@ class TotalMonth
      */
     private $sports;
 
+    /**
+     * @return string
+     */
     public function __toString()
     {
         return $this->getMonth();
@@ -54,7 +58,7 @@ class TotalMonth
 
     /**
      * Sum values for a datatype on the year
-     * 
+     *
      * @param integer $unitId
      * @return integer
      */
@@ -71,7 +75,7 @@ class TotalMonth
 
     /**
      * Returns distance unit id
-     * 
+     *
      * @return integer
      */
     public function getDistanceId()
@@ -81,7 +85,7 @@ class TotalMonth
 
     /**
      * Returns total distance on a year
-     * 
+     *
      * @return integer
      */
     public function getTotalDistance()
@@ -91,7 +95,7 @@ class TotalMonth
 
     /**
      * Returns calories unit id
-     * 
+     *
      * @return integer
      */
     public function getCaloriesId()
@@ -101,7 +105,7 @@ class TotalMonth
 
     /**
      * Returns total calories burnt on a year
-     * 
+     *
      * @return integer
      */
     public function getTotalCalories()
@@ -111,7 +115,7 @@ class TotalMonth
 
     /**
      * Returns duration unit id
-     * 
+     *
      * @return integer
      */
     public function getDurationId()
@@ -121,7 +125,7 @@ class TotalMonth
 
     /**
      * Returns total duration on a year
-     * 
+     *
      * @return integer
      */
     public function getTotalDuration()
@@ -131,7 +135,7 @@ class TotalMonth
 
     /**
      * Returns an array of sorted durations by sport with a concatenation of minors sports in the last value
-     * 
+     *
      * @param integer $length
      * @return array unitId => value
      */
@@ -169,4 +173,5 @@ class TotalMonth
     {
         return $this->getSports()->getArrayCopy();
     }
+
 }

@@ -8,6 +8,7 @@ use JMS\Serializer\Annotation as Serializer;
 
 class Response extends ClientAwareXmlResponse
 {
+
     /**
      * @Serializer\SerializedName("TOTALMONTH")
      * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetUsersTotalMonth\TotalMonth")
@@ -16,6 +17,10 @@ class Response extends ClientAwareXmlResponse
      */
     private $totalMonth;
 
+    /**
+     * @param OperationCommand $command
+     * @return EmptyResponse
+     */
     public static function fromCommand(OperationCommand $command)
     {
         if ($command->getResponse()->getStatusCode() == 204) {
@@ -32,4 +37,5 @@ class Response extends ClientAwareXmlResponse
     {
         return $this->totalMonth;
     }
+
 }

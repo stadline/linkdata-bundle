@@ -6,9 +6,10 @@ use JMS\Serializer\Annotation as Serializer;
 
 class Sport
 {
+
     /**
      * @Serializer\XmlAttribute()
-     * @Serializer\Type("string")
+     * @Serializer\Type("integer")
      */
     private $id;
 
@@ -17,7 +18,7 @@ class Sport
      * @Serializer\XmlList(entry="VALUE", inline=true)
      * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\Common\Value>")
      *
-     * @var string
+     * @var array
      */
     private $values;
 
@@ -30,10 +31,11 @@ class Sport
     }
 
     /**
-     * @return string
+     * @return array
      */
     public function getValues()
     {
         return $this->values;
     }
+
 }
