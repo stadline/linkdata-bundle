@@ -1,9 +1,9 @@
 {
     "operations": {
-        "getTrackDetails": {
+        "getTracksDetails": {
             "httpMethod": "GET",
-            "uri": "tracks/{token}/datastreams.xml",
-            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetTrackDetails\\Response",
+            "uri": "tracks/{token}/details.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetTracksDetails\\Response",
             "parameters": {
                 "token": {
                     "location": "uri",
