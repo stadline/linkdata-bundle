@@ -163,10 +163,9 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
 
     /**
      * @Serializer\SerializedName("MANUAL")
-     * @Serializer\Type("integer")
-     * @Serializer\Accessor(setter="setManualForDeserialization")
+     * @Serializer\Type("boolean")
      *
-     * @var integer
+     * @var boolean
      */
     private $manual;
 
@@ -218,14 +217,6 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
      * @var DataStream
      */
     private $datastream;
-
-    /**
-     * Deserialization setter
-     */
-    public function setManualForDeserialization()
-    {
-        $this->manual = (bool)(int) $this->manual;
-    }
 
     /**
      * @return string
