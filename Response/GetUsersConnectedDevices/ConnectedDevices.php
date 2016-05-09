@@ -2,7 +2,7 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetUsersConnectedDevices;
 
-use Guzzle\Service\Command\ResponseClassInterface;
+use JMS\Serializer\Annotation as Serializer;
 
 class ConnectedDevices extends \ArrayObject
 {
@@ -10,7 +10,7 @@ class ConnectedDevices extends \ArrayObject
     /**
      * @Serializer\SerializedName("CONNECTEDDEVICE")
      * @Serializer\XmlList(entry="CONNECTEDDEVICE", inline=true)
-     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Response\GetUsersConnectedDevices\ConnectedDevice>")
+     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetUsersConnectedDevices\ConnectedDevice>")
      */
     private $devices;
 
@@ -26,6 +26,8 @@ class ConnectedDevices extends \ArrayObject
         foreach ($devices as $connectedDevice) {
             $this->devices[$connectedDevice->getId()] = $connectedDevice;
         }
+
+        return parent::__construct($this->devices);
     }
 
     /*
@@ -51,7 +53,7 @@ class ConnectedDevices extends \ArrayObject
 
     /**
      * Get all the distinct models ids of the collection
-     * 
+     *
      * @return array
      */
     public function getModelIds()
