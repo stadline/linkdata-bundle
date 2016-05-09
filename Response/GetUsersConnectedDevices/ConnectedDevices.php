@@ -17,17 +17,18 @@ class ConnectedDevices extends \ArrayObject
     /**
      * @Serializer\PostDeserialize
      */
-    public function defineDevicesForDeserialization()
+    public function generateCollectionForDeserialization()
     {
         $devices = $this->devices;
 
-        $this->devices = [];
+        // Use $devices only to facilitate deserialization
+        unset($this->devices);
 
         foreach ($devices as $connectedDevice) {
-            $this->devices[$connectedDevice->getId()] = $connectedDevice;
+            $collection[$connectedDevice->getId()] = $connectedDevice;
         }
 
-        return parent::__construct($this->devices);
+        return parent::__construct($collection);
     }
 
     /*
