@@ -1,6 +1,6 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Response\GetUsersTotalMonth;
+namespace Geonaute\LinkdataBundle\Response\GetUsersTotalMonths;
 
 use JMS\Serializer\Annotation as Serializer;
 
@@ -10,7 +10,7 @@ class Sports
     /**
      * @Serializer\SerializedName("SPORT")
      * @Serializer\XmlList(entry="SPORT", inline=true)
-     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetUsersTotalMonth\Sport>")
+     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetUsersTotalMonths\Sport>")
      */
     private $sports;
 

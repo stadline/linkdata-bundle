@@ -1,6 +1,6 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Response\GetUsersTotalMonth;
+namespace Geonaute\LinkdataBundle\Response\GetUsersTotalMonths;
 
 use Geonaute\LinkdataBundle\Response\ClientAwareXmlResponse;
 use Guzzle\Service\Command\OperationCommand;
@@ -11,7 +11,7 @@ class Response extends ClientAwareXmlResponse
 
     /**
      * @Serializer\SerializedName("TOTALMONTH")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetUsersTotalMonth\TotalMonth")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetUsersTotalMonths\TotalMonth")
      *
      * @var TotalMonth
      */
