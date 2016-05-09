@@ -9,7 +9,7 @@ class Response extends ClientAwareXmlResponse
 {
 
     /**
-     * @Serializer\SerializedName("CONNECTEDDEVICE")
+     * @Serializer\SerializedName("CONNECTEDDEVICES")
      * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetUsersConnectedDevices\ConnectedDevice>")
      *
      * @var array
