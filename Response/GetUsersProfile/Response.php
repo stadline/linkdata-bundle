@@ -7,6 +7,7 @@ use JMS\Serializer\Annotation as Serializer;
 
 class Response extends XmlResponse
 {
+
     /**
      * @Serializer\SerializedName("USER")
      * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetUsersProfile\User")
@@ -14,7 +15,7 @@ class Response extends XmlResponse
      * @var User
      */
     private $user;
-    
+
     /**
      * @return User
      */
@@ -22,4 +23,5 @@ class Response extends XmlResponse
     {
         return $this->user;
     }
+
 }

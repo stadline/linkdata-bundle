@@ -6,6 +6,7 @@ use JMS\Serializer\Annotation as Serializer;
 
 class User
 {
+
     /**
      * @Serializer\SerializedName("LDID")
      * @Serializer\Type("string")
@@ -45,12 +46,12 @@ class User
      * @var string
      */
     private $language;
-    
+
     public function __toString()
     {
-        return $this->getFirstName().' '.$this->getLastName();
+        return $this->getFirstName() . ' ' . $this->getLastName();
     }
-    
+
     /**
      * @return string
      */
@@ -58,7 +59,7 @@ class User
     {
         return $this->ldid;
     }
-    
+
     /**
      * @return string
      */
@@ -66,7 +67,7 @@ class User
     {
         return $this->firstName;
     }
-    
+
     /**
      * @return string
      */
@@ -74,7 +75,7 @@ class User
     {
         return $this->lastName;
     }
-    
+
     /**
      * @return string
      */
@@ -82,7 +83,7 @@ class User
     {
         return $this->country;
     }
-    
+
     /**
      * @return string
      */
@@ -90,4 +91,5 @@ class User
     {
         return $this->language;
     }
+
 }
