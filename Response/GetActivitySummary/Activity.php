@@ -2,85 +2,230 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetActivitySummary;
 
-use Guzzle\Service\Command\ResponseClassInterface;
+use DateTime;
+use Geonaute\LinkdataBundle\Response\Common\ActivityWidgetProviderInterface;
+use Geonaute\LinkdataBundle\Response\GetActivityDataStreams\DataStream;
+use Geonaute\LinkdataBundle\Response\GetActivityDataSummary\DataSummary;
+use Geonaute\LinkdataBundle\Response\GetActivitySummary\About;
+use Geonaute\LinkdataBundle\Response\GetTracksDetails\Track;
+use Geonaute\LinkdataBundle\Response\GetUsersConnectedDevices\ConnectedDevice;
+use Geonaute\LinkdataBundle\Utils\Activity as UtilsActivity;
+use Geonaute\LinkdataBundle\Utils\ActivityToStringInterface;
 use Geonaute\LinkdataBundle\Utils\Datatype;
-use Geonaute\LinkdataBundle\Utils\DateFormatter;
+use JMS\Serializer\Annotation as Serializer;
 
-class Activity
+class Activity implements ActivityToStringInterface, ActivityWidgetProviderInterface
 {
-    private $response;
-    private $id;
-    private $userId;
-    private $sportId;
-    private $deviceId;
-    private $device;
-    private $deviceModelId;
-    private $startDate;
-    private $timezone;
-    private $duration;
-    private $libelle;
-    private $latitude;
-    private $longitude;
-    private $elevation;
-    private $trackId;
-    private $track;
-    private $sessionToken;
-    private $shareToken;
-    private $manual;
-    private $createdAt;
-    private $updateTime;
-    private $about;
-    private $tags = array();
-    
-    private $summary = null;
-    private $datastream = null;
-    
-    public function __construct(ResponseClassInterface $response, \SimpleXMLElement $ACTIVITY)
-    {
-        $this->response      = $response;
-        $this->id            = (string)    $ACTIVITY->ID;
-        $this->userId        = (string)    $ACTIVITY->USERID;
-        $this->sportId       = (int)       $ACTIVITY->SPORTID;
-        $this->deviceId      = (string)    $ACTIVITY->DEVICEID;
-        $this->deviceModelId = (int)       $ACTIVITY->DEVICEMODELID;
-        $this->startDate     = (string)    $ACTIVITY->STARTDATE;
-        $this->timezone      = (string)    $ACTIVITY->TIMEZONE;
-        $this->duration      = (int)       $ACTIVITY->DURATION;
-        $this->libelle       = (string)    $ACTIVITY->LIBELLE;
-        $this->latitude      = (float)     $ACTIVITY->LATITUDE;
-        $this->longitude     = (float)     $ACTIVITY->LONGITUDE;
-        $this->elevation     = (float)     $ACTIVITY->ELEVATION;
-        $this->trackId       = (string)    $ACTIVITY->TRACKID;
-        $this->sessionToken  = (string)    $ACTIVITY->SESSION_TOKEN;
-        $this->shareToken    = (string)    $ACTIVITY->SHARE_TOKEN;
-        $this->manual        = (bool)(int) $ACTIVITY->MANUAL;
-        $this->createdAt     = (string)    $ACTIVITY->CREATEDAT;
-        $this->updateTime    = (string)    $ACTIVITY->UPDATETIME;
-        $this->comment       = (string)    $ACTIVITY->COMMENT;
 
-        if ($ACTIVITY->TAGS[0]) {
-            foreach($ACTIVITY->TAGS[0] as $TAG) {
-               $this->tags[] = (string) $TAG;
-            }
-        }
-        
-        if ($ACTIVITY->ABOUT[0]) {
-            $this->about = new About($ACTIVITY->ABOUT[0]);
-        }
-    }
-    
+    /**
+     * @Serializer\SerializedName("ID")
+     * @Serializer\Type("string")
+     *
+     * @var string
+     */
+    private $id;
+
+    /**
+     * @Serializer\SerializedName("USERID")
+     * @Serializer\Type("string")
+     *
+     * @var string
+     */
+    private $userId;
+
+    /**
+     * @Serializer\SerializedName("SPORTID")
+     * @Serializer\Type("integer")
+     *
+     * @var integer
+     */
+    private $sportId;
+
+    /**
+     * @Serializer\SerializedName("DEVICEID")
+     * @Serializer\Type("string")
+     *
+     * @var string
+     */
+    private $deviceId;
+
+    /**
+     * @Serializer\SerializedName("CONNECTEDDEVICE")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetUsersConnectedDevices\ConnectedDevice")
+     *
+     * @var ConnectedDevice
+     */
+    private $device;
+
+    /**
+     * @Serializer\SerializedName("DEVICEMODELID")
+     * @Serializer\Type("integer")
+     *
+     * @var integer
+     */
+    private $deviceModelId;
+
+    /**
+     * @Serializer\SerializedName("STARTDATE")
+     * @Serializer\Type("string")
+     *
+     * @var string
+     */
+    private $startDate;
+
+    /**
+     * @Serializer\SerializedName("TIMEZONE")
+     * @Serializer\Type("string")
+     *
+     * @var string
+     */
+    private $timezone;
+
+    /**
+     * @Serializer\SerializedName("DURATION")
+     * @Serializer\Type("string")
+     *
+     * @var integer
+     */
+    private $duration;
+
+    /**
+     * @Serializer\SerializedName("LIBELLE")
+     * @Serializer\Type("string")
+     *
+     * @var string
+     */
+    private $libelle;
+
+    /**
+     * @Serializer\SerializedName("COMMENT")
+     * @Serializer\Type("string")
+     *
+     * @var string
+     */
+    private $comment;
+
+    /**
+     * @Serializer\SerializedName("LATITUDE")
+     * @Serializer\Type("double")
+     *
+     * @var float
+     */
+    private $latitude;
+
+    /**
+     * @Serializer\SerializedName("LONGITUDE")
+     * @Serializer\Type("double")
+     *
+     * @var float
+     */
+    private $longitude;
+
+    /**
+     * @Serializer\SerializedName("ELEVATION")
+     * @Serializer\Type("double")
+     *
+     * @var float
+     */
+    private $elevation;
+
+    /**
+     * @Serializer\SerializedName("TRACKID")
+     * @Serializer\Type("string")
+     *
+     * @var string
+     */
+    private $trackId;
+
+    /**
+     * @Serializer\SerializedName("TRACK")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetTracksDetails\Track")
+     *
+     * @var Track
+     */
+    private $track;
+
+    /**
+     * @Serializer\SerializedName("SESSION_TOKEN")
+     * @Serializer\Type("string")
+     *
+     * @var string
+     */
+    private $sessionToken;
+
+    /**
+     * @Serializer\SerializedName("SHARE_TOKEN")
+     * @Serializer\Type("string")
+     *
+     * @var string
+     */
+    private $shareToken;
+
+    /**
+     * @Serializer\SerializedName("MANUAL")
+     * @Serializer\Type("boolean")
+     *
+     * @var boolean
+     */
+    private $manual;
+
+    /**
+     * @Serializer\SerializedName("CREATEDAT")
+     * @Serializer\Type("string")
+     *
+     * @var string
+     */
+    private $createdAt;
+
+    /**
+     * @Serializer\SerializedName("UPDATETIME")
+     * @Serializer\Type("string")
+     *
+     * @var string
+     */
+    private $updateTime;
+
+    /**
+     * @Serializer\SerializedName("ABOUT")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetActivitySummary\About")
+     *
+     * @var About
+     */
+    private $about;
+
+    /**
+     *
+     * @Serializer\SerializedName("TAGS")
+     * @Serializer\Type("array")
+     *
+     * @var array
+     */
+    private $tags = [];
+
+    /**
+     * @Serializer\SerializedName("DATASUMMARY")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetActivityDataSummary\DataSummary")
+     *
+     * @var DataSummary
+     */
+    private $summary;
+
+    /**
+     * @Serializer\SerializedName("DATASTREAM")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetActivityDataStreams\DataStream")
+     *
+     * @var DataStream
+     */
+    private $datastream;
+
+     /**
+     * @return string
+     */
     public function __toString()
     {
-       	$formatter = new DateFormatter();
-    	if(trim($this->getLibelle()) == "") {
-    		$date = \DateTime::createFromFormat('Y-m-d H:i:s', $this->startDate);
-    		$shortDate = $formatter->getLocalizedDate($date, 'short', 'none');
-    		return $this->getSport().' - '.$shortDate;
-    	} else  {
-	        return $this->getLibelle();
-  		}
+        return UtilsActivity::getNormalisedLibelle($this);
     }
-    
+
     /**
      * @return string
      */
@@ -88,7 +233,7 @@ class Activity
     {
         return $this->id;
     }
-    
+
     /**
      * @return string
      */
@@ -96,26 +241,15 @@ class Activity
     {
         return $this->userId;
     }
-    
+
     /**
-     * @return int
+     * @return integer
      */
     public function getSportId()
     {
         return $this->sportId;
     }
-    
-    /**
-     * @return Sport
-     */
-    public function getSport()
-    {
-        $client   = $this->response->getClient();
-        $response = $client->getReferenceSports();
-        
-        return $response->getSports()->offsetGet($this->sportId);
-    }
-    
+
     /**
      * @return string
      */
@@ -123,29 +257,23 @@ class Activity
     {
         return $this->deviceId;
     }
-    
+
     /**
-     * @return int
+     * @return integer
      */
     public function getDeviceModelId()
     {
         return $this->deviceModelId;
     }
-    
+
     /**
-     * @return Device
+     * @return ConnectedDevice
      */
     public function getDevice()
     {
-        if ($this->device == null) {
-            $client   = $this->response->getClient();
-            $response = $client->getUsersConnectedDevices(array('ldid' => $this->getUserId()));
-            $this->device = $response->getConnectedDevices()->offsetGet($this->deviceId);
-        }
-    
         return $this->device;
     }
-    
+
     /**
      * @return string
      */
@@ -153,13 +281,13 @@ class Activity
     {
         return $this->startDate;
     }
-    
+
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getStartDateObject()
     {
-        return \DateTime::createFromFormat('Y-m-d H:i:s', $this->getStartDate());
+        return DateTime::createFromFormat('Y-m-d H:i:s', $this->getStartDate());
     }
 
     /**
@@ -169,7 +297,7 @@ class Activity
     {
         return $this->timezone;
     }
-    
+
     /**
      * @return integer
      */
@@ -177,7 +305,7 @@ class Activity
     {
         return $this->duration;
     }
-    
+
     /**
      * @return string
      */
@@ -185,7 +313,7 @@ class Activity
     {
         return $this->libelle;
     }
-    
+
     /**
      * @return string
      */
@@ -193,7 +321,7 @@ class Activity
     {
         return $this->comment;
     }
-    
+
     /**
      * @return float
      */
@@ -201,7 +329,7 @@ class Activity
     {
         return $this->latitude;
     }
-    
+
     /**
      * @return float
      */
@@ -209,7 +337,7 @@ class Activity
     {
         return $this->longitude;
     }
-    
+
     /**
      * @return float
      */
@@ -217,7 +345,7 @@ class Activity
     {
         return $this->elevation;
     }
-    
+
     /**
      * @return string
      */
@@ -225,7 +353,7 @@ class Activity
     {
         return $this->trackId;
     }
-    
+
     /**
      * @return string
      */
@@ -233,7 +361,7 @@ class Activity
     {
         return $this->sessionToken;
     }
-    
+
     /**
      * @return string
      */
@@ -242,39 +370,30 @@ class Activity
         return $this->tags;
     }
 
+    /**
+     * @return DataSummary
+     */
     public function getSummary()
     {
-        if($this->summary == null)
-        {
-            $response = $this->response->getClient()->getActivityDataSummary(array('id' => $this->getId()));
-            $this->summary = $response->getActivity()->getDataSummary();
-        }
-        
         return $this->summary;
     }
 
+    /**
+     * @return DataStream
+     */
     public function getDataStream()
     {
-        if($this->datastream == null)
-        {
-            $response = $this->response->getClient()->getActivityDataStreams(array('id' => $this->getId()));
-            $this->datastream = $response->getActivity()->getDataStream();
-        }
-
         return $this->datastream;
     }
 
+    /**
+     * @return Track
+     */
     public function getTrack()
     {
-        if($this->track == null && $this->trackId != "")
-        {
-            $response = $this->response->getClient()->getTracksDetails(array('token' => $this->trackId));
-            $this->track = $response->getTrack();
-        }
-
         return $this->track;
     }
-    
+
     /**
      * @return integer
      */
@@ -282,7 +401,7 @@ class Activity
     {
         return (int) (string) $this->getSummary()->getValue(Datatype::DISTANCE);
     }
-    
+
     /**
      * @return integer
      */
@@ -290,7 +409,7 @@ class Activity
     {
         return (int) (string) $this->getSummary()->getValue(Datatype::CALORIES_BURNT);
     }
-    
+
     /**
      * @return integer
      */
@@ -298,7 +417,7 @@ class Activity
     {
         return (string) $this->getSummary()->getValue(Datatype::HR_AVG);
     }
-    
+
     /**
      * @return integer
      */
@@ -306,7 +425,7 @@ class Activity
     {
         return (int) (string) $this->getSummary()->getValue(Datatype::STEP_NUMBER);
     }
-    
+
     /**
      * @return integer
      */
@@ -314,20 +433,7 @@ class Activity
     {
         return (string) $this->getSummary()->getValue(Datatype::ACTIVE_TIME);
     }
-    
-    /**
-     * @return Session
-     */
-    public function getSession()
-    {
-        $client   = $this->response->getClient();
-        $response = $client->getSession(array(
-            'token' => $this->sessionToken,
-        ));
-        
-        return $response->getSession();
-    }
-    
+
     /**
      * @return string
      */
@@ -335,15 +441,15 @@ class Activity
     {
         return $this->shareToken;
     }
-    
+
     /**
-     * @return boolean
+     * @return integer
      */
     public function getManual()
     {
         return $this->manual;
     }
-    
+
     /**
      * @return string
      */
@@ -351,7 +457,7 @@ class Activity
     {
         return $this->createdAt;
     }
-    
+
     /**
      * @return string
      */
@@ -359,8 +465,9 @@ class Activity
     {
         return $this->updateTime;
     }
-    
+
     /**
+     * @param null $key
      * @return mixed
      */
     public function getAbout($key = null)
@@ -369,7 +476,7 @@ class Activity
         if (!$this->about) {
             return null;
         }
-        
+
         // return requested value
         if ($key) {
             return $this->about->offsetGet($key);
@@ -378,4 +485,5 @@ class Activity
             return $this->about;
         }
     }
+
 }

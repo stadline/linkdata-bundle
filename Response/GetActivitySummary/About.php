@@ -9,62 +9,62 @@ class About
 
     /**
      * @Serializer\SerializedName("TRACK")
-     * @Serializer\Type("string")
+     * @Serializer\Type("boolean")
      *
-     * @var string
+     * @var boolean
      */
     private $track;
 
     /**
      * @Serializer\SerializedName("DATASTREAM")
-     * @Serializer\Type("string")
+     * @Serializer\Type("boolean")
      *
-     * @var string
+     * @var boolean
      */
     private $datastream;
 
     /**
      * @Serializer\SerializedName("LAP")
-     * @Serializer\Type("string")
+     * @Serializer\Type("boolean")
      *
-     * @var string
+     * @var boolean
      */
     private $lap;
 
     /**
      * @Serializer\SerializedName("ELEVATION")
-     * @Serializer\Type("string")
+     * @Serializer\Type("boolean")
      *
-     * @var string
+     * @var boolean
      */
     private $elevation;
 
     /**
      * @Serializer\SerializedName("HEARTRATE")
-     * @Serializer\Type("string")
+     * @Serializer\Type("boolean")
      *
-     * @var string
+     * @var boolean
      */
     private $heartrate;
 
     /**
      * @Serializer\SerializedName("SPEED")
-     * @Serializer\Type("string")
+     * @Serializer\Type("boolean")
      *
-     * @var string
+     * @var boolean
      */
     private $speed;
 
     /**
      * @Serializer\SerializedName("CHALLENGE")
-     * @Serializer\Type("string")
+     * @Serializer\Type("boolean")
      *
-     * @var string
+     * @var boolean
      */
     private $challenge;
 
     /**
-     * @return string
+     * @return boolean
      */
     public function getTrack()
     {
@@ -72,7 +72,7 @@ class About
     }
 
     /**
-     * @return string
+     * @return boolean
      */
     public function getDatastream()
     {
@@ -80,7 +80,7 @@ class About
     }
 
     /**
-     * @return string
+     * @return boolean
      */
     public function getLap()
     {
@@ -88,7 +88,7 @@ class About
     }
 
     /**
-     * @return string
+     * @return boolean
      */
     public function getElevation()
     {
@@ -96,7 +96,7 @@ class About
     }
 
     /**
-     * @return string
+     * @return boolean
      */
     public function getHeartrate()
     {
@@ -104,7 +104,7 @@ class About
     }
 
     /**
-     * @return string
+     * @return boolean
      */
     public function getSpeed()
     {
@@ -112,7 +112,7 @@ class About
     }
 
     /**
-     * @return string
+     * @return boolean
      */
     public function getChallenge()
     {
