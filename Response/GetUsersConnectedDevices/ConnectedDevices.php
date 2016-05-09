@@ -20,8 +20,9 @@ class ConnectedDevices extends \ArrayObject
     public function generateCollectionForDeserialization()
     {
         $devices = $this->devices;
+        $collection = [];
 
-        // Use $devices only to facilitate deserialization
+        // Used $devices only to facilitate deserialization
         unset($this->devices);
 
         foreach ($devices as $connectedDevice) {
