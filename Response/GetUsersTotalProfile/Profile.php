@@ -2,8 +2,8 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetUsersTotalProfile;
 
-use Geonaute\LinkdataBundle\Response\Utils\Datatype;
-use Geonaute\Module\Utils\Level;
+use Geonaute\LinkdataBundle\Utils\Datatype;
+use Geonaute\LinkdataBundle\Utils\Level;
 use JMS\Serializer\Annotation as Serializer;
 
 class Profile
@@ -26,6 +26,9 @@ class Profile
      */
     private $sportIds = [];
 
+    /**
+     * @var array
+     */
     private $totals = [];
 
     public function __construct(\SimpleXMLElement $STATS)

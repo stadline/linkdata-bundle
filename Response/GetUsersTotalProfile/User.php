@@ -1,14 +1,15 @@
 <?php
-namespace Geonaute\Module\LinkdataBundle\Service\GetUsersTotalProfile;
 
-use Geonaute\Module\LinkdataBundle\Utils\Datatype;
-use Guzzle\Service\Command\ResponseClassInterface;
-use Geonaute\Module\LinkdataBundle\Service\GetTracksDetails\Location;
-use Geonaute\Module\LinkdataBundle\Utils\Level;
+namespace Geonaute\LinkdataBundle\Response\GetUsersTotalProfile;
+
+use Geonaute\LinkdataBundle\Utils\Level;
 
 class User
 {
 
+    /**
+     * @var array
+     */
     private $data;
 
     public function __construct(\SimpleXMLElement $USER)
