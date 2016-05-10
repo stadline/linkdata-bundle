@@ -11,6 +11,8 @@ class ConnectedDevices extends \ArrayObject
      * @Serializer\SerializedName("CONNECTEDDEVICE")
      * @Serializer\XmlList(entry="CONNECTEDDEVICE", inline=true)
      * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetUsersConnectedDevices\ConnectedDevice>")
+     *
+     * @var array
      */
     private $devices;
 
@@ -32,15 +34,14 @@ class ConnectedDevices extends \ArrayObject
         return parent::__construct($collection);
     }
 
-    /*
-     *
+    /**
      * @return ConnectedDevice
      */
-
     public function getConnectedDevice($id)
     {
-        if ($this->offsetExists($id))
+        if ($this->offsetExists($id)) {
             return $this->offsetGet($id);
+        }
 
         return false;
     }
@@ -70,7 +71,7 @@ class ConnectedDevices extends \ArrayObject
     }
 
     /**
-     * Get the last create_at date
+     * Get the last created_at date
      *
      * @return string
      */
@@ -79,8 +80,9 @@ class ConnectedDevices extends \ArrayObject
         $output = "";
 
         foreach ($this as $connectedDevice) {
-            if ($connectedDevice->getCreatedAt() > $output)
+            if ($connectedDevice->getCreatedAt() > $output) {
                 $output = $connectedDevice->getCreatedAt();
+            }
         }
 
         return $output;

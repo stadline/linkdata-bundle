@@ -11,6 +11,8 @@ class Sports extends \ArrayObject
      * @Serializer\SerializedName("SPORT")
      * @Serializer\XmlList(entry="SPORT", inline=true)
      * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetUsersTotalMonth\Sport>")
+     *
+     * @var array
      */
     private $sports;
 

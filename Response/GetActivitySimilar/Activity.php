@@ -160,6 +160,8 @@ class Activity implements ActivityToStringInterface
     }
 
     /**
+     * @todo Change this method to works
+     *
      * @return \Geonaute\Module\LinkdataBundle\Service\GetReferenceSports\Sport
      */
     public function getSport()

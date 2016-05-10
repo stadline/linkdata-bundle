@@ -12,6 +12,8 @@ class TotalMonths extends \ArrayObject
      * @Serializer\SerializedName("TOTALMONTH")
      * @Serializer\XmlList(entry="TOTALMONTH", inline=true)
      * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetUsersTotalMonth\TotalMonth>")
+     *
+     * @var array
      */
     private $totalMonths;
 
