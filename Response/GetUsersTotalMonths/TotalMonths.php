@@ -3,6 +3,7 @@
 namespace Geonaute\LinkdataBundle\Response\GetUsersTotalMonths;
 
 use Geonaute\LinkdataBundle\Utils\Datatype;
+use JMS\Serializer\Annotation as Serializer;
 
 class TotalMonths extends \ArrayObject
 {
