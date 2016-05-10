@@ -1,6 +1,6 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Response\GetUsersTotalMonths;
+namespace Geonaute\LinkdataBundle\Response\GetUsersTotalMonth;
 
 use JMS\Serializer\Annotation as Serializer;
 
