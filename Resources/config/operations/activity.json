@@ -33,6 +33,24 @@
                 }
             }
         },
+        "getActivitySimilar": {
+            "httpMethod": "GET",
+            "uri": "activity/{id}/similar/{datatype}.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetActivitySimilar\\Response",
+            "parameters": {
+                "id": {
+                    "location": "uri",
+                    "required": true
+                },
+                "datatype": {
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
+        },
         "getActivitySummary": {
             "httpMethod": "GET",
             "uri": "activity/{id}/summary.xml",
