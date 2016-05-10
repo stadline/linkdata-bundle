@@ -13,7 +13,7 @@ class Level
      */
     public static function getLevelFromPointEarned($score)
     {
-        switch ($score) {
+        switch (true) {
             case ($score > 150000):
                 return 7;
             case ($score > 100000):
