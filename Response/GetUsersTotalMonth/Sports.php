@@ -4,7 +4,7 @@ namespace Geonaute\LinkdataBundle\Response\GetUsersTotalMonth;
 
 use JMS\Serializer\Annotation as Serializer;
 
-class Sports
+class Sports extends \ArrayObject
 {
 
     /**
