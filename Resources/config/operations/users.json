@@ -28,6 +28,17 @@
                 "location": "query"
             }
         },
+        "getUsersMeasuresGoal": {
+            "httpMethod": "GET",
+            "uri": "users/{ldid}/measuresgoal.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetUsersMeasuresGoal\\Response",
+            "parameters": {
+                "ldid": {
+                    "location": "uri",
+                    "required": true
+                }
+            }
+        },
         "getUsersProfile": {
             "httpMethod": "GET",
             "uri": "users/{ldid}/profile.xml",
