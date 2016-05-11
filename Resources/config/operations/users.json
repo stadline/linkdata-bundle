@@ -14,6 +14,20 @@
                 "location": "query"
             }
         },
+        "getUsersGlobalChallenge": {
+            "httpMethod": "GET",
+            "uri": "users/{ldid}/globalchallenge.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetUsersGlobalChallenge\\Response",
+            "parameters": {
+                "ldid": {
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
+        },
         "getUsersProfile": {
             "httpMethod": "GET",
             "uri": "users/{ldid}/profile.xml",
