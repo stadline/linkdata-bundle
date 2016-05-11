@@ -1,0 +1,15 @@
+{
+    "operations": {
+        "getTagTotalWeek": {
+            "httpMethod": "GET",
+            "uri": "tag/{name}/totalweek.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetTagTotalWeek\\Response",
+            "parameters": {
+                "name": {
+                    "location": "uri",
+                    "required": true
+                }
+            }
+        }
+    }
+}
