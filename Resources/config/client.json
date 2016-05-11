@@ -3,6 +3,7 @@
     "description": "Linkdata REST API client",
     "includes": [
         "operations/activity.json",
+        "operations/friends.json",
         "operations/reference.json",
         "operations/ons.json",
         "operations/tracks.json",
