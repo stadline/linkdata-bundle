@@ -218,7 +218,7 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
      */
     private $datastream;
 
-     /**
+    /**
      * @return string
      */
     public function __toString()

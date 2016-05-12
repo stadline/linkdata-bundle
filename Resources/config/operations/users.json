@@ -67,6 +67,17 @@
                 "location": "query"
             }
         },
+        "getUsersSharedActivities": {
+            "httpMethod": "GET",
+            "uri": "users/{ldid}/shared_activities.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetUsersSharedActivities\\Response",
+            "parameters": {
+                "ldid": {
+                    "location": "uri",
+                    "required": true
+                }
+            }
+        },
         "getUsersTotalMonth": {
             "httpMethod": "GET",
             "uri": "users/{ldid}/totalmonth.xml",
