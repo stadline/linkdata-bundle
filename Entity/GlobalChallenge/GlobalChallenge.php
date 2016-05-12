@@ -1,9 +1,9 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Response\GetGlobalChallenges;
+namespace Geonaute\LinkdataBundle\Entity\GlobalChallenge;
 
 use Geonaute\LinkdataBundle\Utils\Datatype;
-// use Geonaute\Widget\GlobalChallengeBundle\Mapper\GlobalChallengeWidgetObjectInterface; // @todo Reimplement this
+use Geonaute\LinkdataBundle\Utils\GlobalChallengeWidgetObjectInterface;
 use JMS\Serializer\Annotation as Serializer;
 
 class GlobalChallenge implements GlobalChallengeWidgetObjectInterface
