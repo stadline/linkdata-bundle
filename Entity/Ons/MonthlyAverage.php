@@ -1,7 +1,8 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Response\GetOnsMonthlyAverage;
+namespace Geonaute\LinkdataBundle\Entity\Ons;
 
+use Geonaute\LinkdataBundle\Entity\Common\Value;
 use JMS\Serializer\Annotation as Serializer;
 
 class MonthlyAverage
@@ -9,14 +10,14 @@ class MonthlyAverage
 
     /**
      * @Serializer\SerializedName("VALUE")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Response\Common\Value")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Common\Value")
      *
      * @var Value
      */
     private $value;
 
     /**
-     * @return integer
+     * @return Value
      */
     public function getValue()
     {

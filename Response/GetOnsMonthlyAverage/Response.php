@@ -3,6 +3,8 @@
 namespace Geonaute\LinkdataBundle\Response\GetOnsMonthlyAverage;
 
 use Geonaute\LinkdataBundle\Response as BaseResponse;
+use Geonaute\LinkdataBundle\Entity\Ons\Ons;
+use Geonaute\LinkdataBundle\Entity\Ons\MonthlyAverage;
 use JMS\Serializer\Annotation as Serializer;
 
 class Response extends BaseResponse
@@ -10,7 +12,7 @@ class Response extends BaseResponse
 
     /**
      * @Serializer\SerializedName("ONS")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Response\Ons")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Ons\Ons")
      *
      * @var Ons
      */
