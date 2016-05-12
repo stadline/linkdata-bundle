@@ -11,7 +11,7 @@ class Response extends ClientAwareXmlResponse
     /**
      * @Serializer\SerializedName("ACTIVITIES")
      * @Serializer\XmlList(entry="ACTIVITY")
-     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetActivitySimilar\Activity>")
+     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Response\GetActivitySimilar\Activity>")
      *
      * @var array
      */

@@ -11,7 +11,7 @@ class Response extends XmlResponse
     /**
      * @Serializer\SerializedName("ACTIVITIES")
      * @Serializer\XmlList(entry="ACTIVITY")
-     * @Serializer\Type("array<Geonaute/LinkdataBundle/Response/GetUsersSharedActivities/Activity>")
+     * @Serializer\Type("ArrayCollection<Geonaute/LinkdataBundle/Response/GetUsersSharedActivities/Activity>")
      *
      * @var array
      */

@@ -11,7 +11,7 @@ class Response extends ClientAwareXmlResponse
     /**
      * @Serializer\SerializedName("CONNECTEDDEVICES")
      * @Serializer\XmlList(entry="CONNECTEDDEVICE")
-     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetUsersConnectedDevices\ConnectedDevice>")
+     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Response\GetUsersConnectedDevices\ConnectedDevice>")
      *
      * @var array
      */

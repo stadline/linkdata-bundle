@@ -11,7 +11,7 @@ class Response extends ClientAwareXmlResponse
     /**
      * @Serializer\SerializedName("ROUTES")
      * @Serializer\XmlList(entry="ROUTE")
-     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetRoute\Route>")
+     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Response\GetRoute\Route>")
      *
      * @var Routes
      */

@@ -18,7 +18,7 @@ class Route
     /**
      * @Serializer\SerializdName("LOCATIONS")
      * @Serializer\XmlList(entry="LOCATION")
-     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetRoute\Location>")
+     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Response\GetRoute\Location>")
      *
      * @var array
      */

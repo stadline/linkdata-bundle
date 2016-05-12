@@ -27,7 +27,7 @@ class TotalMonth
     /**
      * @Serializer\SerializedName("SPORTS")
      * @Serializer\XmlList(entry="SPORT")
-     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetUsersTotalMonth\Sport>")
+     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Response\GetUsersTotalMonth\Sport>")
      *
      * @var array
      */

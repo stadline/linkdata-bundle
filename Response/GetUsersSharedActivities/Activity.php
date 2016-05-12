@@ -50,7 +50,7 @@ class Activity
     /**
      * @Serializer\SerializedName("DATASUMMARY")
      * @Serializer\XmlMap(entry="VALUE")
-     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\Common\Value>")
+     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Response\Common\Value>")
      *
      * @var array
      */

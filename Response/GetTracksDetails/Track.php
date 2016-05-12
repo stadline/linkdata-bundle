@@ -10,7 +10,7 @@ class Track
 
     /**
      * @Serializer\XmlList(inline=true, entry="LOCATION")
-     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetTracksDetails\Location>")
+     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Response\GetTracksDetails\Location>")
      *
      * @var array
      */

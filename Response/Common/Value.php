@@ -6,6 +6,7 @@ use JMS\Serializer\Annotation as Serializer;
 
 class Value
 {
+
     /**
      * @Serializer\XmlAttribute
      * @Serializer\Type("integer")
@@ -53,4 +54,5 @@ class Value
     {
         $this->value = $value;
     }
+
 }
