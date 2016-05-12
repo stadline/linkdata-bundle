@@ -3,6 +3,7 @@
 namespace Geonaute\LinkdataBundle\Response\GetUsersFriendsActivity;
 
 use Geonaute\LinkdataBundle\Response as BaseResponse;
+use Geonaute\LinkdataBundle\Entity\Friends\PublicActivity;
 use JMS\Serializer\Annotation as Serializer;
 
 class Response extends BaseResponse
@@ -10,7 +11,7 @@ class Response extends BaseResponse
 
     /**
      * @Serializer\SerializedName("PUBLIC_ACTIVITY")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetUsersFriendsActivity\PublicActivity")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Friends\PublicActivity")
      *
      * @var PublicActivity
      */

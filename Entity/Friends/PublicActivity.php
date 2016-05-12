@@ -1,8 +1,8 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Response\GetUsersFriendsActivity;
+namespace Geonaute\LinkdataBundle\Entity\Friends;
 
-use Geonaute\LinkdataBundle\Response\GetShares\Activity;
+use Geonaute\LinkdataBundle\Entity\Shares\Activity;
 use JMS\Serializer\Annotation as Serializer;
 
 class PublicActivity
@@ -10,7 +10,7 @@ class PublicActivity
 
     /**
      * @Serializer\SerializedName("ACTIVITY")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetShares\Activity")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Shares\Activity")
      *
      * @var Activity
      */
