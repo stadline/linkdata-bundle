@@ -2,82 +2,10 @@
 
 namespace Geonaute\LinkdataBundle\Entity\Route;
 
-use JMS\Serializer\Annotation as Serializer;
+use Geonaute\LinkdataBundle\Entity\Common\Location as BaseLocation;
 
-class Location
+class Location extends BaseLocation
 {
-
-    /**
-     * @Serializer\SerializedName("LATITUDE")
-     * @Serializer\Type("double")
-     *
-     * @var float
-     */
-    private $latitude;
-
-    /**
-     * @Serializer\SerializedName("LONGITUDE")
-     * @Serializer\Type("double")
-     *
-     * @var float
-     */
-    private $longitude;
-
-    /**
-     * @Serializer\SerializedName("ELEVATION")
-     * @Serializer\Type("double")
-     *
-     * @var float
-     */
-    private $elevation;
-
-    /**
-     * @Serializer\XmlAttribute
-     * @Serializer\Type("integer")
-     *
-     * @var integer
-     */
-    private $elapsed_time;
-
-    /**
-     * @return float
-     */
-    public function getLatitude()
-    {
-        return $this->latitude;
-    }
-
-    /**
-     * @return float
-     */
-    public function getLongitude()
-    {
-        return $this->longitude;
-    }
-
-    /**
-     * @return float
-     */
-    public function getElevation()
-    {
-        return $this->elevation;
-    }
-
-    /**
-     * @return integer
-     */
-    public function getElapsedTime()
-    {
-        return $this->elapsed_time;
-    }
-
-    /**
-     * @param integer $value
-     */
-    public function setElapsedTime($value)
-    {
-        $this->elapsed_time = $value;
-    }
 
     /**
      * Returns a computed distance from lat/lng

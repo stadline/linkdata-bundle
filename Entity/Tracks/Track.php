@@ -1,6 +1,6 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Response\GetTracksDetails;
+namespace Geonaute\LinkdataBundle\Entity\Tracks;
 
 use JMS\Serializer\Annotation as Serializer;
 
@@ -9,7 +9,7 @@ class Track
 
     /**
      * @Serializer\XmlList(inline=true, entry="LOCATION")
-     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetTracksDetails\Location>")
+     * @Serializer\Type("array<Geonaute\LinkdataBundle\Entity\Tracks\Location>")
      *
      * @var array<Location>
      */
@@ -38,14 +38,14 @@ class Track
      */
     public function getLocationsAsArray()
     {
-        $locations = array();
+        $locations = [];
 
         foreach ($this->locations as $location) {
-            $locations[] = array(
+            $locations[] = [
                 $location->getLatitude(),
                 $location->getLongitude(),
                 $location->getElapsedTime(),
-            );
+            ];
         }
 
         return $locations;
@@ -58,7 +58,7 @@ class Track
      */
     public function getLocationsAsRoute()
     {
-        $locations = array();
+        $locations = [];
 
         foreach ($this->locations as $location) {
             $locations[] = array(

@@ -1,76 +1,12 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Response\GetTracksDetails;
+namespace Geonaute\LinkdataBundle\Entity\Tracks;
 
 use Geonaute\LinkdataBundle\Algorithme\DouglasPeuker\VectorInterface;
-use JMS\Serializer\Annotation as Serializer;
+use Geonaute\LinkdataBundle\Entity\Common\Location as BaseLocation;
 
-class Location implements VectorInterface
+class Location extends BaseLocation implements VectorInterface
 {
-
-    /**
-     * @Serializer\XmlAttribute
-     * @Serializer\Type("integer")
-     *
-     * @var integer
-     */
-    private $elapsedTime;
-
-    /**
-     * @Serializer\SerializedName("LATITUDE")
-     * @Serializer\Type("double")
-     *
-     * @var float
-     */
-    private $latitude;
-
-    /**
-     * @Serializer\SerializedName("LONGITUDE")
-     * @Serializer\Type("double")
-     *
-     * @var float
-     */
-    private $longitude;
-
-    /**
-     * @Serializer\SerializedName("ELEVATION")
-     * @Serializer\Type("double")
-     *
-     * @var float
-     */
-    private $elevation;
-
-    /**
-     * @return integer
-     */
-    public function getElapsedTime()
-    {
-        return $this->elapsedTime;
-    }
-
-    /**
-     * @return float
-     */
-    public function getLatitude()
-    {
-        return $this->latitude;
-    }
-
-    /**
-     * @return float
-     */
-    public function getLongitude()
-    {
-        return $this->longitude;
-    }
-
-    /**
-     * @return float
-     */
-    public function getElevation()
-    {
-        return $this->elevation;
-    }
 
     /**
      * Returns creation/modification timestamp for element
@@ -93,6 +29,8 @@ class Location implements VectorInterface
 
     /**
      * Check if a measure seems wrong to exclude it
+     *
+     * @return boolean
      */
     public function isValid()
     {
