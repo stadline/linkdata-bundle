@@ -3,6 +3,7 @@
 namespace Geonaute\LinkdataBundle\Response\GetUsersConnectedDevices;
 
 use Geonaute\LinkdataBundle\Response as BaseResponse;
+use Geonaute\LinkdataBundle\Entity\Users\ConnectedDevice;
 use JMS\Serializer\Annotation as Serializer;
 
 class Response extends BaseResponse
@@ -11,7 +12,7 @@ class Response extends BaseResponse
     /**
      * @Serializer\SerializedName("CONNECTEDDEVICES")
      * @Serializer\XmlList(entry="CONNECTEDDEVICE")
-     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Response\GetUsersConnectedDevices\ConnectedDevice>")
+     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Users\ConnectedDevice>")
      *
      * @var array<ConnectedDevice>
      */
