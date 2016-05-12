@@ -2,10 +2,10 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetUsersSharedActivities;
 
-use Geonaute\LinkdataBundle\Response\XmlResponse;
+use Geonaute\LinkdataBundle\Response as BaseResponse;
 use JMS\Serializer\Annotation as Serializer;
 
-class Response extends XmlResponse
+class Response extends BaseResponse
 {
 
     /**

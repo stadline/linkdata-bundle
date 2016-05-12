@@ -2,10 +2,10 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetRoute;
 
-use Geonaute\LinkdataBundle\Response\ClientAwareXmlResponse;
+use Geonaute\LinkdataBundle\Response as BaseResponse;
 use JMS\Serializer\Annotation as Serializer;
 
-class Response extends ClientAwareXmlResponse
+class Response extends BaseResponse
 {
 
     /**

@@ -2,9 +2,9 @@
 
 namespace Geonaute\Module\LinkdataBundle\Service\GetGlobalChallenges;
 
-use Geonaute\Module\LinkdataBundle\Service\ClientAwareXmlResponse;
+use Geonaute\LinkdataBundle\Response as BaseResponse;
 
-class Response extends ClientAwareXmlResponse
+class Response extends BaseResponse
 {
 
     /**
