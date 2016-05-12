@@ -1,22 +1,16 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Response\GetActivitySimilar;
+namespace Geonaute\LinkdataBundle\Entity\Activity;
 
+use Activity as BaseActivity;
+use DateTime;
 use Geonaute\LinkdataBundle\Utils\Activity as UtilsActivity;
 use Geonaute\LinkdataBundle\Utils\ActivityToStringInterface;
+use Geonaute\LinkdataBundle\Entity\Activity\DataSummary;
 use JMS\Serializer\Annotation as Serializer;
-use Geonaute\LinkdataBundle\Response\GetActivityDataSummary\DataSummary;
 
-class Activity implements ActivityToStringInterface
+class Activity extends BaseActivity implements ActivityToStringInterface
 {
-
-    /**
-     * @Serializer\SerializedName("ID")
-     * @Serializer\Type("string")
-     *
-     * @var string
-     */
-    private $id;
 
     /**
      * @Serializer\SerializedName("SPORTID")
@@ -84,7 +78,7 @@ class Activity implements ActivityToStringInterface
 
     /**
      * @Serializer\SerializedName("DATASUMMARY")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetActivityDataSummary\DataSummary")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Activity\DataSummary")
      *
      * @var DataSummary
      */
@@ -101,25 +95,17 @@ class Activity implements ActivityToStringInterface
     /**
      * @return string
      */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * @return string
-     */
     public function getStartDate()
     {
         return $this->startDate;
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getStartDateObject()
     {
-        return \DateTime::createFromFormat('Y-m-d H:i:s', $this->startDate);
+        return DateTime::createFromFormat('Y-m-d H:i:s', $this->startDate);
     }
 
     /**
@@ -139,7 +125,7 @@ class Activity implements ActivityToStringInterface
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getEndDateObject()
     {
@@ -157,19 +143,6 @@ class Activity implements ActivityToStringInterface
     public function getSportId()
     {
         return $this->sportId;
-    }
-
-    /**
-     * @todo Change this method to works
-     *
-     * @return \Geonaute\LinkdataBundle\Response\GetReferenceSports\Sport
-     */
-    public function getSport()
-    {
-        $client = $this->response->getClient();
-        $response = $client->getReferenceSports();
-
-        return $response->getSports()->offsetGet($this->sportId);
     }
 
     /**
