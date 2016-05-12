@@ -1,6 +1,8 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Response\GetActivityDataStreams;
+namespace Geonaute\LinkdataBundle\Entity\Activity;
+
+use Geonaute\LinkdataBundle\Entity\Common\FakeValue;
 
 class FakeMeasure extends Measure
 {

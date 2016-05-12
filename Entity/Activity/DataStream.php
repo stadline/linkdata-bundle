@@ -1,6 +1,6 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Response\GetActivityDataStreams;
+namespace Geonaute\LinkdataBundle\Entity\Activity;
 
 use JMS\Serializer\Annotation as Serializer;
 
@@ -10,7 +10,7 @@ class DataStream
     /**
      * @Serializer\SerializedName("MEASURE")
      * @Serializer\XmlList(inline=true, entry="MEASURE")
-     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetActivityDataStreams\Measure>")
+     * @Serializer\Type("array<Geonaute\LinkdataBundle\Entity\Activity\Measure>")
      *
      * @var array<Measure>
      */
@@ -76,7 +76,7 @@ class DataStream
     }
 
     /**
-     * @return Geonaute\LinkdataBundle\Response\Common\Value
+     * @return Measure
      */
     public function getMeasure($elapsedTime)
     {

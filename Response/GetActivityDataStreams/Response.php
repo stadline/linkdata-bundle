@@ -3,21 +3,22 @@
 namespace Geonaute\LinkdataBundle\Response\GetActivityDataStreams;
 
 use Geonaute\LinkdataBundle\Response as BaseResponse;
+use Geonaute\LinkdataBundle\Entity\Activity\DataStreamsActivity;
 use JMS\Serializer\Annotation as Serializer;
 
 class Response extends BaseResponse
 {
 
     /**
-     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetActivityDataStreams\Activity")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Activity\DataStreamsActivity")
      * @Serializer\SerializedName("ACTIVITY")
      *
-     * @var Activity
+     * @var DataStreamsActivity
      */
     private $activity;
 
     /**
-     * @return Activity
+     * @return DataStreamsActivity
      */
     public function getActivity()
     {
