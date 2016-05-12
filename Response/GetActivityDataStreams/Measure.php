@@ -19,10 +19,10 @@ class Measure
 
     /**
      * @Serializer\SerializedName("VALUE")
-     * @Serializer\XmlList(entry="VALUE", inline=true)
-     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Response\Common\Value>")
+     * @Serializer\XmlMap(entry="VALUE", inline=true)
+     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\Common\Value>")
      *
-     * @var array
+     * @var array<Geonaute\LinkdataBundle\Response\Common\Value>
      */
     private $values;
 
@@ -31,20 +31,14 @@ class Measure
      *
      * @var array
      */
-    private $datatypes;
+    private $datatypes = [];
 
     /**
      * @Serializer\PostDeserialize
      */
     public function defineValuesAndDatatypesForSerialization()
     {
-        $values = $this->getValues();
-
-        $this->values = [];
-        $this->datatypes = [];
-
-        foreach ($values as $value) {
-            $this->values[$value->getId()] = $value;
+        foreach ($this->values as $value) {
             $this->datatypes[$value->getId()] = $value->getId();
         }
     }
@@ -66,7 +60,7 @@ class Measure
     }
 
     /**
-     * @return array
+     * @return array<Geonaute\LinkdataBundle\Response\Common\Value>
      */
     public function getValues()
     {
@@ -106,7 +100,7 @@ class Measure
         }
     }
 
-    /** Check if has value
+    /**
      *
      * @param integer $id
      * @return Value

@@ -10,15 +10,15 @@ class DataSummary
 
     /**
      * @Serializer\SerializedName("VALUE")
-     * @Serializer\XmlList(entry="VALUE", inline=true)
-     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Response\Common\Value>")
+     * @Serializer\XmlMap(entry="VALUE", inline=true)
+     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\Common\Value>")
      *
-     * @var array
+     * @var array<Geonaute\LinkdataBundle\Response\Common\Value>
      */
     private $values;
 
     /**
-     * @Serializer\Exclude
+     * @Serializer\Type("array")
      *
      * @var array
      */
@@ -54,21 +54,7 @@ class DataSummary
     ];
 
     /**
-     * @Serializer\PostDeserialize
-     */
-    public function defineValuesForDeserialization()
-    {
-        $values = $this->getValues();
-
-        $this->values = [];
-
-        foreach ($values as $value) {
-            $this->values[$value->getId()] = $value;
-        }
-    }
-
-    /**
-     * @return array
+     * @return array<Value>
      */
     public function getValues()
     {

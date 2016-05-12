@@ -29,7 +29,7 @@ class TotalMonth
      * @Serializer\XmlList(entry="SPORT")
      * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Response\GetUsersTotalMonth\Sport>")
      *
-     * @var array
+     * @var array<Geonaute\LinkdataBundle\Response\GetUsersTotalMonth\Sport>
      */
     private $sports;
 
@@ -159,7 +159,7 @@ class TotalMonth
     }
 
     /**
-     * @return array
+     * @return array<Geonaute\LinkdataBundle\Response\GetUsersTotalMonth\Sport>
      */
     public function getSports()
     {

@@ -47,7 +47,6 @@ class User
      */
     private $language;
 
-
     /**
      * @return string
      */

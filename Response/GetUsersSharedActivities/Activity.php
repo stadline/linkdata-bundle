@@ -50,9 +50,9 @@ class Activity
     /**
      * @Serializer\SerializedName("DATASUMMARY")
      * @Serializer\XmlMap(entry="VALUE")
-     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Response\Common\Value>")
+     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\Common\Value>")
      *
-     * @var array
+     * @var array<Geonaute\LinkdataBundle\Response\Common\Value>
      */
     private $summary;
 
@@ -114,7 +114,7 @@ class Activity
 
     /**
      * @param integer $datatypeId
-     * @return Summary
+     * @return <Geonaute\LinkdataBundle\Response\Common\Value>
      */
     private function getSummary($datatypeId)
     {

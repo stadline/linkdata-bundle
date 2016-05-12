@@ -13,7 +13,7 @@ class Response extends XmlResponse
      * @Serializer\XmlList(entry="ACTIVITY")
      * @Serializer\Type("ArrayCollection<Geonaute/LinkdataBundle/Response/GetUsersSharedActivities/Activity>")
      *
-     * @var array
+     * @var array<Activity>
      */
     private $activities;
 
@@ -26,7 +26,7 @@ class Response extends XmlResponse
     }
 
     /**
-     * @return array
+     * @return array<Activity>
      */
     public function getActivities()
     {

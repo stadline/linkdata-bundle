@@ -13,12 +13,12 @@ class Response extends ClientAwareXmlResponse
      * @Serializer\XmlList(entry="TOTALMONTH")
      * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Response\GetUsersTotalMonth\TotalMonth>")
      *
-     * @var array
+     * @var array<Geonaute\LinkdataBundle\Response\GetUsersTotalMonth\TotalMonth>
      */
     private $totalMonths;
 
     /**
-     * @return array
+     * @return array<Geonaute\LinkdataBundle\Response\GetUsersTotalMonth\TotalMonth>
      */
     public function getTotalMonths()
     {

@@ -10,9 +10,9 @@ class DataStream
     /**
      * @Serializer\SerializedName("MEASURE")
      * @Serializer\XmlList(inline=true, entry="MEASURE")
-     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Response\GetActivityDataStreams\Measure>")
+     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetActivityDataStreams\Measure>")
      *
-     * @var array
+     * @var array<Measure>
      */
     private $measures;
 
@@ -21,7 +21,7 @@ class DataStream
      *
      * @var array
      */
-    private $datatypes;
+    private $datatypes = [];
 
     /**
      * @Serializer\PostDeserialize
@@ -31,7 +31,6 @@ class DataStream
         $measures = $this->getMeasures();
 
         $this->measures = [];
-        $this->datatypes = [];
 
         foreach ($measures as $measure) {
             $this->addMeasure($measure);
@@ -69,7 +68,7 @@ class DataStream
     }
 
     /**
-     * @return array
+     * @return array<Measure>
      */
     public function getMeasures()
     {
@@ -77,7 +76,7 @@ class DataStream
     }
 
     /**
-     * @return Value
+     * @return Geonaute\LinkdataBundle\Response\Common\Value
      */
     public function getMeasure($elapsedTime)
     {

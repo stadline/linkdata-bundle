@@ -11,14 +11,14 @@ class Response extends XmlResponse
     /**
      * @Serializer\SerializedName("FRIENDS")
      * @Serializer\XmlList(entry="FRIEND")
-     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Response\GetUsersTotalProfile\Profile>")
+     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetUsersTotalProfile\Profile>")
      *
-     * @var array
+     * @var array<Geonaute\LinkdataBundle\Response\GetUsersTotalProfile\Profile>
      */
     private $friendProfiles;
 
     /**
-     * @return array
+     * @return array<Geonaute\LinkdataBundle\Response\GetUsersTotalProfile\Profile>
      */
     public function getFriends()
     {

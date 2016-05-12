@@ -13,12 +13,12 @@ class Response extends ClientAwareXmlResponse
      * @Serializer\XmlList(entry="ACTIVITY")
      * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Response\GetActivitySimilar\Activity>")
      *
-     * @var array
+     * @var array<Activity>
      */
     private $activities;
 
     /**
-     * @return array
+     * @return array<Activity>
      */
     public function getActivities()
     {

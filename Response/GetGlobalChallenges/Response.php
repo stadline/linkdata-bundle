@@ -10,14 +10,14 @@ class Response extends ClientAwareXmlResponse
     /**
      * @Serializer\SerializedName("GLOBALCHALLENGES")
      * @Serializer\XmlList(entry="GLOBALCHALLENGE")
-     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Response\GetGlobalChallenges\Challenge>")
+     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Response\GetGlobalChallenges\GlobalChallenge>")
      *
-     * @var array
+     * @var array<GlobalChallenge>
      */
     private $globalChallenges;
 
     /**
-     * @return array
+     * @return array<GlobalChallenge>
      */
     public function getGlobalChallenges()
     {

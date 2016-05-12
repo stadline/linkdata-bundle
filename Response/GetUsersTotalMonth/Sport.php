@@ -16,9 +16,9 @@ class Sport
     /**
      * @Serializer\SerializedName("VALUE")
      * @Serializer\XmlList(entry="VALUE", inline=true)
-     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Response\Common\Value>")
+     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\Common\Value>")
      *
-     * @var array
+     * @var array<Geonaute\LinkdataBundle\Response\Common\Value>
      */
     private $values;
 
@@ -31,7 +31,7 @@ class Sport
     }
 
     /**
-     * @return array
+     * @return array<Geonaute\LinkdataBundle\Response\Common\Value>
      */
     public function getValues()
     {

@@ -13,12 +13,12 @@ class Response extends ClientAwareXmlResponse
      * @Serializer\XmlList(entry="CONNECTEDDEVICE")
      * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Response\GetUsersConnectedDevices\ConnectedDevice>")
      *
-     * @var array
+     * @var array<ConnectedDevice>
      */
     private $connectedDevices;
 
     /**
-     * @return array
+     * @return array<ConnectedDevice>
      */
     public function getConnectedDevices()
     {

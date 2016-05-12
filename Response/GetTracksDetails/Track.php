@@ -2,7 +2,6 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetTracksDetails;
 
-use Geonaute\LinkdataBundle\Response\GetTracksDetails\Location;
 use JMS\Serializer\Annotation as Serializer;
 
 class Track
@@ -10,14 +9,14 @@ class Track
 
     /**
      * @Serializer\XmlList(inline=true, entry="LOCATION")
-     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Response\GetTracksDetails\Location>")
+     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetTracksDetails\Location>")
      *
-     * @var array
+     * @var array<Location>
      */
     private $locations;
 
     /**
-     * @return array
+     * @return array<Location>
      */
     public function getLocations()
     {

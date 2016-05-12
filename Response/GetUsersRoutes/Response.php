@@ -13,12 +13,12 @@ class Response extends ClientAwareXmlResponse
      * @Serializer\XmlList(entry="ROUTE")
      * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Response\GetRoute\Route>")
      *
-     * @var Routes
+     * @var array<Geonaute\LinkdataBundle\Response\GetRoute\Route>
      */
     private $routes;
 
     /**
-     * @return Routes
+     * @return array<Geonaute\LinkdataBundle\Response\GetRoute\Route>
      */
     public function getRoutes()
     {
