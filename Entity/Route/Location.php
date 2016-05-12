@@ -1,6 +1,6 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Response\GetRoute;
+namespace Geonaute\LinkdataBundle\Entity\Route;
 
 use JMS\Serializer\Annotation as Serializer;
 
