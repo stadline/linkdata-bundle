@@ -3,7 +3,6 @@
 namespace Geonaute\LinkdataBundle\Response\GetUsersTotalMonths;
 
 use Geonaute\LinkdataBundle\Response\ClientAwareXmlResponse;
-use Guzzle\Service\Command\OperationCommand;
 use JMS\Serializer\Annotation as Serializer;
 
 class Response extends ClientAwareXmlResponse
@@ -11,27 +10,15 @@ class Response extends ClientAwareXmlResponse
 
     /**
      * @Serializer\SerializedName("TOTALMONTHS")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetUsersTotalMonths\TotalMonths")
+     * @Serializer\XmlList(entry="TOTALMONTH")
+     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetUsersTotalMonth\TotalMonth>")
      *
-     * @var TotalMonths
+     * @var array
      */
     private $totalMonths;
 
     /**
-     * @param OperationCommand $command
-     * @return EmptyResponse
-     */
-    public static function fromCommand(OperationCommand $command)
-    {
-        if ($command->getResponse()->getStatusCode() == 204) {
-            return new EmptyResponse();
-        }
-
-        return parent::fromCommand($command);
-    }
-
-    /**
-     * @return TotalMonth
+     * @return array
      */
     public function getTotalMonths()
     {

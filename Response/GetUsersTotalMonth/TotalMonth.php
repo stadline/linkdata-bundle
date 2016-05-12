@@ -26,9 +26,10 @@ class TotalMonth
 
     /**
      * @Serializer\SerializedName("SPORTS")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetUsersTotalMonth\Sports")
+     * @Serializer\XmlList(entry="SPORT")
+     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetUsersTotalMonth\Sport>")
      *
-     * @var string
+     * @var array
      */
     private $sports;
 
@@ -163,15 +164,6 @@ class TotalMonth
     public function getSports()
     {
         return $this->sports;
-    }
-
-    /**
-     * @Serializer\VirtualProperty
-     * @Serializer\SerializedName("sports")
-     */
-    public function getSportsArray()
-    {
-        return $this->getSports()->getArrayCopy();
     }
 
 }

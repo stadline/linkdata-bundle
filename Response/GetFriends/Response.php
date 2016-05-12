@@ -10,14 +10,15 @@ class Response extends XmlResponse
 
     /**
      * @Serializer\SerializedName("FRIENDS")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetFriends\FriendsProfiles")
+     * @Serializer\XmlList(entry="FRIEND")
+     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetUsersTotalProfile\Profile>")
      *
-     * @var FriendsProfiles
+     * @var array
      */
     private $friendProfiles;
 
     /**
-     * @return Friends
+     * @return array
      */
     public function getFriends()
     {
