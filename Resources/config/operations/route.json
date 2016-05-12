@@ -1,0 +1,18 @@
+{
+    "operations": {
+        "getRoute": {
+            "httpMethod": "GET",
+            "uri": "route/{token}.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetRoute\\Response",
+            "parameters": {
+                "token": {
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
+        }
+    }
+}

@@ -7,6 +7,7 @@
         "operations/globalchallenge.json",
         "operations/reference.json",
         "operations/ons.json",
+        "operations/route.json",
         "operations/tracks.json",
         "operations/training.json",
         "operations/statistic.json",
