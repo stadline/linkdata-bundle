@@ -8,7 +8,7 @@ class Sport
 {
 
     /**
-     * @Serializer\XmlAttribute()
+     * @Serializer\XmlAttribute
      * @Serializer\Type("integer")
      */
     private $id;

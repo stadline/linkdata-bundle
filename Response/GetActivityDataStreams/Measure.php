@@ -10,7 +10,7 @@ class Measure
 {
 
     /**
-     * @Serializer\XmlAttribute()
+     * @Serializer\XmlAttribute
      * @Serializer\Type("integer")
      *
      * @var integer

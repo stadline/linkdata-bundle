@@ -9,7 +9,7 @@ class Location implements VectorInterface
 {
 
     /**
-     * @Serializer\XmlAttribute()
+     * @Serializer\XmlAttribute
      * @Serializer\Type("integer")
      *
      * @var integer
