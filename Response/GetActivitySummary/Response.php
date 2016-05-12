@@ -3,6 +3,7 @@
 namespace Geonaute\LinkdataBundle\Response\GetActivitySummary;
 
 use Geonaute\LinkdataBundle\Response as BaseResponse;
+use Geonaute\LinkdataBundle\Entity\Activity\SummaryActivity;
 use JMS\Serializer\Annotation as Serializer;
 
 class Response extends BaseResponse
@@ -10,14 +11,14 @@ class Response extends BaseResponse
 
     /**
      * @Serializer\SerializedName("ACTIVITY")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetActivitySummary\Activity")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Activity\SummaryActivity")
      *
-     * @var Activity
+     * @var SummaryActivity
      */
     private $activity;
 
     /**
-     * @return Activity
+     * @return SummaryActivity
      */
     public function getActivity()
     {

@@ -1,29 +1,20 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Response\GetActivitySummary;
+namespace Geonaute\LinkdataBundle\Entity\Activity;
 
+use Activity as BaseActivity;
 use DateTime;
 use Geonaute\LinkdataBundle\Response\Common\ActivityWidgetProviderInterface;
-use Geonaute\LinkdataBundle\Response\GetActivityDataStreams\DataStream;
-use Geonaute\LinkdataBundle\Response\GetActivityDataSummary\DataSummary;
-use Geonaute\LinkdataBundle\Response\GetActivitySummary\About;
-use Geonaute\LinkdataBundle\Response\GetTracksDetails\Track;
-use Geonaute\LinkdataBundle\Response\GetUsersConnectedDevices\ConnectedDevice;
+use Geonaute\LinkdataBundle\Entity\Activity\DataStream;
+use Geonaute\LinkdataBundle\Entity\Tracks\Track;
+use Geonaute\LinkdataBundle\Entity\Users\ConnectedDevice;
 use Geonaute\LinkdataBundle\Utils\Activity as UtilsActivity;
 use Geonaute\LinkdataBundle\Utils\ActivityToStringInterface;
 use Geonaute\LinkdataBundle\Utils\Datatype;
 use JMS\Serializer\Annotation as Serializer;
 
-class Activity implements ActivityToStringInterface, ActivityWidgetProviderInterface
+class SummaryActivity extends BaseActivity implements ActivityToStringInterface, ActivityWidgetProviderInterface
 {
-
-    /**
-     * @Serializer\SerializedName("ID")
-     * @Serializer\Type("string")
-     *
-     * @var string
-     */
-    private $id;
 
     /**
      * @Serializer\SerializedName("USERID")
@@ -51,7 +42,7 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
 
     /**
      * @Serializer\SerializedName("CONNECTEDDEVICE")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetUsersConnectedDevices\ConnectedDevice")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Users\ConnectedDevice")
      *
      * @var ConnectedDevice
      */
@@ -139,7 +130,7 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
 
     /**
      * @Serializer\SerializedName("TRACK")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetTracksDetails\Track")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Tracks\Track")
      *
      * @var Track
      */
@@ -187,7 +178,7 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
 
     /**
      * @Serializer\SerializedName("ABOUT")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetActivitySummary\About")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Activity\About")
      *
      * @var About
      */
@@ -204,7 +195,7 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
 
     /**
      * @Serializer\SerializedName("DATASUMMARY")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetActivityDataSummary\DataSummary")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Activity\DataSummary")
      *
      * @var DataSummary
      */
@@ -212,7 +203,7 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
 
     /**
      * @Serializer\SerializedName("DATASTREAM")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetActivityDataStreams\DataStream")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Activity\DataStream")
      *
      * @var DataStream
      */
@@ -224,14 +215,6 @@ class Activity implements ActivityToStringInterface, ActivityWidgetProviderInter
     public function __toString()
     {
         return UtilsActivity::getNormalisedLibelle($this);
-    }
-
-    /**
-     * @return string
-     */
-    public function getId()
-    {
-        return $this->id;
     }
 
     /**

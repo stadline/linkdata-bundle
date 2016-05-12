@@ -5,7 +5,7 @@ namespace Geonaute\LinkdataBundle\Entity\Activity;
 use Activity as BaseActivity;
 use JMS\Serializer\Annotation as Serializer;
 
-class Activity extends BaseActivity
+class DataSummaryActivity extends BaseActivity
 {
 
     /**
