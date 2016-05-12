@@ -4,12 +4,12 @@ namespace Geonaute\LinkdataBundle\Entity\Activity;
 
 use Activity as BaseActivity;
 use DateTime;
-use Geonaute\LinkdataBundle\Response\Common\ActivityWidgetProviderInterface;
 use Geonaute\LinkdataBundle\Entity\Activity\DataStream;
 use Geonaute\LinkdataBundle\Entity\Tracks\Track;
 use Geonaute\LinkdataBundle\Entity\Users\ConnectedDevice;
 use Geonaute\LinkdataBundle\Utils\Activity as UtilsActivity;
 use Geonaute\LinkdataBundle\Utils\ActivityToStringInterface;
+use Geonaute\LinkdataBundle\Utils\ActivityWidgetProviderInterface;
 use Geonaute\LinkdataBundle\Utils\Datatype;
 use JMS\Serializer\Annotation as Serializer;
 
