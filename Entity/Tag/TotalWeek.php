@@ -1,6 +1,6 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Response\GetTagTotalWeek;
+namespace Geonaute\LinkdataBundle\Entity\Tag;
 
 use Geonaute\LinkdataBundle\Utils\Datatype;
 use JMS\Serializer\Annotation as Serializer;

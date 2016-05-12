@@ -3,6 +3,7 @@
 namespace Geonaute\LinkdataBundle\Response\GetTagTotalWeek;
 
 use Geonaute\LinkdataBundle\Response as BaseResponse;
+use Geonaute\LinkdataBundle\Entity\Tag\TotalWeek;
 use JMS\Serializer\Annotation as Serializer;
 
 class Response extends BaseResponse
@@ -10,7 +11,7 @@ class Response extends BaseResponse
 
     /**
      * @Serializer\SerializedName("TOTALWEEK")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetTagTotalWeek\TotalWeek")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Tag\TotalWeek")
      *
      * @var TotalWeek
      */
