@@ -37,6 +37,9 @@
                     "location": "uri",
                     "required": true
                 }
+            },
+            "additionalParameters": {
+                "location": "query"
             }
         },
         "getUsersProfile": {
@@ -76,6 +79,9 @@
                     "location": "uri",
                     "required": true
                 }
+            },
+            "additionalParameters": {
+                "location": "query"
             }
         },
         "getUsersTotalMonth": {
@@ -91,6 +97,9 @@
                     "location": "query",
                     "required": true
                 }
+            },
+            "additionalParameters": {
+                "location": "query"
             }
         },
         "getUsersTotalMonths": {
@@ -106,6 +115,9 @@
                     "location": "query",
                     "required": true
                 }
+            },
+            "additionalParameters": {
+                "location": "query"
             }
         },
         "getUsersTotalProfile": {
@@ -117,6 +129,9 @@
                     "location": "uri",
                     "required": true
                 }
+            },
+            "additionalParameters": {
+                "location": "query"
             }
         }
     }

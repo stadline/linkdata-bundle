@@ -3,7 +3,10 @@
         "getStatistics": {
             "httpMethod": "GET",
             "uri": "statistics.xml",
-            "responseClass": "Geonaute\\LinkdataBundle\\Response\\Statistic\\Statistics"
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\Statistic\\Statistics",
+            "additionalParameters": {
+                "location": "query"
+            }
         },
         "getStatisticsPrograms": {
             "httpMethod": "GET",
@@ -14,6 +17,9 @@
                     "location": "uri",
                     "required": true
                 }
+            },
+            "additionalParameters": {
+                "location": "query"
             }
         }
     }
