@@ -1,15 +1,13 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Response\GetUsersGlobalChallenge;
+namespace Geonaute\LinkdataBundle\Entity\Common;
 
+use DateTime;
+use Geonaute\LinkdataBundle\Utils\GlobalChallengeWidgetObjectInterface;
 use JMS\Serializer\Annotation as Serializer;
 
-class GlobalChallenge
+class GlobalChallenge implements GlobalChallengeWidgetObjectInterface
 {
-
-    const STATE_BEFORE = -1;
-    const STATE_CURRENT = 0;
-    const STATE_AFTER = 1;
 
     /**
      * @Serializer\SerializedName("TOKEN")
@@ -100,14 +98,6 @@ class GlobalChallenge
     private $targetUnitId;
 
     /**
-     * @Serializer\SerializedName("CURRENT")
-     * @Serializer\Type("boolean")
-     *
-     * @var boolean
-     */
-    private $current;
-
-    /**
      * @Serializer\SerializedName("IMAGE_URL")
      * @Serializer\Type("string")
      *
@@ -116,20 +106,12 @@ class GlobalChallenge
     private $imageUrl;
 
     /**
-     * @Serializer\SerializedName("AVERAGE_CONTRIBUTION")
-     * @Serializer\Type("integer")
+     * @Serializer\SerializedName("CURRENT")
+     * @Serializer\Type("boolean")
      *
-     * @var integer
+     * @var boolean
      */
-    private $averageContribution;
-
-    /**
-     * @Serializer\SerializedName("USER_CONTRIBUTION")
-     * @Serializer\Type("integer")
-     *
-     * @var integer
-     */
-    private $userContribution;
+    private $current;
 
     /**
      * @return string
@@ -196,11 +178,11 @@ class GlobalChallenge
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getStartedAtAsDateTimeObject()
     {
-        return \DateTime::createFromFormat('Y-m-d H:i:s', $this->startedAt);
+        return DateTime::createFromFormat('Y-m-d H:i:s', $this->startedAt);
     }
 
     /**
@@ -212,11 +194,11 @@ class GlobalChallenge
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getEndedAtAsDateTimeObject()
     {
-        return \DateTime::createFromFormat('Y-m-d H:i:s', $this->endedAt);
+        return DateTime::createFromFormat('Y-m-d H:i:s', $this->endedAt);
     }
 
     /**
@@ -252,14 +234,11 @@ class GlobalChallenge
     }
 
     /**
-     * @return \Geonaute\Module\LinkdataBundle\Service\GetReferenceDatatypes\Datatype
+     * @throws \Exception
      */
     public function getTargetUnit()
     {
-        $client = $this->response->getClient();
-        $response = $client->getReferenceDatatypes();
-
-        return $response->getDatatypes()->offsetGet($this->targetUnitId);
+        throw new \Exception('cant do getClient !'); // Old method doing getClient (can't remove because is in the interface) @todo fix this
     }
 
     /**
@@ -277,7 +256,7 @@ class GlobalChallenge
      */
     public function getState()
     {
-        $now = new \DateTime();
+        $now = new DateTime();
         $startedAt = $this->getStartedAtAsDateTimeObject();
         $endedAt = $this->getEndedAtAsDateTimeObject();
 
@@ -296,22 +275,6 @@ class GlobalChallenge
     public function getCurrent()
     {
         return $this->current;
-    }
-
-    /**
-     * @return integer
-     */
-    public function getAverageContribution()
-    {
-        return $this->averageContribution;
-    }
-
-    /**
-     * @return integer
-     */
-    public function getUserContribution()
-    {
-        return $this->userContribution;
     }
 
 }
