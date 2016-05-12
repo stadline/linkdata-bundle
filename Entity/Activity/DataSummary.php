@@ -1,8 +1,9 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Response\GetActivityDataSummary;
+namespace Geonaute\LinkdataBundle\Entity\Activity;
 
 use Geonaute\LinkdataBundle\Utils\Datatype;
+use Geonaute\LinkdataBundle\Entity\Common\Value;
 use JMS\Serializer\Annotation as Serializer;
 
 class DataSummary
@@ -13,13 +14,11 @@ class DataSummary
      * @Serializer\XmlMap(entry="VALUE", inline=true)
      * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\Common\Value>")
      *
-     * @var array<Geonaute\LinkdataBundle\Response\Common\Value>
+     * @var array<Value>
      */
     private $values;
 
     /**
-     * @Serializer\Type("array")
-     *
      * @var array
      */
     public static $publicDatatypes = [
