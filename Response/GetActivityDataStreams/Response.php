@@ -10,8 +10,8 @@ class Response extends BaseResponse
 {
 
     /**
-     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Activity\DataStreamsActivity")
      * @Serializer\SerializedName("ACTIVITY")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Activity\DataStreamsActivity")
      *
      * @var DataStreamsActivity
      */
