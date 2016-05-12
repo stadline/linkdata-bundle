@@ -96,6 +96,17 @@
                     "required": true
                 }
             }
+        },
+        "getUsersTotalProfile": {
+            "httpMethod": "GET",
+            "uri": "users/{ldid}/total_profile.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetUsersTotalProfile\\Response",
+            "parameters": {
+                "ldid": {
+                    "location": "uri",
+                    "required": true
+                }
+            }
         }
     }
 }

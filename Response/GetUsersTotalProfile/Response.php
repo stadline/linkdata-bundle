@@ -9,10 +9,9 @@ class Response extends XmlResponse
 {
 
     /**
-     * @Serializer\SerializedName("USER")
-     * @Serializer\XmlList(entry="STATS", inline=true)
+     * @Serializer\SerializedName("STATS")
      * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetUsersTotalProfile\Profile")
-     * 
+     *
      * @var Profile
      */
     private $profile;

@@ -18,8 +18,8 @@ class Profile
     private $user;
 
     /**
-     * @Serializer\SerializedName("SPORTID")
-     * @Serializer\XmlList(entry="SPORTS", inline=true)
+     * @Serializer\SerializedName("SPORTS")
+     * @Serializer\XmlList(entry="SPORTID")
      * @Serializer\Type("array")
      *
      * @var array
@@ -27,30 +27,13 @@ class Profile
     private $sportIds = [];
 
     /**
+     * @Serializer\SerializedName("TOTALS")
+     * @Serializer\XmlMap(entry="TOTAL_DATATYPE")
+     * @Serializer\Type("array")
+     *
      * @var array
      */
     private $totals = [];
-
-    public function __construct(\SimpleXMLElement $STATS)
-    {
-        $this->user = new User($STATS->USER[0]);
-        $this->sportIds;
-
-        if ($STATS->SPORTS[0]) {
-            foreach ($STATS->SPORTS[0] as $NODE) {
-                $this->sportIds[] = (string) $NODE;
-            }
-        }
-
-        if ($STATS->TOTALS[0]) {
-            foreach ($STATS->TOTALS[0] as $NODE) {
-                $attributes = $NODE->attributes();
-                $datatypeId = (string) $attributes['datatype_id'];
-
-                $this->totals[$datatypeId] = (string) $NODE;
-            }
-        }
-    }
 
     /**
      * @return User
@@ -129,7 +112,6 @@ class Profile
     }
 
     /**
-     *
      * @return integer
      */
     public function getLevel()

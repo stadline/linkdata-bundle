@@ -8,55 +8,111 @@ class User
 {
 
     /**
-     * @var array
+     * @Serializer\SerializedName("LDID")
+     * @Serializer\Type("string")
+     *
+     * @var string
      */
-    private $data;
+    private $ldid;
 
-    public function __construct(\SimpleXMLElement $USER)
-    {
-        foreach ($USER as $NODE) {
-            $key = strtolower($NODE->getName());
-            $this->data[$key] = (string) $NODE;
-        }
-    }
+    /**
+     * @Serializer\SerializedName("FIRSTNAME")
+     * @Serializer\Type("string")
+     *
+     * @var string
+     */
+    private $firstName;
 
+    /**
+     * @Serializer\SerializedName("LASTNAME")
+     * @Serializer\Type("string")
+     *
+     * @var string
+     */
+    private $lastName;
+
+    /**
+     * @Serializer\SerializedName("COUNTRY")
+     * @Serializer\Type("string")
+     *
+     * @var string
+     */
+    private $country;
+
+    /**
+     * @Serializer\SerializedName("GENDER")
+     * @Serializer\Type("integer")
+     *
+     * @var integer
+     */
+    private $gender;
+
+    /**
+     * @Serializer\SerializedName(TOTAL_ONS")
+     * @Serializer\Type("string")
+     *
+     * @var string
+     */
+    private $totalOns;
+
+    /**
+     * @return string
+     */
     public function getLdid()
     {
-        return $this->data['ldid'];
+        return $this->ldid;
     }
 
+    /**
+     * @return string
+     */
     public function getFirstName()
     {
-        return $this->data['firstname'];
+        return $this->firstName;
     }
 
+    /**
+     * @return string
+     */
     public function getLastName()
     {
-        return $this->data['lastname'];
+        return $this->lastName;
     }
 
+    /**
+     * @return string
+     */
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+    /**
+     * @return string
+     */
     public function getGender()
     {
-        if($this->data['gender'] == 1) {
+        if ($this->gender == 1) {
             return "man";
         } else {
             return "woman";
         }
     }
-    
 
-    public function getCountry()
+    /**
+     * @return integer
+     */
+    public function getTotalOns()
     {
-        return $this->data['country'];
+        return $this->totalOns;
     }
 
-    public function getTotalONs()
-    {
-        return $this->data['total_ons'];
-    }
-
+    /**
+     * @return integer
+     */
     public function getLevel()
     {
-        return Level::getLevelFromPointEarned($this->getTotalONs());
+        return Level::getLevelFromPointEarned($this->getTotalOns());
     }
+
 }
