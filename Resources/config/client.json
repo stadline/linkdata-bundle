@@ -4,6 +4,7 @@
     "includes": [
         "operations/activity.json",
         "operations/friends.json",
+        "operations/globalchallenge.json",
         "operations/reference.json",
         "operations/ons.json",
         "operations/tracks.json",
