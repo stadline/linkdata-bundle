@@ -3,6 +3,7 @@
 namespace Geonaute\LinkdataBundle\Response\GetUsersSharedActivities;
 
 use Geonaute\LinkdataBundle\Response as BaseResponse;
+use Geonaute\LinkdataBundle\Entity\Users\SharedActivity;
 use JMS\Serializer\Annotation as Serializer;
 
 class Response extends BaseResponse
@@ -11,9 +12,9 @@ class Response extends BaseResponse
     /**
      * @Serializer\SerializedName("ACTIVITIES")
      * @Serializer\XmlList(entry="ACTIVITY")
-     * @Serializer\Type("ArrayCollection<Geonaute/LinkdataBundle/Response/GetUsersSharedActivities/Activity>")
+     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Users\SharedActivity>")
      *
-     * @var array<Activity>
+     * @var array<SharedActivity>
      */
     private $activities;
 
@@ -26,7 +27,7 @@ class Response extends BaseResponse
     }
 
     /**
-     * @return array<Activity>
+     * @return array<SharedActivity>
      */
     public function getActivities()
     {

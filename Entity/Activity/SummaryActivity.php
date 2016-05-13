@@ -2,8 +2,8 @@
 
 namespace Geonaute\LinkdataBundle\Entity\Activity;
 
-use Activity as BaseActivity;
 use DateTime;
+use Geonaute\LinkdataBundle\Entity\Common\Activity as BaseActivity;
 use Geonaute\LinkdataBundle\Entity\Activity\DataStream;
 use Geonaute\LinkdataBundle\Entity\Tracks\Track;
 use Geonaute\LinkdataBundle\Entity\Users\ConnectedDevice;

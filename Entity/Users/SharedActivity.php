@@ -2,9 +2,12 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetUsersSharedActivities;
 
+use Geonaute\LinkdataBundle\Entity\Common\Activity as BaseActivity;
+use Geonaute\LinkdataBundle\Entity\Common\Value;
 use Geonaute\LinkdataBundle\Utils\Datatype;
+use JMS\Serializer\Annotation as Serializer;
 
-class Activity
+class SharedActivity extends BaseActivity
 {
 
     /**
@@ -14,14 +17,6 @@ class Activity
      * @var string
      */
     private $token;
-
-    /**
-     * @Serializer\SerializedName("ID")
-     * @Serializer\Type("string")
-     *
-     * @var string
-     */
-    private $id;
 
     /**
      * @Serializer\SerializedName("STARTDATE")
@@ -50,9 +45,9 @@ class Activity
     /**
      * @Serializer\SerializedName("DATASUMMARY")
      * @Serializer\XmlMap(entry="VALUE")
-     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\Common\Value>")
+     * @Serializer\Type("array<Geonaute\LinkdataBundle\Entity\Common\Value>")
      *
-     * @var array<Geonaute\LinkdataBundle\Response\Common\Value>
+     * @var array<Value>
      */
     private $summary;
 
@@ -114,7 +109,7 @@ class Activity
 
     /**
      * @param integer $datatypeId
-     * @return <Geonaute\LinkdataBundle\Response\Common\Value>
+     * @return Value
      */
     private function getSummary($datatypeId)
     {
@@ -139,14 +134,6 @@ class Activity
     public function getLibelle()
     {
         return $this->libelle;
-    }
-
-    /**
-     * @return integer
-     */
-    public function getId()
-    {
-        return $this->id;
     }
 
     /**

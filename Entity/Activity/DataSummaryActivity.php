@@ -2,7 +2,7 @@
 
 namespace Geonaute\LinkdataBundle\Entity\Activity;
 
-use Activity as BaseActivity;
+use Geonaute\LinkdataBundle\Entity\Common\Activity as BaseActivity;
 use JMS\Serializer\Annotation as Serializer;
 
 class DataSummaryActivity extends BaseActivity

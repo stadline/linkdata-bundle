@@ -1,6 +1,6 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Entity\Activity;
+namespace Geonaute\LinkdataBundle\Common\Activity;
 
 use JMS\Serializer\Annotation as Serializer;
 

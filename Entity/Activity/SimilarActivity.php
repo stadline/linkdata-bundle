@@ -2,8 +2,8 @@
 
 namespace Geonaute\LinkdataBundle\Entity\Activity;
 
-use Activity as BaseActivity;
 use DateTime;
+use Geonaute\LinkdataBundle\Entity\Common\Activity as BaseActivity;
 use Geonaute\LinkdataBundle\Utils\Activity as UtilsActivity;
 use Geonaute\LinkdataBundle\Utils\ActivityToStringInterface;
 use Geonaute\LinkdataBundle\Entity\Activity\DataSummary;
