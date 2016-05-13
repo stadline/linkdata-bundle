@@ -2,9 +2,10 @@
 
 namespace Geonaute\LinkdataBundle\Entity\Users;
 
+use Geonaute\LinkdataBundle\Entity\Common\User as BaseUser;
 use JMS\Serializer\Annotation as Serializer;
 
-class User
+class User extends BaseUser
 {
 
     /**
@@ -14,22 +15,6 @@ class User
      * @var string
      */
     private $ldid;
-
-    /**
-     * @Serializer\SerializedName("FIRSTNAME")
-     * @Serializer\Type("string")
-     *
-     * @var string
-     */
-    private $firstName;
-
-    /**
-     * @Serializer\SerializedName("LASTNAME")
-     * @Serializer\Type("string")
-     *
-     * @var string
-     */
-    private $lastName;
 
     /**
      * @Serializer\SerializedName("COUNTRY")
@@ -42,33 +27,9 @@ class User
     /**
      * @return string
      */
-    public function __toString()
-    {
-        return $this->getFirstName() . ' ' . $this->getLastName();
-    }
-
-    /**
-     * @return string
-     */
     public function getLdid()
     {
         return $this->ldid;
-    }
-
-    /**
-     * @return string
-     */
-    public function getFirstName()
-    {
-        return $this->firstName;
-    }
-
-    /**
-     * @return string
-     */
-    public function getLastName()
-    {
-        return $this->lastName;
     }
 
     /**

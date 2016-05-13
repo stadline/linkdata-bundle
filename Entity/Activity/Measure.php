@@ -1,12 +1,13 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Response\GetActivityDataStreams;
+namespace Geonaute\LinkdataBundle\Entity\Activity;
 
+use Geonaute\LinkdataBundle\Entity\Common\Measure as BaseMeasure;
 use Geonaute\LinkdataBundle\Utils\Datatype;
-use Geonaute\LinkdataBundle\Response\Common\Value;
+use Geonaute\LinkdataBundle\Entity\Common\Value;
 use JMS\Serializer\Annotation as Serializer;
 
-class Measure
+class Measure extends BaseMeasure
 {
 
     /**
@@ -18,15 +19,6 @@ class Measure
     private $elapsedTime;
 
     /**
-     * @Serializer\SerializedName("VALUE")
-     * @Serializer\XmlMap(entry="VALUE", inline=true)
-     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\Common\Value>")
-     *
-     * @var array<Geonaute\LinkdataBundle\Response\Common\Value>
-     */
-    private $values;
-
-    /**
      * @Serializer\Type("array")
      *
      * @var array
@@ -36,7 +28,7 @@ class Measure
     /**
      * @Serializer\PostDeserialize
      */
-    public function defineValuesAndDatatypesForSerialization()
+    public function defineDatatypesForSerialization()
     {
         foreach ($this->values as $value) {
             $this->datatypes[$value->getId()] = $value->getId();
@@ -60,14 +52,6 @@ class Measure
     }
 
     /**
-     * @return array<Geonaute\LinkdataBundle\Response\Common\Value>
-     */
-    public function getValues()
-    {
-        return $this->values;
-    }
-
-    /**
      * @param array $values
      */
     public function setValues($values)
@@ -75,8 +59,8 @@ class Measure
         $this->values = $values;
     }
 
-
     /**
+     * @param integer $id
      * @return Value
      */
     public function getValue($id)
@@ -101,7 +85,6 @@ class Measure
     }
 
     /**
-     *
      * @param integer $id
      * @return Value
      */
