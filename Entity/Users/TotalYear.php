@@ -4,18 +4,11 @@ namespace Geonaute\LinkdataBundle\Entity\Users;
 
 use Geonaute\LinkdataBundle\Utils\Datatype;
 use Geonaute\LinkDataBundle\Utils\ProgressStatisticMapperInterface;
+use Geonaute\LinkdataBundle\Entity\Tag\Sport;
 use JMS\Serializer\Annotation as Serializer;
 
 class TotalYear implements ProgressStatisticMapperInterface
 {
-
-    /**
-     * @Serializer\SerializedName("TOTALPOINTS")
-     * @Serializer\Type("integer")
-     *
-     * @var integer
-     */
-    private $totalPoints;
 
     /**
      * @Serializer\SerializedName("YEAR")
@@ -38,7 +31,7 @@ class TotalYear implements ProgressStatisticMapperInterface
      * @Serializer\XmlList(entry = "SPORT")
      * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Tag\Sport>")
      *
-     * @var type
+     * @var array<Sport>
      */
     private $sports;
 
@@ -67,14 +60,6 @@ class TotalYear implements ProgressStatisticMapperInterface
     }
 
     /**
-     * @return integer
-     */
-    public function getTotalPoints()
-    {
-        return $this->totalPoints;
-    }
-
-    /**
      * Sum values for a datatype on the year
      *
      * @param integer $unitId
@@ -82,13 +67,13 @@ class TotalYear implements ProgressStatisticMapperInterface
      */
     private function getTotal($unitId)
     {
-        $total = 0;
-
-        foreach ($this->xml->xpath('.//VALUE[@id="' . $unitId . '"]') as $node) {
-            $total += (string) $node;
-        }
-
-        return $total;
+//        $total = 0;
+//
+//        foreach ($this->xml->xpath('.//VALUE[@id="' . $unitId . '"]') as $node) { @todo change this
+//            $total += (string) $node;
+//        }
+//
+//        return $total;
     }
 
     /**
@@ -112,16 +97,6 @@ class TotalYear implements ProgressStatisticMapperInterface
     }
 
     /**
-     * Returns total activity on a year
-     *
-     * @return integer
-     */
-    public function getTotalActivityNumber()
-    {
-        return $this->getTotal(Datatype::ACTIVITY_NUMBER);
-    }
-
-    /**
      * Returns calories unit id
      *
      * @return integer
@@ -142,26 +117,6 @@ class TotalYear implements ProgressStatisticMapperInterface
     }
 
     /**
-     * Returns total calories burnt on a year
-     *
-     * @return integer
-     */
-    public function getTotalAscent()
-    {
-        return $this->getTotal($this->getAscentId());
-    }
-
-    /**
-     * Returns total calories burnt on a year
-     *
-     * @return integer
-     */
-    public function getTotalDescent()
-    {
-        return $this->getTotal($this->getDescentId());
-    }
-
-    /**
      * Returns duration unit id
      *
      * @return integer
@@ -169,32 +124,6 @@ class TotalYear implements ProgressStatisticMapperInterface
     public function getDurationId()
     {
         return Datatype::DURATION;
-    }
-
-    /**
-     * Returns speed unit id
-     *
-     * @return integer
-     */
-    public function getSpeedId()
-    {
-        return Datatype::SPEED_AVG;
-    }
-
-    /**
-     * @return integer
-     */
-    public function getAscentId()
-    {
-        return Datatype::ASCENT;
-    }
-
-    /**
-     * @return integer
-     */
-    public function getDescentId()
-    {
-        return Datatype::DESCENT;
     }
 
     /**

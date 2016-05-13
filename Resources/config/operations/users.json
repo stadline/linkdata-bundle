@@ -223,6 +223,20 @@
             "additionalParameters": {
                 "location": "query"
             }
+        },
+        "getUsersTotalYears": {
+            "httpMethod": "GET",
+            "uri": "users/{ldid}/totalyears.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetUsersTotalYears\\Response",
+            "parameters": {
+                "ldid": {
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
         }
     }
 }
