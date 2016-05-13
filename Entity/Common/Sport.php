@@ -1,6 +1,6 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Entity\Users;
+namespace Geonaute\LinkdataBundle\Entity\Common;
 
 use JMS\Serializer\Annotation as Serializer;
 
@@ -14,15 +14,6 @@ class Sport
     private $id;
 
     /**
-     * @Serializer\SerializedName("VALUE")
-     * @Serializer\XmlMap(inline = true, entry = "VALUE")
-     * @Serializer\Type("array")
-     *
-     * @var array
-     */
-    private $values;
-
-    /**
      * @return integer
      */
     public function getId()
@@ -31,11 +22,11 @@ class Sport
     }
 
     /**
-     * @return array
+     * @return string
      */
-    public function getValues()
+    public function __toString()
     {
-        return $this->values;
+        return $this->getId();
     }
 
 }

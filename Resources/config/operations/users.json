@@ -119,6 +119,20 @@
                 "location": "query"
             }
         },
+        "getUsersRecords": {
+            "httpMethod": "GET",
+            "uri": "users/{ldid}/records.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetUsersRecords\\Response",
+            "parameters": {
+                "ldid": {
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
+        },
         "getUsersSharedActivities": {
             "httpMethod": "GET",
             "uri": "users/{ldid}/shared_activities.xml",

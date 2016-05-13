@@ -8,11 +8,20 @@ class Sport extends BaseSport
 {
 
     /**
-     * @return string
+     * @Serializer\SerializedName("VALUE")
+     * @Serializer\XmlMap(inline = true, entry = "VALUE")
+     * @Serializer\Type("array")
+     *
+     * @var array
      */
-    public function __toString()
+    private $values;
+
+    /**
+     * @return array
+     */
+    public function getValues()
     {
-        return $this->getId();
+        return $this->values;
     }
 
     /**
