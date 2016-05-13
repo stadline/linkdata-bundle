@@ -69,6 +69,24 @@
                 "location": "query"
             }
         },
+        "getUsersRanking": {
+            "httpMethod": "GET",
+            "uri": "users/{ldid}/ranking.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetUsersRanking\\Response",
+            "parameters": {
+                "ldid": {
+                    "location": "uri",
+                    "required": true
+                },
+                "datatype_id": {
+                    "location": "query",
+                    "required": true
+                }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
+        },
         "getUsersRoutes": {
             "httpMethod": "GET",
             "uri": "users/{ldid}/routes.xml",
