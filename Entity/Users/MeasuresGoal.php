@@ -1,7 +1,8 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Response\GetUsersMeasuresGoal;
+namespace Geonaute\LinkdataBundle\Entity\Users\MeasuresGoal;
 
+use DateTime;
 use JMS\Serializer\Annotation as Serializer;
 
 class MeasuresGoal
@@ -48,11 +49,11 @@ class MeasuresGoal
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getStartedAtAsDateTimeObject()
     {
-        return \DateTime::createFromFormat('Y-m-d', $this->startedAt);
+        return DateTime::createFromFormat('Y-m-d', $this->startedAt);
     }
 
     /**

@@ -3,6 +3,7 @@
 namespace Geonaute\LinkdataBundle\Response\GetUsersMeasuresGoal;
 
 use Geonaute\LinkdataBundle\Response as BaseResponse;
+use Geonaute\LinkdataBundle\Entity\Users\MeasuresGoal;
 use JMS\Serializer\Annotation as Serializer;
 
 class Response extends BaseResponse
@@ -10,7 +11,7 @@ class Response extends BaseResponse
 
     /**
      * @Serializer\SerializedName("MEASURES_GOAL")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetUsersMeasuresGoal")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Users\MeasuresGoal")
      *
      * @var MeasuresGoal
      */
@@ -25,6 +26,7 @@ class Response extends BaseResponse
     }
 
     /**
+     * @param integer $typeId
      * @return integer
      */
     public function getGoal($typeId)
