@@ -13,6 +13,20 @@
             "additionalParameters": {
                 "location": "query"
             }
+        },
+        "getTagTotalYear": {
+            "httpMethod": "GET",
+            "uri": "tag/{name}/totalyear.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetTagTotalYear\\Response",
+            "parameters": {
+                "name": {
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
         }
     }
 }

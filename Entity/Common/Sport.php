@@ -2,7 +2,6 @@
 
 namespace Geonaute\LinkdataBundle\Entity\Users;
 
-use Geonaute\LinkdataBundle\Entity\Common\Value;
 use JMS\Serializer\Annotation as Serializer;
 
 class Sport
@@ -16,10 +15,10 @@ class Sport
 
     /**
      * @Serializer\SerializedName("VALUE")
-     * @Serializer\XmlList(entry="VALUE", inline=true)
-     * @Serializer\Type("array<Geonaute\LinkdataBundle\Entity\Common\Value>")
+     * @Serializer\XmlMap(inline = true, entry = "VALUE")
+     * @Serializer\Type("array")
      *
-     * @var array<Value>
+     * @var array
      */
     private $values;
 
@@ -32,7 +31,7 @@ class Sport
     }
 
     /**
-     * @return array<Value>
+     * @return array
      */
     public function getValues()
     {
