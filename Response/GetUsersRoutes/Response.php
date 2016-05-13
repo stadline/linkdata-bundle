@@ -3,6 +3,7 @@
 namespace Geonaute\LinkdataBundle\Response\GetUsersRoutes;
 
 use Geonaute\LinkdataBundle\Response as BaseResponse;
+use Geonaute\LinkdataBundle\Entity\Common\Route;
 use JMS\Serializer\Annotation as Serializer;
 
 class Response extends BaseResponse
@@ -11,14 +12,14 @@ class Response extends BaseResponse
     /**
      * @Serializer\SerializedName("ROUTES")
      * @Serializer\XmlList(entry="ROUTE")
-     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Response\GetRoute\Route>")
+     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Common\Route>")
      *
-     * @var array<Geonaute\LinkdataBundle\Response\GetRoute\Route>
+     * @var array<Route>
      */
     private $routes;
 
     /**
-     * @return array<Geonaute\LinkdataBundle\Response\GetRoute\Route>
+     * @return array<Route>
      */
     public function getRoutes()
     {

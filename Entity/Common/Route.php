@@ -1,7 +1,8 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Entity\Route;
+namespace Geonaute\LinkdataBundle\Entity\Common;
 
+use Geonaute\LinkdataBundle\Entity\Route\Location;
 use JMS\Serializer\Annotation as Serializer;
 
 class Route
