@@ -156,7 +156,7 @@
                     "location": "uri"
                 }
             },
-            "additionalParameters":{
+            "additionalParameters": {
                 "location": "query"
             }
         },
@@ -200,6 +200,20 @@
             "httpMethod": "GET",
             "uri": "users/{ldid}/total_profile.xml",
             "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetUsersTotalProfile\\Response",
+            "parameters": {
+                "ldid": {
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
+        },
+        "getUsersTotalYear": {
+            "httpMethod": "GET",
+            "uri": "users/{ldid}/totalyear.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetUsersTotalYear\\Response",
             "parameters": {
                 "ldid": {
                     "location": "uri",
