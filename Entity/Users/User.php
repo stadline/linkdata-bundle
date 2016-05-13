@@ -40,14 +40,6 @@ class User
     private $country;
 
     /**
-     * @Serializer\SerializedName("LANGUAGE")
-     * @Serializer\Type("string")
-     *
-     * @var string
-     */
-    private $language;
-
-    /**
      * @return string
      */
     public function __toString()
@@ -85,14 +77,6 @@ class User
     public function getCountry()
     {
         return $this->country;
-    }
-
-    /**
-     * @return string
-     */
-    public function getLanguage()
-    {
-        return $this->language;
     }
 
 }

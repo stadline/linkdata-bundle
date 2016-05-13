@@ -1,9 +1,10 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Response\GetUsersTotalProfile;
+namespace Geonaute\LinkdataBundle\Entity\Users;
 
 use Geonaute\LinkdataBundle\Utils\Datatype;
 use Geonaute\LinkdataBundle\Utils\Level;
+use Geonaute\LinkdataBundle\Entity\Users\TotalProfileUser;
 use JMS\Serializer\Annotation as Serializer;
 
 class Profile
@@ -11,9 +12,9 @@ class Profile
 
     /**
      * @Serializer\SerializedName("USER")
-     * @Serializer\Type("Geonaute\LinkDataBundle\Response\GetUsersTotalProfile\User")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Users\TotalProfileUser")
      *
-     * @var User
+     * @var TotalProfileUser
      */
     private $user;
 
@@ -36,7 +37,7 @@ class Profile
     private $totals = [];
 
     /**
-     * @return User
+     * @return TotalProfileUser
      */
     public function getUser()
     {

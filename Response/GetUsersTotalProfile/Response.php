@@ -3,6 +3,7 @@
 namespace Geonaute\LinkdataBundle\Response\GetUsersTotalProfile;
 
 use Geonaute\LinkdataBundle\Response as BaseResponse;
+use Geonaute\LinkdataBundle\Entity\Users\Profile;
 use JMS\Serializer\Annotation as Serializer;
 
 class Response extends BaseResponse
@@ -10,7 +11,7 @@ class Response extends BaseResponse
 
     /**
      * @Serializer\SerializedName("STATS")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetUsersTotalProfile\Profile")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Users\Profile")
      *
      * @var Profile
      */
