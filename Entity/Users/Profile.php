@@ -20,7 +20,7 @@ class Profile
 
     /**
      * @Serializer\SerializedName("SPORTS")
-     * @Serializer\XmlList(entry="SPORTID")
+     * @Serializer\XmlList(entry = "SPORTID")
      * @Serializer\Type("array")
      *
      * @var array
@@ -29,7 +29,7 @@ class Profile
 
     /**
      * @Serializer\SerializedName("TOTALS")
-     * @Serializer\XmlMap(entry="TOTAL_DATATYPE")
+     * @Serializer\XmlMap(entry = "TOTAL_DATATYPE")
      * @Serializer\Type("array")
      *
      * @var array

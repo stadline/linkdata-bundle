@@ -44,7 +44,7 @@ class SharedActivity extends BaseActivity
 
     /**
      * @Serializer\SerializedName("DATASUMMARY")
-     * @Serializer\XmlMap(entry="VALUE")
+     * @Serializer\XmlMap(entry = "VALUE")
      * @Serializer\Type("array<Geonaute\LinkdataBundle\Entity\Common\Value>")
      *
      * @var array<Value>

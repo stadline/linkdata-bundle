@@ -27,7 +27,7 @@ class TotalMonth
 
     /**
      * @Serializer\SerializedName("SPORTS")
-     * @Serializer\XmlList(entry="SPORT")
+     * @Serializer\XmlList(entry = "SPORT")
      * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Common\Sport>")
      *
      * @var array<Sport>

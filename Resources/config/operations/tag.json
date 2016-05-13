@@ -27,6 +27,20 @@
             "additionalParameters": {
                 "location": "query"
             }
+        },
+        "getTagWeeklyAverage": {
+            "httpMethod": "GET",
+            "uri": "tag/{name}/weekly_average.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetTagWeeklyAverage\\Response",
+            "parameters": {
+                "name": {
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
         }
     }
 }
