@@ -9,7 +9,7 @@ class DataStream
 
     /**
      * @Serializer\SerializedName("MEASURE")
-     * @Serializer\XmlList(inline=true, entry="MEASURE")
+     * @Serializer\XmlList(inline = true, entry = "MEASURE")
      * @Serializer\Type("array<Geonaute\LinkdataBundle\Entity\Activity\Measure>")
      *
      * @var array<Measure>

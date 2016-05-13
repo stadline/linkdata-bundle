@@ -9,7 +9,7 @@ class Measure
 
     /**
      * @Serializer\SerializedName("VALUE")
-     * @Serializer\XmlMap(entry="VALUE", inline=true)
+     * @Serializer\XmlMap(inline = true, entry = "VALUE")
      * @Serializer\Type("array<Geonaute\LinkdataBundle\Entity\Common\Value>")
      *
      * @var array<Value>

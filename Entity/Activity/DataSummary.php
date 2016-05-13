@@ -11,7 +11,7 @@ class DataSummary
 
     /**
      * @Serializer\SerializedName("VALUE")
-     * @Serializer\XmlMap(entry="VALUE", inline=true)
+     * @Serializer\XmlMap(inline = true, entry = "VALUE")
      * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\Common\Value>")
      *
      * @var array<Value>

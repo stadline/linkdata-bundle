@@ -16,7 +16,7 @@ class Value
     private $id;
 
     /**
-     * @Serializer\XmlList(inline=true, entry="VALUE")
+     * @Serializer\XmlList(inline = true, entry = "VALUE")
      * @Serializer\Type("string")
      *
      * @var mixed

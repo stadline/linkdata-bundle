@@ -8,7 +8,7 @@ class Track
 {
 
     /**
-     * @Serializer\XmlList(inline=true, entry="LOCATION")
+     * @Serializer\XmlList(inline = true, entry = "LOCATION")
      * @Serializer\Type("array<Geonaute\LinkdataBundle\Entity\Tracks\Location>")
      *
      * @var array<Location>
