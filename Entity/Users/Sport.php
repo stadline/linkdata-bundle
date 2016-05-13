@@ -1,7 +1,8 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Response\GetUsersTotalMonth;
+namespace Geonaute\LinkdataBundle\Entity\Users;
 
+use Geonaute\LinkdataBundle\Entity\Common\Value;
 use JMS\Serializer\Annotation as Serializer;
 
 class Sport
@@ -16,9 +17,9 @@ class Sport
     /**
      * @Serializer\SerializedName("VALUE")
      * @Serializer\XmlList(entry="VALUE", inline=true)
-     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\Common\Value>")
+     * @Serializer\Type("array<Geonaute\LinkdataBundle\Entity\Common\Value>")
      *
-     * @var array<Geonaute\LinkdataBundle\Response\Common\Value>
+     * @var array<Value>
      */
     private $values;
 
@@ -31,7 +32,7 @@ class Sport
     }
 
     /**
-     * @return array<Geonaute\LinkdataBundle\Response\Common\Value>
+     * @return array<Value>
      */
     public function getValues()
     {

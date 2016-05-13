@@ -3,6 +3,7 @@
 namespace Geonaute\LinkdataBundle\Response\GetUsersTotalMonth;
 
 use Geonaute\LinkdataBundle\Response as BaseResponse;
+use Geonaute\LinkdataBundle\Entity\Users\TotalMonth;
 use JMS\Serializer\Annotation as Serializer;
 
 class Response extends BaseResponse
@@ -10,7 +11,7 @@ class Response extends BaseResponse
 
     /**
      * @Serializer\SerializedName("TOTALMONTH")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetUsersTotalMonth\TotalMonth")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Users\TotalMonth")
      *
      * @var TotalMonth
      */
