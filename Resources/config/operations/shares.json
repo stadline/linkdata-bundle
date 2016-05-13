@@ -1,0 +1,18 @@
+{
+    "operations": {
+        "getShares": {
+            "httpMethod": "GET",
+            "uri": "shares/{token}.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetShares\\Response",
+            "parameters": {
+                "token": {
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
+        }
+    }
+}
