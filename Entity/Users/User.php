@@ -1,6 +1,6 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Response\GetUsersProfile;
+namespace Geonaute\LinkdataBundle\Entity\Users;
 
 use JMS\Serializer\Annotation as Serializer;
 
