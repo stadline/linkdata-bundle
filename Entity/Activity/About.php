@@ -21,7 +21,7 @@ class About
      *
      * @var boolean
      */
-    private $datastream;
+    private $dataStream;
 
     /**
      * @Serializer\SerializedName("LAP")
@@ -74,9 +74,9 @@ class About
     /**
      * @return boolean
      */
-    public function getDatastream()
+    public function getDataStream()
     {
-        return $this->datastream;
+        return $this->dataStream;
     }
 
     /**

@@ -1,18 +1,21 @@
 <?php
 
-namespace Geonaute\Module\LinkdataBundle\Service\GetShares;
+namespace Geonaute\LinkdataBundle\Entity\Shares;
 
-use Geonaute\Module\LinkdataBundle\Service\GetTracksDetails\Track as BaseTrack;
-use Geonaute\Module\LinkdataBundle\Service\GetTracksDetails\Location;
+use Geonaute\LinkdataBundle\Entity\Tracks\Track as BaseTrack;
+use Geonaute\LinkdataBundle\Entity\Tracks\Location;
+use JMS\Serializer\Annotation as Serializer;
 
 class Track extends BaseTrack
 {
-    public function __construct(\SimpleXMLElement $TRACK)
-    {
-        $this->locations = array();
-        foreach ($TRACK->DETAIL->LOCATION as $LOCATION) {
-            $location = new Location($LOCATION);
-            $this->locations[$location->getElapsedTime()] = $location;
-        }
-    }
+
+    /**
+     * @Serializer\SerializedName("DETAIL")
+     * @Serializer\XmlMap(entry = "LOCATION")
+     * @Serializer\Type("array<Geonaute\LinkdataBundle\Entity\Tracks\Location>")
+     *
+     * @var array<Location>
+     */
+    private $locations;
+
 }

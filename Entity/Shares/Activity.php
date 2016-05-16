@@ -2,66 +2,129 @@
 
 namespace Geonaute\LinkdataBundle\Entity\Shares;
 
+use DateTime;
 use Geonaute\LinkdataBundle\Utils\ActivityWidgetProviderInterface;
-use Geonaute\Module\LinkdataBundle\Service\GetActivityDataStreams\DataStream;
-use Geonaute\Module\LinkdataBundle\Service\GetActivityDataSummary\DataSummary;
-use Geonaute\Module\LinkdataBundle\Service\GetReferenceDeviceModels\DeviceModel;
-use Geonaute\Module\LinkdataBundle\Service\GetReferenceSports\Sport;
+use Geonaute\LinkdataBundle\Entity\Activity\DataStream;
+use Geonaute\LinkdataBundle\Entity\Activity\DataSummary;
+use Geonaute\LinkdataBundle\Entity\Reference\DeviceModel;
+use Geonaute\LinkdataBundle\Entity\Reference\Sport;
 use JMS\Serializer\Annotation as Serializer;
 
-/**
- * @Serializer\ExclusionPolicy("all")
- */
 class Activity implements ActivityWidgetProviderInterface
 {
+
+    /**
+     * @Serializer\SerializedName("USER")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Shares\User")
+     *
+     * @var User
+     */
     private $user;
-    private $response;
-    
+
+    /**
+     * @Serializer\SerializedName("SPORT")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Reference\Sport")
+     *
+     * @var Sport
+     */
     private $sport;
+
+    /**
+     * @Serializer\SerializedName("DEVICEMODEL")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Reference\DeviceModel")
+     *
+     * @var DeviceModel
+     */
     private $deviceModel;
-    private $datastream;
-    private $datasummary;
+
+    /**
+     * @Serializer\SerializedName("DATASTREAM")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Activity\DataStream")
+     *
+     * @var DataStream
+     */
+    private $dataStream;
+
+    /**
+     * @Serializer\SerializedName("DATASUMMARY")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Activity\DataSummary")
+     *
+     * @var DataSummary
+     */
+    private $dataSummary;
+
+    /**
+     * @Serializer\SerializedName("TRACK")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Shares\Track")
+     *
+     * @var Track
+     */
     private $track;
-    
+
+    /**
+     * @Serializer\SerializedName("STARTDATE")
+     * @Serializer\Type("string")
+     *
+     * @var string
+     */
     private $startDate;
+
+    /**
+     * @Serializer\SerializedName("TIMEZONE")
+     * @Serializer\Type("string")
+     *
+     * @var string
+     */
     private $timezone;
+
+    /**
+     * @Serializer\SerializedName("DURATION")
+     * @Serializer\Type("integer")
+     *
+     * @var integer
+     */
     private $duration;
+
+    /**
+     * @Serializer\SerializedName("LIBELLE")
+     * @Serializer\Type("string")
+     *
+     * @var string
+     */
     private $libelle;
+
+    /**
+     * @Serializer\SerializedName("LATITUDE")
+     * @Serializer\Type("double")
+     *
+     * @var float
+     */
     private $latitude;
+
+    /**
+     * @Serializer\SerializedName("LONGITUDE")
+     * @Serializer\Type("double")
+     *
+     * @var float
+     */
     private $longitude;
+
+    /**
+     * @Serializer\SerializedName("ELEVATION")
+     * @Serializer\Type("double")
+     *
+     * @var float
+     */
     private $elevation;
-    
-    public function __construct(ResponseClassInterface $response, SimpleXMLElement $ACTIVITY)
-    {
-        $this->response      = $response;
 
-        $this->startDate     = (string)    $ACTIVITY->STARTDATE;
-        $this->timezone      = (string)    $ACTIVITY->TIMEZONE;
-        $this->duration      = (int)       $ACTIVITY->DURATION;
-        $this->libelle       = (string)    $ACTIVITY->LIBELLE;
-        $this->latitude      = (float)     $ACTIVITY->LATITUDE;
-        $this->longitude     = (float)     $ACTIVITY->LONGITUDE;
-        $this->elevation     = (float)     $ACTIVITY->ELEVATION;
-        
-        $this->user        = new User($response, $ACTIVITY->USER[0]);
-        
-        $this->sport       = new Sport($response, $ACTIVITY->SPORT[0]);
-        $this->deviceModel = new DeviceModel($ACTIVITY->DEVICEMODEL[0]);
+    /**
+     * @Serializer\SerializedName("ABOUT")
+     * @Serializer\Type("?")
+     *
+     * @var About
+     */
+    private $about;
 
-        $this->datastream  = new DataStream($response, $ACTIVITY->DATASTREAM[0]);
-        
-        if ($ACTIVITY->DATASUMMARY[0]) {
-            $this->datasummary = new DataSummary($response, $ACTIVITY->DATASUMMARY[0]);
-        }
-        if ($ACTIVITY->TRACK[0]) {
-            $this->track       = new Track($ACTIVITY->TRACK[0]);
-        }
-        
-        // Cannot use the About from Linkdata so we have to build it again
-        $this->about = new About($ACTIVITY);
-        
-    }
-    
     /**
      * @return string
      */
@@ -69,13 +132,13 @@ class Activity implements ActivityWidgetProviderInterface
     {
         return $this->startDate;
     }
-    
+
     /**
      * @return DateTime
      */
     public function getStartDateObject()
     {
-        return \DateTime::createFromFormat('Y-m-d H:i:s', $this->getStartDate());
+        return DateTime::createFromFormat('Y-m-d H:i:s', $this->getStartDate());
     }
 
     /**
@@ -85,7 +148,7 @@ class Activity implements ActivityWidgetProviderInterface
     {
         return $this->timezone;
     }
-    
+
     /**
      * @return User
      */
@@ -93,7 +156,7 @@ class Activity implements ActivityWidgetProviderInterface
     {
         return $this->user;
     }
-    
+
     /**
      * @return Sport
      */
@@ -101,6 +164,7 @@ class Activity implements ActivityWidgetProviderInterface
     {
         return $this->sport;
     }
+
     /**
      * @return DeviceModel
      */
@@ -108,22 +172,23 @@ class Activity implements ActivityWidgetProviderInterface
     {
         return $this->deviceModel;
     }
-    
+
     /**
-     * @return Datastream
+     * @return DataStream
      */
-    public function getDatastream()
+    public function getDataStream()
     {
-        return $this->datastream;
+        return $this->dataStream;
     }
+
     /**
      * @return DataSummary
      */
-    public function getDatasummary()
+    public function getDataSummary()
     {
-        return $this->datasummary;
+        return $this->dataSummary;
     }
-    
+
     /**
      * @return Track
      */
@@ -131,7 +196,7 @@ class Activity implements ActivityWidgetProviderInterface
     {
         return $this->track;
     }
-    
+
     /**
      * @return string
      */
@@ -139,14 +204,16 @@ class Activity implements ActivityWidgetProviderInterface
     {
         return $this->libelle;
     }
-    
+
     /**
      * Cannot use the About from Linkdata so we have to build it again
+     *
+     * @param $key
+     * @return mixed
      */
-    public function getAbout($key) 
+    public function getAbout($key)
     {
-        if(array_key_exists($key, $this->about))
-        {
+        if (array_key_exists($key, $this->about)) {
             return $this->about[$key];
         } else {
             return false;
@@ -154,31 +221,51 @@ class Activity implements ActivityWidgetProviderInterface
     }
 
     /**
-     * @Serializer\VirtualProperty
-     * @Serializer\Groups({"context"})
-     * @Serializer\SerializedName("about")
+     * @return integer
      */
-    public function getAboutArray()
-    {
-        if (!$this->about) {
-            return array();
-        }
-
-        return $this->about->getArrayCopy();
-    }
-    
-    public function getDeviceModelId() 
+    public function getDeviceModelId()
     {
         return $this->getDeviceModel()->getId();
     }
-    
+
+    /**
+     * @return boolean
+     */
     public function getTrackId()
     {
         return ($this->track) ? true : false;
     }
 
+    /**
+     * @return integer
+     */
     public function getDuration()
     {
         return $this->duration;
     }
+
+    /**
+     * @return float
+     */
+    public function getLongitude()
+    {
+        return $this->longitude;
+    }
+
+    /**
+     * @return float
+     */
+    public function getLatitude()
+    {
+        return $this->latitude;
+    }
+
+    /**
+     * @return float
+     */
+    public function getElevation()
+    {
+        return $this->elevation;
+    }
+
 }

@@ -3,7 +3,7 @@
 namespace Geonaute\LinkdataBundle\Entity\Shares;
 
 use Geonaute\LinkdataBundle\Entity\Common\User as BaseUser;
-use Geonaute\Module\LinkdataBundle\Service\GetUsersMeasures\Measures;
+use Geonaute\LinkdataBundle\Entity\Users\Measure;
 use JMS\Serializer\Annotation as Serializer;
 
 class User extends BaseUser
@@ -20,9 +20,9 @@ class User extends BaseUser
     /**
      * @Serializer\SerializedName("MEASURES")
      * @Serializer\XmlList("MEASURE")
-     * @Serializer\Type("array<Geonaute\LinkdataBundle\Users\Measure>")
+     * @Serializer\Type("array<Geonaute\LinkdataBundle\Entity\Users\Measure>")
      *
-     * @var integer
+     * @var array<Measure>
      */
     private $measures;
 
@@ -35,7 +35,7 @@ class User extends BaseUser
     }
 
     /**
-     * @return Measures
+     * @return array<Measure>
      */
     public function getMeasures()
     {

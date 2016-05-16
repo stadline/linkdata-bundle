@@ -7,7 +7,7 @@ use Geonaute\LinkDataBundle\Utils\ProgressStatisticMapperInterface;
 use Geonaute\LinkdataBundle\Entity\Tag\Sport;
 use JMS\Serializer\Annotation as Serializer;
 
-class TotalYear implements ProgressStatisticMapperInterface
+class TotalYear
 {
 
     /**

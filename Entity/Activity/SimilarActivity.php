@@ -82,7 +82,7 @@ class Activity extends BaseActivity implements ActivityToStringInterface
      *
      * @var DataSummary
      */
-    private $datasummary;
+    private $dataSummary;
 
     /**
      * @return string
@@ -188,9 +188,9 @@ class Activity extends BaseActivity implements ActivityToStringInterface
     /**
      * @return DataSummary
      */
-    public function getDatasummary()
+    public function getDataSummary()
     {
-        return $this->datasummary;
+        return $this->dataSummary;
     }
 
 }

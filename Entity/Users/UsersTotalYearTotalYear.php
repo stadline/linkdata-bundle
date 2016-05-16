@@ -5,7 +5,7 @@ namespace Geonaute\LinkdataBundle\Entity\Users;
 use TotalYear as BaseTotalYear;
 use JMS\Serializer\Annotation as Serializer;
 
-class UsersTotalYearTotalYear extends BaseTotalYear
+class UsersTotalYearTotalYear extends BaseTotalYear implements ProgressStatisticMapperInterface
 {
 
     /**

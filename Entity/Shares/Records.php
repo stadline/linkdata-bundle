@@ -1,24 +1,28 @@
 <?php
 
-namespace Geonaute\Module\LinkdataBundle\Service\GetShares;
+namespace Geonaute\LinkdataBundle\Entity\Shares;
 
-use Guzzle\Service\Command\ResponseClassInterface;
-use Geonaute\Module\LinkdataBundle\Service\GetUsersRecords\Sports;
+use Geonaute\LinkdataBundle\Entity\Users\Sport;
+use JMS\Serializer\Annotation as Serializer;
 
 class Records
 {
-    private $sports;
-    
-    public function __construct(ResponseClassInterface $response, \SimpleXMLElement $RECORDS)
-    {
-        $this->sports = new Sports($response, $RECORDS->SPORTS[0]);
-    }
 
     /**
-     * @return Sports
+     * @Serializer\SerializedName("SPORTS")
+     * @Serializer\XmlList(entry = "SPORT")
+     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Users\Sport>")
+     *
+     * @var array<Sport>
+     */
+    private $sports;
+
+    /**
+     * @return array<Sport>
      */
     public function getSports()
     {
         return $this->sports;
     }
+
 }
