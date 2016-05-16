@@ -13,6 +13,14 @@
             "additionalParameters": {
                 "location": "query"
             }
+        },
+        "putSharesAdd": {
+            "httpMethod": "PUT",
+            "uri": "shares/add.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\PutSharesAdd\\Response",
+            "additionalParameters": {
+                "location": "postField"
+            }
         }
     }
 }

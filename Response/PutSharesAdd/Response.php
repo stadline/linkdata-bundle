@@ -1,9 +1,9 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Response\GetShares;
+namespace Geonaute\LinkdataBundle\Response\PutSharesAdd;
 
 use Geonaute\LinkdataBundle\Response\Response as BaseResponse;
-use Geonaute\LinkdataBundle\Entity\Shares\SharesShare;
+use Geonaute\LinkdataBundle\Entity\Shares\Share;
 use JMS\Serializer\Annotation as Serializer;
 
 class Response extends BaseResponse
@@ -11,14 +11,14 @@ class Response extends BaseResponse
 
     /**
      * @Serializer\SerializedName("SHARE")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Shares\SharesShare")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Shares\Share")
      *
-     * @var SharesShare
+     * @var Share
      */
     private $share;
 
     /**
-     * @return SharesShare
+     * @return Share
      */
     public function getShare()
     {
