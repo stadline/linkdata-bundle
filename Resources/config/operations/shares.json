@@ -1,5 +1,15 @@
 {
     "operations": {
+        "deleteShares": {
+            "httpMethod": "DELETE",
+            "uri": "shares/{token}.xml",
+            "parameters": {
+                "token": {
+                    "location": "uri",
+                    "required": true
+                }
+            }
+        },
         "getShares": {
             "httpMethod": "GET",
             "uri": "shares/{token}.xml",

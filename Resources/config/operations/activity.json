@@ -1,5 +1,39 @@
 {
     "operations": {
+        "deleteActivitySummary": {
+            "httpMethod": "DELETE",
+            "uri": "activity/{id}/summary.xml",
+            "parameters": {
+                "id": {
+                    "location": "uri",
+                    "required": true
+                }
+            }
+        },
+        "deleteActivityTag": {
+            "httpMethod": "DELETE",
+            "uri": "activity/{id}/tag.xml",
+            "parameters": {
+                "id": {
+                    "location": "uri",
+                    "required": true
+                },
+                "tag": {
+                    "location": "postField",
+                    "required": true
+                }
+            }
+        },
+        "deleteActivityTrack": {
+            "httpMethod": "DELETE",
+            "uri": "activity/{id}/track.xml",
+            "parameters": {
+                "id": {
+                    "location": "uri",
+                    "required": true
+                }
+            }
+        },
         "getActivityDataStreams": {
             "httpMethod": "GET",
             "uri": "activity/{id}/datastreams.xml",
@@ -85,6 +119,34 @@
                 }
             }
         },
+        "putActivityComment": {
+            "httpMethod": "PUT",
+            "uri": "activity/{id}/comment.xml",
+            "parameters": {
+                "id": {
+                    "location": "uri",
+                    "required": true
+                },
+                "comment": {
+                    "location": "postField",
+                    "required": true
+                }
+            }
+        },
+        "putActivityElevations": {
+            "httpMethod": "PUT",
+            "uri": "activity/{id}/elevations.xml",
+            "parameters": {
+                "id": {
+                    "location": "uri",
+                    "required": true
+                },
+                "xml": {
+                    "location": "body",
+                    "required": true
+                }
+            }
+        },
         "putActivityImport": {
             "httpMethod": "PUT",
             "uri": "activity/{id}/import.xml",
@@ -96,6 +158,39 @@
                 },
                 "xml": {
                     "location": "body",
+                    "required": true
+                }
+            }
+        },
+        "putActivitySummary": {
+            "httpMethod": "PUT",
+            "uri": "activity/{id}/summary.xml",
+            "parameters": {
+                "id": {
+                    "location": "uri",
+                    "required": true
+                },
+                "libelle": {
+                    "location": "postField"
+                },
+                "startdate": {
+                    "location": "postField"
+                },
+                "sportid": {
+                    "location": "postField"
+                }
+            }
+        },
+        "putActivityTag": {
+            "httpMethod": "PUT",
+            "uri": "activity/{id}/tag.xml",
+            "parameters": {
+                "id": {
+                    "location": "uri",
+                    "required": true
+                },
+                "tag": {
+                    "location": "postField",
                     "required": true
                 }
             }

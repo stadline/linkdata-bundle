@@ -1,5 +1,36 @@
 {
     "operations": {
+        "deleteUsersMeasures": {
+            "httpMethod": "DELETE",
+            "uri": "users/{ldid}/measures.xml",
+            "parameters": {
+                "ldid": {
+                    "location": "uri"
+                },
+                "unitid": {
+                    "location": "postField",
+                    "required": true
+                },
+                "date": {
+                    "location": "postField",
+                    "required": false
+                }
+            }
+        },
+        "deleteUsersTag": {
+            "httpMethod": "DELETE",
+            "uri": "users/{ldid}/tag.xml",
+            "parameters": {
+                "ldid": {
+                    "location": "uri"
+                },
+                "tag": {
+                    "location": "postField",
+                    "required": true
+                }
+            }
+
+        },
         "getUsersConnectedDevices": {
             "httpMethod": "GET",
             "uri": "users/{ldid}/connecteddevices.xml",
@@ -105,10 +136,10 @@
                 "location": "query"
             }
         },
-        "getUsersRoutes": {
+        "getUsersRecords": {
             "httpMethod": "GET",
-            "uri": "users/{ldid}/routes.xml",
-            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetUsersRoutes\\Response",
+            "uri": "users/{ldid}/records.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetUsersRecords\\Response",
             "parameters": {
                 "ldid": {
                     "location": "uri",
@@ -119,10 +150,10 @@
                 "location": "query"
             }
         },
-        "getUsersRecords": {
+        "getUsersRoutes": {
             "httpMethod": "GET",
-            "uri": "users/{ldid}/records.xml",
-            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetUsersRecords\\Response",
+            "uri": "users/{ldid}/routes.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetUsersRoutes\\Response",
             "parameters": {
                 "ldid": {
                     "location": "uri",
@@ -236,6 +267,102 @@
             },
             "additionalParameters": {
                 "location": "query"
+            }
+        },
+        "postUsersMeasures": {
+            "httpMethod": "POST",
+            "uri": "users/{ldid}/measures.xml",
+            "parameters": {
+                "ldid": {
+                    "location": "uri"
+                },
+                "unitid": {
+                    "location": "postField",
+                    "required": true
+                },
+                "value": {
+                    "location": "postField",
+                    "required": true
+                },
+                "date": {
+                    "location": "postField",
+                    "required": true
+                }
+            },
+            "additionalParameters": {
+                "location": "postField"
+            }
+        },
+        "putUsersMeasuresGoal": {
+            "httpMethod": "PUT",
+            "uri": "users/{ldid}/measuresgoal.xml",
+            "responseClass": "Geonaute\\Module\\LinkdataBundle\\Service\\GetUsersMeasuresGoal\\Response",
+            "parameters": {
+                "ldid": {
+                    "location": "uri"
+                },
+                "datatype_id": {
+                    "location": "postField",
+                    "required": true
+                },
+                "goal": {
+                    "location": "postField",
+                    "required": true
+                }
+            },
+            "additionalParameters": {
+                "location": "postField"
+            }
+        },
+        "putUsersLocalization": {
+            "httpMethod": "PUT",
+            "uri": "users/{ldid}/localization.xml",
+            "parameters": {
+                "ldid": {
+                    "location": "uri"
+                },
+                "country": {
+                    "location": "postField",
+                    "required": false
+                },
+                "lang": {
+                    "location": "postField",
+                    "required": false
+                }
+            }
+        },
+        "putUsersMeasures": {
+            "httpMethod": "PUT",
+            "uri": "users/{ldid}/measures.xml",
+            "parameters": {
+                "ldid": {
+                    "location": "uri"
+                },
+                "unitid": {
+                    "location": "postField",
+                    "required": true
+                },
+                "value": {
+                    "location": "postField",
+                    "required": true
+                }
+            },
+            "additionalParameters": {
+                "location": "postField"
+            }
+        },
+        "putUsersTag": {
+            "httpMethod": "PUT",
+            "uri": "users/{ldid}/tag.xml",
+            "parameters": {
+                "ldid": {
+                    "location": "uri",
+                    "required": true
+                },
+                "tag": {
+                    "location": "postField",
+                    "required": true
+                }
             }
         }
     }

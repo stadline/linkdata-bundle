@@ -1,5 +1,15 @@
 {
     "operations": {
+        "deleteTag": {
+            "httpMethod": "DELETE",
+            "uri": "tag/{name}.xml",
+            "parameters": {
+                "name": {
+                    "location": "uri",
+                    "required": true
+                }
+            }
+        },
         "getTagTotalWeek": {
             "httpMethod": "GET",
             "uri": "tag/{name}/totalweek.xml",
