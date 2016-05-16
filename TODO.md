@@ -55,9 +55,6 @@
 - Geonaute/Module/LinkdataBundle/Service/GetUsersGlobalChallenge/GlobalChallenge.php
 - Geonaute/Module/LinkdataBundle/Service/GetUsersRecords/Sports.php
 
-### - Parameter "xml" in POST or PUT without XmlResponse
-Before Response classes implements XmlResponse. It's removed now. We have to test if it always works or if we need to adapt or re-extends the XmlResponse class (deleted)
-
 ### - Use mock system to test all operations
 Add tests on deserialization
 
