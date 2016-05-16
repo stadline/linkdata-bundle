@@ -3,7 +3,7 @@
         "getReferenceDatatypes": {
             "httpMethod": "GET",
             "uri": "reference/datatypes.xml",
-            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetReferencesDatatypes\\Response",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetReferenceDatatypes\\Response",
             "additionalParameters": {
                 "location": "query"
             }
@@ -11,7 +11,15 @@
         "getReferenceDeviceModels": {
             "httpMethod": "GET",
             "uri": "reference/devicemodels.xml",
-            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetReferencesDevicesModels\\Response",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetReferenceDevicesModels\\Response",
+            "additionalParameters": {
+                "location": "query"
+            }
+        },
+        "getReferenceSports": {
+            "httpMethod": "GET",
+            "uri": "reference/sports.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetReferenceSports\\Response",
             "additionalParameters": {
                 "location": "query"
             }
