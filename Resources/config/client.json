@@ -10,7 +10,7 @@
         "operations/route.json",
         "operations/tracks.json",
         "operations/training.json",
-        "operations/statistic.json",
+        "operations/statistics.json",
         "operations/users.json"
     ]
 }
