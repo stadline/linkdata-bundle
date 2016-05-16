@@ -5,12 +5,14 @@
         "operations/activity.json",
         "operations/friends.json",
         "operations/globalchallenge.json",
-        "operations/reference.json",
         "operations/ons.json",
+        "operations/reference.json",
         "operations/route.json",
+        "operations/shares.json",
+        "operations/statistics.json",
+        "operations/tag.json",
         "operations/tracks.json",
         "operations/training.json",
-        "operations/statistics.json",
         "operations/users.json"
     ]
 }
