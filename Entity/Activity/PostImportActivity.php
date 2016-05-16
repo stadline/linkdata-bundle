@@ -2,7 +2,7 @@
 
 namespace Geonaute\LinkdataBundle\Entity\Activity;
 
-use Geonaute\LinkdataBundle\Common\Activity\Activity as BaseActivity;
+use Geonaute\LinkdataBundle\Entity\Common\Activity as BaseActivity;
 use JMS\Serializer\Annotation as Serializer;
 
 class PostImportActivity extends BaseActivity
@@ -111,14 +111,6 @@ class PostImportActivity extends BaseActivity
      * @var string
      */
     private $updateTime;
-
-    /**
-     * @return string
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
 
     /**
      * @return string
