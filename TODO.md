@@ -59,4 +59,4 @@
 Add tests on deserialization
 
 ### - Re-compare all files to check if nothing was lost
-Compare files to be sure variables or functions not removed
+Compare files to be sure variables or functions were not removed
