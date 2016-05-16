@@ -7,6 +7,14 @@
             "additionalParameters": {
                 "location": "query"
             }
+        },
+        "getReferenceDeviceModels": {
+            "httpMethod": "GET",
+            "uri": "reference/devicemodels.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetReferencesDevicesModels\\Response",
+            "additionalParameters": {
+                "location": "query"
+            }
         }
     }
 }
