@@ -74,6 +74,17 @@
                 "location": "query"
             }
         },
+        "postActivityImport": {
+            "httpMethod": "POST",
+            "uri": "activity/import.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\PostActivityImport\\Response",
+            "parameters": {
+                "xml": {
+                    "location": "body",
+                    "required": true
+                }
+            }
+        },
         "putActivityImport": {
             "httpMethod": "PUT",
             "uri": "activity/{id}/import.xml",
