@@ -23,6 +23,14 @@
             "additionalParameters": {
                 "location": "query"
             }
+        },
+        "getReferenceUnivers": {
+            "httpMethod": "GET",
+            "uri": "reference/univers.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetReferenceUnivers\\Response",
+            "additionalParameters": {
+                "location": "query"
+            }
         }
     }
 }
