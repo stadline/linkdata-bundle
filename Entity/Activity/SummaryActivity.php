@@ -178,7 +178,7 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface,
 
     /**
      * @Serializer\SerializedName("ABOUT")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Activity\About")
+     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Activity\About>")
      *
      * @var About
      */
@@ -207,7 +207,7 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface,
      *
      * @var DataStream
      */
-    private $datastream;
+    private $dataStream;
 
     /**
      * @return string
@@ -354,27 +354,27 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface,
     }
 
     /**
-     * @return DataSummary
+     * @throws \Exception
      */
     public function getSummary()
     {
-        return $this->summary;
+        throw new \Exception('cant do getClient !'); // Old method doing getClient (can't remove because is in the interface) @todo fix this
     }
 
     /**
-     * @return DataStream
+     * @throws \Exception
      */
     public function getDataStream()
     {
-        return $this->datastream;
+        throw new \Exception('cant do getClient !'); // Old method doing getClient (can't remove because is in the interface) @todo fix this
     }
 
     /**
-     * @return Track
+     * @throws \Exception
      */
     public function getTrack()
     {
-        return $this->track;
+        throw new \Exception('cant do getClient !'); // Old method doing getClient (can't remove because is in the interface) @todo fix this
     }
 
     /**
@@ -463,10 +463,17 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface,
         // return requested value
         if ($key) {
             return $this->about->offsetGet($key);
-        }
-        else {
+        } else {
             return $this->about;
         }
+    }
+
+    /**
+     * @throws \Exception
+     */
+    public function getSession()
+    {
+        throw new \Exception('cant do getClient !'); // Old method doing getClient (can't remove because is in the interface) @todo fix this
     }
 
 }

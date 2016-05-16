@@ -55,4 +55,12 @@ class Value
         $this->value = $value;
     }
 
+    /**
+     * @throws \Exception
+     */
+    public function getDataType()
+    {
+        throw new \Exception('cant do getClient !'); // Old method doing getClient (can't remove because is in the interface) @todo fix this
+    }
+
 }

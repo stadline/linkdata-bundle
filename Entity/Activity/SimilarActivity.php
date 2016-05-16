@@ -193,4 +193,12 @@ class Activity extends BaseActivity implements ActivityToStringInterface
         return $this->dataSummary;
     }
 
+    /**
+     * @throws \Exception
+     */
+    public function getSport()
+    {
+        throw new \Exception('cant do getClient !'); // Old method doing getClient (can't remove because is in the interface) @todo fix this
+    }
+
 }
