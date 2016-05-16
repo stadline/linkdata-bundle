@@ -73,6 +73,21 @@
             "additionalParameters": {
                 "location": "query"
             }
+        },
+        "putActivityImport": {
+            "httpMethod": "PUT",
+            "uri": "activity/{id}/import.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\PutActivityImport\\Response",
+            "parameters": {
+                "id": {
+                    "location": "uri",
+                    "required": true
+                },
+                "xml": {
+                    "location": "body",
+                    "required": true
+                }
+            }
         }
     }
 }
