@@ -1,6 +1,6 @@
 <?php
 
-namespace Geonaute\Module\CoreBundle\Utils;
+namespace Geonaute\LinkdataBundle\Utils;
 
 class GeonauteUtils
 {

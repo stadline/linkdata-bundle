@@ -73,10 +73,10 @@ To add a Mock Model, it's easy.
 You just have to create your {commandName}Mock.php file into <code>Mock/Model</code> file, like this:
 
     <?php
-        namespace Geonaute\Module\LinkdataBundle\Mock\Model;
+        namespace Geonaute\LinkdataBundle\Mock\Model;
         
-        use Geonaute\Module\LinkdataBundle\Mock\LinkdataMockInterface;
-        use Geonaute\Module\LinkdataBundle\Service\GetActivityDataSummary\Response;
+        use Geonaute\LinkdataBundle\Mock\LinkdataMockInterface;
+        use Geonaute\LinkdataBundle\Service\GetActivityDataSummary\Response;
         use Mockery as m;
         
         class GetActivityDataSummaryMock extends BaseMock implements LinkdataMockInterface
@@ -108,7 +108,7 @@ You just have to create your {commandName}Mock.php file into <code>Mock/Model</c
                 ';
                 
                 return $this->serializer->deserialize(
-                    'Geonaute\Module\LinkdataBundle\Service\GetActivityDataSummary\Response',
+                    'Geonaute\LinkdataBundle\Response\GetActivityDataSummary\Response',
                     $data,
                     'xml
                 ');

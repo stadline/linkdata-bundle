@@ -3,7 +3,6 @@
 namespace Geonaute\LinkdataBundle\Entity\Users;
 
 use Geonaute\LinkdataBundle\Utils\Datatype;
-use Geonaute\LinkDataBundle\Utils\ProgressStatisticMapperInterface;
 use Geonaute\LinkdataBundle\Entity\Tag\Sport;
 use JMS\Serializer\Annotation as Serializer;
 
@@ -152,12 +151,13 @@ class TotalYear
 
         arsort($output);
 
-        if (count($output) <= $length)
+        if (count($output) <= $length) {
             return $output;
+        }
 
         $others = array_sum(array_slice($output, $length - 1));
 
-        return array_slice($output, 0, $length - 1, true) + array("others" => $others);
+        return array_slice($output, 0, $length - 1, true) + ["others" => $others];
     }
 
     /**

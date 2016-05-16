@@ -7,9 +7,6 @@ use Geonaute\LinkdataBundle\Entity\Common\FakeValue;
 class FakeMeasure extends Measure
 {
 
-    /**
-     * Construct
-     */
     public function __construct()
     {
         parent::setElapsedTime(0);

@@ -1,8 +1,8 @@
 <?php
 
-namespace Geonaute\Module\LinkdataBundle\Service\GetShares;
+namespace Geonaute\LinkdataBundle\Entity\Shares;
 
-use Geonaute\Module\LinkdataBundle\Utils\Datatype;
+use Geonaute\LinkdataBundle\Utils\Datatype;
 
 class About extends \ArrayObject
 {
