@@ -11,9 +11,9 @@ class TotalYear
 
     /**
      * @Serializer\SerializedName("YEAR")
-     * @Serializer\Type("integer")
+     * @Serializer\Type("string")
      *
-     * @var integer
+     * @var string
      */
     private $year;
 

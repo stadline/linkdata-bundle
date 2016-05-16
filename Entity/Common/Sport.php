@@ -9,12 +9,12 @@ class Sport
 
     /**
      * @Serializer\XmlAttribute
-     * @Serializer\Type("integer")
+     * @Serializer\Type("string")
      */
     private $id;
 
     /**
-     * @return integer
+     * @return string
      */
     public function getId()
     {

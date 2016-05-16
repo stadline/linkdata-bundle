@@ -11,9 +11,9 @@ class Datatype extends BaseDatatype
     /**
      * @Serializer\SerializedName("DATATYPE")
      * @Serializer\XmlList(inline = true, entry = "DATATYPE")
-     * @Serializer\Type("integer")
+     * @Serializer\Type("string")
      *
-     * @var integer
+     * @var string
      */
     private $value;
 
@@ -26,7 +26,7 @@ class Datatype extends BaseDatatype
     }
 
     /**
-     * @return integer
+     * @return string
      */
     public function getValue()
     {
