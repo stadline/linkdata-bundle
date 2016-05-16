@@ -2,20 +2,14 @@
 
 namespace Geonaute\LinkdataBundle\Entity\Tag;
 
+use Geonaute\LinkdataBundle\Entity\Common\Datatype as BaseDatatype;
 use JMS\Serializer\Annotation as Serializer;
 
-class Datatype
+class Datatype extends BaseDatatype
 {
 
     /**
-     * @Serializer\XmlAttribute
-     * @Serializer\Type("integer")
-     *
-     * @var integer
-     */
-    private $id;
-
-    /**
+     * @Serializer\SerializedName("DATATYPE")
      * @Serializer\XmlList(inline = true, entry = "DATATYPE")
      * @Serializer\Type("integer")
      *
@@ -29,14 +23,6 @@ class Datatype
     public function __toString()
     {
         return $this->getValue();
-    }
-
-    /**
-     * @return integer
-     */
-    public function getId()
-    {
-        return $this->id;
     }
 
     /**
