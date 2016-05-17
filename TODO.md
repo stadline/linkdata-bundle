@@ -33,6 +33,8 @@
 - Geonaute/Module/LinkdataBundle/Service/GetUsersTotalYear/Sports.php
 - Geonaute/Module/LinkdataBundle/Service/GetUsersTotalYears/TotalYears.php
 
+On ne traite pas les cas de sort par index dans le ArrayCollectionHandler
+
 ### - GetArrayCopy method used in classes to check/re-implement
 - Geonaute/Module/LinkdataBundle/Service/GetActivityFullactivity/Activity.php
 - Geonaute/Module/LinkdataBundle/Service/GetUsersActivities/Response.php
@@ -41,6 +43,8 @@
 - Geonaute/Module/LinkdataBundle/Service/GetUsersTotalMonths/TotalMonth.php
 - Geonaute/Module/LinkdataBundle/Service/GetUsersTotalYears/Response.php
 - Geonaute/Module/LinkdataBundle/Service/GetUsersTotalYears/TotalYear.php
+
+Methode toArray() à tester.
 
 ### - GetClient method used in classes to check/re-implement
 - Geonaute/Module/LinkdataBundle/Service/GetActivityDataSummary/Value.php
@@ -54,6 +58,8 @@
 - Geonaute/Module/LinkdataBundle/Service/GetUsersConnectedDevices/ConnectedDevice.php
 - Geonaute/Module/LinkdataBundle/Service/GetUsersGlobalChallenge/GlobalChallenge.php
 - Geonaute/Module/LinkdataBundle/Service/GetUsersRecords/Sports.php
+
+- En stand-by
 
 ### - Use mock system to test all operations
 Add tests on deserialization
