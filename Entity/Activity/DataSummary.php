@@ -12,13 +12,15 @@ class DataSummary
     /**
      * @Serializer\SerializedName("VALUE")
      * @Serializer\XmlMap(inline = true, entry = "VALUE")
-     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\Common\Value>")
+     * @Serializer\Type("array<Geonaute\LinkdataBundle\Entity\Common\Value>")
      *
      * @var array<Value>
      */
     private $values;
 
     /**
+     * @Serializer\Exclude
+     *
      * @var array
      */
     public static $publicDatatypes = [
