@@ -9,7 +9,7 @@ use Geonaute\LinkdataBundle\Utils\ActivityToStringInterface;
 use Geonaute\LinkdataBundle\Entity\Activity\DataSummary;
 use JMS\Serializer\Annotation as Serializer;
 
-class Activity extends BaseActivity implements ActivityToStringInterface
+class SimilarActivity extends BaseActivity implements ActivityToStringInterface
 {
 
     /**

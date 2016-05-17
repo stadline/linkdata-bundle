@@ -3,8 +3,6 @@
 namespace Geonaute\LinkdataBundle\Mock\Model;
 
 use Geonaute\LinkdataBundle\Mock\LinkdataMockInterface;
-use Geonaute\LinkdataBundle\Response\GetActivityFullActivity\Response;
-use JMS\Serializer\Serializer;
 
 class GetActivityFullActivityMock extends BaseMock implements LinkdataMockInterface
 {
