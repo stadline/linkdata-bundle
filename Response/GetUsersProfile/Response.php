@@ -2,7 +2,7 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetUsersProfile;
 
-use Geonaute\LinkdataBundle\Response as BaseResponse;
+use Geonaute\LinkdataBundle\Response\Response as BaseResponse;
 use Geonaute\LinkdataBundle\Entity\Users\ProfileUser;
 use JMS\Serializer\Annotation as Serializer;
 

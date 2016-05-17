@@ -2,7 +2,7 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetOnsMonthlyAverage;
 
-use Geonaute\LinkdataBundle\Response as BaseResponse;
+use Geonaute\LinkdataBundle\Response\Response as BaseResponse;
 use Geonaute\LinkdataBundle\Entity\Ons\Ons;
 use Geonaute\LinkdataBundle\Entity\Ons\MonthlyAverage;
 use JMS\Serializer\Annotation as Serializer;

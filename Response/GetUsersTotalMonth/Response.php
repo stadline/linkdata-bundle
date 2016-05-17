@@ -2,7 +2,7 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetUsersTotalMonth;
 
-use Geonaute\LinkdataBundle\Response as BaseResponse;
+use Geonaute\LinkdataBundle\Response\Response as BaseResponse;
 use Geonaute\LinkdataBundle\Entity\Users\TotalMonth;
 use JMS\Serializer\Annotation as Serializer;
 

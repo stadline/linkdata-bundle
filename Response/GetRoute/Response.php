@@ -2,7 +2,7 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetRoute;
 
-use Geonaute\LinkdataBundle\Response as BaseResponse;
+use Geonaute\LinkdataBundle\Response\Response as BaseResponse;
 use Geonaute\LinkdataBundle\Entity\Common\Route;
 use JMS\Serializer\Annotation as Serializer;
 

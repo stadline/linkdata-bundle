@@ -2,7 +2,7 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetUsersMeasuresGoal;
 
-use Geonaute\LinkdataBundle\Response as BaseResponse;
+use Geonaute\LinkdataBundle\Response\Response as BaseResponse;
 use Geonaute\LinkdataBundle\Entity\Users\MeasuresGoal;
 use JMS\Serializer\Annotation as Serializer;
 

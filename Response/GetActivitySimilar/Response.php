@@ -2,7 +2,7 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetActivitySimilar;
 
-use Geonaute\LinkdataBundle\Response as BaseResponse;
+use Geonaute\LinkdataBundle\Response\Response as BaseResponse;
 use Geonaute\LinkdataBundle\Entity\Activity\SimilarActivity;
 use JMS\Serializer\Annotation as Serializer;
 

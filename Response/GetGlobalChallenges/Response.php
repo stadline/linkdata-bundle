@@ -2,7 +2,7 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetGlobalChallenges;
 
-use Geonaute\LinkdataBundle\Response as BaseResponse;
+use Geonaute\LinkdataBundle\Response\Response as BaseResponse;
 use Geonaute\LinkdataBundle\Entity\GlobalChallenge\GlobalChallenge;
 use JMS\Serializer\Annotation as Serializer;
 

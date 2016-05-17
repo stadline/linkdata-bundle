@@ -2,7 +2,7 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetUsersSharedActivities;
 
-use Geonaute\LinkdataBundle\Response as BaseResponse;
+use Geonaute\LinkdataBundle\Response\Response as BaseResponse;
 use Geonaute\LinkdataBundle\Entity\Users\SharedActivity;
 use JMS\Serializer\Annotation as Serializer;
 

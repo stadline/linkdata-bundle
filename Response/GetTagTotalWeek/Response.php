@@ -2,7 +2,7 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetTagTotalWeek;
 
-use Geonaute\LinkdataBundle\Response as BaseResponse;
+use Geonaute\LinkdataBundle\Response\Response as BaseResponse;
 use Geonaute\LinkdataBundle\Entity\Tag\TotalWeek;
 use JMS\Serializer\Annotation as Serializer;
 

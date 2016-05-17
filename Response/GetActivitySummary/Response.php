@@ -2,7 +2,7 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetActivitySummary;
 
-use Geonaute\LinkdataBundle\Response as BaseResponse;
+use Geonaute\LinkdataBundle\Response\Response as BaseResponse;
 use Geonaute\LinkdataBundle\Entity\Activity\SummaryActivity;
 use JMS\Serializer\Annotation as Serializer;
 
