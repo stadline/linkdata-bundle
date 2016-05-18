@@ -5,7 +5,7 @@ namespace Geonaute\LinkdataBundle\Entity\Users;
 use Geonaute\LinkdataBundle\Entity\Common\Sport as BaseSport;
 use JMS\Serializer\Annotation as Serializer;
 
-class Sport extends BaseSport
+class RecordsSport extends BaseSport
 {
 
     /**

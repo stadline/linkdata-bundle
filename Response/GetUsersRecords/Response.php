@@ -3,7 +3,7 @@
 namespace Geonaute\LinkdataBundle\Response\GetUsersRecords;
 
 use Geonaute\LinkdataBundle\Response\Response as BaseResponse;
-use Geonaute\LinkdataBundle\Entity\Users\Sport;
+use Geonaute\LinkdataBundle\Entity\Users\RecordsSport;
 use JMS\Serializer\Annotation as Serializer;
 
 class Response extends BaseResponse
@@ -12,14 +12,14 @@ class Response extends BaseResponse
     /**
      * @Serializer\SerializedName("SPORTS")
      * @Serializer\XmlList(entry = "SPORT")
-     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Users\Sport>")
+     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Users\RecordsSport>")
      *
-     * @var array<Sport>
+     * @var array<RecordsSport>
      */
     private $sports;
 
     /**
-     * @return array<Sport>
+     * @return array<RecordsSport>
      */
     public function getSports()
     {
