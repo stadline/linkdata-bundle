@@ -14,7 +14,7 @@ class Measure
      *
      * @var array<Value>
      */
-    private $values;
+    protected $values;
 
     /**
      * @return array<Value>

@@ -3,18 +3,18 @@
 namespace Geonaute\LinkdataBundle\Tests\Response\GetActivitySimilar;
 
 use Geonaute\LinkdataBundle\Tests\Response\WebTestCase as ResponseTestCase;
-use Geonaute\LinkdataBundle\Mock\Model\GetSimilarActivityMock;
+use Geonaute\LinkdataBundle\Mock\Model\GetActivitySimilarMock;
 
 class ResponseTest extends ResponseTestCase
 {
 
-    public function testGetSimilarActivityResponse()
+    public function testGetActivitySimilarResponse()
     {
         $serializer = $this->getSerializer();
 
-        $similarActivityClientMock = new GetSimilarActivityMock($serializer);
+        $activitySimilarClientMock = new GetActivitySimilarMock($serializer);
 
-        $response = $similarActivityClientMock->getResponse([]);
+        $response = $activitySimilarClientMock->getResponse([]);
 
         $this->assertObjectHasAttribute('meta', $response);
         $this->assertObjectHasAttribute('activities', $response);
@@ -55,19 +55,13 @@ class ResponseTest extends ResponseTestCase
 
         $this->assertObjectHasAttribute('values', $object);
 
-        $this->assertInternalType('array', $object->getValues());
+        $dataSummaryValues = $object->getValues();
 
-        if (!empty($object->getValues())) {
-            $this->assertIsValue($object->getValues()[0]);
+        $this->assertInternalType('array', $dataSummaryValues);
+
+        if (!empty($dataSummaryValues)) {
+            $this->assertIsValue($dataSummaryValues[0]);
         }
-    }
-
-    private function assertIsValue($object)
-    {
-        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Common\Value", $object);
-
-        $this->assertObjectHasAttribute('id', $object);
-        $this->assertObjectHasAttribute('value', $object);
     }
 
 }

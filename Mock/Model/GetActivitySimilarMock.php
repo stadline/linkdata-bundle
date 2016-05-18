@@ -4,14 +4,14 @@ namespace Geonaute\LinkdataBundle\Mock\Model;
 
 use Geonaute\LinkdataBundle\Mock\LinkdataMockInterface;
 
-class GetSimilarActivityMock extends BaseMock implements LinkdataMockInterface
+class GetActivitySimilarMock extends BaseMock implements LinkdataMockInterface
 {
     /**
      * {@inheritdoc}
      */
     public function getCommandName()
     {
-        return 'getSimilarActivity';
+        return 'getActivitySimilar';
     }
 
     /**

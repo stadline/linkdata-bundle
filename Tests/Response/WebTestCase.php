@@ -28,4 +28,11 @@ class WebTestCase extends \PHPUnit_Framework_TestCase
         $this->assertEquals($arrayCollection[$firstActivityIndex], $firstObjectOfCollection);
     }
 
+    public function assertIsValue($object)
+    {
+        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Common\Value", $object);
+
+        $this->assertObjectHasAttribute('id', $object);
+        $this->assertObjectHasAttribute('value', $object);
+    }
 }
