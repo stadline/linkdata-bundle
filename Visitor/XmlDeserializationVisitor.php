@@ -195,8 +195,9 @@ class XmlDeserializationVisitor extends AbstractVisitor
 
                 foreach ($data->$entryName as $v) {
                     // Index = value of XML Element
-                    $indexElement = $indexType['name'];
-                    $k = $this->navigator->accept($v->$indexElement, $keyType, $context);
+                    $indexElement = $this->getIndexElement($v, $indexType['name']);
+
+                    $k = $this->navigator->accept($indexElement, $keyType, $context);
                     $result[$k] = $this->navigator->accept($v, $entryType, $context);
                 }
 
@@ -388,6 +389,37 @@ class XmlDeserializationVisitor extends AbstractVisitor
         $internalSubset = str_replace(array("[ <!", "> ]>"), array('[<!', '>]>'), $internalSubset);
 
         return $internalSubset;
+    }
+
+    /**
+     * Get the index Element for custom visitArray method
+     *
+     * Chosen "_" in annotation to indicate that we want to access to subchild of XML Element
+     *
+     * Example :
+     * If "a_b" in annotation, we do $xml->a->b
+     * If "c" in annotation, we do $xml->c
+     *
+     * @param \SimpleXMLElement $xml
+     * @param string $indexTypeName
+     * @return mixed
+     */
+    private function getIndexElement(\SimpleXMLElement $xml, $indexTypeName)
+    {
+        if (strpos($indexTypeName, '_')) {
+            $indexArray = explode("_", $indexTypeName);
+
+            $indexElement = $xml;
+
+            foreach ($indexArray as $index) {
+                $indexElement= $indexElement->$index;
+            }
+
+        } else {
+            $indexElement = $xml->$indexTypeName;
+        }
+
+        return $indexElement;
     }
 
 }
