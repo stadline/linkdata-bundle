@@ -17,6 +17,5 @@ before_install:
 
 before_script:
     - composer self-update
-    - composer require symfony/symfony:${SYMFONY_VERSION}
 
 script: phpunit
