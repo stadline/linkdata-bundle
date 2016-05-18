@@ -5,8 +5,10 @@ namespace Geonaute\LinkdataBundle\Entity\Users;
 use DateTime;
 use Geonaute\LinkdataBundle\Entity\Common\Activity as BaseActivity;
 use Geonaute\LinkdataBundle\Entity\Activity\About;
-use Geonaute\Module\LinkdataBundle\Utils\Activity as UtilsActivity;
-use Geonaute\Module\LinkdataBundle\Utils\ActivityToStringInterface;
+use Geonaute\LinkdataBundle\Entity\Users\DataSummary;
+use Geonaute\LinkdataBundle\Entity\Users\Tag;
+use Geonaute\LinkdataBundle\Utils\Activity as UtilsActivity;
+use Geonaute\LinkdataBundle\Utils\ActivityToStringInterface;
 use JMS\Serializer\Annotation as Serializer;
 
 class Activity extends BaseActivity implements ActivityToStringInterface
@@ -69,7 +71,7 @@ class Activity extends BaseActivity implements ActivityToStringInterface
     private $createdAt;
 
     /**
-     * @Serializer\SerializedName("")
+     * @Serializer\SerializedName("DATASUMMARY")
      * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Users\DataSummary>")
      *
      * @var array<DataSummary>
