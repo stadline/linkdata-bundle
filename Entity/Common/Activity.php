@@ -13,7 +13,7 @@ class Activity
      *
      * @var string
      */
-    private $id;
+    protected $id;
 
     /**
      * @return string

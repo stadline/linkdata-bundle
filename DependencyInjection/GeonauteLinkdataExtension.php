@@ -27,6 +27,9 @@ class GeonauteLinkdataExtension extends SimpleExtension
             )
         ));
 
+        // xml deserialization visitor
+        $this->container->setParameter('jms.xml_deserialization_visitor.class', 'Geonaute\\LinkdataBundle\\Visitor\\XmlDeserializationVisitor');
+
         // rest client
         $this->define('geonaute_linkdata.service_description', array(
             'class' => '%guzzle.service_description.class%',

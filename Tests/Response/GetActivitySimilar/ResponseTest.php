@@ -2,16 +2,15 @@
 
 namespace Geonaute\LinkdataBundle\Tests\Response\GetActivitySimilar;
 
+use Geonaute\LinkdataBundle\Tests\Response\WebTestCase as ResponseTestCase;
 use Geonaute\LinkdataBundle\Mock\Model\GetSimilarActivityMock;
-use JMS\Serializer\SerializerBuilder;
 
-class ResponseTest extends \PHPUnit_Framework_TestCase
+class ResponseTest extends ResponseTestCase
 {
 
     public function testGetSimilarActivityResponse()
     {
-        $serializerBuilder = new SerializerBuilder();
-        $serializer = $serializerBuilder->build();
+        $serializer = $this->getSerializer();
 
         $similarActivityClientMock = new GetSimilarActivityMock($serializer);
 
@@ -20,17 +19,23 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
         $this->assertObjectHasAttribute('meta', $response);
         $this->assertObjectHasAttribute('activities', $response);
 
-        $this->assertInstanceOf("Doctrine\Common\Collections\ArrayCollection", $response->getActivities());
+        $activitiesCollection = $response->getActivities();
 
-        $firstObjectOfCollection = $response->getActivities()->first();
+        $this->assertInstanceOf("Doctrine\Common\Collections\ArrayCollection", $activitiesCollection);
 
-        $this->assertIsSimilarActivity($firstObjectOfCollection);
+        $firstActivityOfCollection = $response->getActivities()->first();
+
+        $this->assertElementsAreIndexed($activitiesCollection, $firstActivityOfCollection, 'getId');
+
+        $this->assertIsSimilarActivity($firstActivityOfCollection);
     }
 
     private function assertIsSimilarActivity($object)
     {
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Activity\SimilarActivity", $object);
 
+        $this->assertObjectHasAttribute('id', $object);
+        $this->assertObjectHasAttribute('sportId', $object);
         $this->assertObjectHasAttribute('sportId', $object);
         $this->assertObjectHasAttribute('deviceModelId', $object);
         $this->assertObjectHasAttribute('startDate', $object);
