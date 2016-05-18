@@ -32,38 +32,4 @@ class ResponseTest extends ResponseTestCase
         $this->assertIsDataStream($object->getDataStream());
     }
 
-    private function assertIsDataStream($object)
-    {
-        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Activity\DataStream", $object);
-
-        $this->assertObjectHasAttribute('measures', $object);
-        $this->assertObjectHasAttribute('datatypes', $object);
-
-        $dataStreamMeasures = $object->getMeasures();
-
-        $this->assertInternalType('array', $dataStreamMeasures);
-        $this->assertInternalType('array', $object->getDatatypes());
-
-        if (!empty($dataStreamMeasures)) {
-            $this->assertIsMeasure($dataStreamMeasures[0]);
-        }
-    }
-
-    private function assertIsMeasure($object)
-    {
-        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Activity\Measure", $object);
-
-        $this->assertObjectHasAttribute('values', $object);
-        $this->assertObjectHasAttribute('elapsedTime', $object);
-        $this->assertObjectHasAttribute('datatypes', $object);
-
-        $measureValues = $object->getValues();
-
-        $this->assertInternalType('array', $measureValues);
-
-        if (!empty($measureValues)) {
-            $this->assertIsValue($measureValues[0]);
-        }
-    }
-
 }

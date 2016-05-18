@@ -66,6 +66,6 @@ class GetActivitySummaryMock extends BaseMock implements LinkdataMockInterface
 		</DATASUMMARY>
 	</ACTIVITY>
 </RESPONSE>
-', 'Geonaute\LinkdataBundle\Response\GetActivityDataStreams\Response', 'xml');
+', 'Geonaute\LinkdataBundle\Response\GetActivitySummary\Response', 'xml');
     }
 }

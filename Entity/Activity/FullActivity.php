@@ -2,6 +2,9 @@
 
 namespace Geonaute\LinkdataBundle\Entity\Activity;
 
+use Geonaute\LinkdataBundle\Entity\Tracks\Track;
+use JMS\Serializer\Annotation as Serializer;
+
 class FullActivity extends SummaryActivity
 {
 
@@ -31,10 +34,11 @@ class FullActivity extends SummaryActivity
     }
 
     /**
-     * @return mixed
+     * @return null
      */
     public function getHashXml()
     {
+        return null; // added
         // return md5($this->xml->saveXML()); @todo change this
     }
 

@@ -22,7 +22,7 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface,
      *
      * @var string
      */
-    private $userId;
+    protected $userId;
 
     /**
      * @Serializer\SerializedName("SPORTID")
@@ -30,7 +30,7 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface,
      *
      * @var integer
      */
-    private $sportId;
+    protected $sportId;
 
     /**
      * @Serializer\SerializedName("DEVICEID")
@@ -38,7 +38,7 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface,
      *
      * @var string
      */
-    private $deviceId;
+    protected $deviceId;
 
     /**
      * @Serializer\SerializedName("CONNECTEDDEVICE")
@@ -46,7 +46,7 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface,
      *
      * @var ConnectedDevice
      */
-    private $device;
+    protected $device;
 
     /**
      * @Serializer\SerializedName("DEVICEMODELID")
@@ -54,7 +54,7 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface,
      *
      * @var integer
      */
-    private $deviceModelId;
+    protected $deviceModelId;
 
     /**
      * @Serializer\SerializedName("STARTDATE")
@@ -62,7 +62,7 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface,
      *
      * @var string
      */
-    private $startDate;
+    protected $startDate;
 
     /**
      * @Serializer\SerializedName("TIMEZONE")
@@ -70,7 +70,7 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface,
      *
      * @var string
      */
-    private $timezone;
+    protected $timezone;
 
     /**
      * @Serializer\SerializedName("DURATION")
@@ -78,7 +78,7 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface,
      *
      * @var integer
      */
-    private $duration;
+    protected $duration;
 
     /**
      * @Serializer\SerializedName("LIBELLE")
@@ -86,7 +86,7 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface,
      *
      * @var string
      */
-    private $libelle;
+    protected $libelle;
 
     /**
      * @Serializer\SerializedName("COMMENT")
@@ -94,7 +94,7 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface,
      *
      * @var string
      */
-    private $comment;
+    protected $comment;
 
     /**
      * @Serializer\SerializedName("LATITUDE")
@@ -102,7 +102,7 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface,
      *
      * @var float
      */
-    private $latitude;
+    protected $latitude;
 
     /**
      * @Serializer\SerializedName("LONGITUDE")
@@ -110,7 +110,7 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface,
      *
      * @var float
      */
-    private $longitude;
+    protected $longitude;
 
     /**
      * @Serializer\SerializedName("ELEVATION")
@@ -118,7 +118,7 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface,
      *
      * @var float
      */
-    private $elevation;
+    protected $elevation;
 
     /**
      * @Serializer\SerializedName("TRACKID")
@@ -126,7 +126,7 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface,
      *
      * @var string
      */
-    private $trackId;
+    protected $trackId;
 
     /**
      * @Serializer\SerializedName("TRACK")
@@ -134,7 +134,7 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface,
      *
      * @var Track
      */
-    private $track;
+    protected $track;
 
     /**
      * @Serializer\SerializedName("SESSION_TOKEN")
@@ -142,7 +142,7 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface,
      *
      * @var string
      */
-    private $sessionToken;
+    protected $sessionToken;
 
     /**
      * @Serializer\SerializedName("SHARE_TOKEN")
@@ -150,7 +150,7 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface,
      *
      * @var string
      */
-    private $shareToken;
+    protected $shareToken;
 
     /**
      * @Serializer\SerializedName("MANUAL")
@@ -158,7 +158,7 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface,
      *
      * @var boolean
      */
-    private $manual;
+    protected $manual;
 
     /**
      * @Serializer\SerializedName("CREATEDAT")
@@ -166,7 +166,7 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface,
      *
      * @var string
      */
-    private $createdAt;
+    protected $createdAt;
 
     /**
      * @Serializer\SerializedName("UPDATETIME")
@@ -174,24 +174,25 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface,
      *
      * @var string
      */
-    private $updateTime;
+    protected $updateTime;
 
     /**
      * @Serializer\SerializedName("ABOUT")
-     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Activity\About>")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Activity\About")
      *
      * @var About
      */
-    private $about;
+    protected $about;
 
     /**
      *
      * @Serializer\SerializedName("TAGS")
-     * @Serializer\Type("array")
+     * @Serializer\XmlList(entry = "TAG")
+     * @Serializer\Type("array<string>")
      *
      * @var array
      */
-    private $tags = [];
+    protected $tags = [];
 
     /**
      * @Serializer\SerializedName("DATASUMMARY")
@@ -199,7 +200,7 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface,
      *
      * @var DataSummary
      */
-    private $summary;
+    protected $summary;
 
     /**
      * @Serializer\SerializedName("DATASTREAM")
@@ -207,7 +208,7 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface,
      *
      * @var DataStream
      */
-    private $dataStream;
+    protected $dataStream;
 
     /**
      * @return string
@@ -247,14 +248,6 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface,
     public function getDeviceModelId()
     {
         return $this->deviceModelId;
-    }
-
-    /**
-     * @return ConnectedDevice
-     */
-    public function getDevice()
-    {
-        return $this->device;
     }
 
     /**
@@ -346,35 +339,11 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface,
     }
 
     /**
-     * @return string
+     * @return array
      */
     public function getTags()
     {
         return $this->tags;
-    }
-
-    /**
-     * @throws \Exception
-     */
-    public function getSummary()
-    {
-        throw new \Exception('cant do getClient !'); // Old method doing getClient (can't remove because is in the interface) @todo fix this
-    }
-
-    /**
-     * @throws \Exception
-     */
-    public function getDataStream()
-    {
-        throw new \Exception('cant do getClient !'); // Old method doing getClient (can't remove because is in the interface) @todo fix this
-    }
-
-    /**
-     * @throws \Exception
-     */
-    public function getTrack()
-    {
-        throw new \Exception('cant do getClient !'); // Old method doing getClient (can't remove because is in the interface) @todo fix this
     }
 
     /**
@@ -466,6 +435,38 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface,
         } else {
             return $this->about;
         }
+    }
+
+    /**
+     * @throws \Exception
+     */
+    public function getDevice()
+    {
+        throw new \Exception('cant do getClient !'); // Old method doing getClient (can't remove because is in the interface) @todo fix this
+    }
+
+    /**
+     * @throws \Exception
+     */
+    public function getSummary()
+    {
+        throw new \Exception('cant do getClient !'); // Old method doing getClient (can't remove because is in the interface) @todo fix this
+    }
+
+    /**
+     * @throws \Exception
+     */
+    public function getDataStream()
+    {
+        throw new \Exception('cant do getClient !'); // Old method doing getClient (can't remove because is in the interface) @todo fix this
+    }
+
+    /**
+     * @throws \Exception
+     */
+    public function getTrack()
+    {
+        throw new \Exception('cant do getClient !'); // Old method doing getClient (can't remove because is in the interface) @todo fix this
     }
 
     /**

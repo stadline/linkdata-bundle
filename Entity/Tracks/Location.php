@@ -2,8 +2,8 @@
 
 namespace Geonaute\LinkdataBundle\Entity\Tracks;
 
-use Geonaute\LinkdataBundle\Algorithme\DouglasPeuker\VectorInterface;
 use Geonaute\LinkdataBundle\Entity\Common\Location as BaseLocation;
+use Geonaute\LinkdataBundle\Algorithme\DouglasPeuker\VectorInterface;
 
 class Location extends BaseLocation implements VectorInterface
 {

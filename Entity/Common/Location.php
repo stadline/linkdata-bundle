@@ -13,7 +13,7 @@ class Location
      *
      * @var integer
      */
-    private $elapsedTime;
+    protected $elapsedTime;
 
     /**
      * @Serializer\SerializedName("LATITUDE")
@@ -21,7 +21,7 @@ class Location
      *
      * @var float
      */
-    private $latitude;
+    protected $latitude;
 
     /**
      * @Serializer\SerializedName("LONGITUDE")
@@ -29,7 +29,7 @@ class Location
      *
      * @var float
      */
-    private $longitude;
+    protected $longitude;
 
     /**
      * @Serializer\SerializedName("ELEVATION")
@@ -37,7 +37,7 @@ class Location
      *
      * @var float
      */
-    private $elevation;
+    protected $elevation;
 
     /**
      * @return integer

@@ -59,9 +59,7 @@ class ResponseTest extends ResponseTestCase
 
         $this->assertInternalType('array', $dataSummaryValues);
 
-        if (!empty($dataSummaryValues)) {
-            $this->assertIsValue($dataSummaryValues[0]);
-        }
+        $this->assertIsValue($dataSummaryValues[0]);
     }
 
 }
