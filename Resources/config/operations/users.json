@@ -31,6 +31,20 @@
             }
 
         },
+        "getFriends": {
+            "httpMethod": "GET",
+            "uri": "users/{ldid}/friends.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetFriends\\Response",
+            "parameters": {
+                "ldid": {
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
+        },
         "getUsersActivities": {
             "httpMethod": "GET",
             "uri": "users/{ldid}/activities.xml",

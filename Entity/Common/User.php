@@ -13,7 +13,7 @@ class User
      *
      * @var string
      */
-    private $firstName;
+    protected $firstName;
 
     /**
      * @Serializer\SerializedName("LASTNAME")
@@ -21,7 +21,7 @@ class User
      *
      * @var string
      */
-    private $lastName;
+    protected $lastName;
 
     /**
      * @return string

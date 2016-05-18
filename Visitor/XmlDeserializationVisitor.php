@@ -408,13 +408,11 @@ class XmlDeserializationVisitor extends AbstractVisitor
     {
         if (strpos($indexTypeName, '_')) {
             $indexArray = explode("_", $indexTypeName);
-
             $indexElement = $xml;
 
             foreach ($indexArray as $index) {
-                $indexElement= $indexElement->$index;
+                $indexElement = $indexElement->$index;
             }
-
         } else {
             $indexElement = $xml->$indexTypeName;
         }

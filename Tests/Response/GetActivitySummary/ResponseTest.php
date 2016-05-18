@@ -1,6 +1,6 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Tests\Response\GetActivityDataSummary;
+namespace Geonaute\LinkdataBundle\Tests\Response\GetActivitySummary;
 
 use Geonaute\LinkdataBundle\Tests\Response\WebTestCase as ResponseTestCase;
 use Geonaute\LinkdataBundle\Mock\Model\GetActivitySummaryMock;

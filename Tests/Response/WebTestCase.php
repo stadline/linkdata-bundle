@@ -22,10 +22,17 @@ class WebTestCase extends \PHPUnit_Framework_TestCase
 
     public function assertElementsAreIndexed(ArrayCollection $arrayCollection, $firstObjectOfCollection, $method = '')
     {
-        $firstActivityIndex = $firstObjectOfCollection->$method();
+        if (is_array($method)) {
+            $firstElementIndex = $firstObjectOfCollection;
+            foreach ($method as $tmpMethod) {
+                $firstElementIndex = $firstElementIndex->$tmpMethod();
+            }
+        } else {
+            $firstElementIndex = $firstObjectOfCollection->$method();
+        }
 
-        $this->assertArrayHasKey($firstActivityIndex, $arrayCollection);
-        $this->assertEquals($arrayCollection[$firstActivityIndex], $firstObjectOfCollection);
+        $this->assertArrayHasKey($firstElementIndex, $arrayCollection);
+        $this->assertEquals($arrayCollection[$firstElementIndex], $firstObjectOfCollection);
     }
 
     public function assertIsAbout($object)
@@ -83,6 +90,7 @@ class WebTestCase extends \PHPUnit_Framework_TestCase
 
         $this->assertIsValue($measureValues[0]);
     }
+
     public function assertIsValue($object)
     {
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Common\Value", $object);

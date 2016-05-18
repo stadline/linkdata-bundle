@@ -14,7 +14,7 @@ class User extends BaseUser
      *
      * @var string
      */
-    private $ldid;
+    protected $ldid;
 
     /**
      * @Serializer\SerializedName("COUNTRY")
@@ -22,7 +22,7 @@ class User extends BaseUser
      *
      * @var string
      */
-    private $country;
+    protected $country;
 
     /**
      * @return string

@@ -49,17 +49,4 @@ class ResponseTest extends ResponseTestCase
         $this->assertIsDataSummary($object->getDataSummary());
     }
 
-    private function assertIsDataSummary($object)
-    {
-        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Activity\DataSummary", $object);
-
-        $this->assertObjectHasAttribute('values', $object);
-
-        $dataSummaryValues = $object->getValues();
-
-        $this->assertInternalType('array', $dataSummaryValues);
-
-        $this->assertIsValue($dataSummaryValues[0]);
-    }
-
 }

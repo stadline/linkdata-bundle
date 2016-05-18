@@ -2,7 +2,7 @@
 
 namespace Geonaute\LinkdataBundle\Entity\Users;
 
-use User as UsersUser;
+use Geonaute\LinkdataBundle\Entity\Users\User as UsersUser;
 use Geonaute\LinkdataBundle\Utils\Level;
 use JMS\Serializer\Annotation as Serializer;
 
@@ -18,7 +18,7 @@ class TotalProfileUser extends UsersUser
     private $gender;
 
     /**
-     * @Serializer\SerializedName(TOTAL_ONS")
+     * @Serializer\SerializedName("TOTAL_ONS")
      * @Serializer\Type("string")
      *
      * @var string
