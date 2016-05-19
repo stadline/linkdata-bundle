@@ -75,7 +75,7 @@
         },
         "getUsersFriendsActivity": {
             "httpMethod": "GET",
-            "uri": "users/{ldid}/friends/{ldid_friend}/activities.xml",
+            "uri": "users/{ldid}/friends/{ldid_friend}/activity/{token}.xml",
             "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetUsersFriendsActivity\\Response",
             "parameters": {
                 "ldid": {
@@ -83,6 +83,10 @@
                     "required": true
                 },
                 "ldid_friend": {
+                    "location": "uri",
+                    "required": true
+                },
+                "token": {
                     "location": "uri",
                     "required": true
                 }

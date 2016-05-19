@@ -9,7 +9,8 @@ class Measure extends BaseMeasure
 {
 
     /**
-     * @Serializer\XmlAttribute
+     * @Serializer\SerializedName("unitid")
+     * @Serializer\XmlAttribute()
      * @Serializer\Type("integer")
      *
      * @var integer

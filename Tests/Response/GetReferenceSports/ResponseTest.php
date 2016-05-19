@@ -20,7 +20,7 @@ class ResponseTest extends ResponseTestCase
         $this->assertObjectHasAttribute('sports', $response);
 
         $sportsCollection = $response->getSports();
-var_dump($sportsCollection);
+
         $this->assertInstanceOf("Doctrine\Common\Collections\ArrayCollection", $sportsCollection);
 
         $firstSportOfCollection = $sportsCollection->first();

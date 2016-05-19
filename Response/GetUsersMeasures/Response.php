@@ -11,7 +11,8 @@ class Response extends BaseResponse
 
     /**
      * @Serializer\SerializedName("MEASURES")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Users\Measure")
+     * @Serializer\XmlMap(entry = "MEASURE", keyAttribute = "unitid")
+     * @Serializer\Type("ArrayCollection<string, Geonaute\LinkdataBundle\Entity\Users\Measure>")
      *
      * @var array<Measure>
      */

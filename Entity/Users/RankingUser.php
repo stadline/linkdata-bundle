@@ -4,7 +4,7 @@ namespace Geonaute\LinkdataBundle\Entity\Users;
 
 use JMS\Serializer\Annotation as Serializer;
 
-class User extends TotalProfileUser
+class RankingUser extends TotalProfileUser
 {
 
     /**

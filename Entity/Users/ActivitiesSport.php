@@ -1,9 +1,8 @@
 <?php
 
-namespace Geonaute\Module\LinkdataBundle\Service\GetUsersActivitiesSports;
+namespace Geonaute\LinkdataBundle\Entity\Users;
 
 use Geonaute\LinkdataBundle\Entity\Common\Sport as BaseSport;
-use Geonaute\LinkdataBundle\Entity\Activity\About;
 use Geonaute\LinkdataBundle\Entity\Reference\Sport as RefSport;
 use JMS\Serializer\Annotation as Serializer;
 

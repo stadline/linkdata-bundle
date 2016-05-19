@@ -17,7 +17,7 @@ class PublicActivity
     protected $activity;
 
     /**
-     * @Serializer\SerializedName(TOKEN")
+     * @Serializer\SerializedName("TOKEN")
      * @Serializer\Type("string")
      *
      * @var string

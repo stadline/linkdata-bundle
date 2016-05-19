@@ -15,26 +15,28 @@ class Response extends BaseResponse
      *
      * @var Ranking
      */
-    private $ranking;
+    protected $ranking;
 
     /**
      * @Serializer\Type("array")
      *
      * @var array
      */
-    private $params = [];
+    protected $params = [];
 
     /**
      * @Serializer\PostDeserialize
      */
     public function defineParamsAndRankingForDeserialization()
     {
-//        foreach ($XML->RANKING->DATA[0] as $NODE) {
-//            $key = strtolower($NODE->getName());
-//            $this->params[$key] = (string) $NODE; @todo change this
-//        }
-//
-//        $this->ranking = new Ranking($XML->RANKING->USERS[0]);
+        $rankingData = (array) $this->ranking->getData();
+
+        foreach ($rankingData as $entry => $data) {
+            $key = strtolower($entry);
+            $this->params[$key] = $data;
+        }
+
+        $this->ranking = $this->ranking->getUsers();
     }
 
     /**

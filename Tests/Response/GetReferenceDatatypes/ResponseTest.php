@@ -20,7 +20,7 @@ class ResponseTest extends ResponseTestCase
         $this->assertObjectHasAttribute('datatypes', $response);
 
         $datatypesCollection = $response->getDatatypes();
-var_dump($datatypesCollection);
+
         $this->assertInstanceOf("Doctrine\Common\Collections\ArrayCollection", $datatypesCollection);
 
         $firstDatatypeOfCollection = $datatypesCollection->first();

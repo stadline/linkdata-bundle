@@ -18,6 +18,7 @@ class ActivitiesTag
     /**
      * @Serializer\SerializedName("TAG")
      * @Serializer\XmlList(inline = true, entry = "TAG")
+     * @Serializer\Type("string")
      *
      * @var string
      */

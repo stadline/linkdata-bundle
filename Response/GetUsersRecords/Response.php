@@ -11,8 +11,8 @@ class Response extends BaseResponse
 
     /**
      * @Serializer\SerializedName("SPORTS")
-     * @Serializer\XmlList(entry = "SPORT")
-     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Users\RecordsSport>")
+     * @Serializer\XmlMap(entry = "SPORT", keyAttribute = "id")
+     * @Serializer\Type("ArrayCollection<string, Geonaute\LinkdataBundle\Entity\Users\RecordsSport>")
      *
      * @var array<RecordsSport>
      */

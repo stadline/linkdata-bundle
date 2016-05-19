@@ -12,7 +12,7 @@ class Response extends BaseResponse
     /**
      * @Serializer\SerializedName("ROUTES")
      * @Serializer\XmlList(entry="ROUTE")
-     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Common\Route>")
+     * @Serializer\Type("ArrayCollection<string, Geonaute\LinkdataBundle\Entity\Common\Route, SUMMARY_TOKEN>")
      *
      * @var array<Route>
      */

@@ -1,6 +1,6 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Entity\Users\MeasuresGoal;
+namespace Geonaute\LinkdataBundle\Entity\Users;
 
 use DateTime;
 use JMS\Serializer\Annotation as Serializer;

@@ -2,7 +2,7 @@
 
 namespace Geonaute\LinkdataBundle\Entity\Users;
 
-use User as UsersUser;
+use Geonaute\LinkdataBundle\Entity\Users\User as UsersUser;
 use JMS\Serializer\Annotation as Serializer;
 
 class ProfileUser extends UsersUser

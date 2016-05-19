@@ -11,12 +11,12 @@ class Response extends BaseResponse
 
     /**
      * @Serializer\SerializedName("SPORTS")
-     * @Serializer\XmlList(entry = "SPORT")
-     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Users\ActivitiesSport>")
+     * @Serializer\XmlMap(entry = "SPORT", keyAttribute = "id")
+     * @Serializer\Type("ArrayCollection<string, Geonaute\LinkdataBundle\Entity\Users\ActivitiesSport>")
      *
      * @var array<ActivitiesSport>
      */
-    private $sports;
+    protected $sports;
 
     /**
      * @return array<ActivitiesSport>
