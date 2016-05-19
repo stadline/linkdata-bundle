@@ -20,7 +20,7 @@ class ResponseTest extends ResponseTestCase
         $this->assertObjectHasAttribute('connectedDevices', $response);
 
         $connectedDevicesCollection = $response->getConnectedDevices();
-var_dump($connectedDevicesCollection);
+
         $this->assertInstanceOf("Doctrine\Common\Collections\ArrayCollection", $connectedDevicesCollection);
 
         $firstConnectedDeviceOfCollection = $connectedDevicesCollection->first();

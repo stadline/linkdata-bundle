@@ -12,7 +12,7 @@ class Response extends BaseResponse
     /**
      * @Serializer\SerializedName("ACTIVITIES")
      * @Serializer\XmlList(entry="ACTIVITY")
-     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Users\SharedActivity>")
+     * @Serializer\Type("ArrayCollection<string, Geonaute\LinkdataBundle\Entity\Users\SharedActivity, ID>")
      *
      * @var array<SharedActivity>
      */
@@ -23,7 +23,7 @@ class Response extends BaseResponse
      */
     public function sortActivities()
     {
-        usort($this->activities, [$this->activities, "orderActivities"]);
+        // usort($this->activities, [$this->activities, "orderActivities"]); @todo change this not working
     }
 
     /**

@@ -406,6 +406,12 @@ class XmlDeserializationVisitor extends AbstractVisitor
      */
     private function getIndexElement(\SimpleXMLElement $xml, $indexTypeName)
     {
+        if ($indexTypeName === "_HIMSELF_"){
+            $indexElement = $xml;
+
+            return $indexElement;
+        }
+
         if (strpos($indexTypeName, '_')) {
             $indexArray = explode("_", $indexTypeName);
             $indexElement = $xml;

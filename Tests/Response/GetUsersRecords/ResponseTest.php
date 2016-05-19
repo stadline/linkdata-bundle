@@ -1,6 +1,6 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Tests\Response\GetUsersConnectedDevices;
+namespace Geonaute\LinkdataBundle\Tests\Response\GetUsersRecors;
 
 use Geonaute\LinkdataBundle\Tests\Response\WebTestCase as ResponseTestCase;
 use Geonaute\LinkdataBundle\Mock\Model\GetUsersRecordsMock;
