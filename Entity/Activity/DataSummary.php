@@ -16,7 +16,7 @@ class DataSummary
      *
      * @var array<Value>
      */
-    private $values;
+    protected $values;
 
     /**
      * @Serializer\Exclude

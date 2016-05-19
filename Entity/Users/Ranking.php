@@ -13,7 +13,7 @@ class Ranking
      *
      * @var Data
      */
-    private $data;
+    protected $data;
 
     /**
      * @Serializer\SerializedName("USERS")
@@ -22,7 +22,7 @@ class Ranking
      *
      * @var Data
      */
-    private $users;
+    protected $users;
 
     /**
      * @return Data

@@ -2,7 +2,7 @@
 
 namespace Geonaute\LinkdataBundle\Entity\Shares;
 
-use Share as BaseShare;
+use Geonaute\LinkdataBundle\Entity\Shares\Share as BaseShare;
 use JMS\Serializer\Annotation as Serializer;
 
 class SharesShare extends BaseShare
@@ -14,7 +14,7 @@ class SharesShare extends BaseShare
      *
      * @var string
      */
-    private $type;
+    protected $type;
 
     /**
      * @Serializer\SerializedName("LEVEL")
@@ -22,7 +22,7 @@ class SharesShare extends BaseShare
      *
      * @var integer
      */
-    private $level;
+    protected $level;
 
     /**
      * @Serializer\SerializedName("GLOBALCHALLENGE")
@@ -30,7 +30,7 @@ class SharesShare extends BaseShare
      *
      * @var GlobalChallenge
      */
-    private $globalChallenge;
+    protected $globalChallenge;
 
     /**
      * @Serializer\SerializedName("CHALLENGE")
@@ -38,7 +38,7 @@ class SharesShare extends BaseShare
      *
      * @var Challenge
      */
-    private $challenge;
+    protected $challenge;
 
     /**
      * @Serializer\SerializedName("ACTIVITY")
@@ -46,7 +46,7 @@ class SharesShare extends BaseShare
      *
      * @var Activity
      */
-    private $activity;
+    protected $activity;
 
     /**
      * @Serializer\SerializedName("STATISTICS")
@@ -54,7 +54,7 @@ class SharesShare extends BaseShare
      *
      * @var Statistics
      */
-    private $statistics;
+    protected $statistics;
 
     /**
      * @return string

@@ -15,7 +15,7 @@ class GlobalChallenge implements GlobalChallengeWidgetObjectInterface
      *
      * @var string
      */
-    private $token;
+    protected $token;
 
     /**
      * @Serializer\SerializedName("NAME")
@@ -23,7 +23,7 @@ class GlobalChallenge implements GlobalChallengeWidgetObjectInterface
      *
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * @Serializer\SerializedName("BEFORE_MESSAGE")
@@ -31,7 +31,7 @@ class GlobalChallenge implements GlobalChallengeWidgetObjectInterface
      *
      * @var string
      */
-    private $beforeMessage;
+    protected $beforeMessage;
 
     /**
      * @Serializer\SerializedName("CURRENT_MESSAGE")
@@ -39,7 +39,7 @@ class GlobalChallenge implements GlobalChallengeWidgetObjectInterface
      *
      * @var string
      */
-    private $currentMessage;
+    protected $currentMessage;
 
     /**
      * @Serializer\SerializedName("AFTER_MESSAGE")
@@ -47,7 +47,7 @@ class GlobalChallenge implements GlobalChallengeWidgetObjectInterface
      *
      * @var string
      */
-    private $afterMessage;
+    protected $afterMessage;
 
     /**
      * @Serializer\SerializedName("PUBLISH_DATE")
@@ -55,7 +55,7 @@ class GlobalChallenge implements GlobalChallengeWidgetObjectInterface
      *
      * @var string
      */
-    private $publishDate;
+    protected $publishDate;
 
     /**
      * @Serializer\SerializedName("STARTED_AT")
@@ -63,7 +63,7 @@ class GlobalChallenge implements GlobalChallengeWidgetObjectInterface
      *
      * @var string
      */
-    private $startedAt;
+    protected $startedAt;
 
     /**
      * @Serializer\SerializedName("ENDED_AT")
@@ -71,7 +71,7 @@ class GlobalChallenge implements GlobalChallengeWidgetObjectInterface
      *
      * @var string
      */
-    private $endedAt;
+    protected $endedAt;
 
     /**
      * @Serializer\SerializedName("RESULT")
@@ -79,7 +79,7 @@ class GlobalChallenge implements GlobalChallengeWidgetObjectInterface
      *
      * @var integer
      */
-    private $result;
+    protected $result;
 
     /**
      * @Serializer\SerializedName("TARGET")
@@ -87,7 +87,7 @@ class GlobalChallenge implements GlobalChallengeWidgetObjectInterface
      *
      * @var integer
      */
-    private $target;
+    protected $target;
 
     /**
      * @Serializer\SerializedName("TARGET_UNIT_ID")
@@ -95,7 +95,7 @@ class GlobalChallenge implements GlobalChallengeWidgetObjectInterface
      *
      * @var integer
      */
-    private $targetUnitId;
+    protected $targetUnitId;
 
     /**
      * @Serializer\SerializedName("IMAGE_URL")
@@ -103,7 +103,7 @@ class GlobalChallenge implements GlobalChallengeWidgetObjectInterface
      *
      * @var string
      */
-    private $imageUrl;
+    protected $imageUrl;
 
     /**
      * @Serializer\SerializedName("CURRENT")
@@ -111,7 +111,7 @@ class GlobalChallenge implements GlobalChallengeWidgetObjectInterface
      *
      * @var boolean
      */
-    private $current;
+    protected $current;
 
     /**
      * @return string

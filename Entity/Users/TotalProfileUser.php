@@ -15,7 +15,7 @@ class TotalProfileUser extends UsersUser
      *
      * @var integer
      */
-    private $gender;
+    protected $gender;
 
     /**
      * @Serializer\SerializedName("TOTAL_ONS")
@@ -23,7 +23,7 @@ class TotalProfileUser extends UsersUser
      *
      * @var string
      */
-    private $totalOns;
+    protected $totalOns;
 
     /**
      * @return string

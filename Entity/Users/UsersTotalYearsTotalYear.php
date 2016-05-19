@@ -2,7 +2,7 @@
 
 namespace Geonaute\LinkdataBundle\Entity\Users;
 
-use TotalYear as BaseTotalYear;
+use Geonaute\LinkdataBundle\Entity\Users\TotalYear as BaseTotalYear;
 
 class UsersTotalYearsTotalYears extends BaseTotalYear
 {

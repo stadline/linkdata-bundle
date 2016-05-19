@@ -13,7 +13,7 @@ class User extends TotalProfileUser
      *
      * @var integer
      */
-    private $position;
+    protected $position;
 
     /**
      * @Serializer\SerializedName("TOTAL")
@@ -21,7 +21,7 @@ class User extends TotalProfileUser
      *
      * @var integer
      */
-    private $total;
+    protected $total;
 
     /**
      * @Serializer\SerializedName("PREVIOUS_POSITION")
@@ -29,7 +29,7 @@ class User extends TotalProfileUser
      *
      * @var integer
      */
-    private $previous_position;
+    protected $previous_position;
 
     /**
      * @return integer

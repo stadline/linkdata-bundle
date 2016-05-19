@@ -14,7 +14,7 @@ class GlobalChallenge extends BaseGlobalChallenge
      *
      * @var integer
      */
-    private $averageContribution;
+    protected $averageContribution;
 
     /**
      * @Serializer\SerializedName("USER_CONTRIBUTION")
@@ -22,7 +22,7 @@ class GlobalChallenge extends BaseGlobalChallenge
      *
      * @var integer
      */
-    private $userContribution;
+    protected $userContribution;
 
     /**
      * @return integer

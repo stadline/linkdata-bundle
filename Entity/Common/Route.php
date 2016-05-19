@@ -2,7 +2,7 @@
 
 namespace Geonaute\LinkdataBundle\Entity\Common;
 
-use Geonaute\LinkdataBundle\Entity\Route\Location;
+use Geonaute\LinkdataBundle\Entity\Route\Location as RouteLocation;
 use JMS\Serializer\Annotation as Serializer;
 
 class Route
@@ -14,16 +14,16 @@ class Route
      *
      * @var Summary
      */
-    private $summary;
+    protected $summary;
 
     /**
-     * @Serializer\SerializdName("LOCATIONS")
+     * @Serializer\SerializedName("LOCATIONS")
      * @Serializer\XmlList(entry = "LOCATION")
      * @Serializer\Type("array<Geonaute\LinkdataBundle\Entity\Route\Location>")
      *
-     * @var array<Location>
+     * @var array<RouteLocation>
      */
-    private $locations;
+    protected $locations;
 
     /**
      * @return string
@@ -58,7 +58,7 @@ class Route
     }
 
     /**
-     * @return array<Location>
+     * @return array<RouteLocation>
      */
     public function getLocations()
     {

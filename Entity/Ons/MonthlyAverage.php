@@ -14,7 +14,7 @@ class MonthlyAverage
      *
      * @var Value
      */
-    private $value;
+    protected $value;
 
     /**
      * @return Value

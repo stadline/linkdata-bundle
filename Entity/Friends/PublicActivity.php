@@ -14,7 +14,7 @@ class PublicActivity
      *
      * @var Activity
      */
-    private $activity;
+    protected $activity;
 
     /**
      * @Serializer\SerializedName(TOKEN")
@@ -22,7 +22,7 @@ class PublicActivity
      *
      * @var string
      */
-    private $token;
+    protected $token;
 
     /**
      * @return string

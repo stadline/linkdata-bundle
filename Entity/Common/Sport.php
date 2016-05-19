@@ -11,7 +11,7 @@ class Sport
      * @Serializer\XmlAttribute
      * @Serializer\Type("string")
      */
-    private $id;
+    protected $id;
 
     /**
      * @return string

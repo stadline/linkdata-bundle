@@ -10,12 +10,20 @@ class Sport extends BaseSport
 {
 
     /**
+     * @Serializer\SerializedName("ID")
+     * @Serializer\Type("integer")
+     *
+     * @var integer
+     */
+    protected $id;
+
+    /**
      * @Serializer\SerializedName("NAME")
      * @Serializer\Type("string")
      *
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * @Serializer\SerializedName("UNIVERSID")
@@ -23,7 +31,7 @@ class Sport extends BaseSport
      *
      * @var integer
      */
-    private $universId;
+    protected $universId;
 
     /**
      * @return string

@@ -16,14 +16,14 @@ class Measure extends BaseMeasure
      *
      * @var integer
      */
-    private $elapsedTime;
+    protected $elapsedTime;
 
     /**
      * @Serializer\Type("array")
      *
      * @var array
      */
-    private $datatypes = [];
+    protected $datatypes = [];
 
     /**
      * @Serializer\PostDeserialize

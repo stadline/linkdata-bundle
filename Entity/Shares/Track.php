@@ -16,6 +16,6 @@ class Track extends BaseTrack
      *
      * @var array<Location>
      */
-    private $locations;
+    protected $locations;
 
 }

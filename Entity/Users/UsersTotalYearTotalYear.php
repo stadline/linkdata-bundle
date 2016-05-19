@@ -2,7 +2,7 @@
 
 namespace Geonaute\LinkdataBundle\Entity\Users;
 
-use TotalYear as BaseTotalYear;
+use Geonaute\LinkdataBundle\Entity\Users\TotalYear as BaseTotalYear;
 use JMS\Serializer\Annotation as Serializer;
 
 class UsersTotalYearTotalYear extends BaseTotalYear implements ProgressStatisticMapperInterface
@@ -14,7 +14,7 @@ class UsersTotalYearTotalYear extends BaseTotalYear implements ProgressStatistic
      *
      * @var integer
      */
-    private $totalPoints;
+    protected $totalPoints;
 
     /**
      * @return integer

@@ -15,7 +15,7 @@ class Records
      *
      * @var array<RecordsSport>
      */
-    private $sports;
+    protected $sports;
 
     /**
      * @return array<RecordsSport>

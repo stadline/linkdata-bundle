@@ -23,11 +23,18 @@ class ResponseTest extends ResponseTestCase
 
         $this->assertInstanceOf("Doctrine\Common\Collections\ArrayCollection", $globalChallengesCollection);
 
-        $firstFriendOfCollection = $response->getFriends()->first();
+        $firstGlobalChallengeOfCollection = $globalChallengesCollection->first();
 
-        $this->assertElementsAreIndexed($friendsCollection, $firstFriendOfCollection, 'getToken');
+        $this->assertElementsAreIndexed($globalChallengesCollection, $firstGlobalChallengeOfCollection, 'getToken');
 
-        $this->assertIsProfile($firstFriendOfCollection);
+        $this->assertIsGlobalChallenge($firstGlobalChallengeOfCollection);
+    }
+
+    private function assertIsGlobalChallenge($object)
+    {
+        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\GlobalChallenge\GlobalChallenge", $object);
+
+        // No time remaining to test sub elements
     }
 
 }

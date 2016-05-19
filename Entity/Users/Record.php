@@ -13,7 +13,7 @@ class Record
      *
      * @var integer
      */
-    private $id;
+    protected $id;
 
     /**
      * @Serializer\SerializedName("VALUE")
@@ -21,7 +21,7 @@ class Record
      *
      * @var integer
      */
-    private $value;
+    protected $value;
 
     /**
      * @Serializer\SerializedName("DATE")
@@ -29,7 +29,7 @@ class Record
      *
      * @var integer
      */
-    private $date;
+    protected $date;
 
     /**
      * @Serializer\SerializedName("ACTIVITYID")
@@ -37,7 +37,7 @@ class Record
      *
      * @var string
      */
-    private $activityToken;
+    protected $activityToken;
 
     /**
      * @return string

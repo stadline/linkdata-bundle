@@ -15,7 +15,7 @@ class TotalYear
      *
      * @var string
      */
-    private $year;
+    protected $year;
 
     /**
      * @Serializer\SerializedName("SHARE_TOKEN")
@@ -23,7 +23,7 @@ class TotalYear
      *
      * @var string
      */
-    private $shareToken;
+    protected $shareToken;
 
     /**
      * @Serializer\SerializedName("SPORTS")
@@ -32,7 +32,7 @@ class TotalYear
      *
      * @var array<Sport>
      */
-    private $sports;
+    protected $sports;
 
     /**
      * @return string
@@ -64,7 +64,7 @@ class TotalYear
      * @param integer $unitId
      * @return integer
      */
-    private function getTotal($unitId)
+    protected function getTotal($unitId)
     {
 //        $total = 0;
 //

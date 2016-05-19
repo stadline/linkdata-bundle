@@ -16,7 +16,7 @@ class Profile
      *
      * @var TotalProfileUser
      */
-    private $user;
+    protected $user;
 
     /**
      * @Serializer\SerializedName("SPORTS")
@@ -25,7 +25,7 @@ class Profile
      *
      * @var array
      */
-    private $sportIds = [];
+    protected $sportIds = [];
 
     /**
      * @Serializer\SerializedName("TOTALS")
@@ -34,7 +34,7 @@ class Profile
      *
      * @var array
      */
-    private $totals = [];
+    protected $totals = [];
 
     /**
      * @return TotalProfileUser

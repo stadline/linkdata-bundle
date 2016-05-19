@@ -13,7 +13,7 @@ class Challenge
      *
      * @var string
      */
-    private $token;
+    protected $token;
 
     /**
      * @Serializer\SerializedName("NAME")
@@ -21,7 +21,7 @@ class Challenge
      *
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * @Serializer\SerializedName("CATEGORY_ID")
@@ -29,7 +29,7 @@ class Challenge
      *
      * @var integer
      */
-    private $categoryId;
+    protected $categoryId;
 
     /**
      * @Serializer\SerializedName("MODEL_ID")
@@ -37,7 +37,7 @@ class Challenge
      *
      * @var integer
      */
-    private $modelId;
+    protected $modelId;
 
     /**
      * @Serializer\SerializedName("RESULT")
@@ -45,7 +45,7 @@ class Challenge
      *
      * @var integer
      */
-    private $result;
+    protected $result;
 
     /**
      * @Serializer\SerializedName("TARGET")
@@ -53,7 +53,7 @@ class Challenge
      *
      * @var integer
      */
-    private $target;
+    protected $target;
 
     /**
      * @Serializer\SerializedName("TARGET_UNIT_ID")
@@ -61,7 +61,7 @@ class Challenge
      *
      * @var integer
      */
-    private $targetUnitId;
+    protected $targetUnitId;
 
     /**
      * @Serializer\SerializedName("CURRENT")
@@ -69,7 +69,7 @@ class Challenge
      *
      * @var boolean
      */
-    private $current;
+    protected $current;
 
     /**
      * @Serializer\SerializedName("STARTED_AT")
@@ -77,7 +77,7 @@ class Challenge
      *
      * @var string
      */
-    private $started_at;
+    protected $started_at;
 
     /**
      * @Serializer\SerializedName("ENDED_AT")
@@ -85,7 +85,7 @@ class Challenge
      *
      * @var string
      */
-    private $ended_at;
+    protected $ended_at;
 
     /**
      * @return string

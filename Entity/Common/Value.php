@@ -13,7 +13,7 @@ class Value
      *
      * @var integer
      */
-    private $id;
+    protected $id;
 
     /**
      * @Serializer\XmlList(inline = true, entry = "VALUE")
@@ -21,7 +21,7 @@ class Value
      *
      * @var mixed
      */
-    private $value;
+    protected $value;
 
     /**
      * @return integer

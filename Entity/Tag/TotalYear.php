@@ -15,7 +15,7 @@ class TotalYear implements ProgressStatisticMapperInterface
      *
      * @var integer
      */
-    private $totalPoints;
+    protected $totalPoints;
 
     /**
      * @Serializer\SerializedName("TOTALUSERS")
@@ -23,7 +23,7 @@ class TotalYear implements ProgressStatisticMapperInterface
      *
      * @var integer
      */
-    private $totalUsers;
+    protected $totalUsers;
 
     /**
      * @Serializer\SerializedName("TOTALACTIVITIES")
@@ -31,7 +31,7 @@ class TotalYear implements ProgressStatisticMapperInterface
      *
      * @var integer
      */
-    private $totalActivities;
+    protected $totalActivities;
 
     /**
      * @Serializer\SerializedName("TOTALACTIVITIES")
@@ -39,7 +39,7 @@ class TotalYear implements ProgressStatisticMapperInterface
      *
      * @var integer
      */
-    private $year;
+    protected $year;
 
     /**
      * @Serializer\SerializedName("SPORTS")
@@ -48,7 +48,7 @@ class TotalYear implements ProgressStatisticMapperInterface
      *
      * @var Sports
      */
-    private $sports;
+    protected $sports;
 
     /**
      * @return string
@@ -96,7 +96,7 @@ class TotalYear implements ProgressStatisticMapperInterface
      * @param integer $unitId
      * @return integer
      */
-    private function getTotal($unitId)
+    protected function getTotal($unitId)
     {
         $total = 0;
 

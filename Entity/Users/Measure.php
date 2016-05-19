@@ -14,7 +14,7 @@ class Measure extends BaseMeasure
      *
      * @var integer
      */
-    private $unitId;
+    protected $unitId;
 
     /**
      * @Serializer\PostDeserialize

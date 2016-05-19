@@ -3,8 +3,8 @@
 namespace Geonaute\LinkdataBundle\Response\GetStatisticsTags;
 
 use Geonaute\LinkdataBundle\Response\Response as BaseResponse;
-use Geonaute\LinkdataBundle\Statistic\Statistic;
-use Geonaute\LinkdataBundle\Statistic\Tag;
+use Geonaute\LinkdataBundle\Entity\Statistic\Statistic;
+use Geonaute\LinkdataBundle\Entity\Statistic\Tag;
 use JMS\Serializer\Annotation as Serializer;
 
 class Response extends BaseResponse
@@ -13,7 +13,7 @@ class Response extends BaseResponse
     /**
      * @Serializer\SerializedName("STATISTICS")
      * @Serializer\XmlList(entry = "STATISTIC")
-     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Statistic\Statistic>")
+     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Statistic\Statistic>")
      *
      * @var array<Statistic>
      */

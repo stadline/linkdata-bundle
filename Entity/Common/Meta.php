@@ -13,7 +13,7 @@ class Meta
      *
      * @var integer
      */
-    private $statusCode;
+    protected $statusCode;
 
     /**
      * @Serializer\SerializedName("MESSAGE")
@@ -21,7 +21,7 @@ class Meta
      *
      * @var string
      */
-    private $message;
+    protected $message;
 
     /**
      * @return integer

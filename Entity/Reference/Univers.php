@@ -13,7 +13,7 @@ class Univers
      *
      * @var integer
      */
-    private $id;
+    protected $id;
 
     /**
      * @Serializer\SerializedName("NAME")
@@ -21,7 +21,7 @@ class Univers
      *
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * @return string

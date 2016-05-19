@@ -13,7 +13,7 @@ class Datatype
      *
      * @var integer
      */
-    private $id;
+    protected $id;
 
     /**
      * @return integer

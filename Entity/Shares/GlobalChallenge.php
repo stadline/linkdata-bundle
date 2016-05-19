@@ -14,7 +14,7 @@ class GlobalChallenge extends UsersGlobalChallenge
      *
      * @var User
      */
-    private $user;
+    protected $user;
 
     /**
      * @Serializer\SerializedName("NAME")
@@ -22,7 +22,7 @@ class GlobalChallenge extends UsersGlobalChallenge
      *
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * @return User

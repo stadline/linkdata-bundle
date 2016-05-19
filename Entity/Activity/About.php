@@ -13,7 +13,7 @@ class About
      *
      * @var boolean
      */
-    private $track;
+    protected $track;
 
     /**
      * @Serializer\SerializedName("DATASTREAM")
@@ -21,7 +21,7 @@ class About
      *
      * @var boolean
      */
-    private $dataStream;
+    protected $dataStream;
 
     /**
      * @Serializer\SerializedName("LAP")
@@ -29,7 +29,7 @@ class About
      *
      * @var boolean
      */
-    private $lap;
+    protected $lap;
 
     /**
      * @Serializer\SerializedName("ELEVATION")
@@ -37,7 +37,7 @@ class About
      *
      * @var boolean
      */
-    private $elevation;
+    protected $elevation;
 
     /**
      * @Serializer\SerializedName("HEARTRATE")
@@ -45,7 +45,7 @@ class About
      *
      * @var boolean
      */
-    private $heartrate;
+    protected $heartrate;
 
     /**
      * @Serializer\SerializedName("SPEED")
@@ -53,7 +53,7 @@ class About
      *
      * @var boolean
      */
-    private $speed;
+    protected $speed;
 
     /**
      * @Serializer\SerializedName("CHALLENGE")
@@ -61,7 +61,7 @@ class About
      *
      * @var boolean
      */
-    private $challenge;
+    protected $challenge;
 
     /**
      * @return boolean

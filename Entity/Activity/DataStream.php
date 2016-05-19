@@ -14,14 +14,14 @@ class DataStream
      *
      * @var array<Measure>
      */
-    private $measures;
+    protected $measures;
 
     /**
      * @Serializer\Type("array")
      *
      * @var array
      */
-    private $datatypes = [];
+    protected $datatypes = [];
 
     /**
      * @Serializer\PostDeserialize

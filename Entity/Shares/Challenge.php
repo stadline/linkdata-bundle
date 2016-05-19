@@ -14,7 +14,7 @@ class Challenge extends BaseChallenge
      *
      * @var User
      */
-    private $user;
+    protected $user;
 
     /**
      * @return User

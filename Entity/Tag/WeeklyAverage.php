@@ -14,7 +14,7 @@ class WeeklyAverage
      *
      * @var array<Datatype>
      */
-    private $datatypes;
+    protected $datatypes;
 
     /**
      * @return array<Datatype>

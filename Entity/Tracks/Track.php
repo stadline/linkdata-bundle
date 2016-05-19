@@ -13,7 +13,7 @@ class Track
      *
      * @var array<Location>
      */
-    private $locations;
+    protected $locations;
 
     /**
      * @return array<Location>

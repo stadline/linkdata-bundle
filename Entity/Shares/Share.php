@@ -13,7 +13,7 @@ class Share
      *
      * @var string
      */
-    private $token;
+    protected $token;
 
     /**
      * @return string

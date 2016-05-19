@@ -20,7 +20,7 @@ class Activity extends BaseActivity implements ActivityToStringInterface
      *
      * @var string
      */
-    private $startDate;
+    protected $startDate;
 
     /**
      * @Serializer\SerializedName("TIMEZONE")
@@ -28,7 +28,7 @@ class Activity extends BaseActivity implements ActivityToStringInterface
      *
      * @var string
      */
-    private $timezone;
+    protected $timezone;
 
     /**
      * @Serializer\SerializedName("SPORTID")
@@ -36,7 +36,7 @@ class Activity extends BaseActivity implements ActivityToStringInterface
      *
      * @var integer
      */
-    private $sportId;
+    protected $sportId;
 
     /**
      * @Serializer\SerializedName("LIBELLE")
@@ -44,7 +44,7 @@ class Activity extends BaseActivity implements ActivityToStringInterface
      *
      * @var string
      */
-    private $libelle;
+    protected $libelle;
 
     /**
      * @Serializer\SerializedName("MANUAL")
@@ -52,7 +52,7 @@ class Activity extends BaseActivity implements ActivityToStringInterface
      *
      * @var boolean
      */
-    private $manual;
+    protected $manual;
 
     /**
      * @Serializer\SerializedName("DEVICE_MODEL_ID")
@@ -60,7 +60,7 @@ class Activity extends BaseActivity implements ActivityToStringInterface
      *
      * @var integer
      */
-    private $deviceModelId;
+    protected $deviceModelId;
 
     /**
      * @Serializer\SerializedName("CREATED_AT")
@@ -68,7 +68,7 @@ class Activity extends BaseActivity implements ActivityToStringInterface
      *
      * @var string
      */
-    private $createdAt;
+    protected $createdAt;
 
     /**
      * @Serializer\SerializedName("DATASUMMARY")
@@ -76,7 +76,7 @@ class Activity extends BaseActivity implements ActivityToStringInterface
      *
      * @var array<DataSummary>
      */
-    private $dataSummaries;
+    protected $dataSummaries;
 
     /**
      * @Serializer\SerializedName("ABOUT")
@@ -84,7 +84,7 @@ class Activity extends BaseActivity implements ActivityToStringInterface
      *
      * @var About
      */
-    private $about;
+    protected $about;
 
     /**
      * @Serializer\SerializedName("TAGS")
@@ -93,7 +93,7 @@ class Activity extends BaseActivity implements ActivityToStringInterface
      *
      * @var array<Tag>
      */
-    private $tags = [];
+    protected $tags = [];
 
     /**
      * @return string

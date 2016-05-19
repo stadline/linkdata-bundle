@@ -18,7 +18,7 @@ class SimilarActivity extends BaseActivity implements ActivityToStringInterface
      *
      * @var integer
      */
-    private $sportId;
+    protected $sportId;
 
     /**
      * @Serializer\SerializedName("DEVICEMODELID")
@@ -26,7 +26,7 @@ class SimilarActivity extends BaseActivity implements ActivityToStringInterface
      *
      * @var integer
      */
-    private $deviceModelId;
+    protected $deviceModelId;
 
     /**
      * @Serializer\SerializedName("STARTDATE")
@@ -34,7 +34,7 @@ class SimilarActivity extends BaseActivity implements ActivityToStringInterface
      *
      * @var string
      */
-    private $startDate;
+    protected $startDate;
 
     /**
      * @Serializer\SerializedName("TIMEZONE")
@@ -42,7 +42,7 @@ class SimilarActivity extends BaseActivity implements ActivityToStringInterface
      *
      * @var string
      */
-    private $timezone;
+    protected $timezone;
 
     /**
      * @Serializer\SerializedName("LIBELLE")
@@ -50,7 +50,7 @@ class SimilarActivity extends BaseActivity implements ActivityToStringInterface
      *
      * @var string
      */
-    private $libelle;
+    protected $libelle;
 
     /**
      * @Serializer\SerializedName("LATITUDE")
@@ -58,7 +58,7 @@ class SimilarActivity extends BaseActivity implements ActivityToStringInterface
      *
      * @var float
      */
-    private $latitude;
+    protected $latitude;
 
     /**
      * @Serializer\SerializedName("LONGITUDE")
@@ -66,7 +66,7 @@ class SimilarActivity extends BaseActivity implements ActivityToStringInterface
      *
      * @var float
      */
-    private $longitude;
+    protected $longitude;
 
     /**
      * @Serializer\SerializedName("CREATEDAT")
@@ -74,7 +74,7 @@ class SimilarActivity extends BaseActivity implements ActivityToStringInterface
      *
      * @var string
      */
-    private $createdAt;
+    protected $createdAt;
 
     /**
      * @Serializer\SerializedName("DATASUMMARY")
@@ -82,7 +82,7 @@ class SimilarActivity extends BaseActivity implements ActivityToStringInterface
      *
      * @var DataSummary
      */
-    private $dataSummary;
+    protected $dataSummary;
 
     /**
      * @return string

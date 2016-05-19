@@ -14,7 +14,7 @@ class TotalWeek
      *
      * @var integer
      */
-    private $totalUsers;
+    protected $totalUsers;
 
     /**
      * @return integer
@@ -30,7 +30,7 @@ class TotalWeek
      * @param integer $unitId
      * @return integer
      */
-    private function getTotal($unitId)
+    protected function getTotal($unitId)
     {
         $total = 0;
 

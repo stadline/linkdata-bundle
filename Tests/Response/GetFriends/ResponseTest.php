@@ -23,7 +23,7 @@ class ResponseTest extends ResponseTestCase
 
         $this->assertInstanceOf("Doctrine\Common\Collections\ArrayCollection", $friendsCollection);
 
-        $firstFriendOfCollection = $response->getFriends()->first();
+        $firstFriendOfCollection = $friendsCollection->first();
 
         $this->assertElementsAreIndexed($friendsCollection, $firstFriendOfCollection, [0 => 'getUser', 1 => 'getLdid']);
 

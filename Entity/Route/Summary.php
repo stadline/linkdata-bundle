@@ -13,7 +13,7 @@ class Summary
      *
      * @var string
      */
-    private $token;
+    protected $token;
 
     /**
      * @Serializer\SerializedName("LIBELLE")
@@ -21,7 +21,7 @@ class Summary
      *
      * @var string
      */
-    private $libelle;
+    protected $libelle;
 
     /**
      * @Serializer\SerializedName("DISTANCE")
@@ -29,7 +29,7 @@ class Summary
      *
      * @var integer
      */
-    private $distance;
+    protected $distance;
 
     /**
      * @Serializer\SerializedName("ASCENDANT")
@@ -37,7 +37,7 @@ class Summary
      *
      * @var integer
      */
-    private $ascendant;
+    protected $ascendant;
 
     /**
      * @Serializer\SerializedName("DESCENDANT")
@@ -45,7 +45,7 @@ class Summary
      *
      * @var integer
      */
-    private $descendant;
+    protected $descendant;
 
     /**
      * @Serializer\SerializedName("LDID")
@@ -53,7 +53,7 @@ class Summary
      *
      * @var string
      */
-    private $ldid;
+    protected $ldid;
 
     /**
      * @return string

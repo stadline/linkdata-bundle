@@ -13,7 +13,7 @@ class ActivitiesTag
      *
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * @Serializer\SerializedName("TAG")
@@ -21,7 +21,7 @@ class ActivitiesTag
      *
      * @var string
      */
-    private $cardinality;
+    protected $cardinality;
 
     /**
      * @return string

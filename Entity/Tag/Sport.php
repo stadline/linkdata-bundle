@@ -3,6 +3,7 @@
 namespace Geonaute\LinkdataBundle\Entity\Tag;
 
 use Geonaute\LinkdataBundle\Entity\Common\Sport as BaseSport;
+use JMS\Serializer\Annotation as Serializer;
 
 class Sport extends BaseSport
 {
@@ -10,11 +11,11 @@ class Sport extends BaseSport
     /**
      * @Serializer\SerializedName("VALUE")
      * @Serializer\XmlMap(inline = true, entry = "VALUE")
-     * @Serializer\Type("array")
+     * @Serializer\Type("array<string>")
      *
      * @var array
      */
-    private $values;
+    protected $values;
 
     /**
      * @return array

@@ -17,7 +17,7 @@ class DeviceModel
      *
      * @var integer
      */
-    private $id;
+    protected $id;
 
     /**
      * @Serializer\SerializedName("NAME")
@@ -25,7 +25,7 @@ class DeviceModel
      *
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * @Serializer\SerializedName("BRANID")
@@ -33,7 +33,7 @@ class DeviceModel
      * 
      * @var integer
      */
-    private $brandId;
+    protected $brandId;
 
 
     /**

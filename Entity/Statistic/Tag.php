@@ -14,7 +14,7 @@ class Tag
      *
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * @return string

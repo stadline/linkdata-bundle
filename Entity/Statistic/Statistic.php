@@ -14,7 +14,7 @@ class Statistic
      *
      * @var array<Tag>
      */
-    private $tags;
+    protected $tags;
 
     /**
      * @Serializer\SerializedName("VERSION")
@@ -22,7 +22,7 @@ class Statistic
      *
      * @var string
      */
-    private $version;
+    protected $version;
 
     /**
      * @Serializer\SerializedName("CALCULATED_AT")
@@ -30,7 +30,7 @@ class Statistic
      *
      * @var string
      */
-    private $calculatedAt;
+    protected $calculatedAt;
 
     /**
      * Return tags Object

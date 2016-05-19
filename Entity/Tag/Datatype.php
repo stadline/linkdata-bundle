@@ -15,7 +15,7 @@ class Datatype extends BaseDatatype
      *
      * @var string
      */
-    private $value;
+    protected $value;
 
     /**
      * @return string

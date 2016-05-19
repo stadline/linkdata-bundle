@@ -13,7 +13,7 @@ class ConnectedDevice
      *
      * @var string
      */
-    private $id;
+    protected $id;
 
     /**
      * @Serializer\SerializedName("MODELID")
@@ -21,7 +21,7 @@ class ConnectedDevice
      *
      * @var integer
      */
-    private $modelId;
+    protected $modelId;
 
     /**
      * @Serializer\SerializedName("SERIAL")
@@ -29,7 +29,7 @@ class ConnectedDevice
      *
      * @var string
      */
-    private $serial;
+    protected $serial;
 
     /**
      * @Serializer\SerializedName("FIRMWAREID")
@@ -37,7 +37,7 @@ class ConnectedDevice
      *
      * @var string
      */
-    private $firmwareId;
+    protected $firmwareId;
 
     /**
      * @Serializer\SerializedName("CREATED_AT")
@@ -45,7 +45,7 @@ class ConnectedDevice
      *
      * @var string
      */
-    private $createdAt;
+    protected $createdAt;
 
     /**
      * @Serializer\SerializedName("LASTCONNECT")
@@ -53,7 +53,7 @@ class ConnectedDevice
      *
      * @var string
      */
-    private $lastConnect;
+    protected $lastConnect;
 
     /**
      * @Serializer\SerializedName("OWNERSHIP")
@@ -61,7 +61,7 @@ class ConnectedDevice
      *
      * @var string
      */
-    private $ownership;
+    protected $ownership;
 
     /**
      * @return string

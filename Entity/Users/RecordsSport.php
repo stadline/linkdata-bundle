@@ -15,7 +15,7 @@ class RecordsSport extends BaseSport
      *
      * @var array<Record>
      */
-    private $records;
+    protected $records;
 
     /**
      * @return array<Record>

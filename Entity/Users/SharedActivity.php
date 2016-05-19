@@ -16,7 +16,7 @@ class SharedActivity extends BaseActivity
      *
      * @var string
      */
-    private $token;
+    protected $token;
 
     /**
      * @Serializer\SerializedName("STARTDATE")
@@ -24,7 +24,7 @@ class SharedActivity extends BaseActivity
      *
      * @var string
      */
-    private $startdate;
+    protected $startdate;
 
     /**
      * @Serializer\SerializedName("SPORTID")
@@ -32,7 +32,7 @@ class SharedActivity extends BaseActivity
      *
      * @var string
      */
-    private $sportId;
+    protected $sportId;
 
     /**
      * @Serializer\SerializedName("LIBELLE")
@@ -40,7 +40,7 @@ class SharedActivity extends BaseActivity
      *
      * @var string
      */
-    private $libelle;
+    protected $libelle;
 
     /**
      * @Serializer\SerializedName("DATASUMMARY")
@@ -49,7 +49,7 @@ class SharedActivity extends BaseActivity
      *
      * @var array<Value>
      */
-    private $summary;
+    protected $summary;
 
     /**
      * @return string
@@ -111,7 +111,7 @@ class SharedActivity extends BaseActivity
      * @param integer $datatypeId
      * @return Value
      */
-    private function getSummary($datatypeId)
+    protected function getSummary($datatypeId)
     {
         if (array_key_exists($datatypeId, $this->summary)) {
             return $this->summary[$datatypeId];

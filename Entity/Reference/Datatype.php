@@ -9,12 +9,20 @@ class Datatype extends BaseDatatype
 {
 
     /**
+     * @Serializer\SerializedName("ID")
+     * @Serializer\Type("integer")
+     *
+     * @var integer
+     */
+    protected $id;
+
+    /**
      * @Serializer\SerializedName("NAME")
      * @Serializer\Type("string")
      *
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * @Serializer\SerializedName("UNIT")
@@ -22,7 +30,7 @@ class Datatype extends BaseDatatype
      *
      * @var string
      */
-    private $unit;
+    protected $unit;
 
     /**
      * @Serializer\SerializedName("CUMULABLE")
@@ -30,7 +38,7 @@ class Datatype extends BaseDatatype
      *
      * @var boolean
      */
-    private $cumulable;
+    protected $cumulable;
 
     /**
      * @return string

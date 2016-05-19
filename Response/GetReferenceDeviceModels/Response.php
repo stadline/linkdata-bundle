@@ -12,7 +12,7 @@ class Response extends BaseResponse
     /**
      * @Serializer\SerializedName("DEVICEMODELS")
      * @Serializer\XmlList(entry = "DEVICEMODEL")
-     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Reference\DeviceModel>")
+     * @Serializer\Type("ArrayCollection<string, Geonaute\LinkdataBundle\Entity\Reference\DeviceModel, ID>")
      *
      * @var array<DeviceModel>
      */

@@ -14,7 +14,7 @@ class PostImportActivity extends BaseActivity
      *
      * @var string
      */
-    private $userId;
+    protected $userId;
 
     /**
      * @Serializer\SerializedName("SPORTID")
@@ -22,7 +22,7 @@ class PostImportActivity extends BaseActivity
      *
      * @var integer
      */
-    private $sportId;
+    protected $sportId;
 
     /**
      * @Serializer\SerializedName("DEVICEID")
@@ -30,7 +30,7 @@ class PostImportActivity extends BaseActivity
      *
      * @var integer
      */
-    private $deviceId;
+    protected $deviceId;
 
     /**
      * @Serializer\SerializedName("DEVICEMODELID")
@@ -38,7 +38,7 @@ class PostImportActivity extends BaseActivity
      *
      * @var integer
      */
-    private $deviceModelId;
+    protected $deviceModelId;
 
     /**
      * @Serializer\SerializedName("STARTDATE")
@@ -46,7 +46,7 @@ class PostImportActivity extends BaseActivity
      *
      * @var string
      */
-    private $startDate;
+    protected $startDate;
 
     /**
      * @Serializer\SerializedName("DURATION")
@@ -54,7 +54,7 @@ class PostImportActivity extends BaseActivity
      *
      * @var integer
      */
-    private $duration;
+    protected $duration;
 
     /**
      * @Serializer\SerializedName("LIBELLE")
@@ -62,7 +62,7 @@ class PostImportActivity extends BaseActivity
      *
      * @var string
      */
-    private $libelle;
+    protected $libelle;
 
     /**
      * @Serializer\SerializedName("LATITUDE")
@@ -70,7 +70,7 @@ class PostImportActivity extends BaseActivity
      *
      * @var float
      */
-    private $latitude;
+    protected $latitude;
 
     /**
      * @Serializer\SerializedName("LONGITUDE")
@@ -78,7 +78,7 @@ class PostImportActivity extends BaseActivity
      *
      * @var float
      */
-    private $longitude;
+    protected $longitude;
 
     /**
      * @Serializer\SerializedName("ELEVATION")
@@ -86,7 +86,7 @@ class PostImportActivity extends BaseActivity
      *
      * @var float
      */
-    private $elevation;
+    protected $elevation;
 
     /**
      * @Serializer\SerializedName("TRACKID")
@@ -94,7 +94,7 @@ class PostImportActivity extends BaseActivity
      *
      * @var string
      */
-    private $trackId;
+    protected $trackId;
 
     /**
      * @Serializer\SerializedName("CREATEDAT")
@@ -102,7 +102,7 @@ class PostImportActivity extends BaseActivity
      *
      * @var string
      */
-    private $createdAt;
+    protected $createdAt;
 
     /**
      * @Serializer\SerializedName("UPDATETI%E")
@@ -110,7 +110,7 @@ class PostImportActivity extends BaseActivity
      *
      * @var string
      */
-    private $updateTime;
+    protected $updateTime;
 
     /**
      * @return string

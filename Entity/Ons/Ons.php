@@ -13,7 +13,7 @@ class Ons
      *
      * @var MonthlyAverage
      */
-    private $monthlyAverage;
+    protected $monthlyAverage;
 
     /**
      * @return MonthlyAverage

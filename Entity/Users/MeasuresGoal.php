@@ -14,7 +14,7 @@ class MeasuresGoal
      *
      * @var string
      */
-    private $startedAt;
+    protected $startedAt;
 
     /**
      * @Serializer\SerializedName("DATATYPE_ID")
@@ -22,7 +22,7 @@ class MeasuresGoal
      *
      * @var integer
      */
-    private $datatypeId;
+    protected $datatypeId;
 
     /**
      * @Serializer\SerializedName("INITIAL")
@@ -30,7 +30,7 @@ class MeasuresGoal
      *
      * @var integer
      */
-    private $initial;
+    protected $initial;
 
     /**
      * @Serializer\SerializedName("GOAL")
@@ -38,7 +38,7 @@ class MeasuresGoal
      *
      * @var integer
      */
-    private $goal;
+    protected $goal;
 
     /**
      * @return string

@@ -14,7 +14,7 @@ class DataSummary
      *
      * @var string
      */
-    private $value;
+    protected $value;
 
     /**
      * @Serializer\SerializedName("id")
@@ -23,7 +23,7 @@ class DataSummary
      *
      * @var integer
      */
-    private $unitId;
+    protected $unitId;
 
     /**
      * @return ?

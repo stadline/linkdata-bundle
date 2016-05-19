@@ -19,7 +19,7 @@ class Activity implements ActivityWidgetProviderInterface
      *
      * @var User
      */
-    private $user;
+    protected $user;
 
     /**
      * @Serializer\SerializedName("SPORT")
@@ -27,7 +27,7 @@ class Activity implements ActivityWidgetProviderInterface
      *
      * @var Sport
      */
-    private $sport;
+    protected $sport;
 
     /**
      * @Serializer\SerializedName("DEVICEMODEL")
@@ -35,7 +35,7 @@ class Activity implements ActivityWidgetProviderInterface
      *
      * @var DeviceModel
      */
-    private $deviceModel;
+    protected $deviceModel;
 
     /**
      * @Serializer\SerializedName("DATASTREAM")
@@ -43,7 +43,7 @@ class Activity implements ActivityWidgetProviderInterface
      *
      * @var DataStream
      */
-    private $dataStream;
+    protected $dataStream;
 
     /**
      * @Serializer\SerializedName("DATASUMMARY")
@@ -51,7 +51,7 @@ class Activity implements ActivityWidgetProviderInterface
      *
      * @var DataSummary
      */
-    private $dataSummary;
+    protected $dataSummary;
 
     /**
      * @Serializer\SerializedName("TRACK")
@@ -59,7 +59,7 @@ class Activity implements ActivityWidgetProviderInterface
      *
      * @var Track
      */
-    private $track;
+    protected $track;
 
     /**
      * @Serializer\SerializedName("STARTDATE")
@@ -67,7 +67,7 @@ class Activity implements ActivityWidgetProviderInterface
      *
      * @var string
      */
-    private $startDate;
+    protected $startDate;
 
     /**
      * @Serializer\SerializedName("TIMEZONE")
@@ -75,7 +75,7 @@ class Activity implements ActivityWidgetProviderInterface
      *
      * @var string
      */
-    private $timezone;
+    protected $timezone;
 
     /**
      * @Serializer\SerializedName("DURATION")
@@ -83,7 +83,7 @@ class Activity implements ActivityWidgetProviderInterface
      *
      * @var integer
      */
-    private $duration;
+    protected $duration;
 
     /**
      * @Serializer\SerializedName("LIBELLE")
@@ -91,7 +91,7 @@ class Activity implements ActivityWidgetProviderInterface
      *
      * @var string
      */
-    private $libelle;
+    protected $libelle;
 
     /**
      * @Serializer\SerializedName("LATITUDE")
@@ -99,7 +99,7 @@ class Activity implements ActivityWidgetProviderInterface
      *
      * @var float
      */
-    private $latitude;
+    protected $latitude;
 
     /**
      * @Serializer\SerializedName("LONGITUDE")
@@ -107,7 +107,7 @@ class Activity implements ActivityWidgetProviderInterface
      *
      * @var float
      */
-    private $longitude;
+    protected $longitude;
 
     /**
      * @Serializer\SerializedName("ELEVATION")
@@ -115,15 +115,15 @@ class Activity implements ActivityWidgetProviderInterface
      *
      * @var float
      */
-    private $elevation;
+    protected $elevation;
 
     /**
      * @Serializer\SerializedName("ABOUT")
-     * @Serializer\Type("?")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Shares\About")
      *
      * @var About
      */
-    private $about;
+    protected $about;
 
     /**
      * @return string

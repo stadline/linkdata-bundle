@@ -17,14 +17,14 @@ class ActivitiesSport extends BaseSport
      * 
      * @var string
      */
-    private $cardinality;
+    protected $cardinality;
 
     /**
      * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Reference\Sport")
      *
      * @var RefSport|null
      */
-    private $sport = null;
+    protected $sport = null;
 
     /**
      * @return string

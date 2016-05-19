@@ -11,7 +11,7 @@ class FakeMeasure extends Measure
     {
         parent::setElapsedTime(0);
         parent::setValues([new FakeValue()]);
-        parent::defineValuesAndDatatypesForSerialization();
+        parent::defineDatatypesForSerialization();
     }
 
 }

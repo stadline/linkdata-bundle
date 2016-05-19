@@ -14,7 +14,7 @@ class DataSummaryActivity extends BaseActivity
      *
      * @var DataSummary
      */
-    private $dataSummary;
+    protected $dataSummary;
 
     /**
      * @return DataSummary

@@ -14,7 +14,7 @@ class ProfileUser extends UsersUser
      *
      * @var string
      */
-    private $language;
+    protected $language;
 
     /**
      * @return string

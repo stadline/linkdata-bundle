@@ -13,7 +13,7 @@ class Statistics
      *
      * @var User
      */
-    private $user;
+    protected $user;
 
     /**
      * @Serializer\SerializedName("TOTALYEARS")
@@ -22,7 +22,7 @@ class Statistics
      *
      * @var array<TotalYear>
      */
-    private $totalYears;
+    protected $totalYears;
 
     /**
      * @Serializer\SerializedName("TOTALMONTHS")
@@ -31,7 +31,7 @@ class Statistics
      *
      * @var array<TotalMonth>
      */
-    private $totalMonths;
+    protected $totalMonths;
 
     /**
      * @Serializer\SerializedName("RECORDS")
@@ -39,7 +39,7 @@ class Statistics
      *
      * @var Records
      */
-    private $records;
+    protected $records;
 
     /**
      * @return User

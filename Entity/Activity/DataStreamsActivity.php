@@ -14,7 +14,7 @@ class DataStreamsActivity extends BaseActivity
      *
      * @var DataStream
      */
-    private $dataStream;
+    protected $dataStream;
 
     /**
      * @return DataStream
