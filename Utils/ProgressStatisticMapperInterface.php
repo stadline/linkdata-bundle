@@ -1,6 +1,6 @@
 <?php 
 
-namespace Geonaute\LinkDataBundle\Utils;
+namespace Geonaute\LinkdataBundle\Utils;
 
 /**
  * Interface to be used for render the statistics used is progress

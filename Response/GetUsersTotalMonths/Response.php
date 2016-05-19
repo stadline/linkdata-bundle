@@ -11,8 +11,8 @@ class Response extends BaseResponse
 
     /**
      * @Serializer\SerializedName("TOTALMONTHS")
-     * @Serializer\XmlList(entry="TOTALMONTH")
-     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Users\TotalMonth>")
+     * @Serializer\XmlList(entry = "TOTALMONTH")
+     * @Serializer\Type("ArrayCollection<string, Geonaute\LinkdataBundle\Entity\Users\TotalMonth, MONTH>")
      *
      * @var array<TotalMonth>
      */

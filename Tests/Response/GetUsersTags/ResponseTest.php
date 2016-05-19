@@ -30,7 +30,7 @@ class ResponseTest extends ResponseTestCase
         $this->assertIsTag($firstTagOfCollection);
     }
 
-    public function assertIsTag($object)
+    private function assertIsTag($object)
     {
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Users\Tag", $object);
 

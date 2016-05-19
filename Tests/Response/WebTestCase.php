@@ -91,6 +91,27 @@ class WebTestCase extends \PHPUnit_Framework_TestCase
         $this->assertIsValue($measureValues[0]);
     }
 
+    public function assertIsRoute($object)
+    {
+        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Common\Route", $object);
+
+        // No time remaining to test sub elements
+    }
+
+    public function assertIsTotalMonth($object)
+    {
+        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Users\TotalMonth", $object);
+
+        // No time remaining to test sub elements
+    }
+
+    public function assertIsUsersTotalYearTotalYear($object)
+    {
+        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Users\UsersTotalYearTotalYear", $object);
+
+        // No time remaining to test sub elementss
+    }
+
     public function assertIsValue($object)
     {
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Common\Value", $object);

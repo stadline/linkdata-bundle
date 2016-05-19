@@ -12,7 +12,7 @@ class Response extends BaseResponse
     /**
      * @Serializer\SerializedName("TOTALYEARS")
      * @Serializer\XmlList(entry = "TOTALYEAR")
-     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Users\UsersTotalYearTotalYear>")
+     * @Serializer\Type("ArrayCollection<string, Geonaute\LinkdataBundle\Entity\Users\UsersTotalYearTotalYear, YEAR>")
      *
      * @var array<UsersTotalYearTotalYear>>
      */

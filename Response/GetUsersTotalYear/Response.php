@@ -10,7 +10,7 @@ class Response extends BaseResponse
 {
 
     /**
-     * @Serializer\SerializedName("TOTAL_YEAR")
+     * @Serializer\SerializedName("TOTALYEAR")
      * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Users\UsersTotalYearTotalYear")
      *
      * @var UsersTotalYearTotalYear

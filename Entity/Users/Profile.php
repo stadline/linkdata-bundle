@@ -21,7 +21,7 @@ class Profile
     /**
      * @Serializer\SerializedName("SPORTS")
      * @Serializer\XmlList(entry = "SPORTID")
-     * @Serializer\Type("array")
+     * @Serializer\Type("array<integer>")
      *
      * @var array
      */
@@ -29,8 +29,8 @@ class Profile
 
     /**
      * @Serializer\SerializedName("TOTALS")
-     * @Serializer\XmlMap(entry = "TOTAL_DATATYPE")
-     * @Serializer\Type("array")
+     * @Serializer\XmlMap(entry = "TOTAL_DATATYPE", keyAttribute = "datatype_id")
+     * @Serializer\Type("array<integer>")
      *
      * @var array
      */

@@ -15,7 +15,7 @@ class Response extends BaseResponse
      *
      * @var Route
      */
-    private $route;
+    protected $route;
 
     /**
      * @return Route

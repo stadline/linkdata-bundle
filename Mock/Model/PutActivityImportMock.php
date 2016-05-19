@@ -20,7 +20,12 @@ class PutActivityImportMock extends BaseMock implements LinkdataMockInterface
     public function getResponse($data)
     {
         return $this->getSerializer()->deserialize('
-
+<RESPONSE>
+	<META>
+		<STATUSCODE>200</STATUSCODE>
+		<MESSAGE>OK : Updated</MESSAGE>
+	</META>
+</RESPONSE>
 ', 'Geonaute\LinkdataBundle\Response\PutActivityImport\Response', 'xml');
     }
 }
