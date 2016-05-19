@@ -39,6 +39,20 @@ class ResponseTest extends ResponseTestCase
         $this->assertObjectHasAttribute('totals', $object);
 
         $this->assertInternalType('array', $object->getSportIds());
+
+        $this->assertIsTotalProfileUser($object->getUser());
+    }
+
+    private function assertIsTotalProfileUser($object)
+    {
+        $this->assertInstanceOf('Geonaute\LinkdataBundle\Entity\Users\TotalProfileUser', $object);
+
+        $this->assertObjectHasAttribute('firstName', $object);
+        $this->assertObjectHasAttribute('lastName', $object);
+        $this->assertObjectHasAttribute('ldid', $object);
+        $this->assertObjectHasAttribute('country', $object);
+        $this->assertObjectHasAttribute('gender', $object);
+        $this->assertObjectHasAttribute('totalOns', $object);
     }
 
 }

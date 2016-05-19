@@ -12,7 +12,7 @@ class Response extends BaseResponse
     /**
      * @Serializer\SerializedName("GLOBALCHALLENGES")
      * @Serializer\XmlList(entry="GLOBALCHALLENGE")
-     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\GlobalChallenge\GlobalChallenge>")
+     * @Serializer\Type("ArrayCollection<string, Geonaute\LinkdataBundle\Entity\GlobalChallenge\GlobalChallenge, TOKEN>")
      *
      * @var array<GlobalChallenge>
      */
