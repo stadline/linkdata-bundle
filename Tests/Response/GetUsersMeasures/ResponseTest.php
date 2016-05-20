@@ -25,7 +25,7 @@ class ResponseTest extends ResponseTestCase
 
         $firstMeasureOfCollection = $measuresCollection->first();
 
-        $this->assertElementsAreIndexed($measuresCollection, $firstMeasureOfCollection, 'getUnitId');
+        $this->assertElementsAreIndexed($measuresCollection, 'getUnitId');
 
         $this->assertIsMeasureInUsersDirectory($firstMeasureOfCollection);
     }

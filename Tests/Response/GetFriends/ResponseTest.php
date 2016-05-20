@@ -25,7 +25,7 @@ class ResponseTest extends ResponseTestCase
 
         $firstFriendOfCollection = $friendsCollection->first();
 
-        $this->assertElementsAreIndexed($friendsCollection, $firstFriendOfCollection, [0 => 'getUser', 1 => 'getLdid']);
+        $this->assertElementsAreIndexed($friendsCollection, [0 => 'getUser', 1 => 'getLdid']);
 
         $this->assertIsProfile($firstFriendOfCollection);
     }

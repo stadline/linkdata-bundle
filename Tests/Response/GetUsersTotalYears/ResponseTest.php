@@ -25,7 +25,7 @@ class ResponseTest extends ResponseTestCase
 
         $firstTotalYearOfCollection = $totalYearsCollection->first();
 
-        $this->assertElementsAreIndexed($totalYearsCollection, $firstTotalYearOfCollection, 'getYear');
+        $this->assertElementsAreIndexed($totalYearsCollection, 'getYear');
 
         $this->assertIsUsersTotalYearTotalYear($firstTotalYearOfCollection);
 

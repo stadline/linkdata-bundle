@@ -40,7 +40,7 @@ class ResponseTest extends ResponseTestCase
 
         $firstRecordOfCollection = $recordsCollection->first();
 
-        $this->assertElementsAreIndexed($recordsCollection, $firstRecordOfCollection, 'getId');
+        $this->assertElementsAreIndexed($recordsCollection, 'getId');
 
         $this->assertIsRecord($firstRecordOfCollection);
     }

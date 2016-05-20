@@ -25,7 +25,7 @@ class ResponseTest extends ResponseTestCase
 
         $firstActivityOfCollection = $activitiesCollection->first();
 
-        $this->assertElementsAreIndexed($activitiesCollection, $firstActivityOfCollection, 'getId');
+        $this->assertElementsAreIndexed($activitiesCollection, 'getId');
 
         $this->assertIsActivity($firstActivityOfCollection);
     }
@@ -51,7 +51,7 @@ class ResponseTest extends ResponseTestCase
 
         $firstDataSummaryOfCollection = $activityDataSummariesCollection->first();
 
-        $this->assertElementsAreIndexed($activityDataSummariesCollection, $firstDataSummaryOfCollection, 'getUnitId');
+        $this->assertElementsAreIndexed($activityDataSummariesCollection, 'getUnitId');
 
         $this->assertIsDataSummary($firstDataSummaryOfCollection);
     }

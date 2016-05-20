@@ -25,7 +25,7 @@ class ResponseTest extends ResponseTestCase
 
         $firstTotalMonthOfCollection = $totalMonthsCollection->first();
 
-        $this->assertElementsAreIndexed($totalMonthsCollection, $firstTotalMonthOfCollection, 'getMonth');
+        $this->assertElementsAreIndexed($totalMonthsCollection, 'getMonth');
 
         $this->assertIsTotalMonth($firstTotalMonthOfCollection);
     }

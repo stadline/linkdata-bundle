@@ -20,19 +20,49 @@ class WebTestCase extends \PHPUnit_Framework_TestCase
         return $serializer;
     }
 
-    public function assertElementsAreIndexed(ArrayCollection $arrayCollection, $firstObjectOfCollection, $method = '')
+    /**
+     * This method assert that ArrayCollection[$key] = $object with getMethod = $key
+     * example : ArrayCollection[8] = the object in collection with ->getMethod() returns 8
+     *
+     * @param ArrayCollection $arrayCollection
+     * @param mixed $method
+     */
+    public function assertElementsAreIndexed(ArrayCollection $arrayCollection, $method = '')
+    {
+        foreach ($arrayCollection as $elementOfCollection) {
+            $currentElementIndex = $this->getIndexOfElement($elementOfCollection, $method);
+
+            $this->assertArrayHasKey($currentElementIndex, $arrayCollection);
+            $this->assertEquals($arrayCollection[$currentElementIndex], $elementOfCollection);
+        }
+    }
+
+    /**
+     * This method get the indexElement for the assertElementsAreIndex function
+     * example :
+     *
+     * if $method is an array "[0 => 'getA', 1 => 'getB']", we do :
+     * $element->getA()->getB()
+     *
+     * if $method is a string "getC", we do :
+     * $element->getC()
+     *
+     * @param \stdClass $element
+     * @param mixed $method
+     * @return type
+     */
+    public function getIndexOfElement($element, $method)
     {
         if (is_array($method)) {
-            $firstElementIndex = $firstObjectOfCollection;
+            $currentElementIndex = $element;
             foreach ($method as $tmpMethod) {
-                $firstElementIndex = $firstElementIndex->$tmpMethod();
+                $currentElementIndex = $currentElementIndex->$tmpMethod();
             }
         } else {
-            $firstElementIndex = $firstObjectOfCollection->$method();
+            $currentElementIndex = $element->$method();
         }
 
-        $this->assertArrayHasKey($firstElementIndex, $arrayCollection);
-        $this->assertEquals($arrayCollection[$firstElementIndex], $firstObjectOfCollection);
+        return $currentElementIndex;
     }
 
     public function assertIsAbout($object)
@@ -228,7 +258,7 @@ class WebTestCase extends \PHPUnit_Framework_TestCase
 
         $firstSportOfCollection = $sportsCollection->first();
 
-        $this->assertElementsAreIndexed($sportsCollection, $firstSportOfCollection, 'getId');
+        $this->assertElementsAreIndexed($sportsCollection, 'getId');
 
         $this->assertIsSport($firstSportOfCollection);
     }
@@ -259,7 +289,7 @@ class WebTestCase extends \PHPUnit_Framework_TestCase
 
         $firstSportOfCollection = $sportsCollection->first();
 
-        $this->assertElementsAreIndexed($sportsCollection, $firstSportOfCollection, 'getId');
+        $this->assertElementsAreIndexed($sportsCollection, 'getId');
 
         $this->assertIsSport($firstSportOfCollection);
     }

@@ -25,7 +25,7 @@ class ResponseTest extends ResponseTestCase
 
         $firstUniversOfCollection = $universCollection->first();
 
-        $this->assertElementsAreIndexed($universCollection, $firstUniversOfCollection, 'getId');
+        $this->assertElementsAreIndexed($universCollection, 'getId');
 
         $this->assertIsUnivers($firstUniversOfCollection);
     }

@@ -25,7 +25,7 @@ class ResponseTest extends ResponseTestCase
 
         $firstActivityOfCollection = $activitiesCollection->first();
 
-        $this->assertElementsAreIndexed($activitiesCollection, $firstActivityOfCollection, 'getId');
+        $this->assertElementsAreIndexed($activitiesCollection, 'getId');
 
         $this->assertIsSimilarActivity($firstActivityOfCollection);
     }

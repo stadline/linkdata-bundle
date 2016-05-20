@@ -25,7 +25,7 @@ class ResponseTest extends ResponseTestCase
 
         $firstDeviceModelOfCollection = $deviceModelsCollection->first();
 
-        $this->assertElementsAreIndexed($deviceModelsCollection, $firstDeviceModelOfCollection, 'getId');
+        $this->assertElementsAreIndexed($deviceModelsCollection, 'getId');
 
         $this->assertIsDeviceModel($firstDeviceModelOfCollection);
     }

@@ -25,7 +25,7 @@ class ResponseTest extends ResponseTestCase
 
         $firstConnectedDeviceOfCollection = $connectedDevicesCollection->first();
 
-        $this->assertElementsAreIndexed($connectedDevicesCollection, $firstConnectedDeviceOfCollection, 'getId');
+        $this->assertElementsAreIndexed($connectedDevicesCollection, 'getId');
 
         $this->assertIsConnectedDevice($firstConnectedDeviceOfCollection);
     }

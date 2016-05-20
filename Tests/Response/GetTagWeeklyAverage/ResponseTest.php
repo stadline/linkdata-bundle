@@ -34,7 +34,7 @@ class ResponseTest extends ResponseTestCase
 
         $firstDatatypeOfCollection = $datatypesCollection->first();
 
-        $this->assertElementsAreIndexed($datatypesCollection, $firstDatatypeOfCollection, 'getId');
+        $this->assertElementsAreIndexed($datatypesCollection, 'getId');
 
         $this->assertIsDatatype($firstDatatypeOfCollection);
     }

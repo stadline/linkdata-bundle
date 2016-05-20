@@ -25,7 +25,7 @@ class ResponseTest extends ResponseTestCase
 
         $firstTagOfCollection = $tagsCollection->first();
 
-        $this->assertElementsAreIndexed($tagsCollection, $firstTagOfCollection, 'getName');
+        $this->assertElementsAreIndexed($tagsCollection, 'getName');
 
         $this->assertIsTag($firstTagOfCollection);
     }

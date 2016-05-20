@@ -25,7 +25,7 @@ class ResponseTest extends ResponseTestCase
 
         $firstGlobalChallengeOfCollection = $globalChallengesCollection->first();
 
-        $this->assertElementsAreIndexed($globalChallengesCollection, $firstGlobalChallengeOfCollection, 'getToken');
+        $this->assertElementsAreIndexed($globalChallengesCollection, 'getToken');
 
         $this->assertIsGlobalChallenge($firstGlobalChallengeOfCollection);
     }
