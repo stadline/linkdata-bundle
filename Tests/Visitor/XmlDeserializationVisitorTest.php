@@ -5,10 +5,210 @@ namespace Geonaute\LinkdataBundle\Tests\Visitor;
 use Geonaute\LinkdataBundle\Visitor\XmlDeserializationVisitor;
 use JMS\Serializer\Naming\SerializedNameAnnotationStrategy;
 use JMS\Serializer\Naming\CamelCaseNamingStrategy;
+use JMS\Serializer\Exception\RuntimeException;
 
 class XmlDeserializationVisitorTest extends \PHPUnit_Framework_TestCase
 {
 
+    public function testGetIndexElementWhenIndexTypeNameIsHimself()
+    {
+        $data = new \SimpleXmlElement('<VALUE id="1">10</VALUE>');
+        $indexTypeName = '_HIMSELF_';
+
+        $returnExpected = "10";
+        $return = $this->getIndexElement($data, $indexTypeName);
+
+        $this->assertEquals($returnExpected, $return);
+    }
+
+    public function testGetIndexElementWhenIndexTypeNameIsChildValue()
+    {
+        $data = new \SimpleXmlElement('
+            <ACTIVITY>
+                <ID>5f0468da2600ffea245f</ID>
+            </ACTIVITY>
+        ');
+        $indexTypeName = 'ID';
+
+        $returnExpected = "5f0468da2600ffea245f";
+        $return = $this->getIndexElement($data, $indexTypeName);
+
+        $this->assertEquals($returnExpected, $return);
+    }
+
+    public function testGetIndexElementWhenIndexTypeNameIsSubChildValue()
+    {
+        $data = new \SimpleXmlElement('
+            <ACTIVITY>
+                <DATASUMMARY>
+                    <VALUE id="1">10</VALUE>
+                </DATASUMMARY>
+            </ACTIVITY>
+        ');
+        $indexTypeName = 'DATASUMMARY_VALUE';
+
+        $returnExpected = "10";
+        $return = $this->getIndexElement($data, $indexTypeName);
+
+        $this->assertEquals($returnExpected, $return);
+    }
+
+    public function testGetIndexElementWhenIndexTypeNameIsSubChildAttribute()
+    {
+        $data = new \SimpleXmlElement('
+            <ACTIVITY>
+                <VALUE id="1">10</VALUE>
+            </ACTIVITY>
+        ');
+        $indexTypeName = 'VALUE_id';
+
+        $returnExpected = "1";
+        $return = $this->getIndexElement($data, $indexTypeName);
+
+        $this->assertEquals($returnExpected, $return);
+    }
+
+    public function testGetIndexElementWhenIndexTypeNameIsTwoSubChildAttribute()
+    {
+        $data = new \SimpleXmlElement('
+            <ACTIVITY>
+                <DATASUMMARY>
+                    <VALUE id="1">10</VALUE>
+                </DATASUMMARY>
+            </ACTIVITY>
+        ');
+        $indexTypeName = 'DATASUMMARY_VALUE_id';
+
+        $returnExpected = "1";
+        $return = $this->getIndexElement($data, $indexTypeName);
+
+        $this->assertEquals($returnExpected, $return);
+    }
+
+    /**
+     * Function copied from XmlDeserializationVisitor because private function but want to test it
+     */
+    public function getIndexElement(\SimpleXMLElement $xml, $indexTypeName)
+    {
+        if ($indexTypeName === "_HIMSELF_") {
+            $indexElement = $xml;
+
+            return $indexElement;
+        }
+
+        if (strpos($indexTypeName, '_')) {
+            $indexArray = explode("_", $indexTypeName);
+            $indexElement = $this->findIndexElementInXml($xml, $indexArray);
+        } else {
+            $indexElement = $xml->$indexTypeName;
+        }
+
+        return $indexElement;
+    }
+
+    public function testFindIndexElementInXmlWhenIsArrayWithOneValue()
+    {
+        $data = new \SimpleXmlElement('
+            <ACTIVITY>
+                <VALUE id="1">10</VALUE>
+            </ACTIVITY>
+        ');
+        $indexArray = [0 => 'VALUE'];
+
+        $expectedReturn = "10";
+        $return = $this->findIndexElementInXml($data, $indexArray);
+
+        $this->assertEquals($expectedReturn, $return);
+    }
+
+    public function testFindIndexElementInXmlWhenIsArrayWithOneValueAndOneAttribute()
+    {
+        $data = new \SimpleXmlElement('
+            <ACTIVITY>
+                    <VALUE id="1">10</VALUE>
+            </ACTIVITY>
+        ');
+        $indexArray = [0 => 'VALUE', 1 => 'id'];
+
+        $expectedReturn = "1";
+        $return = $this->findIndexElementInXml($data, $indexArray);
+
+        $this->assertEquals($expectedReturn, $return);
+    }
+
+    public function testFindIndexElementInXmlWhenIsArrayWithTwoValues()
+    {
+        $data = new \SimpleXmlElement('
+            <ACTIVITY>
+                    <DATASUMMARY>
+                        <VALUE id="1">10</VALUE>
+                    </DATASUMMARY>
+            </ACTIVITY>
+        ');
+        $indexArray = [0 => 'DATASUMMARY', 1 => 'VALUE'];
+
+        $expectedReturn = "10";
+        $return = $this->findIndexElementInXml($data, $indexArray);
+
+        $this->assertEquals($expectedReturn, $return);
+    }
+
+    public function testFindIndexElementInXmlWhenIsArrayWithTwoValuesAndOneAttribute()
+    {
+        $data = new \SimpleXmlElement('
+            <ACTIVITY>
+                    <DATASUMMARY>
+                        <VALUE id="1">10</VALUE>
+                    </DATASUMMARY>
+            </ACTIVITY>
+        ');
+        $indexArray = [0 => 'DATASUMMARY', 1 => 'VALUE', 2 => 'id'];
+
+        $expectedReturn = "1";
+        $return = $this->findIndexElementInXml($data, $indexArray);
+
+        $this->assertEquals($expectedReturn, $return);
+    }
+
+    /**
+     * @expectedException JMS\Serializer\Exception\RuntimeException
+     * @expectedExceptionMessageRegExp /Can't find value for index in XML Element attribute or value/
+     */
+    public function testFindIndexElementInXmlThrowsException()
+    {
+        $data = new \SimpleXmlElement('
+            <ACTIVITY>
+                    <DATASUMMARY>
+                        <VALUE id="1">10</VALUE>
+                    </DATASUMMARY>
+            </ACTIVITY>
+        ');
+        $indexArray = [0 => 'UNEXISTINGVALUE'];
+
+        $return = $this->findIndexElementInXml($data, $indexArray);
+    }
+
+    /**
+     * Function copied from XmlDeserializationVisitor because private function but want to test it
+     */
+    public function findIndexElementInXml(\SimpleXMLElement $xml, array $indexArray)
+    {
+        $indexElement = $xml;
+
+        foreach ($indexArray as $index) {
+            if (!empty($indexElement->$index)) {
+                $indexElement = $indexElement->$index;
+            } else if (!empty($indexElement[$index])) {
+                $indexElement = $indexElement[$index];
+            } else {
+                throw new RuntimeException(sprintf("Can't find value for index in XML Element attribute or value"));
+            }
+        }
+
+        return $indexElement;
+    }
+
+    /**
     public function testVisitArrayWhenThreeParametersInAnnotationAndNoUnderscore() // Test not finished/working
     {
         $xmlDeserializationVisitor = new XmlDeserializationVisitor(new SerializedNameAnnotationStrategy(new CamelCaseNamingStrategy()));
@@ -95,5 +295,5 @@ class XmlDeserializationVisitorTest extends \PHPUnit_Framework_TestCase
 
         return $xml;
     }
-
+    **/
 }
