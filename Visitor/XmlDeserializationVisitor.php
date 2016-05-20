@@ -395,18 +395,20 @@ class XmlDeserializationVisitor extends AbstractVisitor
      * Get the index Element for custom visitArray method
      *
      * Chosen "_" in annotation to indicate that we want to access to subchild of XML Element
+     * And _HIMSELF_ for current element value
      *
-     * Example :
-     * If "a_b" in annotation, we do $xml->a->b
-     * If "c" in annotation, we do $xml->c
-     *
+     * Examples :
+     * If "_HIMSELF_" in annotation, it returns $xml
+     * If "a_b" in annotation, it returns $xml->a->b
+     * If "c" in annotation, it returns $xml->c
+     * 
      * @param \SimpleXMLElement $xml
      * @param string $indexTypeName
      * @return mixed
      */
     private function getIndexElement(\SimpleXMLElement $xml, $indexTypeName)
     {
-        if ($indexTypeName === "_HIMSELF_"){
+        if ($indexTypeName === "_HIMSELF_") {
             $indexElement = $xml;
 
             return $indexElement;
@@ -414,17 +416,36 @@ class XmlDeserializationVisitor extends AbstractVisitor
 
         if (strpos($indexTypeName, '_')) {
             $indexArray = explode("_", $indexTypeName);
-            $indexElement = $xml;
-
-            foreach ($indexArray as $index) {
-                if (!empty($indexElement->$index)){
-                    $indexElement = $indexElement->$index;
-                } else {
-                    $indexElement = $indexElement[$index];
-                }
-            }
+            $indexElement = $this->findIndexElementInXml($xml, $indexArray);
         } else {
             $indexElement = $xml->$indexTypeName;
+        }
+
+        return $indexElement;
+    }
+
+    /**
+     * Finds the index element in XML
+     *
+     * Search priority is value / attribute
+     *
+     * @param \SimpleXMLElement $xml
+     * @param array $indexArray
+     * @return mixed
+     * @throws RuntimeException
+     */
+    private function findIndexElementInXml(\SimpleXMLElement $xml, array $indexArray)
+    {
+        $indexElement = $xml;
+
+        foreach ($indexArray as $index) {
+            if (!empty($indexElement->$index)) {
+                $indexElement = $indexElement->$index;
+            } else if (!empty($indexElement[$index])) {
+                $indexElement = $indexElement[$index];
+            } else {
+                throw new RuntimeException(sprintf("Can't find value for index in XML Element attribute or value"));
+            }
         }
 
         return $indexElement;
