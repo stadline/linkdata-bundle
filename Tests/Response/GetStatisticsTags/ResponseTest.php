@@ -32,7 +32,26 @@ class ResponseTest extends ResponseTestCase
     {
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Statistic\Statistic", $object);
 
-        // No time remaining to test sub elements
+        $this->assertObjectHasAttribute('tags', $object);
+        $this->assertObjectHasAttribute('version', $object);
+        $this->assertObjectHasAttribute('calculatedAt', $object);
+
+        $tagsCollection = $object->getTags();
+
+        $this->assertInstanceOf("Doctrine\Common\Collections\ArrayCollection", $tagsCollection);
+
+        $firstTagOfCollection = $tagsCollection->first();
+
+        $this->assertElementsAreIndexed($tagsCollection, $firstTagOfCollection, 'getName');
+
+        $this->assertIsTag($firstTagOfCollection);
+    }
+
+    private function assertIsTag($object)
+    {
+        $this->assertInstanceOf('Geonaute\LinkdataBundle\Entity\Statistic\Tag', $object);
+
+        $this->assertObjectHasAttribute('name', $object);
     }
 
 }

@@ -34,7 +34,26 @@ class ResponseTest extends ResponseTestCase
     {
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Users\Activity", $object);
 
-        // No time remaining to test sub elements
+        $this->assertObjectHasAttribute('startDate', $object);
+        $this->assertObjectHasAttribute('timezone', $object);
+        $this->assertObjectHasAttribute('sportId', $object);
+        $this->assertObjectHasAttribute('libelle', $object);
+        $this->assertObjectHasAttribute('manual', $object);
+        $this->assertObjectHasAttribute('deviceModelId', $object);
+        $this->assertObjectHasAttribute('createdAt', $object);
+        $this->assertObjectHasAttribute('dataSummaries', $object);
+        $this->assertObjectHasAttribute('about', $object);
+        $this->assertObjectHasAttribute('tags', $object);
+
+        $activityDataSummariesCollection = $object->getDataSummaries();
+
+        $this->assertInstanceOf("Doctrine\Common\Collections\ArrayCollection", $activityDataSummariesCollection);
+
+        $firstDataSummaryOfCollection = $activityDataSummariesCollection->first();
+
+        //$this->assertElementsAreIndexed($activityDataSummariesCollection, $firstDataSummaryOfCollection, 'getUnitId');
+
+        //$this->assertIsDataSummary($firstDataSummaryOfCollection);
     }
 
 }

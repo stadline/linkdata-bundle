@@ -9,8 +9,8 @@ class Statistic
 
     /**
      * @Serializer\SerializedName("TAGS")
-     * @Serializer\XmlList(entry = "TAG")
-     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Statistic\Tag>")
+     * @Serializer\XmlMap(entry = "TAG", keyAttribute = "name")
+     * @Serializer\Type("ArrayCollection<string, Geonaute\LinkdataBundle\Entity\Statistic\Tag>")
      *
      * @var array<Tag>
      */

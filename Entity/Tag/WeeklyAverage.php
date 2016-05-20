@@ -9,8 +9,8 @@ class WeeklyAverage
 
     /**
      * @Serializer\SerializedName("DATATYPES")
-     * @Serializer\XmlList(entry = "DATATYPE")
-     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Tag\Datatype>")
+     * @Serializer\XmlMap(entry = "DATATYPE", keyAttribute="id")
+     * @Serializer\Type("ArrayCollection<string, Geonaute\LinkdataBundle\Entity\Tag\Datatype>")
      *
      * @var array<Datatype>
      */

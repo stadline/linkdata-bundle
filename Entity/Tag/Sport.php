@@ -10,8 +10,8 @@ class Sport extends BaseSport
 
     /**
      * @Serializer\SerializedName("VALUE")
-     * @Serializer\XmlMap(inline = true, entry = "VALUE")
-     * @Serializer\Type("array<string>")
+     * @Serializer\XmlMap(inline = true, entry = "VALUE", keyAttribute = "id")
+     * @Serializer\Type("array<string, string>")
      *
      * @var array
      */

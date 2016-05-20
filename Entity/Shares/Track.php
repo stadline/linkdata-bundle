@@ -11,8 +11,8 @@ class Track extends BaseTrack
 
     /**
      * @Serializer\SerializedName("DETAIL")
-     * @Serializer\XmlMap(entry = "LOCATION")
-     * @Serializer\Type("array<Geonaute\LinkdataBundle\Entity\Tracks\Location>")
+     * @Serializer\XmlMap(entry = "LOCATION", keyAttribute="elapsed_time")
+     * @Serializer\Type("array<string, Geonaute\LinkdataBundle\Entity\Tracks\Location>")
      *
      * @var array<Location>
      */

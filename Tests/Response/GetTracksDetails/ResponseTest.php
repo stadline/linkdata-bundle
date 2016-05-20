@@ -26,7 +26,23 @@ class ResponseTest extends ResponseTestCase
     {
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Tracks\Track", $object);
 
-        // No time remaining to test sub elements
+        $this->assertObjectHasAttribute('locations', $object);
+
+        $trackLocationsArray = $object->getLocations();
+
+        $this->assertInternalType('array', $trackLocationsArray);
+
+        $this->assertIsLocation($trackLocationsArray[0]);
+    }
+
+    public function assertIsLocation($object)
+    {
+        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Tracks\Location", $object);
+        
+        $this->assertObjectHasAttribute('elapsedTime', $object);
+        $this->assertObjectHasAttribute('latitude', $object);
+        $this->assertObjectHasAttribute('longitude', $object);
+        $this->assertObjectHasAttribute('elevation', $object);
     }
 
 }

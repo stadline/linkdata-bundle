@@ -30,7 +30,7 @@ class Profile
     /**
      * @Serializer\SerializedName("TOTALS")
      * @Serializer\XmlMap(entry = "TOTAL_DATATYPE", keyAttribute = "datatype_id")
-     * @Serializer\Type("array<integer>")
+     * @Serializer\Type("array<integer, integer>")
      *
      * @var array
      */

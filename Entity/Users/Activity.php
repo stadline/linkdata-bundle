@@ -72,7 +72,7 @@ class Activity extends BaseActivity implements ActivityToStringInterface
 
     /**
      * @Serializer\SerializedName("DATASUMMARY")
-     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Users\DataSummary>")
+     * @Serializer\Type("ArrayCollection<string, Geonaute\LinkdataBundle\Entity\Users\DataSummary, VALUE_ID>")
      *
      * @var array<DataSummary>
      */

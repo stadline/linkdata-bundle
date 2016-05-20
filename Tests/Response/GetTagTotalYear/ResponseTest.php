@@ -26,7 +26,31 @@ class ResponseTest extends ResponseTestCase
     {
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Tag\TotalYear", $object);
 
-        // No time remaining to test sub elements
+        $this->assertObjectHasAttribute('totalPoints', $object);
+        $this->assertObjectHasAttribute('totalUsers', $object);
+        $this->assertObjectHasAttribute('totalActivities', $object);
+        $this->assertObjectHasAttribute('year', $object);
+        $this->assertObjectHasAttribute('sports', $object);
+
+        $sportsCollection = $object->getSports();
+
+        $this->assertInstanceOf("Doctrine\Common\Collections\ArrayCollection", $sportsCollection);
+
+        $firstSportOfCollection = $sportsCollection->first();
+
+        $this->assertElementsAreIndexed($sportsCollection, $firstSportOfCollection, 'getId');
+
+        $this->assertIsSport($firstSportOfCollection);
+    }
+
+    private function assertIsSport($object)
+    {
+        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Tag\Sport", $object);
+
+        $this->assertObjectHasAttribute('id', $object);
+        $this->assertObjectHasAttribute('values', $object);
+
+        $this->assertInternalType('array', $object->getValues());
     }
 
 }

@@ -26,7 +26,25 @@ class ResponseTest extends ResponseTestCase
     {
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Tag\WeeklyAverage", $object);
 
-        // No time remaining to test sub elements
+        $this->assertObjectHasAttribute('datatypes', $object);
+
+        $datatypesCollection = $object->getDatatypes();
+
+        $this->assertInstanceOf("Doctrine\Common\Collections\ArrayCollection", $datatypesCollection);
+
+        $firstDatatypeOfCollection = $datatypesCollection->first();
+
+        $this->assertElementsAreIndexed($datatypesCollection, $firstDatatypeOfCollection, 'getId');
+
+        $this->assertIsDatatype($firstDatatypeOfCollection);
+    }
+
+    private function assertIsDatatype($object)
+    {
+        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Tag\Datatype", $object);
+
+        $this->assertObjectHasAttribute('id', $object);
+        $this->assertObjectHasAttribute('value', $object);
     }
 
 }

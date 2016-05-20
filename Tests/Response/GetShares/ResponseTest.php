@@ -8,7 +8,7 @@ use Geonaute\LinkdataBundle\Mock\Model\GetSharesMock;
 class ResponseTest extends ResponseTestCase
 {
 
-    public function testGetSharesResponse()
+    public function testGetSharesResponse() // All is not tested
     {
         $serializer = $this->getSerializer();
 
