@@ -27,15 +27,7 @@ class ResponseTest extends ResponseTestCase
 
         $this->assertElementsAreIndexed($tagsCollection, $firstTagOfCollection, 'getName');
 
-        $this->assertIsTag($firstTagOfCollection);
-    }
-
-    private function assertIsTag($object)
-    {
-        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Users\ActivitiesTag", $object);
-
-        $this->assertObjectHasAttribute('name', $object);
-        $this->assertObjectHasAttribute('cardinality', $object);
+        $this->assertIsActivitiesTag($firstTagOfCollection);
     }
 
 }

@@ -27,16 +27,7 @@ class ResponseTest extends ResponseTestCase
 
         $this->assertElementsAreIndexed($sportsCollection, $firstSportOfCollection, 'getId');
 
-        $this->assertIsSport($firstSportOfCollection);
-    }
-
-    private function assertIsSport($object)
-    {
-        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Users\ActivitiesSport", $object);
-
-        $this->assertObjectHasAttribute('id', $object);
-        $this->assertObjectHasAttribute('cardinality', $object);
-        $this->assertObjectHasAttribute('sport', $object);
+        $this->assertIsActivitiesSport($firstSportOfCollection);
     }
 
 }

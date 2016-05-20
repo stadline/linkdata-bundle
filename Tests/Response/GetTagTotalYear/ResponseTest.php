@@ -43,7 +43,7 @@ class ResponseTest extends ResponseTestCase
         $this->assertIsSport($firstSportOfCollection);
     }
 
-    private function assertIsSport($object)
+    public function assertIsSport($object)
     {
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Tag\Sport", $object);
 

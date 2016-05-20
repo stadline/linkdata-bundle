@@ -34,7 +34,7 @@ class ResponseTest extends ResponseTestCase
     {
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Users\Tag", $object);
 
-        // No time remaining to test sub elements
+        $this->assertObjectHasAttribute('name', $object);
     }
 
 }

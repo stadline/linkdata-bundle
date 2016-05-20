@@ -26,7 +26,7 @@ class ResponseTest extends ResponseTestCase
     {
         $this->assertInstanceOf('Geonaute\LinkdataBundle\Entity\Shares\Share', $object);
 
-        // No time remaining to test sub elements
+        $this->assertObjectHasAttribute('token', $object);
     }
 
 }

@@ -24,7 +24,7 @@ class SharedActivity extends BaseActivity
      *
      * @var string
      */
-    protected $startdate;
+    protected $startDate;
 
     /**
      * @Serializer\SerializedName("SPORTID")
@@ -111,7 +111,7 @@ class SharedActivity extends BaseActivity
      * @param integer $datatypeId
      * @return Value
      */
-    protected function getSummary($datatypeId)
+    public function getSummary($datatypeId)
     {
         if (array_key_exists($datatypeId, $this->summary)) {
             return $this->summary[$datatypeId];
@@ -147,7 +147,7 @@ class SharedActivity extends BaseActivity
     /**
      * @return integer
      */
-    public function getStartdate()
+    public function getStartDate()
     {
         return \DateTime::createFromFormat('Y-m-d H:i:s', $this->startdate);
     }

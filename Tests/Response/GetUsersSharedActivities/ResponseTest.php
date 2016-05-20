@@ -32,7 +32,14 @@ class ResponseTest extends ResponseTestCase
     {
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Users\SharedActivity", $object);
 
-        // No time remaining to test sub elements
+        $this->assertObjectHasAttribute('id', $object);
+        $this->assertObjectHasAttribute('token', $object);
+        $this->assertObjectHasAttribute('startDate', $object);
+        $this->assertObjectHasAttribute('sportId', $object);
+        $this->assertObjectHasAttribute('libelle', $object);
+        $this->assertObjectHasAttribute('summary', $object);
+
+        $this->assertIsValue($object->getSummary(4));
     }
 
 }

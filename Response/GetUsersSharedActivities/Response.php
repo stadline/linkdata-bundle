@@ -44,11 +44,11 @@ class Response extends BaseResponse
      */
     public function orderActivities($activityA, $activityB)
     {
-        if ($activityA->getStartdate() == $activityB->getStartdate()) {
+        if ($activityA->getStartDate() == $activityB->getStartDate()) {
             return 0;
         }
         
-        return ($activityA->getStartdate() > $activityB->getStartdate()) ? -1 : 1;
+        return ($activityA->getStartDate() > $activityB->getStartDate()) ? -1 : 1;
     }
 
 }

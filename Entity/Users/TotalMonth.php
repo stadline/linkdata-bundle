@@ -27,8 +27,8 @@ class TotalMonth
 
     /**
      * @Serializer\SerializedName("SPORTS")
-     * @Serializer\XmlList(entry = "SPORT")
-     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Common\Sport>")
+     * @Serializer\XmlMap(entry = "SPORT", keyAttribute = "id")
+     * @Serializer\Type("ArrayCollection<string, Geonaute\LinkdataBundle\Entity\Common\Sport>")
      *
      * @var array<Sport>
      */

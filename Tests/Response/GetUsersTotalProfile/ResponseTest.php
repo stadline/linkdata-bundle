@@ -22,12 +22,4 @@ class ResponseTest extends ResponseTestCase
         $this->assertIsProfile($response->getProfile());
     }
 
-    private function assertIsProfile($object)
-    {
-        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Users\Profile", $object);
-
-        // No time remaining to test sub elements
-
-    }
-
 }

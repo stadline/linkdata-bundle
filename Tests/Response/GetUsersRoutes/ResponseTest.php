@@ -28,11 +28,4 @@ class ResponseTest extends ResponseTestCase
         $this->assertIsRoute($firstRouteOfCollection);
     }
 
-    public function assertIsRoute($object)
-    {
-        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Common\Route", $object);
-
-        // No time remaining to test sub elements
-    }
-
 }

@@ -48,6 +48,23 @@ class WebTestCase extends \PHPUnit_Framework_TestCase
         $this->assertObjectHasAttribute('challenge', $object);
     }
 
+    public function assertIsActivitiesSport($object)
+    {
+        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Users\ActivitiesSport", $object);
+
+        $this->assertObjectHasAttribute('id', $object);
+        $this->assertObjectHasAttribute('cardinality', $object);
+        $this->assertObjectHasAttribute('sport', $object);
+    }
+
+    public function assertIsActivitiesTag($object)
+    {
+        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Users\ActivitiesTag", $object);
+
+        $this->assertObjectHasAttribute('name', $object);
+        $this->assertObjectHasAttribute('cardinality', $object);
+    }
+
     public function assertIsDataStream($object)
     {
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Activity\DataStream", $object);
@@ -101,6 +118,19 @@ class WebTestCase extends \PHPUnit_Framework_TestCase
         $this->assertIsValue($measureValues[0]);
     }
 
+    public function assertIsProfile($object)
+    {
+        $this->assertInstanceOf('Geonaute\LinkdataBundle\Entity\Users\Profile', $object);
+
+        $this->assertObjectHasAttribute('user', $object);
+        $this->assertObjectHasAttribute('sportIds', $object);
+        $this->assertObjectHasAttribute('totals', $object);
+
+        $this->assertInternalType('array', $object->getSportIds());
+
+        $this->assertIsTotalProfileUser($object->getUser());
+    }
+
     public function assertIsRankingUser($object)
     {
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Users\RankingUser", $object);
@@ -132,6 +162,13 @@ class WebTestCase extends \PHPUnit_Framework_TestCase
         $this->assertIsLocation($locationsArray[0]);
     }
 
+    public function assertIsSport($object)
+    {
+        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Common\Sport", $object);
+
+        $this->assertObjectHasAttribute('id', $object);
+    }
+
     public function assertIsSummary($object)
     {
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Route\Summary", $object);
@@ -147,13 +184,51 @@ class WebTestCase extends \PHPUnit_Framework_TestCase
     public function assertIsTotalMonth($object)
     {
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Users\TotalMonth", $object);
+
+        $this->assertObjectHasAttribute('month', $object);
+        $this->assertObjectHasAttribute('shareToken', $object);
+        $this->assertObjectHasAttribute('sports', $object);
+
+        $sportsCollection = $object->getSports();
+
+        $this->assertInstanceOf("Doctrine\Common\Collections\ArrayCollection", $sportsCollection);
+
+        $firstSportOfCollection = $sportsCollection->first();
+
+        $this->assertElementsAreIndexed($sportsCollection, $firstSportOfCollection, 'getId');
+
+        $this->assertIsSport($firstSportOfCollection);
+    }
+
+    public function assertIsTotalProfileUser($object)
+    {
+        $this->assertInstanceOf('Geonaute\LinkdataBundle\Entity\Users\TotalProfileUser', $object);
+
+        $this->assertObjectHasAttribute('firstName', $object);
+        $this->assertObjectHasAttribute('lastName', $object);
+        $this->assertObjectHasAttribute('ldid', $object);
+        $this->assertObjectHasAttribute('country', $object);
+        $this->assertObjectHasAttribute('gender', $object);
+        $this->assertObjectHasAttribute('totalOns', $object);
     }
 
     public function assertIsUsersTotalYearTotalYear($object)
     {
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Users\UsersTotalYearTotalYear", $object);
 
-        // No time remaining to test sub elementss
+        $this->assertObjectHasAttribute('year', $object);
+        $this->assertObjectHasAttribute('shareToken', $object);
+        $this->assertObjectHasAttribute('sports', $object);
+
+        $sportsCollection = $object->getSports();
+
+        $this->assertInstanceOf("Doctrine\Common\Collections\ArrayCollection", $sportsCollection);
+
+        $firstSportOfCollection = $sportsCollection->first();
+
+        $this->assertElementsAreIndexed($sportsCollection, $firstSportOfCollection, 'getId');
+
+        $this->assertIsSport($firstSportOfCollection);
     }
 
     public function assertIsValue($object)

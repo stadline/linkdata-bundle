@@ -30,29 +30,4 @@ class ResponseTest extends ResponseTestCase
         $this->assertIsProfile($firstFriendOfCollection);
     }
 
-    private function assertIsProfile($object)
-    {
-        $this->assertInstanceOf('Geonaute\LinkdataBundle\Entity\Users\Profile', $object);
-
-        $this->assertObjectHasAttribute('user', $object);
-        $this->assertObjectHasAttribute('sportIds', $object);
-        $this->assertObjectHasAttribute('totals', $object);
-
-        $this->assertInternalType('array', $object->getSportIds());
-
-        $this->assertIsTotalProfileUser($object->getUser());
-    }
-
-    private function assertIsTotalProfileUser($object)
-    {
-        $this->assertInstanceOf('Geonaute\LinkdataBundle\Entity\Users\TotalProfileUser', $object);
-
-        $this->assertObjectHasAttribute('firstName', $object);
-        $this->assertObjectHasAttribute('lastName', $object);
-        $this->assertObjectHasAttribute('ldid', $object);
-        $this->assertObjectHasAttribute('country', $object);
-        $this->assertObjectHasAttribute('gender', $object);
-        $this->assertObjectHasAttribute('totalOns', $object);
-    }
-
 }

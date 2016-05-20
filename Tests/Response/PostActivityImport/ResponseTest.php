@@ -24,8 +24,22 @@ class ResponseTest extends ResponseTestCase
 
     private function assertIsPostActivityImport($object)
     {
-         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Activity\PostImportActivity", $object);
+        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Activity\PostImportActivity", $object);
 
-        // No time remaining to test sub elementss
+        $this->assertObjectHasAttribute('id', $object);
+        $this->assertObjectHasAttribute('userId', $object);
+        $this->assertObjectHasAttribute('sportId', $object);
+        $this->assertObjectHasAttribute('deviceId', $object);
+        $this->assertObjectHasAttribute('deviceModelId', $object);
+        $this->assertObjectHasAttribute('startDate', $object);
+        $this->assertObjectHasAttribute('duration', $object);
+        $this->assertObjectHasAttribute('libelle', $object);
+        $this->assertObjectHasAttribute('latitude', $object);
+        $this->assertObjectHasAttribute('longitude', $object);
+        $this->assertObjectHasAttribute('elevation', $object);
+        $this->assertObjectHasAttribute('trackId', $object);
+        $this->assertObjectHasAttribute('createdAt', $object);
+        $this->assertObjectHasAttribute('updateTime', $object);
     }
+
 }

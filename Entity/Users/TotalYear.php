@@ -27,8 +27,8 @@ class TotalYear
 
     /**
      * @Serializer\SerializedName("SPORTS")
-     * @Serializer\XmlList(entry = "SPORT")
-     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Tag\Sport>")
+     * @Serializer\XmlMap(entry = "SPORT", keyAttribute="id")
+     * @Serializer\Type("ArrayCollection<string, Geonaute\LinkdataBundle\Entity\Tag\Sport>")
      *
      * @var array<Sport>
      */

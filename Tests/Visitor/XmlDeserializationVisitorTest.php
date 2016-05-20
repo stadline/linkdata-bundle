@@ -9,7 +9,7 @@ use JMS\Serializer\Naming\CamelCaseNamingStrategy;
 class XmlDeserializationVisitorTest extends \PHPUnit_Framework_TestCase
 {
 
-    public function testVisitArrayWhenThreeParametersInAnnotationAndNoUnderscore()
+    public function testVisitArrayWhenThreeParametersInAnnotationAndNoUnderscore() // Test not finished/working
     {
         $xmlDeserializationVisitor = new XmlDeserializationVisitor(new SerializedNameAnnotationStrategy(new CamelCaseNamingStrategy()));
         $data = $this->getXmlElementExampleForNoUnderscore();
@@ -34,7 +34,7 @@ class XmlDeserializationVisitorTest extends \PHPUnit_Framework_TestCase
         $testReturn = $xmlDeserializationVisitor->visitArray($data, $type, $contextMock);
     }
 
-    public function testVisitArrayWhenThreeParametersInAnnotationAndUnderscore()
+    public function testVisitArrayWhenThreeParametersInAnnotationAndUnderscore() // Test not finished/working
     {
         $xmlDeserializationVisitorMock = $this->getMockBuilder('Geonaute\LinkdataBundle\Visitor\XmlDeserializationVisitor')
                 ->disableOriginalConstructor()
