@@ -54,7 +54,7 @@ class ResponseTest extends ResponseTestCase
     {
         $this->assertInstanceOf('Geonaute\LinkdataBundle\Entity\Shares\Activity', $object);
 
-        // No time remaining to test sub elementss
+        // No time remaining to test sub elements
     }
 
     private function assertIsStatistics($object)

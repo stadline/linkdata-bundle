@@ -33,11 +33,4 @@ class ResponseTest extends ResponseTestCase
         $this->assertIsRankingUser($firstRankingUserOfCollection);
     }
 
-    public function assertIsRankingUser($object)
-    {
-        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Users\RankingUser", $object);
-
-        // No time remaining to test sub elements
-    }
-
 }

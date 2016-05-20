@@ -32,7 +32,22 @@ class ResponseTest extends ResponseTestCase
     {
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Users\RecordsSport", $object);
 
-        // No time remaining to test sub elements
+        $this->assertObjectHasAttribute('records', $object);
+
+        $recordsCollection = $object->getRecords();
+
+        $this->assertInstanceOf("Doctrine\Common\Collections\ArrayCollection", $recordsCollection);
+
+        $firstRecordOfCollection = $recordsCollection->first();
+
+//        $this->assertElementsAreIndexed($recordsCollection, $firstRecordOfCollection, 'getId');
+//
+//        $this->assertIsRecord($firstRecordOfCollection);
+    }
+
+    private function assertIsRecord($object)
+    {
+        
     }
 
 }

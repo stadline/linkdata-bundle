@@ -22,11 +22,15 @@ class ResponseTest extends ResponseTestCase
         $this->assertIsProfileUser($response->getUser());
     }
 
-    public function assertIsProfileUser($object)
+    private function assertIsProfileUser($object)
     {
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Users\ProfileUser", $object);
 
-        // No time remaining to test sub elements
+        $this->assertObjectHasAttribute('firstName', $object);
+        $this->assertObjectHasAttribute('lastName', $object);
+        $this->assertObjectHasAttribute('ldid', $object);
+        $this->assertObjectHasAttribute('country', $object);
+        $this->assertObjectHasAttribute('language', $object);
     }
 
 }

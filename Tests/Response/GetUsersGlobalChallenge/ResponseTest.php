@@ -26,7 +26,21 @@ class ResponseTest extends ResponseTestCase
     {
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Users\GlobalChallenge", $object);
 
-        // No time remaining to test sub elements
+        $this->assertObjectHasAttribute('token', $object);
+        $this->assertObjectHasAttribute('name', $object);
+        $this->assertObjectHasAttribute('beforeMessage', $object);
+        $this->assertObjectHasAttribute('currentMessage', $object);
+        $this->assertObjectHasAttribute('afterMessage', $object);
+        $this->assertObjectHasAttribute('publishDate', $object);
+        $this->assertObjectHasAttribute('startedAt', $object);
+        $this->assertObjectHasAttribute('endedAt', $object);
+        $this->assertObjectHasAttribute('result', $object);
+        $this->assertObjectHasAttribute('target', $object);
+        $this->assertObjectHasAttribute('targetUnitId', $object);
+        $this->assertObjectHasAttribute('imageUrl', $object);
+        $this->assertObjectHasAttribute('current', $object);
+        $this->assertObjectHasAttribute('averageContribution', $object);
+        $this->assertObjectHasAttribute('userContribution', $object);
     }
 
 }

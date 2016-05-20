@@ -22,11 +22,14 @@ class ResponseTest extends ResponseTestCase
         $this->assertIsMeasureGoal($response->getMeasuresGoal());
     }
 
-    public function assertIsMeasureGoal($object)
+    private function assertIsMeasureGoal($object)
     {
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Users\MeasuresGoal", $object);
 
-        // No time remaining to test sub elements
+        $this->assertObjectHasAttribute('startedAt', $object);
+        $this->assertObjectHasAttribute('datatypeId', $object);
+        $this->assertObjectHasAttribute('initial', $object);
+        $this->assertObjectHasAttribute('goal', $object);
     }
 
 }

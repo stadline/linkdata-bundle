@@ -51,9 +51,16 @@ class ResponseTest extends ResponseTestCase
 
         $firstDataSummaryOfCollection = $activityDataSummariesCollection->first();
 
-        //$this->assertElementsAreIndexed($activityDataSummariesCollection, $firstDataSummaryOfCollection, 'getUnitId');
+        $this->assertElementsAreIndexed($activityDataSummariesCollection, $firstDataSummaryOfCollection, 'getUnitId');
 
-        //$this->assertIsDataSummary($firstDataSummaryOfCollection);
+        $this->assertIsDataSummary($firstDataSummaryOfCollection);
+    }
+
+    public function assertIsDataSummary($object)
+    {
+        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Users\DataSummary", $object);
+
+        // old class not matching API return
     }
 
 }

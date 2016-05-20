@@ -101,6 +101,21 @@ class WebTestCase extends \PHPUnit_Framework_TestCase
         $this->assertIsValue($measureValues[0]);
     }
 
+    public function assertIsRankingUser($object)
+    {
+        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Users\RankingUser", $object);
+
+        $this->assertObjectHasAttribute('firstName', $object);
+        $this->assertObjectHasAttribute('lastName', $object);
+        $this->assertObjectHasAttribute('ldid', $object);
+        $this->assertObjectHasAttribute('country', $object);
+        $this->assertObjectHasAttribute('gender', $object);
+        $this->assertObjectHasAttribute('totalOns', $object);
+        $this->assertObjectHasAttribute('position', $object);
+        $this->assertObjectHasAttribute('total', $object);
+        $this->assertObjectHasAttribute('previousPosition', $object);
+    }
+
     public function assertIsRoute($object)
     {
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Common\Route", $object);

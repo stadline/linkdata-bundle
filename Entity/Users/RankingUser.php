@@ -29,14 +29,14 @@ class RankingUser extends TotalProfileUser
      *
      * @var integer
      */
-    protected $previous_position;
+    protected $previousPosition;
 
     /**
      * @return integer
      */
     public function getPreviousPosition()
     {
-        return $this->previous_position;
+        return $this->previousPosition;
     }
 
     /**

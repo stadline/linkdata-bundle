@@ -18,7 +18,6 @@ class DataSummary
 
     /**
      * @Serializer\SerializedName("id")
-     * @Serializer\XmlAttribute
      * @Serializer\XmlList(inline = true, entry = "VALUE")
      * @Serializer\Type("integer")
      *
