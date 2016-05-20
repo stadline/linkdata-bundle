@@ -30,13 +30,4 @@ class ResponseTest extends ResponseTestCase
         $this->assertIsDeviceModel($firstDeviceModelOfCollection);
     }
 
-    private function assertIsDeviceModel($object)
-    {
-        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Reference\DeviceModel", $object);
-
-        $this->assertObjectHasAttribute('id', $object);
-        $this->assertObjectHasAttribute('name', $object);
-        $this->assertObjectHasAttribute('brandId', $object);
-    }
-
 }

@@ -27,14 +27,7 @@ class ResponseTest extends ResponseTestCase
 
         $this->assertElementsAreIndexed($measuresCollection, $firstMeasureOfCollection, 'getUnitId');
 
-        $this->assertIsMeasure($firstMeasureOfCollection);
-    }
-
-    public function assertIsMeasure($object)
-    {
-        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Users\Measure", $object);
-
-        $this->assertObjectHasAttribute('unitId', $object);
+        $this->assertIsMeasureInUsersDirectory($firstMeasureOfCollection);
     }
 
 }

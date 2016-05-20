@@ -40,14 +40,22 @@ class ResponseTest extends ResponseTestCase
 
         $firstRecordOfCollection = $recordsCollection->first();
 
-//        $this->assertElementsAreIndexed($recordsCollection, $firstRecordOfCollection, 'getId');
-//
-//        $this->assertIsRecord($firstRecordOfCollection);
+        $this->assertElementsAreIndexed($recordsCollection, $firstRecordOfCollection, 'getId');
+
+        $this->assertIsRecord($firstRecordOfCollection);
     }
 
     private function assertIsRecord($object)
     {
-        
+        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Users\Record", $object);
+
+        $this->assertObjectHasAttribute('id', $object);
+        $this->assertObjectHasAttribute('value', $object);
+        $this->assertObjectHasAttribute('date', $object);
+        $this->assertObjectHasAttribute('activityToken', $object);
+
+        $this->assertNotNull($object->getId());
+        $this->assertNotInstanceOf('Geonaute\LinkdataBundle\Entity\Common\Value', $object->getValue());
     }
 
 }

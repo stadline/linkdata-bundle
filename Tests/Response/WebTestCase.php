@@ -93,9 +93,28 @@ class WebTestCase extends \PHPUnit_Framework_TestCase
         $this->assertIsValue($dataSummaryValues[0]);
     }
 
+    public function assertIsDeviceModel($object)
+    {
+        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Reference\DeviceModel", $object);
+
+        $this->assertObjectHasAttribute('id', $object);
+        $this->assertObjectHasAttribute('name', $object);
+        $this->assertObjectHasAttribute('brandId', $object);
+    }
+
     public function assertIsLocation($object)
     {
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Route\Location", $object);
+
+        $this->assertObjectHasAttribute('elapsedTime', $object);
+        $this->assertObjectHasAttribute('latitude', $object);
+        $this->assertObjectHasAttribute('longitude', $object);
+        $this->assertObjectHasAttribute('elevation', $object);
+    }
+
+    public function assertIsLocationInTracksDirectory($object)
+    {
+        $this->assertInstanceOf('Geonaute\LinkdataBundle\Entity\Tracks\Location', $object);
 
         $this->assertObjectHasAttribute('elapsedTime', $object);
         $this->assertObjectHasAttribute('latitude', $object);
@@ -110,6 +129,20 @@ class WebTestCase extends \PHPUnit_Framework_TestCase
         $this->assertObjectHasAttribute('values', $object);
         $this->assertObjectHasAttribute('elapsedTime', $object);
         $this->assertObjectHasAttribute('datatypes', $object);
+
+        $measureValues = $object->getValues();
+
+        $this->assertInternalType('array', $measureValues);
+
+        $this->assertIsValue($measureValues[0]);
+    }
+
+    public function assertIsMeasureInUsersDirectory($object)
+    {
+        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Users\Measure", $object);
+
+        $this->assertObjectHasAttribute('unitId', $object);
+        $this->assertObjectHasAttribute('values', $object);
 
         $measureValues = $object->getValues();
 

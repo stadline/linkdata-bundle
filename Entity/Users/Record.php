@@ -8,7 +8,6 @@ class Record
 {
 
     /**
-     * @Serializer\XmlAttribute
      * @Serializer\Type("integer")
      *
      * @var integer
@@ -17,7 +16,7 @@ class Record
 
     /**
      * @Serializer\SerializedName("VALUE")
-     * @Serializer\Type("integer")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Common\Value")
      *
      * @var integer
      */
@@ -38,6 +37,15 @@ class Record
      * @var string
      */
     protected $activityToken;
+
+    /**
+     * @Serializer\PostDeserialize
+     */
+    public function defineIdAndValueForDeserialization()
+    {
+        $this->id = $this->value->getId();
+        $this->value = $this->value->getValue();
+    }
 
     /**
      * @return string

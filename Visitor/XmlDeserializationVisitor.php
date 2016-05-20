@@ -417,7 +417,11 @@ class XmlDeserializationVisitor extends AbstractVisitor
             $indexElement = $xml;
 
             foreach ($indexArray as $index) {
-                $indexElement = $indexElement->$index;
+                if (!empty($indexElement->$index)){
+                    $indexElement = $indexElement->$index;
+                } else {
+                    $indexElement = $indexElement[$index];
+                }
             }
         } else {
             $indexElement = $xml->$indexTypeName;

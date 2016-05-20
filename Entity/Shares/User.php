@@ -19,8 +19,8 @@ class User extends BaseUser
 
     /**
      * @Serializer\SerializedName("MEASURES")
-     * @Serializer\XmlList("MEASURE")
-     * @Serializer\Type("array<Geonaute\LinkdataBundle\Entity\Users\Measure>")
+     * @Serializer\XmlMap(entry = "MEASURE", keyAttribute="unitid")
+     * @Serializer\Type("ArrayCollection<string, Geonaute\LinkdataBundle\Entity\Users\Measure>")
      *
      * @var array<Measure>
      */
