@@ -76,6 +76,16 @@ class WebTestCase extends \PHPUnit_Framework_TestCase
         $this->assertIsValue($dataSummaryValues[0]);
     }
 
+    public function assertIsLocation($object)
+    {
+        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Route\Location", $object);
+
+        $this->assertObjectHasAttribute('elapsedTime', $object);
+        $this->assertObjectHasAttribute('latitude', $object);
+        $this->assertObjectHasAttribute('longitude', $object);
+        $this->assertObjectHasAttribute('elevation', $object);
+    }
+
     public function assertIsMeasure($object)
     {
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Activity\Measure", $object);
@@ -95,14 +105,33 @@ class WebTestCase extends \PHPUnit_Framework_TestCase
     {
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Common\Route", $object);
 
-        // No time remaining to test sub elements
+        $this->assertObjectHasAttribute('summary', $object);
+        $this->assertObjectHasAttribute('locations', $object);
+
+        $this->assertIsSummary($object->getSummary());
+
+        $locationsArray = $object->getLocations();
+
+        $this->assertInternalType('array', $locationsArray);
+
+        $this->assertIsLocation($locationsArray[0]);
+    }
+
+    public function assertIsSummary($object)
+    {
+        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Route\Summary", $object);
+
+        $this->assertObjectHasAttribute('token', $object);
+        $this->assertObjectHasAttribute('libelle', $object);
+        $this->assertObjectHasAttribute('distance', $object);
+        $this->assertObjectHasAttribute('ascendant', $object);
+        $this->assertObjectHasAttribute('descendant', $object);
+        $this->assertObjectHasAttribute('ldid', $object);
     }
 
     public function assertIsTotalMonth($object)
     {
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Users\TotalMonth", $object);
-
-        // No time remaining to test sub elements
     }
 
     public function assertIsUsersTotalYearTotalYear($object)

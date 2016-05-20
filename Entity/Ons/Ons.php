@@ -8,7 +8,7 @@ class Ons
 {
 
     /**
-     * @Serializer\SerializedName("MONTHLYAVERAGE")
+     * @Serializer\SerializedName("MONTHLY_AVERAGE")
      * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Ons\MonthlyAverage")
      *
      * @var MonthlyAverage

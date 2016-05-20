@@ -26,7 +26,40 @@ class ResponseTest extends ResponseTestCase
     {
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Shares\SharesShare", $object);
 
-        // No time remaining to test sub elements
+        $this->assertObjectHasAttribute('token', $object);
+        $this->assertObjectHasAttribute('type', $object);
+        $this->assertObjectHasAttribute('level', $object);
+        $this->assertObjectHasAttribute('globalChallenge', $object);
+        $this->assertObjectHasAttribute('challenge', $object);
+        $this->assertObjectHasAttribute('activity', $object);
+        $this->assertObjectHasAttribute('statistics', $object);
+
+        //$this->assertIsGlobalChallenge($object->getGlobalChallenge()); Not in XML data
+        //$this->assertIsChallenge($object->getChallenge()); Not in XML data
+        $this->assertIsActivity($object->getActivity());
+        //$this->assertIsStatistics($object->getStatistics()); Not in XML data
+    }
+
+    private function assertIsGlobalChallenge($object)
+    {
+        $this->assertInstanceOf('Geonaute\LinkdataBundle\Entity\Shares\GlobalChallenge', $object);
+    }
+
+    private function assertIsChallenge($object)
+    {
+        $this->assertInstanceOf('Geonaute\LinkdataBundle\Entity\Shares\Challenge', $object);
+    }
+
+    private function assertIsActivity($object)
+    {
+        $this->assertInstanceOf('Geonaute\LinkdataBundle\Entity\Shares\Activity', $object);
+
+        // No time remaining to test sub elementss
+    }
+
+    private function assertIsStatistics($object)
+    {
+        $this->assertInstanceOf('Geonaute\LinkdataBundle\Entity\Shares\Statistics', $object);
     }
 
 }

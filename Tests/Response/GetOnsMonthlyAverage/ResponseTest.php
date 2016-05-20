@@ -26,7 +26,18 @@ class ResponseTest extends ResponseTestCase
     {
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Ons\Ons", $object);
 
-        // No time remaining to test sub elements
+        $this->assertObjectHasAttribute('monthlyAverage', $object);
+
+        $this->assertIsMonthlyAverage($object->getMonthlyAverage());
+    }
+
+    private function assertIsMonthlyAverage($object)
+    {
+        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Ons\MonthlyAverage", $object);
+
+        $this->assertObjectHasAttribute('value', $object);
+
+        $this->assertIsValue($object->getValue());
     }
 
 }

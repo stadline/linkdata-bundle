@@ -73,7 +73,7 @@ class ResponseTest extends ResponseTestCase
         $this->assertIsLocation($trackLocations[0]);
     }
 
-    private function assertIsLocation($object)
+    public function assertIsLocation($object)
     {
         $this->assertInstanceOf('Geonaute\LinkdataBundle\Entity\Tracks\Location', $object);
 
