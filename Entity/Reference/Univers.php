@@ -4,44 +4,47 @@ namespace Geonaute\LinkdataBundle\Entity\Reference;
 
 use JMS\Serializer\Annotation as Serializer;
 
-/**
- * Sport entity.
- *
- * @Serializer\XmlRoot("SPORT")
- */
 class Univers
 {
+
     /**
-     * @Serializer\Expose
-     * @Serializer\Type("integer")
      * @Serializer\SerializedName("ID")
+     * @Serializer\Type("integer")
+     *
+     * @var integer
      */
-    protected $ID;
+    protected $id;
 
     /**
-     * @Serializer\Expose
-     * @Serializer\Type("string")
      * @Serializer\SerializedName("NAME")
+     * @Serializer\Type("string")
+     *
+     * @var string
      */
-    protected $NAME;
+    protected $name;
 
-    public function getID()
+    /**
+     * @return string
+     */
+    public function __toString()
     {
-        return $this->ID;
+        return $this->getName();
     }
 
-    public function getNAME()
+    /**
+     * @return integer
+     */
+    public function getId()
     {
-        return $this->NAME;
+        return $this->id;
     }
 
-    public function setID($ID)
+    /**
+     * @return string
+     */
+    public function getName()
     {
-        $this->ID = $ID;
+        return $this->name;
     }
 
-    public function setNAME($NAME)
-    {
-        $this->NAME = $NAME;
-    }
 }

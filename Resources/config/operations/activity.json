@@ -1,11 +1,198 @@
 {
     "operations": {
+        "deleteActivitySummary": {
+            "httpMethod": "DELETE",
+            "uri": "activity/{id}/summary.xml",
+            "parameters": {
+                "id": {
+                    "location": "uri",
+                    "required": true
+                }
+            }
+        },
+        "deleteActivityTag": {
+            "httpMethod": "DELETE",
+            "uri": "activity/{id}/tag.xml",
+            "parameters": {
+                "id": {
+                    "location": "uri",
+                    "required": true
+                },
+                "tag": {
+                    "location": "postField",
+                    "required": true
+                }
+            }
+        },
+        "deleteActivityTrack": {
+            "httpMethod": "DELETE",
+            "uri": "activity/{id}/track.xml",
+            "parameters": {
+                "id": {
+                    "location": "uri",
+                    "required": true
+                }
+            }
+        },
+        "getActivityDataStreams": {
+            "httpMethod": "GET",
+            "uri": "activity/{id}/datastreams.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetActivityDataStreams\\Response",
+            "parameters": {
+                "id": {
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
+        },
+        "getActivityDataSummary": {
+            "httpMethod": "GET",
+            "uri": "activity/{id}/datasummary.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetActivityDataSummary\\Response",
+            "parameters": {
+                "id": {
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
+        },
         "getActivityFullActivity": {
             "httpMethod": "GET",
             "uri": "activity/{id}/fullactivity.xml",
             "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetActivityFullActivity\\Response",
             "parameters": {
-                "id": { "location": "uri", "required": true }
+                "id": {
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
+        },
+        "getActivitySimilar": {
+            "httpMethod": "GET",
+            "uri": "activity/{id}/similar/{datatype}.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetActivitySimilar\\Response",
+            "parameters": {
+                "id": {
+                    "location": "uri",
+                    "required": true
+                },
+                "datatype": {
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
+        },
+        "getActivitySummary": {
+            "httpMethod": "GET",
+            "uri": "activity/{id}/summary.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetActivityFullActivity\\Response",
+            "parameters": {
+                "id": {
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
+        },
+        "postActivityImport": {
+            "httpMethod": "POST",
+            "uri": "activity/import.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\PostActivityImport\\Response",
+            "parameters": {
+                "xml": {
+                    "location": "body",
+                    "required": true
+                }
+            }
+        },
+        "putActivityComment": {
+            "httpMethod": "PUT",
+            "uri": "activity/{id}/comment.xml",
+            "parameters": {
+                "id": {
+                    "location": "uri",
+                    "required": true
+                },
+                "comment": {
+                    "location": "postField",
+                    "required": true
+                }
+            }
+        },
+        "putActivityElevations": {
+            "httpMethod": "PUT",
+            "uri": "activity/{id}/elevations.xml",
+            "parameters": {
+                "id": {
+                    "location": "uri",
+                    "required": true
+                },
+                "xml": {
+                    "location": "body",
+                    "required": true
+                }
+            }
+        },
+        "putActivityImport": {
+            "httpMethod": "PUT",
+            "uri": "activity/{id}/import.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\PutActivityImport\\Response",
+            "parameters": {
+                "id": {
+                    "location": "uri",
+                    "required": true
+                },
+                "xml": {
+                    "location": "body",
+                    "required": true
+                }
+            }
+        },
+        "putActivitySummary": {
+            "httpMethod": "PUT",
+            "uri": "activity/{id}/summary.xml",
+            "parameters": {
+                "id": {
+                    "location": "uri",
+                    "required": true
+                },
+                "libelle": {
+                    "location": "postField"
+                },
+                "startdate": {
+                    "location": "postField"
+                },
+                "sportid": {
+                    "location": "postField"
+                }
+            }
+        },
+        "putActivityTag": {
+            "httpMethod": "PUT",
+            "uri": "activity/{id}/tag.xml",
+            "parameters": {
+                "id": {
+                    "location": "uri",
+                    "required": true
+                },
+                "tag": {
+                    "location": "postField",
+                    "required": true
+                }
             }
         }
     }

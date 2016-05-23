@@ -2,77 +2,92 @@
 
 namespace Geonaute\LinkdataBundle\Entity\Reference;
 
+use Geonaute\LinkdataBundle\Entity\Common\Datatype as BaseDatatype;
 use JMS\Serializer\Annotation as Serializer;
 
-/**
- * Datatype entity.
- */
-class Datatype
+class Datatype extends BaseDatatype
 {
+
     /**
-     * @Serializer\Expose
-     * @Serializer\Type("integer")
      * @Serializer\SerializedName("ID")
+     * @Serializer\Type("integer")
+     *
+     * @var integer
      */
-    protected $ID;
+    protected $id;
 
     /**
-     * @Serializer\Expose
-     * @Serializer\Type("string")
      * @Serializer\SerializedName("NAME")
+     * @Serializer\Type("string")
+     *
+     * @var string
      */
-    protected $NAME;
+    protected $name;
 
     /**
-     * @Serializer\Expose
-     * @Serializer\Type("string")
      * @Serializer\SerializedName("UNIT")
-     */
-    protected $UNIT;
-    /**
-     * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("CUMULABLE")
+     *
+     * @var string
      */
-    protected $CUMULABLE = 0;
+    protected $unit;
 
-    public function getID()
+    /**
+     * @Serializer\SerializedName("CUMULABLE")
+     * @Serializer\Type("boolean")
+     *
+     * @var boolean
+     */
+    protected $cumulable;
+
+    /**
+     * @return string
+     */
+    public function __toString()
     {
-        return $this->ID;
+        return $this->getName();
     }
 
-    public function setID($ID)
+    /**
+     * @return string
+     */
+    public function getTranslationKey()
     {
-        $this->ID = $ID;
+        return 'datatype_' . $this->id;
     }
 
-    public function getNAME()
+    /**
+     * @return string
+     */
+    public function getUnit()
     {
-        return $this->NAME;
+        return $this->unit;
     }
 
-    public function getUNIT()
+    /**
+     * @return string
+     */
+    public function getName()
     {
-        return $this->UNIT;
+        return $this->name;
     }
 
-    public function getCUMULABLE()
+    /**
+     * @return boolean
+     */
+    public function getCumulable()
     {
-        return $this->CUMULABLE;
+        return $this->cumulable;
     }
 
-    public function setNAME($NAME)
+    /**
+     * Return icon for datatype
+     *
+     * @return string
+     */
+    public function getIcon()
     {
-        $this->NAME = $NAME;
+        return Reference::getIcon($this->getId());
     }
 
-    public function setUNIT($UNIT)
-    {
-        $this->UNIT = $UNIT;
-    }
-
-    public function setCUMULABLE($CUMULABLE)
-    {
-        $this->CUMULABLE = $CUMULABLE;
-    }
 }

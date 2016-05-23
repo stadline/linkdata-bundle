@@ -1,20 +1,19 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alexandre
- * Date: 08/06/15
- * Time: 11:23
- */
 
 namespace Geonaute\LinkdataBundle\Response;
 
+use Geonaute\LinkdataBundle\Entity\Common\Meta;
 use JMS\Serializer\Annotation as Serializer;
 
 abstract class Response
 {
+
     /**
-     * @Serializer\Type("Geonaute\LinkdataBundle\Response\Meta")
      * @Serializer\SerializedName("META")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Common\Meta")
+     *
+     * @var Meta
      */
     protected $meta;
+
 }

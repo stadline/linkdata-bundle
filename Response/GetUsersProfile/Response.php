@@ -2,24 +2,27 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetUsersProfile;
 
-use Geonaute\LinkdataBundle\Response\XmlResponse;
+use Geonaute\LinkdataBundle\Response\Response as BaseResponse;
+use Geonaute\LinkdataBundle\Entity\Users\ProfileUser;
 use JMS\Serializer\Annotation as Serializer;
 
-class Response extends XmlResponse
+class Response extends BaseResponse
 {
+
     /**
      * @Serializer\SerializedName("USER")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetUsersProfile\User")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Users\ProfileUser")
      *
-     * @var User
+     * @var ProfileUser
      */
     private $user;
-    
+
     /**
-     * @return User
+     * @return ProfileUser
      */
     public function getUser()
     {
         return $this->user;
     }
+
 }

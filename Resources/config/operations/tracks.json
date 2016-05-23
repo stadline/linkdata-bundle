@@ -1,0 +1,18 @@
+{
+    "operations": {
+        "getTracksDetails": {
+            "httpMethod": "GET",
+            "uri": "tracks/{token}/details.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetTracksDetails\\Response",
+            "parameters": {
+                "token": {
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
+        }
+    }
+}

@@ -2,23 +2,28 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetUsersConnectedDevices;
 
-use Geonaute\LinkdataBundle\Response\ClientAwareXmlResponse;
+use Geonaute\LinkdataBundle\Response\Response as BaseResponse;
+use Geonaute\LinkdataBundle\Entity\Users\ConnectedDevice;
 use JMS\Serializer\Annotation as Serializer;
 
-class Response extends ClientAwareXmlResponse
+class Response extends BaseResponse
 {
+
     /**
-     * @Serializer\SerializedName("CONNECTEDDEVICE")
-     * @Serializer\Type("array<Geonaute\LinkdataBundle\Response\GetTracksDetails\Location>")
-     * @var integer
+     * @Serializer\SerializedName("CONNECTEDDEVICES")
+     * @Serializer\XmlList(entry="CONNECTEDDEVICE")
+     * @Serializer\Type("ArrayCollection<string, Geonaute\LinkdataBundle\Entity\Users\ConnectedDevice, ID>")
+     *
+     * @var array<ConnectedDevice>
      */
-    private $devices;
-    
+    private $connectedDevices;
+
     /**
-     * @return connectedDevices
+     * @return array<ConnectedDevice>
      */
     public function getConnectedDevices()
     {
-        return $this->devices;
+        return $this->connectedDevices;
     }
+
 }

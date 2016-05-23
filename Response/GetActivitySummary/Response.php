@@ -2,24 +2,27 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetActivitySummary;
 
-use Geonaute\LinkdataBundle\Response\ClientAwareXmlResponse;
+use Geonaute\LinkdataBundle\Response\Response as BaseResponse;
+use Geonaute\LinkdataBundle\Entity\Activity\SummaryActivity;
+use JMS\Serializer\Annotation as Serializer;
 
-class Response extends ClientAwareXmlResponse
+class Response extends BaseResponse
 {
-    private $activity;
-    
-    public function __construct(\SimpleXMLElement $XML)
-    {
-        parent::__construct($XML);
-        
-        $this->activity = new Activity($this, $XML->ACTIVITY[0]);
-    }
-    
+
     /**
-     * @return Activity
+     * @Serializer\SerializedName("ACTIVITY")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Activity\SummaryActivity")
+     *
+     * @var SummaryActivity
+     */
+    private $activity;
+
+    /**
+     * @return SummaryActivity
      */
     public function getActivity()
     {
         return $this->activity;
     }
+
 }

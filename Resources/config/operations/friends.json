@@ -1,0 +1,113 @@
+{
+    "operations": {
+        "deleteFriends": {
+            "httpMethod": "DELETE",
+            "uri": "users/{ldid}/friends/{friend}.xml",
+            "parameters": {
+                "ldid": {
+                    "location": "uri",
+                    "required": true
+                },
+                "friend": {
+                    "location": "uri",
+                    "required": true
+                }
+            }
+        },
+        "getUsersFriendsActivities": {
+            "httpMethod": "GET",
+            "uri": "users/{ldid}/friends/{ldid_friend}/activities.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetUsersFriendsActivities\\Response",
+            "parameters": {
+                "ldid": {
+                    "location": "uri",
+                    "required": true
+                },
+                "ldid_friend": {
+                    "location": "uri",
+                    "required": true
+                },
+                "include": {
+                    "location": "query",
+                    "required": true,
+                    "default": ""
+                }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
+        },
+        "getUsersFriendsActivitiesSports": {
+            "httpMethod": "GET",
+            "uri": "users/{ldid}/friends/{ldid_friend}/activities/sports.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetUsersFriendsActivitiesSports\\Response",
+            "parameters": {
+                "ldid": {
+                    "location": "uri",
+                    "required": true
+                },
+                "ldid_friend": {
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
+        },
+        "getUsersFriendsActivitiesTags": {
+            "httpMethod": "GET",
+            "uri": "users/{ldid}/friends/{ldid_friend}/activities/tags.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetUsersFriendsActivitiesTags\\Response",
+            "parameters": {
+                "ldid": {
+                    "location": "uri",
+                    "required": true
+                },
+                "ldid_friend": {
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
+        },
+        "getUsersFriendsActivity": {
+            "httpMethod": "GET",
+            "uri": "users/{ldid}/friends/{ldid_friend}/activity/{token}.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetUsersFriendsActivity\\Response",
+            "parameters": {
+                "ldid": {
+                    "location": "uri",
+                    "required": true
+                },
+                "ldid_friend": {
+                    "location": "uri",
+                    "required": true
+                },
+                "token": {
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
+        },
+        "postFriends": {
+            "httpMethod": "POST",
+            "uri": "users/{ldid}/friends.xml",
+            "parameters": {
+                "ldid": {
+                    "location": "uri",
+                    "required": true
+                },
+                "friend": {
+                    "location": "postField",
+                    "required": true
+                }
+            }
+        }
+    }
+}

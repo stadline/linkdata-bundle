@@ -2,24 +2,27 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetActivityFullActivity;
 
-use Geonaute\LinkdataBundle\Response\ClientAwareXmlResponse;
+use Geonaute\LinkdataBundle\Response\Response as BaseResponse;
+use Geonaute\LinkdataBundle\Entity\Activity\FullActivity;
 use JMS\Serializer\Annotation as Serializer;
 
-class Response extends ClientAwareXmlResponse
+class Response extends BaseResponse
 {
+
     /**
-     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetActivityFullActivity\Activity")
      * @Serializer\SerializedName("ACTIVITY")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Activity\FullActivity")
      *
-     * @var Activity
+     * @var FullActivity
      */
     private $activity;
 
     /**
-     * @return Activity
+     * @return FullActivity
      */
     public function getActivity()
     {
         return $this->activity;
     }
+
 }

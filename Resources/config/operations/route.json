@@ -1,0 +1,49 @@
+{
+    "operations": {
+        "getRoute": {
+            "httpMethod": "GET",
+            "uri": "route/{token}.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetRoute\\Response",
+            "parameters": {
+                "token": {
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
+        },
+        "postRouteCreate": {
+            "httpMethod": "POST",
+            "uri": "route/create.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\PostRouteCreate\\Response",
+            "parameters": {
+                "ldid": {
+                    "location": "postField",
+                    "required": true
+                },
+                "libelle": {
+                    "location": "postField",
+                    "required": true
+                },
+                "distance": {
+                    "location": "postField",
+                    "required": true
+                },
+                "ascendant": {
+                    "location": "postField",
+                    "required": true
+                },
+                "descendant": {
+                    "location": "postField",
+                    "required": true
+                },
+                "locations": {
+                    "location": "postField",
+                    "required": true
+                }
+            }
+        }
+    }
+}

@@ -2,28 +2,20 @@
 
 namespace Geonaute\LinkdataBundle\Response\GetUsersTotalMonth;
 
-use Geonaute\LinkdataBundle\Response\ClientAwareXmlResponse;
-use Guzzle\Service\Command\OperationCommand;
+use Geonaute\LinkdataBundle\Response\Response as BaseResponse;
+use Geonaute\LinkdataBundle\Entity\Users\TotalMonth;
 use JMS\Serializer\Annotation as Serializer;
 
-class Response extends ClientAwareXmlResponse
+class Response extends BaseResponse
 {
+
     /**
      * @Serializer\SerializedName("TOTALMONTH")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetUsersTotalMonth\TotalMonth")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Users\TotalMonth")
      *
      * @var TotalMonth
      */
     private $totalMonth;
-
-    public static function fromCommand(OperationCommand $command)
-    {
-        if ($command->getResponse()->getStatusCode() == 204) {
-            return new EmptyResponse();
-        }
-
-        return parent::fromCommand($command);
-    }
 
     /**
      * @return TotalMonth
@@ -32,4 +24,5 @@ class Response extends ClientAwareXmlResponse
     {
         return $this->totalMonth;
     }
+
 }

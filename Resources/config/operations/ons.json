@@ -1,0 +1,12 @@
+{
+    "operations": {
+        "getOnsMonthlyAverage": {
+            "httpMethod": "GET",
+            "uri": "ons/monthly_average.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetOnsMonthlyAverage\\Response",
+            "additionalParameters": {
+                "location": "query"
+            }
+        }
+    }
+}

@@ -2,56 +2,44 @@
 
 namespace Geonaute\LinkdataBundle\Entity\Activity;
 
+use Geonaute\LinkdataBundle\Entity\Tracks\Track;
 use JMS\Serializer\Annotation as Serializer;
 
-/**
- * FullActivity entity.
- */
-class FullActivity
+class FullActivity extends SummaryActivity
 {
-    /**
-     * @Serializer\Expose
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("ID")
-     */
-    private $id;
 
     /**
-     * @Serializer\Expose
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("USERID")
+     * @return DataSummary
      */
-    protected $userId;
-
-    /**
-     * @return string
-     */
-    public function getId()
+    public function getSummary()
     {
-        return $this->id;
+        return $this->summary;
     }
 
     /**
-     * @param string $id
+     * @return DataStream
      */
-    public function setId($id)
+    public function getDataStream()
     {
-        $this->id = $id;
+        return $this->dataStream;
+
     }
 
     /**
-     * @return string
+     * @return Track
      */
-    public function getUserId()
+    public function getTrack()
     {
-        return $this->userId;
+        return $this->track;
     }
 
     /**
-     * @param string $userId
+     * @return null
      */
-    public function setUserId($userId)
+    public function getHashXml()
     {
-        $this->userId = $userId;
+        return null; // added
+        // return md5($this->xml->saveXML()); @todo change this
     }
+
 }

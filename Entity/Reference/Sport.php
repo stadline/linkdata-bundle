@@ -2,63 +2,68 @@
 
 namespace Geonaute\LinkdataBundle\Entity\Reference;
 
+use Geonaute\LinkdataBundle\Entity\Common\Sport as BaseSport;
+use Geonaute\LinkdataBundle\Utils\Sport as Reference;
 use JMS\Serializer\Annotation as Serializer;
 
-/**
- * Sport entity.
- *
- * @Serializer\XmlRoot("SPORT")
- */
-class Sport
+class Sport extends BaseSport
 {
+
     /**
-     * @Serializer\Expose
-     * @Serializer\Type("integer")
      * @Serializer\SerializedName("ID")
-     */
-    protected $ID;
-
-    /**
-     * @Serializer\Expose
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("NAME")
-     */
-    protected $NAME;
-
-    /**
-     * @Serializer\Expose
      * @Serializer\Type("integer")
-     * @Serializer\SerializedName("UNIVERSID")
+     *
+     * @var integer
      */
-    protected $UNIVERSID;
+    protected $id;
 
-    public function getID()
+    /**
+     * @Serializer\SerializedName("NAME")
+     * @Serializer\Type("string")
+     *
+     * @var string
+     */
+    protected $name;
+
+    /**
+     * @Serializer\SerializedName("UNIVERSID")
+     * @Serializer\Type("integer")
+     *
+     * @var integer
+     */
+    protected $universId;
+
+    /**
+     * @return string
+     */
+    public function getName()
     {
-        return $this->ID;
+        return $this->name;
     }
 
-    public function getNAME()
+    /**
+     * @return integer
+     */
+    public function getUniversId()
     {
-        return $this->NAME;
+        return $this->universId;
     }
 
-    public function getUNIVERSID()
+    /**
+     *
+     * @throws \Exception
+     */
+    public function getUnivers()
     {
-        return $this->UNIVERSID;
+        throw new \Exception('cant do getClient !'); // Old method doing getClient (can't remove because is in the interface) @todo fix this
     }
 
-    public function setID($ID)
+    /**
+     * @return integer
+     */
+    public function getIcon()
     {
-        $this->ID = $ID;
+        return Reference::getIcon($this->getId());
     }
 
-    public function setNAME($NAME)
-    {
-        $this->NAME = $NAME;
-    }
-
-    public function setUNIVERSID($UNIVERSID)
-    {
-        $this->UNIVERSID = $UNIVERSID;
-    }
 }
