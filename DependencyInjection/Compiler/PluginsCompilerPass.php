@@ -82,7 +82,7 @@ class PluginsCompilerPass extends SimpleCompilerPass
         // request-key providers
         $this->define('geonaute_linkdata.auth.request_provider', array(
             'class' => 'Geonaute\LinkdataBundle\Auth\RequestProvider',
-            'arguments' => array($this->get('request_injector')),
+            'arguments' => array($this->get('geonaute_linkdata.request_injector')),
         ));
 
         $this->define('geonaute_linkdata.auth.security_context_provider', array(
@@ -107,7 +107,7 @@ class PluginsCompilerPass extends SimpleCompilerPass
     {
         $this->define('geonaute_linkdata.plugin.language', array(
             'class' => 'Geonaute\LinkdataBundle\Plugin\LanguagePlugin',
-            'arguments' => array($this->get('locale_injector')),
+            'arguments' => array($this->get('geonaute_linkdata.locale_injector')),
         ));
 
         $client = $this->container->getDefinition('geonaute_linkdata.client');
