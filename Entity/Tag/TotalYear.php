@@ -3,7 +3,7 @@
 namespace Geonaute\LinkdataBundle\Entity\Tag;
 
 use Geonaute\LinkdataBundle\Utils\ProgressStatisticMapperInterface;
-use Geonaute\LinkdataBundle\Utils\Datatype;
+use Geonaute\LinkdataBundle\Utils\Datatype as UtilsDatatype;
 use JMS\Serializer\Annotation as Serializer;
 
 class TotalYear implements ProgressStatisticMapperInterface
@@ -114,7 +114,7 @@ class TotalYear implements ProgressStatisticMapperInterface
      */
     public function getDistanceId()
     {
-        return Datatype::DISTANCE;
+        return UtilsDatatype::DISTANCE;
     }
 
     /**
@@ -134,7 +134,7 @@ class TotalYear implements ProgressStatisticMapperInterface
      */
     public function getCaloriesId()
     {
-        return Datatype::CALORIES_BURNT;
+        return UtilsDatatype::CALORIES_BURNT;
     }
 
     /**
@@ -154,7 +154,7 @@ class TotalYear implements ProgressStatisticMapperInterface
      */
     public function getDurationId()
     {
-        return Datatype::DURATION;
+        return UtilsDatatype::DURATION;
     }
 
     /**
@@ -164,7 +164,7 @@ class TotalYear implements ProgressStatisticMapperInterface
      */
     public function getSpeedId()
     {
-        return Datatype::SPEED_AVG;
+        return UtilsDatatype::SPEED_AVG;
     }
 
     /**
@@ -184,7 +184,7 @@ class TotalYear implements ProgressStatisticMapperInterface
      */
     public function getTotalSteps()
     {
-        return $this->getTotal(Datatype::STEP_NUMBER);
+        return $this->getTotal(UtilsDatatype::STEP_NUMBER);
     }
 
     /**

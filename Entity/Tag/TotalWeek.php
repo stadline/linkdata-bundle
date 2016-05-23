@@ -2,7 +2,7 @@
 
 namespace Geonaute\LinkdataBundle\Entity\Tag;
 
-use Geonaute\LinkdataBundle\Utils\Datatype;
+use Geonaute\LinkdataBundle\Utils\Datatype as UtilsDatatype;
 use JMS\Serializer\Annotation as Serializer;
 
 class TotalWeek
@@ -32,13 +32,13 @@ class TotalWeek
      */
     protected function getTotal($unitId)
     {
-        $total = 0;
+//        $total = 0;
+//
+//        foreach ($this->xml->xpath('.//DATATYPE[@id="' . $unitId . '"]') as $node) { @todo change this
+//            $total += (int) $node;
+//        }
 
-        foreach ($this->xml->xpath('.//DATATYPE[@id="' . $unitId . '"]') as $node) {
-            $total += (int) $node;
-        }
-
-        return $total;
+//        return $total;
     }
 
     /**
@@ -46,7 +46,7 @@ class TotalWeek
      */
     public function getTotalPoints()
     {
-        return $this->getTotal(Datatype::POINTS_EARNED);
+        return $this->getTotal(UtilsUtilsDatatype::POINTS_EARNED);
     }
 
     /**
@@ -56,7 +56,7 @@ class TotalWeek
      */
     public function getDistanceId()
     {
-        return Datatype::DISTANCE;
+        return UtilsDatatype::DISTANCE;
     }
 
     /**
@@ -76,7 +76,7 @@ class TotalWeek
      */
     public function getTotalSteps()
     {
-        return $this->getTotal(Datatype::STEP_NUMBER);
+        return $this->getTotal(UtilsDatatype::STEP_NUMBER);
     }
 
     /**
@@ -86,7 +86,7 @@ class TotalWeek
      */
     public function getCaloriesId()
     {
-        return Datatype::CALORIES_BURNT;
+        return UtilsDatatype::CALORIES_BURNT;
     }
 
     /**
@@ -106,7 +106,7 @@ class TotalWeek
      */
     public function getDurationId()
     {
-        return Datatype::DURATION;
+        return UtilsDatatype::DURATION;
     }
 
     /**
@@ -116,7 +116,7 @@ class TotalWeek
      */
     public function getSpeedId()
     {
-        return Datatype::SPEED_AVG;
+        return UtilsDatatype::SPEED_AVG;
     }
 
     /**
