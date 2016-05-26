@@ -12,9 +12,9 @@ class ResponseTest extends ResponseTestCase
     {
         $serializer = $this->getSerializer();
 
-        $globalChallengesClientMock = new GetGlobalChallengesMock($serializer);
+        $globalChallengesClientMock = new GetGlobalChallengesMock();
 
-        $response = $globalChallengesClientMock->getResponse([]);
+        $response = $globalChallengesClientMock->getResponse($serializer, []);
 
         $this->assertObjectHasAttribute('meta', $response);
         $this->assertObjectHasAttribute('globalChallenges', $response);

@@ -28,7 +28,7 @@ class GeonauteLinkdataExtension extends SimpleExtension
         ));
 
         // xml deserialization visitor
-        $this->container->setParameter('jms.xml_deserialization_visitor.class', 'Geonaute\\LinkdataBundle\\Visitor\\XmlDeserializationVisitor');
+        $this->container->setParameter('jms_serializer.xml_deserialization_visitor.class', 'Geonaute\\LinkdataBundle\\Visitor\\XmlDeserializationVisitor');
 
         // rest client
         $this->define('geonaute_linkdata.service_description', array(
@@ -83,6 +83,7 @@ class GeonauteLinkdataExtension extends SimpleExtension
         // mock resolver
         $this->define('geonaute_linkdata.mock_resolver', array(
             'class' => 'Geonaute\LinkdataBundle\Mock\Resolver\LinkdataMockResolver',
+            'arguments' => array($this->get('serializer')),
         ));
 
         // mock builder

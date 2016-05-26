@@ -5,6 +5,8 @@ namespace Geonaute\LinkdataBundle\Utils;
 /**
  * Interface to securised the used of an activity Object
  * in ActivityWidgetProviderDecorator
+ *
+ * @todo : delete
  */
 interface ActivityWidgetProviderInterface
 {

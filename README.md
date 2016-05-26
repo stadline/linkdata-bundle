@@ -79,7 +79,7 @@ You just have to create your {commandName}Mock.php file into <code>Mock/Model</c
         use Geonaute\LinkdataBundle\Service\GetActivityDataSummary\Response;
         use Mockery as m;
         
-        class GetActivityDataSummaryMock extends BaseMock implements LinkdataMockInterface
+        class GetActivityDataSummaryMock implements LinkdataMockInterface
         {
             /**
              * {@inheritdoc}
@@ -92,7 +92,7 @@ You just have to create your {commandName}Mock.php file into <code>Mock/Model</c
             /**
              * {@inheritdoc}
              */
-            public function getResponse($data)
+            public function getResponse($serializer, $data)
             {
                 $data = ' 
                 <RESPONSE>
@@ -107,7 +107,7 @@ You just have to create your {commandName}Mock.php file into <code>Mock/Model</c
                     </RESPONSE>
                 ';
                 
-                return $this->serializer->deserialize(
+                return $serializer->deserialize(
                     'Geonaute\LinkdataBundle\Response\GetActivityDataSummary\Response',
                     $data,
                     'xml

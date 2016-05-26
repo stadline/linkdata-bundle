@@ -12,9 +12,9 @@ class ResponseTest extends ResponseTestCase
     {
         $serializer = $this->getSerializer();
 
-        $usersRankingFriendsClientMock = new GetUsersRankingFriendsMock($serializer);
+        $usersRankingFriendsClientMock = new GetUsersRankingFriendsMock();
 
-        $response = $usersRankingFriendsClientMock->getResponse([]);
+        $response = $usersRankingFriendsClientMock->getResponse($serializer, []);
 
         $this->assertObjectHasAttribute('meta', $response);
         $this->assertObjectHasAttribute('ranking', $response);

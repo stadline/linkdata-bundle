@@ -12,9 +12,9 @@ class ResponseTest extends ResponseTestCase
     {
         $serializer = $this->getSerializer();
 
-        $trackDetailsClientMock = new GetTracksDetailsMock($serializer);
+        $trackDetailsClientMock = new GetTracksDetailsMock();
 
-        $response = $trackDetailsClientMock->getResponse([]);
+        $response = $trackDetailsClientMock->getResponse($serializer, []);
 
         $this->assertObjectHasAttribute('meta', $response);
         $this->assertObjectHasAttribute('track', $response);

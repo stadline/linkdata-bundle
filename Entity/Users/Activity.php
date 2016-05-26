@@ -101,9 +101,10 @@ class Activity extends BaseActivity implements ActivityToStringInterface
      */
     public function defineDataSummariesForDeserialization()
     {
-        $indexId = $this->dataSummaries->getUnitId();
-
-        $this->dataSummaries = new ArrayCollection([$indexId => $this->dataSummaries]);
+        if ($this->dataSummaries) {
+            $indexId = $this->dataSummaries->getUnitId();
+            $this->dataSummaries = new ArrayCollection([$indexId => $this->dataSummaries]);
+        }
     }
 
     /**

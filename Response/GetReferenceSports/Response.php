@@ -25,5 +25,4 @@ class Response extends BaseResponse
     {
         return $this->sports;
     }
-
 }

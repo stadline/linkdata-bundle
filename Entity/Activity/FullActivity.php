@@ -32,14 +32,4 @@ class FullActivity extends SummaryActivity
     {
         return $this->track;
     }
-
-    /**
-     * @return null
-     */
-    public function getHashXml()
-    {
-        return null; // added
-        // return md5($this->xml->saveXML()); @todo change this
-    }
-
 }

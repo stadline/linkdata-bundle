@@ -3,14 +3,13 @@
 namespace Geonaute\LinkdataBundle\Entity\Shares;
 
 use DateTime;
-use Geonaute\LinkdataBundle\Utils\ActivityWidgetProviderInterface;
 use Geonaute\LinkdataBundle\Entity\Activity\DataStream;
 use Geonaute\LinkdataBundle\Entity\Activity\DataSummary;
 use Geonaute\LinkdataBundle\Entity\Reference\DeviceModel;
 use Geonaute\LinkdataBundle\Entity\Reference\Sport;
 use JMS\Serializer\Annotation as Serializer;
 
-class Activity implements ActivityWidgetProviderInterface
+class Activity
 {
 
     /**

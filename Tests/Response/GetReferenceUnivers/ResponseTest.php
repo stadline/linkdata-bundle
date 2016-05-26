@@ -12,9 +12,9 @@ class ResponseTest extends ResponseTestCase
     {
         $serializer = $this->getSerializer();
 
-        $referenceUniversClientMock = new GetReferenceUniversMock($serializer);
+        $referenceUniversClientMock = new GetReferenceUniversMock();
 
-        $response = $referenceUniversClientMock->getResponse([]);
+        $response = $referenceUniversClientMock->getResponse($serializer, []);
 
         $this->assertObjectHasAttribute('meta', $response);
         $this->assertObjectHasAttribute('universList', $response);

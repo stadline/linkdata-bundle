@@ -12,9 +12,9 @@ class ResponseTest extends ResponseTestCase
     {
         $serializer = $this->getSerializer();
 
-        $usersTagsClientMock = new GetUsersTagsMock($serializer);
+        $usersTagsClientMock = new GetUsersTagsMock();
 
-        $response = $usersTagsClientMock->getResponse([]);
+        $response = $usersTagsClientMock->getResponse($serializer, []);
 
         $this->assertObjectHasAttribute('meta', $response);
         $this->assertObjectHasAttribute('tags', $response);

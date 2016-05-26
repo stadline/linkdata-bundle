@@ -12,9 +12,9 @@ class ResponseTest extends ResponseTestCase
     {
         $serializer = $this->getSerializer();
 
-        $referenceDatatypesClientMock = new GetReferenceDatatypesMock($serializer);
+        $referenceDatatypesClientMock = new GetReferenceDatatypesMock();
 
-        $response = $referenceDatatypesClientMock->getResponse([]);
+        $response = $referenceDatatypesClientMock->getResponse($serializer, []);
 
         $this->assertObjectHasAttribute('meta', $response);
         $this->assertObjectHasAttribute('datatypes', $response);

@@ -1,6 +1,7 @@
 <?php
 
 namespace Geonaute\LinkdataBundle\Mock;
+use JMS\Serializer\SerializerInterface;
 
 /**
  * Linkdata mock interface.
@@ -19,8 +20,9 @@ interface LinkdataMockInterface
     /**
      * Get the response.
      *
+     * @param SerializerInterface $serializer
      * @param $data array
      * @return string
      */
-    public function getResponse($data);
+    public function getResponse(SerializerInterface $serializer, $data);
 }

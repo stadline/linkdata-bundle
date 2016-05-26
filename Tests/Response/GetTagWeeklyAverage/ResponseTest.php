@@ -12,9 +12,9 @@ class ResponseTest extends ResponseTestCase
     {
         $serializer = $this->getSerializer();
 
-        $tagWeeklyAverageClientMock = new GetTagWeeklyAverageMock($serializer);
+        $tagWeeklyAverageClientMock = new GetTagWeeklyAverageMock();
 
-        $response = $tagWeeklyAverageClientMock->getResponse([]);
+        $response = $tagWeeklyAverageClientMock->getResponse($serializer, []);
 
         $this->assertObjectHasAttribute('meta', $response);
         $this->assertObjectHasAttribute('weeklyAverage', $response);

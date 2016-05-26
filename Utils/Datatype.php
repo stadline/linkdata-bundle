@@ -125,80 +125,12 @@ class Datatype
     /**
      * @param $unitId
      * @return Formatter
+     *
+     * @deprecated Replaced by FormatterManager
      */
     public function getFormatter($unitId)
     {
-        switch ($unitId) {
-            case self::ELEVATION_CURRENT:
-            case self::ELEVATION_MAX:
-            case self::ELEVATION_MIN:
-            case self::ASCENT:
-            case self::DESCENT:
-                return $this->formatter->getElevationFormatter();
-
-            case self::LAP:
-                return $this->formatter->getDefaultFormatter();
-
-            case self::HR_PERCENTAGE_MAX:
-            case self::HR_PERCENTAGE_MIN:
-                return $this->formatter->getHeartratePercentageFormatter();
-
-            case self::RPM_CURRENT:
-            case self::RPM_AVG:
-                return $this->formatter->getRPMFormatter();
-
-            case self::SPEED_AVG:
-            case self::SPEED_CURRENT:
-            case self::SPEED_MIN:
-            case self::SPEED_MAX:
-                return $this->formatter->getSpeedFormatter();
-
-            case self::DISTANCE:
-                return $this->formatter->getDistanceFormatter();
-
-            case self::DURATION:
-            case self::ACTIVE_TIME:
-            case self::ELAPSED_TIME:
-                return $this->formatter->getDurationFormatter();
-
-            case self::SPEED_RATE_CURRENT:
-            case self::SPEED_RATE_AVG:
-                return $this->formatter->getSpeedRateFormatter();
-
-            case self::HR_AVG:
-            case self::HR_CURRENT:
-            case self::HR_MIN:
-            case self::HR_MAX:
-                return $this->formatter->getHealthRateFormatter();
-
-            case self::CALORIES_BURNT:
-                return $this->formatter->getCalorieFormatter();
-
-            case self::POINTS_EARNED:
-                return $this->formatter->getPointFormatter();
-
-            case self::ACTIVITY_NUMBER:
-                return $this->formatter->getActivityNumberFormatter();
-
-            case self::STEP_NUMBER:
-                return $this->formatter->getStepNumberFormatter();
-
-            case self::CURRENT_HOME_TRAINER_POWER:
-            case self::AVERAGE_HOME_TRAINER_POWER:
-                return $this->formatter->getPowerFormatter();
-
-            case self::BIKE_TRAINER_RESISTANCE:
-                return $this->formatter->getResistanceFormatter();
-
-            case self::BODY_BONE_PERCENTAGE:
-            case self::BODY_FAT_PERCENTAGE:
-            case self::BODY_MUSCLE_PERCENTAGE:
-            case self::BODY_WATER_PERCENTAGE:
-                return $this->formatter->getPercentageFormatter();
-
-            default:
-                return $this->formatter->getDefaultFormatter();
-        }
+        return $this->formatter->getFormatter($unitId);
     }
 
     /**

@@ -9,11 +9,10 @@ use Geonaute\LinkdataBundle\Entity\Tracks\Track;
 use Geonaute\LinkdataBundle\Entity\Users\ConnectedDevice;
 use Geonaute\LinkdataBundle\Utils\Activity as UtilsActivity;
 use Geonaute\LinkdataBundle\Utils\ActivityToStringInterface;
-use Geonaute\LinkdataBundle\Utils\ActivityWidgetProviderInterface;
 use Geonaute\LinkdataBundle\Utils\Datatype;
 use JMS\Serializer\Annotation as Serializer;
 
-class SummaryActivity extends BaseActivity implements ActivityToStringInterface, ActivityWidgetProviderInterface
+class SummaryActivity extends BaseActivity implements ActivityToStringInterface
 {
 
     /**

@@ -5,7 +5,11 @@ namespace Geonaute\LinkdataBundle\Response\GetUsersConnectedDevices;
 use Geonaute\LinkdataBundle\Response\Response as BaseResponse;
 use Geonaute\LinkdataBundle\Entity\Users\ConnectedDevice;
 use JMS\Serializer\Annotation as Serializer;
+use Misd\GuzzleBundle\Service\Command\JMSSerializerAwareCommandInterface;
 
+/**
+ * @Serializer\XmlRoot()
+ */
 class Response extends BaseResponse
 {
 

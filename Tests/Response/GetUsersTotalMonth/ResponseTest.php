@@ -12,9 +12,9 @@ class ResponseTest extends ResponseTestCase
     {
         $serializer = $this->getSerializer();
 
-        $usersTotalMonthClientMock = new GetUsersTotalMonthMock($serializer);
+        $usersTotalMonthClientMock = new GetUsersTotalMonthMock();
 
-        $response = $usersTotalMonthClientMock->getResponse([]);
+        $response = $usersTotalMonthClientMock->getResponse($serializer, []);
 
         $this->assertObjectHasAttribute('meta', $response);
         $this->assertObjectHasAttribute('totalMonth', $response);

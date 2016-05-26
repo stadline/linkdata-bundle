@@ -6,6 +6,7 @@ use Geonaute\LinkdataBundle\Mock\Exception\BadMockModelException;
 use Geonaute\LinkdataBundle\Mock\Exception\MockNotLoadedException;
 use Geonaute\LinkdataBundle\Mock\LinkdataMockInterface;
 use Guzzle\Service\Command\OperationCommand;
+use JMS\Serializer\SerializerInterface;
 
 /**
  * Class LinkdataMockResolver
@@ -14,12 +15,24 @@ use Guzzle\Service\Command\OperationCommand;
  */
 class LinkdataMockResolver
 {
+    /** @var SerializerInterface */
+    private $serializer;
+
     /**
      * An array of models loaded.
      *
      * @var array
      */
     private $loadedModels = array();
+
+    /**
+     * LinkdataMockResolver constructor.
+     * @param SerializerInterface $serializer
+     */
+    public function __construct(SerializerInterface $serializer)
+    {
+        $this->serializer = $serializer;
+    }
 
     /**
      * Load a list a models.
@@ -53,7 +66,7 @@ class LinkdataMockResolver
     {
         foreach ($this->loadedModels as $model) {
             if ($model->getCommandName() === $command->getName()) {
-                return $model->getResponse($command->getAll());
+                return $model->getResponse($this->serializer, $command->getAll());
             }
         }
 

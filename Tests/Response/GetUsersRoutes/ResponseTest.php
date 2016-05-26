@@ -12,9 +12,9 @@ class ResponseTest extends ResponseTestCase
     {
         $serializer = $this->getSerializer();
 
-        $usersRoutesClientMock = new GetUsersRoutesMock($serializer);
+        $usersRoutesClientMock = new GetUsersRoutesMock();
 
-        $response = $usersRoutesClientMock->getResponse([]);
+        $response = $usersRoutesClientMock->getResponse($serializer, []);
 
         $this->assertObjectHasAttribute('meta', $response);
         $this->assertObjectHasAttribute('routes', $response);
