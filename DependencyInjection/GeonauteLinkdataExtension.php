@@ -16,17 +16,6 @@ class GeonauteLinkdataExtension extends SimpleExtension
      */
     protected function loadConfig(array $config)
     {
-        // serializer listener
-        $this->define('geonaute_linkdata_bundle.serializer_listener', array(
-            'class' => 'Geonaute\LinkdataBundle\Listener\SerializerEventSubscriber',
-            'tags' => array(
-                array('name' => 'jms_serializer.event_subscriber'),
-            ),
-            'calls' => array(
-                array('setClient', array($this->get('linkdata_rest_client'))),
-            )
-        ));
-
         // xml deserialization visitor
         $this->container->setParameter('jms_serializer.xml_deserialization_visitor.class', 'Geonaute\\LinkdataBundle\\Visitor\\XmlDeserializationVisitor');
 
@@ -91,6 +80,16 @@ class GeonauteLinkdataExtension extends SimpleExtension
             'class' => 'Geonaute\LinkdataBundle\Mock\Builder\LinkdataMockBuilder',
             'calls' => array(
                 array('setResolver', array($this->get('geonaute_linkdata.mock_resolver')))
+            )
+        ));
+
+        // Custom JMS handler to manage CustomCollection
+        $this->define('geonaute_linkdata.custom_collection_decorator_handler', array(
+            "class" => 'Geonaute\LinkdataBundle\Handler\CustomCollectionDecoratorHandler',
+            "tags" => array(
+                array(
+                    "name" => "jms_serializer.subscribing_handler"
+                )
             )
         ));
     }

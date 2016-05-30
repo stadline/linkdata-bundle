@@ -2,10 +2,13 @@
 
 namespace Geonaute\LinkdataBundle\Visitor;
 
+use JMS\Serializer\AbstractVisitor;
+use JMS\Serializer\Context;
 use JMS\Serializer\Exception\XmlErrorException;
 use JMS\Serializer\Exception\LogicException;
 use JMS\Serializer\Exception\InvalidArgumentException;
 use JMS\Serializer\Exception\RuntimeException;
+use JMS\Serializer\GraphNavigator;
 use JMS\Serializer\Metadata\PropertyMetadata;
 use JMS\Serializer\Metadata\ClassMetadata;
 use JMS\Serializer\AbstractVisitor;
@@ -51,7 +54,7 @@ class XmlDeserializationVisitor extends AbstractVisitor
         $dom->loadXML($data);
         foreach ($dom->childNodes as $child) {
             if ($child->nodeType === XML_DOCUMENT_TYPE_NODE) {
-                $internalSubset = $this->getDomDocumentTypeEntitySubset($child, $data);
+                $internalSubset = str_replace(array("\n", "\r"), '', $child->internalSubset);
                 if (!in_array($internalSubset, $this->doctypeWhitelist, true)) {
                     throw new InvalidArgumentException(sprintf(
                             'The document type "%s" is not allowed. If it is safe, you may add it to the whitelist configuration.', $internalSubset
@@ -280,10 +283,15 @@ class XmlDeserializationVisitor extends AbstractVisitor
             }
             $node = reset($nodes);
         } else {
-            if (!isset($data->$name)) {
+            $upperName = strtoupper($name);
+            if (isset($data->$name)) {
+                $node = $data->$name;
+            }
+            else if (isset($data->$upperName)) {
+                $node = $data->$upperName;
+            } else {
                 return;
             }
-            $node = $data->$name;
         }
 
         $v = $this->navigator->accept($node, $metadata->type, $context);

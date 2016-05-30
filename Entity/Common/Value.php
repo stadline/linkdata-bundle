@@ -55,6 +55,11 @@ class Value
         $this->value = $value;
     }
 
+    function __toString()
+    {
+        return $this->getValue();
+    }
+
     /**
      * @throws \Exception
      */
