@@ -11,9 +11,6 @@ use JMS\Serializer\Exception\RuntimeException;
 use JMS\Serializer\GraphNavigator;
 use JMS\Serializer\Metadata\PropertyMetadata;
 use JMS\Serializer\Metadata\ClassMetadata;
-use JMS\Serializer\AbstractVisitor;
-use JMS\Serializer\Context;
-use JMS\Serializer\GraphNavigator;
 
 class XmlDeserializationVisitor extends AbstractVisitor
 {
