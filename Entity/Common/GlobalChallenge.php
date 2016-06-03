@@ -234,14 +234,6 @@ class GlobalChallenge implements GlobalChallengeWidgetObjectInterface
     }
 
     /**
-     * @throws \Exception
-     */
-    public function getTargetUnit()
-    {
-        throw new \Exception('cant do getClient !'); // Old method doing getClient (can't remove because is in the interface) @todo fix this
-    }
-
-    /**
      * @return string
      */
     public function getImageUrl()

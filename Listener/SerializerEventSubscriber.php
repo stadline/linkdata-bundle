@@ -73,6 +73,10 @@ class SerializerEventSubscriber implements EventSubscriberInterface
             "Geonaute\\LinkdataBundle\\Entity\\Common\\FakeValue" => "Geonaute\\LinkdataBundle\\Decorator\\Entity\\Common\\HydratableFakeValue",
             "Geonaute\\LinkdataBundle\\Entity\\Users\\ActivitiesSport" => "Geonaute\\LinkdataBundle\\Decorator\\Entity\\Users\\HydratableActivitiesSport",
             "Geonaute\\LinkdataBundle\\Entity\\Users\\Activity" => "Geonaute\\LinkdataBundle\\Decorator\\Entity\\Users\\HydratableActivity",
+            "Geonaute\\LinkdataBundle\\Entity\\Common\\GlobalChallenge" => "Geonaute\\LinkdataBundle\\Decorator\\Entity\\Common\\HydratableGlobalChallenge",
+            "Geonaute\\LinkdataBundle\\Entity\\Shares\\GlobalChallenge" => "Geonaute\\LinkdataBundle\\Decorator\\Entity\\Shares\\HydratableGlobalChallenge",
+            "Geonaute\\LinkdataBundle\\Entity\\Users\\GlobalChallenge" => "Geonaute\\LinkdataBundle\\Decorator\\Entity\\Users\\HydratableGlobalChallenge",
+            "Geonaute\\LinkdataBundle\\Entity\\GlobalChallenge\\GlobalChallenge" => "Geonaute\\LinkdataBundle\\Decorator\\Entity\\GlobalChallenge\\HydratableGlobalChallenge",
         );
 
         $class = $event->getType()["name"];

@@ -14,7 +14,7 @@ interface GlobalChallengeWidgetObjectInterface
 
     public function getTargetUnitId();
 
-    public function getTargetUnit();
+//    public function getTargetUnit();
 
     public function getName();
 
