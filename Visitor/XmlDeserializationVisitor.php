@@ -93,7 +93,7 @@ class XmlDeserializationVisitor extends AbstractVisitor
 
         if ('true' === $data || '1' === $data) {
             $data = true;
-        } elseif ('false' === $data || '0' === $data) {
+        } elseif ('false' === $data || '0' === $data || $data === '') {
             $data = false;
         } else {
             throw new RuntimeException(sprintf('Could not convert data to boolean. Expected "true", "false", "1" or "0", but got %s.', json_encode($data)));
@@ -280,12 +280,8 @@ class XmlDeserializationVisitor extends AbstractVisitor
             }
             $node = reset($nodes);
         } else {
-            $upperName = strtoupper($name);
             if (isset($data->$name)) {
                 $node = $data->$name;
-            }
-            else if (isset($data->$upperName)) {
-                $node = $data->$upperName;
             } else {
                 return;
             }
