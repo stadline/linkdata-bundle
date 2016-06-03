@@ -92,5 +92,27 @@ class GeonauteLinkdataExtension extends SimpleExtension
                 )
             )
         ));
+
+        // Linkdata Hydrator
+        $this->define('geonaute_linkdata.hydrator', array(
+            "class" => 'Geonaute\LinkdataBundle\Hydrator\LinkdataHydrator',
+            'calls' => array(
+                array('setClient', array($this->get('linkdata_rest_client')))
+            )
+        ));
+
+
+        // serializer listener
+        $this->define('geonaute_linkdata_bundle.serializer_listener', array(
+            'class' => 'Geonaute\LinkdataBundle\Listener\SerializerEventSubscriber',
+            'tags' => array(
+                array('name' => 'jms_serializer.event_subscriber'),
+            ),
+            'calls' => array(
+                array('setClient', array($this->get('linkdata_rest_client'))),
+                array('setHydrator', array($this->get('geonaute_linkdata.hydrator'))),
+            )
+        ));
+
     }
 }
