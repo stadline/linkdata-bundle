@@ -6,12 +6,10 @@ use DateTime;
 use Geonaute\LinkdataBundle\Entity\Common\Activity as BaseActivity;
 use Geonaute\LinkdataBundle\Utils\Activity as UtilsActivity;
 use Geonaute\LinkdataBundle\Utils\ActivityToStringInterface;
-use Geonaute\LinkdataBundle\Entity\Activity\DataSummary;
 use JMS\Serializer\Annotation as Serializer;
 
 class SimilarActivity extends BaseActivity implements ActivityToStringInterface
 {
-
     /**
      * @Serializer\SerializedName("SPORTID")
      * @Serializer\Type("integer")
@@ -192,13 +190,4 @@ class SimilarActivity extends BaseActivity implements ActivityToStringInterface
     {
         return $this->dataSummary;
     }
-
-    /**
-     * @throws \Exception
-     */
-    public function getSport()
-    {
-        throw new \Exception('cant do getClient !'); // Old method doing getClient (can't remove because is in the interface) @todo fix this
-    }
-
 }

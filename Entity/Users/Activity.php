@@ -5,8 +5,6 @@ namespace Geonaute\LinkdataBundle\Entity\Users;
 use DateTime;
 use Geonaute\LinkdataBundle\Entity\Common\Activity as BaseActivity;
 use Geonaute\LinkdataBundle\Entity\Activity\About;
-use Geonaute\LinkdataBundle\Entity\Users\DataSummary;
-use Geonaute\LinkdataBundle\Entity\Users\Tag;
 use Geonaute\LinkdataBundle\Utils\Activity as UtilsActivity;
 use Geonaute\LinkdataBundle\Utils\ActivityToStringInterface;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -14,7 +12,6 @@ use JMS\Serializer\Annotation as Serializer;
 
 class Activity extends BaseActivity implements ActivityToStringInterface
 {
-
     /**
      * @Serializer\SerializedName("STARTDATE")
      * @Serializer\Type("string")
@@ -169,14 +166,6 @@ class Activity extends BaseActivity implements ActivityToStringInterface
     }
 
     /**
-     * @throws \Exception
-     */
-    public function getSport()
-    {
-        throw new \Exception('cant do getClient !'); // Old method doing getClient (can't remove because is in the interface) @todo fix this
-    }
-
-    /**
      * @return string
      */
     public function getLibelle()
@@ -242,5 +231,4 @@ class Activity extends BaseActivity implements ActivityToStringInterface
     {
         return $this->tags;
     }
-
 }

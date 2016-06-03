@@ -6,7 +6,6 @@ use JMS\Serializer\Annotation as Serializer;
 
 class Value
 {
-
     /**
      * @Serializer\XmlAttribute
      * @Serializer\Type("integer")
@@ -55,17 +54,8 @@ class Value
         $this->value = $value;
     }
 
-    function __toString()
+    public function __toString()
     {
         return $this->getValue();
     }
-
-    /**
-     * @throws \Exception
-     */
-    public function getDataType()
-    {
-        throw new \Exception('cant do getClient !'); // Old method doing getClient (can't remove because is in the interface) @todo fix this
-    }
-
 }

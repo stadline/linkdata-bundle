@@ -28,5 +28,4 @@ class Sport
     {
         return $this->getId();
     }
-
 }

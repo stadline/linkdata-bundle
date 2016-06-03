@@ -3,6 +3,7 @@
 namespace Geonaute\LinkdataBundle\Entity\Users;
 
 use Geonaute\LinkdataBundle\Entity\Users\TotalYear as BaseTotalYear;
+use Geonaute\LinkdataBundle\Utils\Datatype;
 use Geonaute\LinkdataBundle\Utils\ProgressStatisticMapperInterface;
 use JMS\Serializer\Annotation as Serializer;
 

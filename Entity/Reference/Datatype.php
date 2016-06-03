@@ -3,6 +3,7 @@
 namespace Geonaute\LinkdataBundle\Entity\Reference;
 
 use Geonaute\LinkdataBundle\Entity\Common\Datatype as BaseDatatype;
+use Geonaute\LinkdataBundle\Utils\Datatype as Reference;
 use JMS\Serializer\Annotation as Serializer;
 
 class Datatype extends BaseDatatype

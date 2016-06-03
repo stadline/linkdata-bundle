@@ -4,17 +4,12 @@ namespace Geonaute\LinkdataBundle\Entity\Activity;
 
 use DateTime;
 use Geonaute\LinkdataBundle\Entity\Common\Activity as BaseActivity;
-use Geonaute\LinkdataBundle\Entity\Activity\DataStream;
-use Geonaute\LinkdataBundle\Entity\Tracks\Track;
-use Geonaute\LinkdataBundle\Entity\Users\ConnectedDevice;
 use Geonaute\LinkdataBundle\Utils\Activity as UtilsActivity;
 use Geonaute\LinkdataBundle\Utils\ActivityToStringInterface;
-use Geonaute\LinkdataBundle\Utils\Datatype;
 use JMS\Serializer\Annotation as Serializer;
 
 class SummaryActivity extends BaseActivity implements ActivityToStringInterface
 {
-
     /**
      * @Serializer\SerializedName("USERID")
      * @Serializer\Type("string")
@@ -38,14 +33,6 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface
      * @var string
      */
     protected $deviceId;
-
-    /**
-     * @Serializer\SerializedName("CONNECTEDDEVICE")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Users\ConnectedDevice")
-     *
-     * @var ConnectedDevice
-     */
-    protected $device;
 
     /**
      * @Serializer\SerializedName("DEVICEMODELID")
@@ -128,14 +115,6 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface
     protected $trackId;
 
     /**
-     * @Serializer\SerializedName("TRACK")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Tracks\Track")
-     *
-     * @var Track
-     */
-    protected $track;
-
-    /**
      * @Serializer\SerializedName("SESSION_TOKEN")
      * @Serializer\Type("string")
      *
@@ -184,7 +163,6 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface
     protected $about;
 
     /**
-     *
      * @Serializer\SerializedName("TAGS")
      * @Serializer\XmlList(entry = "TAG")
      * @Serializer\Type("array<string>")
@@ -192,22 +170,6 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface
      * @var array
      */
     protected $tags = [];
-
-    /**
-     * @Serializer\SerializedName("DATASUMMARY")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Activity\DataSummary")
-     *
-     * @var DataSummary
-     */
-    protected $summary;
-
-    /**
-     * @Serializer\SerializedName("DATASTREAM")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Activity\DataStream")
-     *
-     * @var DataStream
-     */
-    protected $dataStream;
 
     /**
      * @return string
@@ -346,46 +308,6 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface
     }
 
     /**
-     * @return integer
-     */
-    public function getDistance()
-    {
-        return (int) (string) $this->getSummary()->getValue(Datatype::DISTANCE);
-    }
-
-    /**
-     * @return integer
-     */
-    public function getCalories()
-    {
-        return (int) (string) $this->getSummary()->getValue(Datatype::CALORIES_BURNT);
-    }
-
-    /**
-     * @return integer
-     */
-    public function getHeartRate()
-    {
-        return (string) $this->getSummary()->getValue(Datatype::HR_AVG);
-    }
-
-    /**
-     * @return integer
-     */
-    public function getStepNumber()
-    {
-        return (int) (string) $this->getSummary()->getValue(Datatype::STEP_NUMBER);
-    }
-
-    /**
-     * @return integer
-     */
-    public function getActiveTime()
-    {
-        return (string) $this->getSummary()->getValue(Datatype::ACTIVE_TIME);
-    }
-
-    /**
      * @return string
      */
     public function getShareToken()
@@ -435,45 +357,4 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface
             return $this->about;
         }
     }
-
-    /**
-     * @throws \Exception
-     */
-    public function getDevice()
-    {
-        throw new \Exception('cant do getClient !'); // Old method doing getClient (can't remove because is in the interface) @todo fix this
-    }
-
-    /**
-     * @throws \Exception
-     */
-    public function getSummary()
-    {
-        throw new \Exception('cant do getClient !'); // Old method doing getClient (can't remove because is in the interface) @todo fix this
-    }
-
-    /**
-     * @throws \Exception
-     */
-    public function getDataStream()
-    {
-        throw new \Exception('cant do getClient !'); // Old method doing getClient (can't remove because is in the interface) @todo fix this
-    }
-
-    /**
-     * @throws \Exception
-     */
-    public function getTrack()
-    {
-        throw new \Exception('cant do getClient !'); // Old method doing getClient (can't remove because is in the interface) @todo fix this
-    }
-
-    /**
-     * @throws \Exception
-     */
-    public function getSession()
-    {
-        throw new \Exception('cant do getClient !'); // Old method doing getClient (can't remove because is in the interface) @todo fix this
-    }
-
 }
