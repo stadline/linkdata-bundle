@@ -77,7 +77,7 @@ class Challenge
      *
      * @var string
      */
-    protected $started_at;
+    protected $startedAt;
 
     /**
      * @Serializer\SerializedName("ENDED_AT")
@@ -85,7 +85,7 @@ class Challenge
      *
      * @var string
      */
-    protected $ended_at;
+    protected $endedAt;
 
     /**
      * @return string
@@ -164,7 +164,7 @@ class Challenge
      */
     public function getStartedAt()
     {
-        return $this->started_at;
+        return $this->startedAt;
     }
 
     /**
@@ -172,7 +172,7 @@ class Challenge
      */
     public function getEndedAt()
     {
-        return $this->ended_at;
+        return $this->endedAt;
     }
 
 }
