@@ -2,6 +2,7 @@
 
 namespace Geonaute\LinkdataBundle\Entity\Users;
 
+use Geonaute\LinkdataBundle\Entity\Common\Value as CommonValue;
 use JMS\Serializer\Annotation as Serializer;
 
 class Record
@@ -18,7 +19,7 @@ class Record
      * @Serializer\SerializedName("VALUE")
      * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Common\Value")
      *
-     * @var integer
+     * @var CommonValue
      */
     protected $value;
 

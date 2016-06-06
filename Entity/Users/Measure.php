@@ -37,7 +37,7 @@ class Measure extends BaseMeasure
 
         foreach ($values as $value) {
             $date = isset($value->date) ? (string) $value->getDate() : substr($value->getUpdatedTime(), 0, 10);
-            $this->values[$date] = $value;
+            $this->values[$date] = $value->getValue();
         }
 
         krsort($this->values);

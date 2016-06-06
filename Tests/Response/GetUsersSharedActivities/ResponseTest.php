@@ -38,8 +38,6 @@ class ResponseTest extends ResponseTestCase
         $this->assertObjectHasAttribute('sportId', $object);
         $this->assertObjectHasAttribute('libelle', $object);
         $this->assertObjectHasAttribute('summary', $object);
-
-        $this->assertIsValue($object->getSummary(4));
     }
 
 }

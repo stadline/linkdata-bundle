@@ -30,7 +30,12 @@ class Measure extends BaseMeasure
      */
     public function defineDatatypesForSerialization()
     {
-        foreach ($this->values as $value) {
+        $values = $this->getValues();
+
+        $this->values = [];
+
+        foreach ($values as $value) {
+            $this->values[$value->getId()] = $value->getValue();
             $this->datatypes[$value->getId()] = $value->getId();
         }
     }

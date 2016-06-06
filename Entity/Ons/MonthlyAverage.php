@@ -10,7 +10,7 @@ class MonthlyAverage
 
     /**
      * @Serializer\SerializedName("VALUE")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Common\Value")
+     * @Serializer\Type("string")
      *
      * @var Value
      */

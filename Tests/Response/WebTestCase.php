@@ -43,17 +43,18 @@ class WebTestCase extends \PHPUnit_Framework_TestCase
     /**
      * This method assert that ArrayCollection[$key] = $object with getMethod = $key
      * example : ArrayCollection[8] = the object in collection with ->getMethod() returns 8
+     * works with arrays two
      *
-     * @param ArrayCollection $arrayCollection
+     * @param mixed $array
      * @param mixed $method
      */
-    public function assertElementsAreIndexed(ArrayCollection $arrayCollection, $method = '')
+    public function assertElementsAreIndexed($array, $method = '')
     {
-        foreach ($arrayCollection as $elementOfCollection) {
-            $currentElementIndex = $this->getIndexOfElement($elementOfCollection, $method);
+        foreach ($array as $element) {
+            $currentElementIndex = $this->getIndexOfElement($element, $method);
 
-            $this->assertArrayHasKey($currentElementIndex, $arrayCollection);
-            $this->assertEquals($arrayCollection[$currentElementIndex], $elementOfCollection);
+            $this->assertArrayHasKey($currentElementIndex, $array);
+            $this->assertEquals($array[$currentElementIndex], $element);
         }
     }
 
@@ -139,7 +140,9 @@ class WebTestCase extends \PHPUnit_Framework_TestCase
 
         $this->assertInternalType('array', $dataSummaryValues);
 
-        $this->assertIsValue($dataSummaryValues[0]);
+        $this->assertElementsAreIndexed($dataSummaryValues, 'getId');
+
+        $this->assertIsValue(current($dataSummaryValues));
     }
 
     public function assertIsDeviceModel($object)
@@ -182,8 +185,6 @@ class WebTestCase extends \PHPUnit_Framework_TestCase
         $measureValues = $object->getValues();
 
         $this->assertInternalType('array', $measureValues);
-
-        $this->assertIsValue($measureValues[0]);
     }
 
     public function assertIsMeasureInUsersDirectory($object)
@@ -196,8 +197,6 @@ class WebTestCase extends \PHPUnit_Framework_TestCase
         $measureValues = $object->getValues();
 
         $this->assertInternalType('array', $measureValues);
-
-        $this->assertIsValueInUsersDirectory(current($measureValues));
     }
 
     public function assertIsProfile($object)
@@ -241,7 +240,7 @@ class WebTestCase extends \PHPUnit_Framework_TestCase
 
         $this->assertInternalType('array', $locationsArray);
 
-        $this->assertIsLocation($locationsArray[0]);
+        $this->assertIsLocation(current($locationsArray));
     }
 
     public function assertIsSport($object)

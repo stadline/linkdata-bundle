@@ -52,6 +52,20 @@ class SharedActivity extends BaseActivity
     protected $summary;
 
     /**
+     * @Serializer\PostDeserialize
+     */
+    public function defineSummaryForDeserialization()
+    {
+        $summary = $this->summary;
+
+        $this->summary = [];
+
+        foreach ($summary as $value) {
+            $this->summary[$value->getId()] = $value->getValue();
+        }
+    }
+
+    /**
      * @return string
      */
     public function __toString()

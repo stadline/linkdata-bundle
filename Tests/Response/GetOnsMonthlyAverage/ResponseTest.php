@@ -36,8 +36,6 @@ class ResponseTest extends ResponseTestCase
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Ons\MonthlyAverage", $object);
 
         $this->assertObjectHasAttribute('value', $object);
-
-        $this->assertIsValue($object->getValue());
     }
 
 }
