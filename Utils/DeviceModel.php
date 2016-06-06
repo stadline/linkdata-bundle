@@ -4,7 +4,10 @@ namespace Geonaute\LinkdataBundle\Utils;
 
 class DeviceModel
 {
+    const ONCOACH = 1;
+    const ONMOVE510710 = 7;
     const ONDAILY = 13;
+    const SATCOUNT = 23;
     const FORERUNNER_10 = 27;
     const FORERUNNER_110 = 28;
     const FORERUNNER_205 = 29;
@@ -28,15 +31,14 @@ class DeviceModel
     const GARMIN_COMMUNICATOR = 47;
 
     /**
-     * Try to get deviceId from deviceName.
+     * Try to get deviceId from deviceName
      *
-     * Something like: "myGeonaute mobile Android"
-     * Will be converted to: "MYGEONAUTE_MOBILE_ANDROID"
+     * Something like: "DecathlonCoach mobile Android"
+     * Will be converted to: "DECATHLONCOACH_MOBILE_ANDROID"
      * And should match defined constants
      *
      * @param string $fullDeviceName
-     *
-     * @return int
+     * @return integer
      */
     public static function getIdFromName($fullDeviceName)
     {
