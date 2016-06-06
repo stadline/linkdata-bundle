@@ -30,7 +30,6 @@ class ResponseTest extends ResponseTestCase
         $this->assertObjectHasAttribute('userId', $object);
         $this->assertObjectHasAttribute('sportId', $object);
         $this->assertObjectHasAttribute('deviceId', $object);
-        $this->assertObjectHasAttribute('device', $object);
         $this->assertObjectHasAttribute('deviceModelId', $object);
         $this->assertObjectHasAttribute('startDate', $object);
         $this->assertObjectHasAttribute('timezone', $object);
@@ -41,7 +40,6 @@ class ResponseTest extends ResponseTestCase
         $this->assertObjectHasAttribute('longitude', $object);
         $this->assertObjectHasAttribute('elevation', $object);
         $this->assertObjectHasAttribute('trackId', $object);
-        $this->assertObjectHasAttribute('track', $object);
         $this->assertObjectHasAttribute('sessionToken', $object);
         $this->assertObjectHasAttribute('shareToken', $object);
         $this->assertObjectHasAttribute('manual', $object);
@@ -49,8 +47,6 @@ class ResponseTest extends ResponseTestCase
         $this->assertObjectHasAttribute('updateTime', $object);
         $this->assertObjectHasAttribute('about', $object);
         $this->assertObjectHasAttribute('tags', $object);
-        $this->assertObjectHasAttribute('summary', $object);
-        $this->assertObjectHasAttribute('dataStream', $object);
 
         $this->assertInternalType('array', $object->getTags());
 

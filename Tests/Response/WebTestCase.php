@@ -84,7 +84,6 @@ class WebTestCase extends \PHPUnit_Framework_TestCase
 
         $this->assertObjectHasAttribute('id', $object);
         $this->assertObjectHasAttribute('cardinality', $object);
-        $this->assertObjectHasAttribute('sport', $object);
     }
 
     public function assertIsActivitiesTag($object)
