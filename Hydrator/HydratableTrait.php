@@ -1,9 +1,8 @@
 <?php
 
-namespace Geonaute\LinkdataBundle\Decorator;
+namespace Geonaute\LinkdataBundle\Hydrator;
 
 use JMS\Serializer\Annotation as Serializer;
-use Geonaute\LinkdataBundle\Hydrator\LinkdataHydrator;
 
 trait HydratableTrait
 {
