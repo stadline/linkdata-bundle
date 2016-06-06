@@ -40,14 +40,4 @@ class DataSummary
     {
         return $this->unitId;
     }
-
-    /**
-     * @todo understand this / not matching API data
-     */
-    public function __construct(\SimpleXMLElement $DATASUMMARY)
-    {
-        $this->unitId = (string) $DATASUMMARY['id'];
-        $this->value = (string) $DATASUMMARY;
-    }
-
 }
