@@ -8,17 +8,8 @@ class DataSummary
 {
 
     /**
-     * @Serializer\SerializedName("VALUE")
-     * @Serializer\XmlList(inline = true, entry = "VALUE")
-     * @Serializer\Type("integer")
-     *
-     * @var string
-     */
-    protected $value;
-
-    /**
      * @Serializer\SerializedName("id")
-     * @Serializer\XmlList(inline = true, entry = "VALUE")
+     * @Serializer\XmlAttribute
      * @Serializer\Type("integer")
      *
      * @var integer
@@ -26,12 +17,12 @@ class DataSummary
     protected $unitId;
 
     /**
-     * @return ?
+     * @Serializer\XmlList(inline = true, entry = "VALUE")
+     * @Serializer\Type("integer")
+     *
+     * @var integer
      */
-    public function getValue()
-    {
-        return $this->value;
-    }
+    protected $value;
 
     /**
      * @return integer
@@ -39,5 +30,13 @@ class DataSummary
     public function getUnitId()
     {
         return $this->unitId;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getValue()
+    {
+        return $this->value;
     }
 }
