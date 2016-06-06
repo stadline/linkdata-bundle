@@ -3,7 +3,7 @@
 namespace Geonaute\LinkdataBundle\Hydrator;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use Geonaute\LinkdataBundle\Decorator\Entity\Activity\HydratableSummaryActivity;
+use Geonaute\Module\LinkdataBundle\Decorator\Entity\Activity\HydratableSummaryActivity;
 use Geonaute\LinkdataBundle\Plugin\CachedClient;
 
 class LinkdataHydrator
