@@ -60,7 +60,8 @@ class ResponseTest extends ResponseTestCase
     {
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Users\DataSummary", $object);
 
-        // old class not matching API return
+        $this->assertObjectHasAttribute('unitId', $object);
+        $this->assertObjectHasAttribute('value', $object);
     }
 
 }
