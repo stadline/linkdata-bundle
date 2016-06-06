@@ -18,17 +18,6 @@ trait HydratableGlobalChallengeTrait
     /**
      * @throws \Exception
      */
-    public function getSport()
-    {
-        if ($this->targetUnit === null) {
-            $this->getHydrator()->hydrateReferencedSports($this);
-        }
-        return $this->targetUnit;
-    }
-
-    /**
-     * @throws \Exception
-     */
     public function getTargetUnit()
     {
         if ($this->targetUnit === null) {
