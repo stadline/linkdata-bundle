@@ -21,6 +21,26 @@ class WebTestCase extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Method to assert array is sorted
+     *
+     * @param array $array
+     * @param string $method
+     */
+    public function assertArrayIsSorted(array $array, $method = '')
+    {
+        $valuesArray = [];
+
+        foreach ($array as $element) {
+            $valuesArray[] = $element->$method();
+        }
+
+        $sortedArray = $valuesArray;
+        sort($sortedArray);
+
+        $this->assertEquals($valuesArray, $sortedArray);
+    }
+
+    /**
      * This method assert that ArrayCollection[$key] = $object with getMethod = $key
      * example : ArrayCollection[8] = the object in collection with ->getMethod() returns 8
      *
