@@ -7,7 +7,6 @@ use Geonaute\LinkdataBundle\Entity\Common\Activity as BaseActivity;
 use Geonaute\LinkdataBundle\Entity\Activity\About;
 use Geonaute\LinkdataBundle\Utils\Activity as UtilsActivity;
 use Geonaute\LinkdataBundle\Utils\ActivityToStringInterface;
-use Doctrine\Common\Collections\ArrayCollection;
 use JMS\Serializer\Annotation as Serializer;
 
 class Activity extends BaseActivity implements ActivityToStringInterface
@@ -70,7 +69,8 @@ class Activity extends BaseActivity implements ActivityToStringInterface
 
     /**
      * @Serializer\SerializedName("DATASUMMARY")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Users\DataSummary")
+     * @Serializer\XmlMap(entry = "VALUE", keyAttribute="id")
+     * @Serializer\Type("ArrayCollection<string, Geonaute\LinkdataBundle\Entity\Users\DataSummary>")
      *
      * @var array<DataSummary>
      */
@@ -92,17 +92,6 @@ class Activity extends BaseActivity implements ActivityToStringInterface
      * @var array<Tag>
      */
     protected $tags = [];
-
-    /**
-     * @Serializer\PostDeserialize
-     */
-    public function defineDataSummariesForDeserialization()
-    {
-        if ($this->dataSummaries) {
-            $indexId = $this->dataSummaries->getUnitId();
-            $this->dataSummaries = new ArrayCollection([$indexId => $this->dataSummaries]);
-        }
-    }
 
     /**
      * @return string
