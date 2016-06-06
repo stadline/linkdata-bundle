@@ -3,7 +3,7 @@
 namespace Geonaute\LinkdataBundle\Entity\Users;
 
 use Geonaute\LinkdataBundle\Entity\Common\Activity as BaseActivity;
-use Geonaute\LinkdataBundle\Entity\Common\Value;
+use Geonaute\LinkdataBundle\Entity\Common\Value as CommonValue;
 use Geonaute\LinkdataBundle\Utils\Datatype;
 use JMS\Serializer\Annotation as Serializer;
 
@@ -47,7 +47,7 @@ class SharedActivity extends BaseActivity
      * @Serializer\XmlMap(entry = "VALUE", keyAttribute="id")
      * @Serializer\Type("array<string, Geonaute\LinkdataBundle\Entity\Common\Value>")
      *
-     * @var array<Value>
+     * @var array<CommonValue>
      */
     protected $summary;
 

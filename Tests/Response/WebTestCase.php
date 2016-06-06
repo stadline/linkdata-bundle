@@ -177,7 +177,7 @@ class WebTestCase extends \PHPUnit_Framework_TestCase
 
         $this->assertInternalType('array', $measureValues);
 
-        $this->assertIsValue($measureValues[0]);
+        $this->assertIsValueInUsersDirectory(current($measureValues));
     }
 
     public function assertIsProfile($object)
@@ -298,6 +298,15 @@ class WebTestCase extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Common\Value", $object);
 
         $this->assertObjectHasAttribute('id', $object);
+        $this->assertObjectHasAttribute('value', $object);
+    }
+
+    public function assertIsValueInUsersDirectory($object)
+    {
+        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Users\Value", $object);
+
+        $this->assertObjectHasAttribute('date', $object);
+        $this->assertObjectHasAttribute('updatedTime', $object);
         $this->assertObjectHasAttribute('value', $object);
     }
 

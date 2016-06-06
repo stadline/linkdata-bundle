@@ -9,6 +9,15 @@ class Measure extends BaseMeasure
 {
 
     /**
+     * @Serializer\SerializedName("VALUE")
+     * @Serializer\XmlMap(inline = true, entry = "VALUE")
+     * @Serializer\Type("array<Geonaute\LinkdataBundle\Entity\Users\Value>")
+     *
+     * @var array<Value>
+     */
+    protected $values;
+
+    /**
      * @Serializer\SerializedName("unitid")
      * @Serializer\XmlAttribute()
      * @Serializer\Type("integer")
@@ -22,18 +31,16 @@ class Measure extends BaseMeasure
      */
     public function defineValuesForDeserialization()
     {
-//        $values = $this->getValues();
-//
-//        $this->values = [];
-//
-//        foreach ($values as $value) {
-//            $date = isset($value['date']) ? (string) $value['date'] : substr($value['updated_time'], 0, 10); @todo change this
-//            $this->values[$date] = $value;
-//        }
-//
-//        krsort($this->values);
-//
-//        $this->values = $values;
+        $values = $this->getValues();
+
+        $this->values = [];
+
+        foreach ($values as $value) {
+            $date = isset($value->date) ? (string) $value->getDate() : substr($value->getUpdatedTime(), 0, 10);
+            $this->values[$date] = $value;
+        }
+
+        krsort($this->values);
     }
 
     /**
