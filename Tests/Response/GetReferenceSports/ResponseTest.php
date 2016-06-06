@@ -26,6 +26,7 @@ class ResponseTest extends ResponseTestCase
         $firstSportOfCollection = $sportsCollection->first();
 
         $this->assertElementsAreIndexed($sportsCollection, 'getId');
+        $this->assertArrayIsSorted($sportsCollection->toArray(), 'getName');
 
         $this->assertIsSport($firstSportOfCollection);
     }
