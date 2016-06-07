@@ -43,11 +43,19 @@ class User extends BaseUser
     }
 
     /**
-     * @throws \Exception
+     * @return integer
      */
     public function getLevel()
     {
-        throw new \Exception("trying to do GetLevel from Share class by using response"); // @todo change this
+        return $this->level;
+    }
+
+    /**
+     * @param integer $level
+     */
+    public function setLevel($level)
+    {
+        $this->level = $level;
     }
 
 }
