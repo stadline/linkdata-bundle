@@ -2,10 +2,9 @@
 
 namespace Geonaute\LinkdataBundle\Entity\Users;
 
-use Geonaute\LinkdataBundle\Entity\Common\Measure as BaseMeasure;
 use JMS\Serializer\Annotation as Serializer;
 
-class Measure extends BaseMeasure
+class Measure
 {
 
     /**
@@ -13,7 +12,7 @@ class Measure extends BaseMeasure
      * @Serializer\XmlMap(inline = true, entry = "VALUE")
      * @Serializer\Type("array<Geonaute\LinkdataBundle\Entity\Users\Value>")
      *
-     * @var array<Value>
+     * @var array
      */
     protected $values;
 
@@ -37,10 +36,18 @@ class Measure extends BaseMeasure
 
         foreach ($values as $value) {
             $date = isset($value->date) ? (string) $value->getDate() : substr($value->getUpdatedTime(), 0, 10);
-            $this->values[$date] = $value->getValue();
+            $this->values[$date] = (int) $value->getValue();
         }
 
         krsort($this->values);
+    }
+
+    /**
+     * @return array<Value>
+     */
+    public function getValues()
+    {
+        return $this->values;
     }
 
     /**

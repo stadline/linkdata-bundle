@@ -68,7 +68,7 @@ class About
      */
     public function getTrack()
     {
-        return $this->track;
+        return (bool)(int)$this->track;
     }
 
     /**
@@ -76,7 +76,7 @@ class About
      */
     public function getDataStream()
     {
-        return $this->dataStream;
+        return (bool)(int)$this->dataStream;
     }
 
     /**
@@ -84,7 +84,7 @@ class About
      */
     public function getLap()
     {
-        return $this->lap;
+        return (bool)(int)$this->lap;
     }
 
     /**
@@ -92,7 +92,7 @@ class About
      */
     public function getElevation()
     {
-        return $this->elevation;
+        return (bool)(int)$this->elevation;
     }
 
     /**
@@ -100,7 +100,7 @@ class About
      */
     public function getHeartrate()
     {
-        return $this->heartrate;
+        return (bool)(int)$this->heartrate;
     }
 
     /**
@@ -108,7 +108,7 @@ class About
      */
     public function getSpeed()
     {
-        return $this->speed;
+        return (bool)(int)$this->speed;
     }
 
     /**
@@ -116,7 +116,22 @@ class About
      */
     public function getChallenge()
     {
-        return $this->challenge;
+        return (bool)(int)$this->challenge;
     }
 
+    /**
+     * @return array
+     */
+    public function toArray()
+    {
+        return array(
+            'track' => $this->getTrack(),
+            'dataStream' => $this->getDataStream(),
+            'lap' => $this->getLap(),
+            'elevation' => $this->getElevation(),
+            'heartRate' => $this->getHeartrate(),
+            'speed' => $this->getSpeed(),
+            'challenge' => $this->getChallenge(),
+        );
+    }
 }
