@@ -50,15 +50,6 @@ class Sport extends BaseSport
     }
 
     /**
-     *
-     * @throws \Exception
-     */
-    public function getUnivers()
-    {
-        throw new \Exception('cant do getClient !'); // Old method doing getClient (can't remove because is in the interface) @todo fix this
-    }
-
-    /**
      * @return integer
      */
     public function getIcon()
