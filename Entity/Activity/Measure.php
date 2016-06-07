@@ -35,7 +35,7 @@ class Measure extends BaseMeasure
         $this->values = [];
 
         foreach ($values as $value) {
-            $this->values[$value->getId()] = $value->getValue();
+            $this->values[$value->getId()] = $value;
             $this->datatypes[$value->getId()] = $value->getId();
         }
     }
