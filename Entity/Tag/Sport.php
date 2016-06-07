@@ -13,7 +13,7 @@ class Sport extends BaseSport
      * @Serializer\XmlMap(inline = true, entry = "VALUE", keyAttribute = "id")
      * @Serializer\Type("array<string, string>")
      *
-     * @var array
+     * @var array<integer>
      */
     protected $values;
 

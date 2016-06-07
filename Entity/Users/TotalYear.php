@@ -28,7 +28,7 @@ class TotalYear
     /**
      * @Serializer\SerializedName("SPORTS")
      * @Serializer\XmlMap(entry = "SPORT", keyAttribute="id")
-     * @Serializer\Type("ArrayCollection<string, Geonaute\LinkdataBundle\Entity\Tag\Sport>")
+     * @Serializer\Type("ArrayCollection<string, Geonaute\LinkdataBundle\Entity\Users\Sport>")
      *
      * @var array<TagSport>
      */
@@ -66,13 +66,11 @@ class TotalYear
      */
     protected function getTotal($unitId)
     {
-//        $total = 0;
-//
-//        foreach ($this->xml->xpath('.//VALUE[@id="' . $unitId . '"]') as $node) { @todo change this
-//            $total += (string) $node;
-//        }
-//
-//        return $total;
+        $total = 0;
+        foreach($this->getSports() as $sport) {
+            $total += $sport->getValue($unitId);
+        }
+        return $total;
     }
 
     /**

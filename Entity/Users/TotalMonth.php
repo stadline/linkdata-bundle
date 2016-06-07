@@ -66,11 +66,9 @@ class TotalMonth
     protected function getTotal($unitId)
     {
         $total = 0;
-
-        foreach ($this->xml->xpath('.//VALUE[@id="' . $unitId . '"]') as $node) {
-            $total += (string) $node;
+        foreach($this->getSports() as $sport) {
+            $total += $sport->getValue($unitId);
         }
-
         return $total;
     }
 

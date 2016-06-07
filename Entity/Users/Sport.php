@@ -19,8 +19,18 @@ class Sport extends BaseSport
     protected $values;
 
     /**
+     * @return array
+     */
+    public function getValues()
+    {
+        return $this->values;
+    }
+
+    /**
      * Return the value of the total Years for the sport
-     * @param unknown $id
+     *
+     * @param integer $id
+     * @return integer
      */
     public function getValue($id)
     {

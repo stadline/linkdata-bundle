@@ -7,7 +7,6 @@ use JMS\Serializer\Annotation as Serializer;
 
 class TotalWeek
 {
-
     /**
      * @Serializer\SerializedName("TOTALUSERS")
      * @Serializer\Type("integer")
@@ -15,6 +14,24 @@ class TotalWeek
      * @var integer
      */
     protected $totalUsers;
+
+
+    /**
+     * @Serializer\SerializedName("DATATYPES")
+     * @Serializer\XmlMap(entry = "DATATYPE", keyAttribute="id")
+     * @Serializer\Type("ArrayCollection<string, Geonaute\LinkdataBundle\Entity\Tag\Datatype>")
+     *
+     * @var array<Datatype>
+     */
+    protected $datatypes;
+
+    /**
+     * @return array<Datatype>
+     */
+    public function getDatatypes()
+    {
+        return $this->datatypes;
+    }
 
     /**
      * @return integer
@@ -32,13 +49,12 @@ class TotalWeek
      */
     protected function getTotal($unitId)
     {
-//        $total = 0;
-//
-//        foreach ($this->xml->xpath('.//DATATYPE[@id="' . $unitId . '"]') as $node) { @todo change this
-//            $total += (int) $node;
-//        }
 
-//        return $total;
+        $total = 0;
+        foreach($this->getDatatypes() as $datatype) {
+            $total += $datatype->getValue($unitId);
+        }
+        return $total;
     }
 
     /**
@@ -46,7 +62,7 @@ class TotalWeek
      */
     public function getTotalPoints()
     {
-        return $this->getTotal(UtilsUtilsDatatype::POINTS_EARNED);
+        return $this->getTotal(UtilsDatatype::POINTS_EARNED);
     }
 
     /**
