@@ -75,7 +75,6 @@ class ResponseTest extends ResponseTestCase
         $this->assertIsDataStream($object->getDataStream());
         $this->assertIsDataSummary($object->getDataSummary());
         $this->assertIsTrack($object->getTrack());
-        //$this->assertIsAbout($object->getAbout()); Not in XML data
     }
 
     private function assertIsUser($object)
@@ -118,13 +117,6 @@ class ResponseTest extends ResponseTestCase
         $this->assertInternalType('array', $trackLocationsArray);
 
         $this->assertIsLocationInTracksDirectory($trackLocationsArray[5000]);
-    }
-
-    public function assertIsAbout($object)
-    {
-        $this->assertInstanceOf('Geonaute\LinkdataBundle\Entity\Shares\About', $object);
-
-        // class not adapted yet
     }
 
     private function assertIsStatistics($object)

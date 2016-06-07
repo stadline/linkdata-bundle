@@ -7,6 +7,7 @@ use Geonaute\LinkdataBundle\Entity\Activity\DataStream;
 use Geonaute\LinkdataBundle\Entity\Activity\DataSummary;
 use Geonaute\LinkdataBundle\Entity\Reference\DeviceModel;
 use Geonaute\LinkdataBundle\Entity\Reference\Sport;
+use Geonaute\LinkdataBundle\Utils\Datatype;
 use JMS\Serializer\Annotation as Serializer;
 
 class Activity
@@ -123,6 +124,50 @@ class Activity
      * @var About
      */
     protected $about;
+
+    /**
+     * @Serializer\PostDeserialize
+     */
+    public function defineAboutAndItsValuesForDeserialization()
+    {
+        $this->about = new About();
+
+        $dataStreamMeasures = $this->getDataStream()->getMeasures();
+        $dataStream = $this->getDataStream() && count($dataStreamMeasures) > 0;
+        $track = $this->getTrack() && count($this->getTrack()->getLocations()) > 0;
+
+        $countElevation = $countLap = $countSpeed = 0;
+
+        foreach ($dataStreamMeasures as $measure) {
+
+            switch (true) {
+                case $measure->getValue(Datatype::ELEVATION_CURRENT):
+                    $countElevation++;
+                    break;
+                case $measure->getValue(Datatype::LAP):
+                    $countLap++;
+                case $measure->getValue(Datatype::SPEED_CURRENT):
+                    $countSpeed++;
+                    break;
+            }
+        }
+
+        $elevation = $countElevation > 0;
+        $lap = $countLap > 0;
+        $speed = $countSpeed > 0;
+
+        $this->about->setDataStream($dataStream);
+        $this->about->setElevation($elevation);
+        $this->about->setLap($lap);
+        $this->about->setSpeed($speed);
+        $this->about->setTrack($track);
+
+        if ($this->about) {
+            $this->about = $this->about->toArray();
+        } else {
+            $this->about = [];
+        }
+    }
 
     /**
      * @return string

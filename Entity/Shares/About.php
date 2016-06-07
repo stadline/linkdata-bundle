@@ -4,18 +4,141 @@ namespace Geonaute\LinkdataBundle\Entity\Shares;
 
 use Geonaute\LinkdataBundle\Utils\Datatype;
 
-class About extends \ArrayObject
+class About
 {
 
-//    public function __construct(\SimpleXMLElement $ACTIVITY)
-//    {
-//        return parent::__construct(array(
-//                    'track' => $ACTIVITY->TRACK[0] && count($ACTIVITY->TRACK->DETAIL->LOCATION) > 0,
-//                    'dataStream' => $ACTIVITY->DATASTREAM[0] && count($ACTIVITY->DATASTREAM->MEASURE) > 0,
-//                    'elevation' => count($ACTIVITY->xpath('.//MEASURE/VALUE[@id=' . Datatype::ELEVATION_CURRENT . ']')) > 0, @todo change this
-//                    'speed' => count($ACTIVITY->xpath('.//MEASURE/VALUE[@id=' . Datatype::SPEED_CURRENT . ']')) > 0,
-//                    'lap' => count($ACTIVITY->xpath('.//MEASURE/VALUE[@id=' . Datatype::LAP . ']')) > 0,
-//        ));
-//    }
+    /**
+     * @Serializer\SerializedName("TRACK")
+     * @Serializer\Type("boolean")
+     *
+     * @var boolean
+     */
+    protected $track;
+
+    /**
+     * @Serializer\SerializedName("DATASTREAM")
+     * @Serializer\Type("boolean")
+     *
+     * @var boolean
+     */
+    protected $dataStream;
+
+    /**
+     * @Serializer\SerializedName("LAP")
+     * @Serializer\Type("boolean")
+     *
+     * @var boolean
+     */
+    protected $lap;
+
+    /**
+     * @Serializer\SerializedName("ELEVATION")
+     * @Serializer\Type("boolean")
+     *
+     * @var boolean
+     */
+    protected $elevation;
+
+    /**
+     * @Serializer\SerializedName("SPEED")
+     * @Serializer\Type("boolean")
+     *
+     * @var boolean
+     */
+    protected $speed;
+
+    /**
+     * @return boolean
+     */
+    public function getTrack()
+    {
+        return $this->track;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getDataStream()
+    {
+        return $this->dataStream;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getLap()
+    {
+        return $this->lap;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getElevation()
+    {
+        return $this->elevation;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getSpeed()
+    {
+        return $this->speed;
+    }
+
+        /**
+     * @param boolean $track
+     */
+    public function setTrack($track)
+    {
+        $this->track = $track;
+    }
+
+    /**
+     * @param boolean $dataStream
+     */
+    public function setDataStream($dataStream)
+    {
+        $this->dataStream = $dataStream;
+    }
+
+    /**
+     * @param boolean $lap
+     */
+    public function setLap($lap)
+    {
+        $this->lap = $lap;
+    }
+
+    /**
+     * @param boolean $elevation
+     */
+    public function setElevation($elevation)
+    {
+        $this->elevation = $elevation;
+    }
+
+    /**
+     * @param boolean $speed
+     */
+    public function setSpeed($speed)
+    {
+        $this->speed = $speed;
+    }
+
+    /**
+     * @return array
+     */
+    public function toArray()
+    {
+        return array(
+            'track' => $this->getTrack(),
+            'dataStream' => $this->getDataStream(),
+            'lap' => $this->getLap(),
+            'elevation' => $this->getElevation(),
+            'speed' => $this->getSpeed()
+        );
+    }
 
 }

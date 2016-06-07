@@ -172,6 +172,17 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface
     protected $tags = [];
 
     /**
+     * @Serializer\PostDeserialize
+     */
+    public function defineAboutForDeserialization()
+    {
+        if ($this->about) {
+            $this->about = $this->about->toArray();
+        } else {
+            $this->about = [];
+        }
+    }
+    /**
      * @return string
      */
     public function __toString()

@@ -49,8 +49,7 @@ class ResponseTest extends ResponseTestCase
         $this->assertObjectHasAttribute('tags', $object);
 
         $this->assertInternalType('array', $object->getTags());
-
-        $this->assertIsAbout($object->getAbout());
+        $this->assertInternalType('array', $object->getAbout());
     }
 
     private function assertIsTrack($object)

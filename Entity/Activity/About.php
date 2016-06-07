@@ -134,4 +134,5 @@ class About
             'challenge' => $this->getChallenge(),
         );
     }
+
 }
