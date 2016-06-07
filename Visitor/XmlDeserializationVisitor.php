@@ -440,9 +440,9 @@ class XmlDeserializationVisitor extends AbstractVisitor
         $indexElement = $xml;
 
         foreach ($indexArray as $index) {
-            if (!empty($indexElement->$index)) {
+            if (isset($indexElement->$index)) {
                 $indexElement = $indexElement->$index;
-            } else if (!empty($indexElement[$index])) {
+            } else if (isset($indexElement[$index])) {
                 $indexElement = $indexElement[$index];
             } else {
                 throw new RuntimeException(sprintf("Can't find value for index in XML Element attribute or value"));

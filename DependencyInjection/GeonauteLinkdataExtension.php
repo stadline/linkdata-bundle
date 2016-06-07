@@ -82,15 +82,5 @@ class GeonauteLinkdataExtension extends SimpleExtension
                 array('setResolver', array($this->get('geonaute_linkdata.mock_resolver')))
             )
         ));
-
-        // Custom JMS handler to manage CustomCollection
-        $this->define('geonaute_linkdata.custom_collection_decorator_handler', array(
-            "class" => 'Geonaute\LinkdataBundle\Handler\CustomCollectionDecoratorHandler',
-            "tags" => array(
-                array(
-                    "name" => "jms_serializer.subscribing_handler"
-                )
-            )
-        ));
     }
 }
