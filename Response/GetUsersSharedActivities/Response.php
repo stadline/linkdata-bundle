@@ -4,6 +4,7 @@ namespace Geonaute\LinkdataBundle\Response\GetUsersSharedActivities;
 
 use Geonaute\LinkdataBundle\Response\Response as BaseResponse;
 use Geonaute\LinkdataBundle\Entity\Users\SharedActivity;
+use Doctrine\Common\Collections\ArrayCollection;
 use JMS\Serializer\Annotation as Serializer;
 
 class Response extends BaseResponse
@@ -21,9 +22,13 @@ class Response extends BaseResponse
     /**
      * @Serializer\PostDeserialize
      */
-    public function sortActivities()
+    public function defineActivitiesForDeserialization()
     {
-        // usort($this->activities, [$this->activities, "orderActivities"]); @todo change this not working
+        $activities = $this->activities->toArray();
+
+        usort($activities, [$this, "orderActivities"]);
+
+        $this->activities = new ArrayCollection($activities);
     }
 
     /**

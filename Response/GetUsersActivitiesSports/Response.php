@@ -4,6 +4,7 @@ namespace Geonaute\LinkdataBundle\Response\GetUsersActivitiesSports;
 
 use Geonaute\LinkdataBundle\Response\Response as BaseResponse;
 use Geonaute\LinkdataBundle\Entity\Users\ActivitiesSport;
+use Doctrine\Common\Collections\ArrayCollection;
 use JMS\Serializer\Annotation as Serializer;
 
 class Response extends BaseResponse
@@ -24,6 +25,20 @@ class Response extends BaseResponse
     public function getSports()
     {
         return $this->sports;
+    }
+
+    /**
+     * @Serializer\PostDeserialize
+     */
+    public function defineSportsForDeserialization()
+    {
+        $collection = $this->sports->toArray();
+
+        uasort($collection, function($a, $b){
+            return $a->getCardinality() > $b->getCardinality();
+        });
+
+        $this->sports = new ArrayCollection($collection);
     }
 
 }

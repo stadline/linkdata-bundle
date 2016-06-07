@@ -163,7 +163,7 @@ class SharedActivity extends BaseActivity
      */
     public function getStartDate()
     {
-        return \DateTime::createFromFormat('Y-m-d H:i:s', $this->startdate);
+        return \DateTime::createFromFormat('Y-m-d H:i:s', $this->startDate);
     }
 
 }
