@@ -3,7 +3,7 @@
 namespace Geonaute\LinkdataBundle\Entity\Users;
 
 use Geonaute\LinkdataBundle\Utils\Datatype;
-use Geonaute\LinkdataBundle\Entity\Tag\Sport;
+use Geonaute\LinkdataBundle\Entity\Tag\Sport as TagSport;
 use JMS\Serializer\Annotation as Serializer;
 
 class TotalYear
@@ -30,7 +30,7 @@ class TotalYear
      * @Serializer\XmlMap(entry = "SPORT", keyAttribute="id")
      * @Serializer\Type("ArrayCollection<string, Geonaute\LinkdataBundle\Entity\Tag\Sport>")
      *
-     * @var array<Sport>
+     * @var array<TagSport>
      */
     protected $sports;
 
@@ -161,7 +161,7 @@ class TotalYear
     }
 
     /**
-     * @return array<Sport>
+     * @return array<TagSport>
      */
     public function getSports()
     {

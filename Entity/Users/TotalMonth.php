@@ -3,7 +3,6 @@
 namespace Geonaute\LinkdataBundle\Entity\Users;
 
 use Geonaute\LinkdataBundle\Utils\Datatype;
-use Geonaute\LinkdataBundle\Entity\Common\Sport;
 use JMS\Serializer\Annotation as Serializer;
 
 class TotalMonth
@@ -28,7 +27,7 @@ class TotalMonth
     /**
      * @Serializer\SerializedName("SPORTS")
      * @Serializer\XmlMap(entry = "SPORT", keyAttribute = "id")
-     * @Serializer\Type("ArrayCollection<string, Geonaute\LinkdataBundle\Entity\Common\Sport>")
+     * @Serializer\Type("ArrayCollection<string, Geonaute\LinkdataBundle\Entity\Users\Sport>")
      *
      * @var array<Sport>
      */
