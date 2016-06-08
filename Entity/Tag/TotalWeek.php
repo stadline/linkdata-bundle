@@ -49,10 +49,12 @@ class TotalWeek
      */
     protected function getTotal($unitId)
     {
-
         $total = 0;
-        foreach($this->getDatatypes() as $datatype) {
-            $total += $datatype->getValue($unitId);
+        foreach($this->getDatatypes() as $datatypeUnit => $datatype) {
+            if ($datatypeUnit !== $unitId) {
+                continue;
+            }
+            $total += $datatype->getValue();
         }
         return $total;
     }
