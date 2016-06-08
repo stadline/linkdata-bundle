@@ -127,18 +127,4 @@ class About
         $this->speed = $speed;
     }
 
-    /**
-     * @return array
-     */
-    public function toArray()
-    {
-        return array(
-            'track' => $this->getTrack(),
-            'dataStream' => $this->getDataStream(),
-            'lap' => $this->getLap(),
-            'elevation' => $this->getElevation(),
-            'speed' => $this->getSpeed()
-        );
-    }
-
 }

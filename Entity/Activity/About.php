@@ -119,20 +119,4 @@ class About
         return (bool)(int)$this->challenge;
     }
 
-    /**
-     * @return array
-     */
-    public function toArray()
-    {
-        return array(
-            'track' => $this->getTrack(),
-            'dataStream' => $this->getDataStream(),
-            'lap' => $this->getLap(),
-            'elevation' => $this->getElevation(),
-            'heartRate' => $this->getHeartrate(),
-            'speed' => $this->getSpeed(),
-            'challenge' => $this->getChallenge(),
-        );
-    }
-
 }

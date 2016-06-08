@@ -340,21 +340,10 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface
     }
 
     /**
-     * @param null $key
-     * @return mixed
+     * @return About
      */
-    public function getAbout($key = null)
+    public function getAbout()
     {
-        // return null if about is undefined
-        if (!$this->about) {
-            return null;
-        }
-
-        // return requested value
-        if ($key) {
-            return $this->about->toArray()[$key];
-        } else {
-            return $this->about;
-        }
+        return $this->about;
     }
 }

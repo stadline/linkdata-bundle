@@ -244,18 +244,11 @@ class Activity
     }
 
     /**
-     * Cannot use the About from Linkdata so we have to build it again
-     *
-     * @param $key
-     * @return mixed
+     * @return About
      */
-    public function getAbout($key)
+    public function getAbout()
     {
-        if (array_key_exists($key, $this->about->toArray())) {
-            return $this->about[$key];
-        } else {
-            return false;
-        }
+        return $this->about;
     }
 
     /**
