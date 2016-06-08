@@ -1,1487 +1,1503 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-	<file source-language="fr" datatype="plaintext" original="file.ext">
-		<body>
-			<trans-unit id="datatype_1" resname="datatype_1">
-				<source>datatype_1</source>
-				<target>Rythme cardiaque</target>
-			</trans-unit>
-			<trans-unit id="datatype_2" resname="datatype_2">
-				<source>datatype_2</source>
-				<target>HR min</target>
-			</trans-unit>
-			<trans-unit id="datatype_3" resname="datatype_3">
-				<source>datatype_3</source>
-				<target>HR max</target>
-			</trans-unit>
-			<trans-unit id="datatype_4" resname="datatype_4">
-				<source>datatype_4</source>
-				<target>Cardio moy.</target>
-			</trans-unit>
-			<trans-unit id="datatype_5" resname="datatype_5">
-				<source>datatype_5</source>
-				<target>Distance</target>
-			</trans-unit>
-			<trans-unit id="datatype_6" resname="datatype_6">
-				<source>datatype_6</source>
-				<target>Vitesse</target>
-			</trans-unit>
-			<trans-unit id="datatype_7" resname="datatype_7">
-				<source>datatype_7</source>
-				<target>Speed max</target>
-			</trans-unit>
-			<trans-unit id="datatype_8" resname="datatype_8">
-				<source>datatype_8</source>
-				<target>Speed min</target>
-			</trans-unit>
-			<trans-unit id="datatype_9" resname="datatype_9">
-				<source>datatype_9</source>
-				<target>Vitesse moy.</target>
-			</trans-unit>
-			<trans-unit id="datatype_10" resname="datatype_10">
-				<source>datatype_10</source>
-				<target>Cadence current</target>
-			</trans-unit>
-			<trans-unit id="datatype_11" resname="datatype_11">
-				<source>datatype_11</source>
-				<target>Cadence max</target>
-			</trans-unit>
-			<trans-unit id="datatype_12" resname="datatype_12">
-				<source>datatype_12</source>
-				<target>Cadence min</target>
-			</trans-unit>
-			<trans-unit id="datatype_13" resname="datatype_13">
-				<source>datatype_13</source>
-				<target>Cadence avg</target>
-			</trans-unit>
-			<trans-unit id="datatype_14" resname="datatype_14">
-				<source>datatype_14</source>
-				<target>Altitude</target>
-			</trans-unit>
-			<trans-unit id="datatype_15" resname="datatype_15">
-				<source>datatype_15</source>
-				<target>Altitude max</target>
-			</trans-unit>
-			<trans-unit id="datatype_16" resname="datatype_16">
-				<source>datatype_16</source>
-				<target>Altitude min</target>
-			</trans-unit>
-			<trans-unit id="datatype_17" resname="datatype_17">
-				<source>datatype_17</source>
-				<target>Elevation avg</target>
-			</trans-unit>
-			<trans-unit id="datatype_18" resname="datatype_18">
-				<source>datatype_18</source>
-				<target>Dénivelé en montée</target>
-			</trans-unit>
-			<trans-unit id="datatype_19" resname="datatype_19">
-				<source>datatype_19</source>
-				<target>Dénivelé en descente</target>
-			</trans-unit>
-			<trans-unit id="datatype_20" resname="datatype_20">
-				<source>datatype_20</source>
-				<target>Lap</target>
-			</trans-unit>
-			<trans-unit id="datatype_21" resname="datatype_21">
-				<source>datatype_21</source>
-				<target>Break Time</target>
-			</trans-unit>
-			<trans-unit id="datatype_22" resname="datatype_22">
-				<source>datatype_22</source>
-				<target>Weight, in kilograms</target>
-			</trans-unit>
-			<trans-unit id="datatype_23" resname="datatype_23">
-				<source>datatype_23</source>
-				<target>Calories brûlées</target>
-			</trans-unit>
-			<trans-unit id="datatype_24" resname="datatype_24">
-				<source>datatype_24</source>
-				<target>Durée</target>
-			</trans-unit>
-			<trans-unit id="datatype_25" resname="datatype_25">
-				<source>datatype_25</source>
-				<target>Pourcentage cardio min.</target>
-			</trans-unit>
-			<trans-unit id="datatype_26" resname="datatype_26">
-				<source>datatype_26</source>
-				<target>Pourcentage cardio max.</target>
-			</trans-unit>
-			<trans-unit id="datatype_27" resname="datatype_27">
-				<source>datatype_27</source>
-				<target>Height</target>
-			</trans-unit>
-			<trans-unit id="datatype_28" resname="datatype_28">
-				<source>datatype_28</source>
-				<target>HR Rest</target>
-			</trans-unit>
-			<trans-unit id="datatype_29" resname="datatype_29">
-				<source>datatype_29</source>
-				<target>Nombre de pas</target>
-			</trans-unit>
-			<trans-unit id="datatype_30" resname="datatype_30">
-				<source>datatype_30</source>
-				<target>Temps d'activité</target>
-			</trans-unit>
-			<trans-unit id="datatype_32" resname="datatype_32">
-				<source>datatype_32</source>
-				<target>Average Lap Time</target>
-			</trans-unit>
-			<trans-unit id="datatype_33" resname="datatype_33">
-				<source>datatype_33</source>
-				<target>Length Number</target>
-			</trans-unit>
-			<trans-unit id="datatype_34" resname="datatype_34">
-				<source>datatype_34</source>
-				<target>Lap Length</target>
-			</trans-unit>
-			<trans-unit id="datatype_35" resname="datatype_35">
-				<source>datatype_35</source>
-				<target>Stairs number</target>
-			</trans-unit>
-			<trans-unit id="datatype_36" resname="datatype_36">
-				<source>datatype_36</source>
-				<target>Mode</target>
-			</trans-unit>
-			<trans-unit id="datatype_37" resname="datatype_37">
-				<source>datatype_37</source>
-				<target>Walking time</target>
-			</trans-unit>
-			<trans-unit id="datatype_38" resname="datatype_38">
-				<source>datatype_38</source>
-				<target>Running time</target>
-			</trans-unit>
-			<trans-unit id="datatype_39" resname="datatype_39">
-				<source>datatype_39</source>
-				<target>Music Track</target>
-			</trans-unit>
-			<trans-unit id="datatype_40" resname="datatype_40">
-				<source>datatype_40</source>
-				<target>Laps Number</target>
-			</trans-unit>
-			<trans-unit id="datatype_41" resname="datatype_41">
-				<source>datatype_41</source>
-				<target>Fat burn</target>
-			</trans-unit>
-			<trans-unit id="datatype_42" resname="datatype_42">
-				<source>datatype_42</source>
-				<target>Time in zone</target>
-			</trans-unit>
-			<trans-unit id="datatype_43" resname="datatype_43">
-				<source>datatype_43</source>
-				<target>Exercise type</target>
-			</trans-unit>
-			<trans-unit id="datatype_44" resname="datatype_44">
-				<source>datatype_44</source>
-				<target>Total strokes</target>
-			</trans-unit>
-			<trans-unit id="datatype_45" resname="datatype_45">
-				<source>datatype_45</source>
-				<target>Total serves</target>
-			</trans-unit>
-			<trans-unit id="datatype_46" resname="datatype_46">
-				<source>datatype_46</source>
-				<target>Total forehands</target>
-			</trans-unit>
-			<trans-unit id="datatype_47" resname="datatype_47">
-				<source>datatype_47</source>
-				<target>Total backhands</target>
-			</trans-unit>
-			<trans-unit id="datatype_48" resname="datatype_48">
-				<source>datatype_48</source>
-				<target>Stroke type</target>
-			</trans-unit>
-			<trans-unit id="datatype_49" resname="datatype_49">
-				<source>datatype_49</source>
-				<target>Strokes in zone 1</target>
-			</trans-unit>
-			<trans-unit id="datatype_50" resname="datatype_50">
-				<source>datatype_50</source>
-				<target>Strokes in zone 2</target>
-			</trans-unit>
-			<trans-unit id="datatype_51" resname="datatype_51">
-				<source>datatype_51</source>
-				<target>Strokes in zone 3</target>
-			</trans-unit>
-			<trans-unit id="datatype_52" resname="datatype_52">
-				<source>datatype_52</source>
-				<target>Stroke zone</target>
-			</trans-unit>
-			<trans-unit id="datatype_53" resname="datatype_53">
-				<source>datatype_53</source>
-				<target>Winning or loosing point</target>
-			</trans-unit>
-			<trans-unit id="datatype_54" resname="datatype_54">
-				<source>datatype_54</source>
-				<target>Ball Speed - current</target>
-			</trans-unit>
-			<trans-unit id="datatype_55" resname="datatype_55">
-				<source>datatype_55</source>
-				<target>Ball Speed - Min</target>
-			</trans-unit>
-			<trans-unit id="datatype_56" resname="datatype_56">
-				<source>datatype_56</source>
-				<target>Ball Speed - Max</target>
-			</trans-unit>
-			<trans-unit id="datatype_57" resname="datatype_57">
-				<source>datatype_57</source>
-				<target>Ball Speed - Avg</target>
-			</trans-unit>
-			<trans-unit id="datatype_58" resname="datatype_58">
-				<source>datatype_58</source>
-				<target>Consecutive walking time</target>
-			</trans-unit>
-			<trans-unit id="datatype_59" resname="datatype_59">
-				<source>datatype_59</source>
-				<target>Centered forehands</target>
-			</trans-unit>
-			<trans-unit id="datatype_60" resname="datatype_60">
-				<source>datatype_60</source>
-				<target>Centered backhands</target>
-			</trans-unit>
-			<trans-unit id="datatype_61" resname="datatype_61">
-				<source>datatype_61</source>
-				<target>Centered serves</target>
-			</trans-unit>
-			<trans-unit id="datatype_62" resname="datatype_62">
-				<source>datatype_62</source>
-				<target>Total winning forehands</target>
-			</trans-unit>
-			<trans-unit id="datatype_63" resname="datatype_63">
-				<source>datatype_63</source>
-				<target>Total loosing forehands</target>
-			</trans-unit>
-			<trans-unit id="datatype_64" resname="datatype_64">
-				<source>datatype_64</source>
-				<target>Total winning backhands</target>
-			</trans-unit>
-			<trans-unit id="datatype_65" resname="datatype_65">
-				<source>datatype_65</source>
-				<target>Total loosing backhands</target>
-			</trans-unit>
-			<trans-unit id="datatype_66" resname="datatype_66">
-				<source>datatype_66</source>
-				<target>Total winning first serves</target>
-			</trans-unit>
-			<trans-unit id="datatype_67" resname="datatype_67">
-				<source>datatype_67</source>
-				<target>Total winning second serves</target>
-			</trans-unit>
-			<trans-unit id="datatype_68" resname="datatype_68">
-				<source>datatype_68</source>
-				<target>Total loosing second serves</target>
-			</trans-unit>
-			<trans-unit id="datatype_69" resname="datatype_69">
-				<source>datatype_69</source>
-				<target>Total loosing first serves</target>
-			</trans-unit>
-			<trans-unit id="datatype_70" resname="datatype_70">
-				<source>datatype_70</source>
-				<target>Total winning points</target>
-			</trans-unit>
-			<trans-unit id="datatype_71" resname="datatype_71">
-				<source>datatype_71</source>
-				<target>Total loosing points</target>
-			</trans-unit>
-			<trans-unit id="datatype_72" resname="datatype_72">
-				<source>datatype_72</source>
-				<target>Max consecutive winning point</target>
-			</trans-unit>
-			<trans-unit id="datatype_73" resname="datatype_73">
-				<source>datatype_73</source>
-				<target>Total first serves</target>
-			</trans-unit>
-			<trans-unit id="datatype_74" resname="datatype_74">
-				<source>datatype_74</source>
-				<target>Total second serves</target>
-			</trans-unit>
-			<trans-unit id="datatype_75" resname="datatype_75">
-				<source>datatype_75</source>
-				<target>Total centered first serves</target>
-			</trans-unit>
-			<trans-unit id="datatype_76" resname="datatype_76">
-				<source>datatype_76</source>
-				<target>Total centered second serves</target>
-			</trans-unit>
-			<trans-unit id="datatype_77" resname="datatype_77">
-				<source>datatype_77</source>
-				<target>First serve ball Speed - Max</target>
-			</trans-unit>
-			<trans-unit id="datatype_78" resname="datatype_78">
-				<source>datatype_78</source>
-				<target>Second serve ball Speed - Max</target>
-			</trans-unit>
-			<trans-unit id="datatype_79" resname="datatype_79">
-				<source>datatype_79</source>
-				<target>First serve ball Speed - Avg</target>
-			</trans-unit>
-			<trans-unit id="datatype_80" resname="datatype_80">
-				<source>datatype_80</source>
-				<target>Second serve ball Speed - Avg</target>
-			</trans-unit>
-			<trans-unit id="datatype_81" resname="datatype_81">
-				<source>datatype_81</source>
-				<target>Total winning points on first serve</target>
-			</trans-unit>
-			<trans-unit id="datatype_82" resname="datatype_82">
-				<source>datatype_82</source>
-				<target>Total winning points on second serve</target>
-			</trans-unit>
-			<trans-unit id="datatype_83" resname="datatype_83">
-				<source>datatype_83</source>
-				<target>Successful First serve ball speed - Max</target>
-			</trans-unit>
-			<trans-unit id="datatype_84" resname="datatype_84">
-				<source>datatype_84</source>
-				<target>Successful First serve ball speed - Avg</target>
-			</trans-unit>
-			<trans-unit id="datatype_85" resname="datatype_85">
-				<source>datatype_85</source>
-				<target>Total successful first serve</target>
-			</trans-unit>
-			<trans-unit id="datatype_86" resname="datatype_86">
-				<source>datatype_86</source>
-				<target>Total successful centered first serve</target>
-			</trans-unit>
-			<trans-unit id="datatype_87" resname="datatype_87">
-				<source>datatype_87</source>
-				<target>Match time</target>
-			</trans-unit>
-			<trans-unit id="datatype_88" resname="datatype_88">
-				<source>datatype_88</source>
-				<target>Training time</target>
-			</trans-unit>
-			<trans-unit id="datatype_89" resname="datatype_89">
-				<source>datatype_89</source>
-				<target>Total games</target>
-			</trans-unit>
-			<trans-unit id="datatype_90" resname="datatype_90">
-				<source>datatype_90</source>
-				<target>Total break points</target>
-			</trans-unit>
-			<trans-unit id="datatype_91" resname="datatype_91">
-				<source>datatype_91</source>
-				<target>Total break points won</target>
-			</trans-unit>
-			<trans-unit id="datatype_92" resname="datatype_92">
-				<source>datatype_92</source>
-				<target>Total victory</target>
-			</trans-unit>
-			<trans-unit id="datatype_93" resname="datatype_93">
-				<source>datatype_93</source>
-				<target>Total defeat</target>
-			</trans-unit>
-			<trans-unit id="datatype_94" resname="datatype_94">
-				<source>datatype_94</source>
-				<target>Laterality</target>
-			</trans-unit>
-			<trans-unit id="datatype_95" resname="datatype_95">
-				<source>datatype_95</source>
-				<target>Total match</target>
-			</trans-unit>
-			<trans-unit id="datatype_96" resname="datatype_96">
-				<source>datatype_96</source>
-				<target>Total training</target>
-			</trans-unit>
-			<trans-unit id="datatype_97" resname="datatype_97">
-				<source>datatype_97</source>
-				<target>Manual points</target>
-			</trans-unit>
-			<trans-unit id="datatype_98" resname="datatype_98">
-				<source>datatype_98</source>
-				<target>Nombre de séances</target>
-			</trans-unit>
-			<trans-unit id="datatype_99" resname="datatype_99">
-				<source>datatype_99</source>
-				<target>Points gagnés</target>
-			</trans-unit>
-			<trans-unit id="datatype_100" resname="datatype_100">
-				<source>datatype_100</source>
-				<target>RPM</target>
-			</trans-unit>
-			<trans-unit id="datatype_101" resname="datatype_101">
-				<source>datatype_101</source>
-				<target>RPM max</target>
-			</trans-unit>
-			<trans-unit id="datatype_102" resname="datatype_102">
-				<source>datatype_102</source>
-				<target>RPM min</target>
-			</trans-unit>
-			<trans-unit id="datatype_103" resname="datatype_103">
-				<source>datatype_103</source>
-				<target>RPM avg</target>
-			</trans-unit>
-			<trans-unit id="datatype_104" resname="datatype_104">
-				<source>datatype_104</source>
-				<target>Total forehands during a match</target>
-			</trans-unit>
-			<trans-unit id="datatype_105" resname="datatype_105">
-				<source>datatype_105</source>
-				<target>Total backhands during a match</target>
-			</trans-unit>
-			<trans-unit id="datatype_106" resname="datatype_106">
-				<source>datatype_106</source>
-				<target>Total forehands during a training</target>
-			</trans-unit>
-			<trans-unit id="datatype_107" resname="datatype_107">
-				<source>datatype_107</source>
-				<target>Total backhands during a training</target>
-			</trans-unit>
-			<trans-unit id="datatype_108" resname="datatype_108">
-				<source>datatype_108</source>
-				<target>Total serves during a training</target>
-			</trans-unit>
-			<trans-unit id="datatype_109" resname="datatype_109">
-				<source>datatype_109</source>
-				<target>Total centered forehands during a match</target>
-			</trans-unit>
-			<trans-unit id="datatype_110" resname="datatype_110">
-				<source>datatype_110</source>
-				<target>Total centered backhands during a match</target>
-			</trans-unit>
-			<trans-unit id="datatype_111" resname="datatype_111">
-				<source>datatype_111</source>
-				<target>Total centered forehands during a training</target>
-			</trans-unit>
-			<trans-unit id="datatype_112" resname="datatype_112">
-				<source>datatype_112</source>
-				<target>Total centered backhands during a training</target>
-			</trans-unit>
-			<trans-unit id="datatype_113" resname="datatype_113">
-				<source>datatype_113</source>
-				<target>Total centered serves during a training</target>
-			</trans-unit>
-			<trans-unit id="datatype_114" resname="datatype_114">
-				<source>datatype_114</source>
-				<target>Total Trophies</target>
-			</trans-unit>
-			<trans-unit id="datatype_115" resname="datatype_115">
-				<source>datatype_115</source>
-				<target>Serve ball speed average during a training</target>
-			</trans-unit>
-			<trans-unit id="datatype_116" resname="datatype_116">
-				<source>datatype_116</source>
-				<target>Serve ball speed max during a training</target>
-			</trans-unit>
-			<trans-unit id="datatype_117" resname="datatype_117">
-				<source>datatype_117</source>
-				<target>Max strokes during a point</target>
-			</trans-unit>
-			<trans-unit id="datatype_118" resname="datatype_118">
-				<source>datatype_118</source>
-				<target>Max consecutive winning serves</target>
-			</trans-unit>
-			<trans-unit id="datatype_119" resname="datatype_119">
-				<source>datatype_119</source>
-				<target>Walking duration</target>
-			</trans-unit>
-			<trans-unit id="datatype_120" resname="datatype_120">
-				<source>datatype_120</source>
-				<target>Speed Device</target>
-			</trans-unit>
-			<trans-unit id="datatype_121" resname="datatype_121">
-				<source>datatype_121</source>
-				<target>Slope Device</target>
-			</trans-unit>
-			<trans-unit id="datatype_122" resname="datatype_122">
-				<source>datatype_122</source>
-				<target>Pumps</target>
-			</trans-unit>
-			<trans-unit id="datatype_123" resname="datatype_123">
-				<source>datatype_123</source>
-				<target>High knees</target>
-			</trans-unit>
-			<trans-unit id="datatype_124" resname="datatype_124">
-				<source>datatype_124</source>
-				<target>Squats</target>
-			</trans-unit>
-			<trans-unit id="datatype_125" resname="datatype_125">
-				<source>datatype_125</source>
-				<target>Introduction's duration</target>
-			</trans-unit>
-			<trans-unit id="datatype_126" resname="datatype_126">
-				<source>datatype_126</source>
-				<target>Exercice's duration</target>
-			</trans-unit>
-			<trans-unit id="datatype_127" resname="datatype_127">
-				<source>datatype_127</source>
-				<target>Stroke intensity</target>
-			</trans-unit>
-			<trans-unit id="datatype_128" resname="datatype_128">
-				<source>datatype_128</source>
-				<target>Total serve without effect</target>
-			</trans-unit>
-			<trans-unit id="datatype_129" resname="datatype_129">
-				<source>datatype_129</source>
-				<target>Total serve with effect</target>
-			</trans-unit>
-			<trans-unit id="datatype_130" resname="datatype_130">
-				<source>datatype_130</source>
-				<target>Total forehands topspin</target>
-			</trans-unit>
-			<trans-unit id="datatype_131" resname="datatype_131">
-				<source>datatype_131</source>
-				<target>Total forehands slice</target>
-			</trans-unit>
-			<trans-unit id="datatype_132" resname="datatype_132">
-				<source>datatype_132</source>
-				<target>Total forehands flat</target>
-			</trans-unit>
-			<trans-unit id="datatype_133" resname="datatype_133">
-				<source>datatype_133</source>
-				<target>Total backhands topspin</target>
-			</trans-unit>
-			<trans-unit id="datatype_134" resname="datatype_134">
-				<source>datatype_134</source>
-				<target>Total backhands slice</target>
-			</trans-unit>
-			<trans-unit id="datatype_135" resname="datatype_135">
-				<source>datatype_135</source>
-				<target>Total backhands flat</target>
-			</trans-unit>
-			<trans-unit id="datatype_136" resname="datatype_136">
-				<source>datatype_136</source>
-				<target>Stroke type effect</target>
-			</trans-unit>
-			<trans-unit id="datatype_137" resname="datatype_137">
-				<source>datatype_137</source>
-				<target>Total first serve without effect</target>
-			</trans-unit>
-			<trans-unit id="datatype_138" resname="datatype_138">
-				<source>datatype_138</source>
-				<target>Total first serve with effect</target>
-			</trans-unit>
-			<trans-unit id="datatype_139" resname="datatype_139">
-				<source>datatype_139</source>
-				<target>Total second serve without effect</target>
-			</trans-unit>
-			<trans-unit id="datatype_140" resname="datatype_140">
-				<source>datatype_140</source>
-				<target>Total second serve with effect</target>
-			</trans-unit>
-			<trans-unit id="datatype_141" resname="datatype_141">
-				<source>datatype_141</source>
-				<target>Intensity forehands topspin</target>
-			</trans-unit>
-			<trans-unit id="datatype_142" resname="datatype_142">
-				<source>datatype_142</source>
-				<target>Intensity forehands slice</target>
-			</trans-unit>
-			<trans-unit id="datatype_143" resname="datatype_143">
-				<source>datatype_143</source>
-				<target>Intensity forehands flat</target>
-			</trans-unit>
-			<trans-unit id="datatype_144" resname="datatype_144">
-				<source>datatype_144</source>
-				<target>Intensity backhands topspin</target>
-			</trans-unit>
-			<trans-unit id="datatype_145" resname="datatype_145">
-				<source>datatype_145</source>
-				<target>Intensity backhands slice</target>
-			</trans-unit>
-			<trans-unit id="datatype_146" resname="datatype_146">
-				<source>datatype_146</source>
-				<target>Intensity backhands flat</target>
-			</trans-unit>
-			<trans-unit id="datatype_147" resname="datatype_147">
-				<source>datatype_147</source>
-				<target>Total serves without effect during a training</target>
-			</trans-unit>
-			<trans-unit id="datatype_148" resname="datatype_148">
-				<source>datatype_148</source>
-				<target>Total serves with effect during a training</target>
-			</trans-unit>
-			<trans-unit id="datatype_149" resname="datatype_149">
-				<source>datatype_149</source>
-				<target>Total forehands topspin during a training</target>
-			</trans-unit>
-			<trans-unit id="datatype_150" resname="datatype_150">
-				<source>datatype_150</source>
-				<target>Total forehands slice during a training</target>
-			</trans-unit>
-			<trans-unit id="datatype_151" resname="datatype_151">
-				<source>datatype_151</source>
-				<target>Total forehands flat during a training</target>
-			</trans-unit>
-			<trans-unit id="datatype_152" resname="datatype_152">
-				<source>datatype_152</source>
-				<target>Total backhands topspin during a training</target>
-			</trans-unit>
-			<trans-unit id="datatype_153" resname="datatype_153">
-				<source>datatype_153</source>
-				<target>Total backhands slice during a training</target>
-			</trans-unit>
-			<trans-unit id="datatype_154" resname="datatype_154">
-				<source>datatype_154</source>
-				<target>Total backhands flat during a training</target>
-			</trans-unit>
-			<trans-unit id="datatype_155" resname="datatype_155">
-				<source>datatype_155</source>
-				<target>Total forehands topspin during a match</target>
-			</trans-unit>
-			<trans-unit id="datatype_156" resname="datatype_156">
-				<source>datatype_156</source>
-				<target>Total forehands slice during a match</target>
-			</trans-unit>
-			<trans-unit id="datatype_157" resname="datatype_157">
-				<source>datatype_157</source>
-				<target>Total forehands flat during a match</target>
-			</trans-unit>
-			<trans-unit id="datatype_158" resname="datatype_158">
-				<source>datatype_158</source>
-				<target>Total backhands topspin during a match</target>
-			</trans-unit>
-			<trans-unit id="datatype_159" resname="datatype_159">
-				<source>datatype_159</source>
-				<target>Total backhands slice during a match</target>
-			</trans-unit>
-			<trans-unit id="datatype_160" resname="datatype_160">
-				<source>datatype_160</source>
-				<target>Total backhands flat during a match</target>
-			</trans-unit>
-			<trans-unit id="datatype_161" resname="datatype_161">
-				<source>datatype_161</source>
-				<target>Intensity forehands topspin during a training</target>
-			</trans-unit>
-			<trans-unit id="datatype_162" resname="datatype_162">
-				<source>datatype_162</source>
-				<target>Intensity forehands slice during a training</target>
-			</trans-unit>
-			<trans-unit id="datatype_163" resname="datatype_163">
-				<source>datatype_163</source>
-				<target>Intensity forehands flat during a training</target>
-			</trans-unit>
-			<trans-unit id="datatype_164" resname="datatype_164">
-				<source>datatype_164</source>
-				<target>Intensity backhands topspin during a training</target>
-			</trans-unit>
-			<trans-unit id="datatype_165" resname="datatype_165">
-				<source>datatype_165</source>
-				<target>Intensity backhands slice during a training</target>
-			</trans-unit>
-			<trans-unit id="datatype_166" resname="datatype_166">
-				<source>datatype_166</source>
-				<target>Intensity backhands flat during a training</target>
-			</trans-unit>
-			<trans-unit id="datatype_167" resname="datatype_167">
-				<source>datatype_167</source>
-				<target>Intensity forehands topspin during a match</target>
-			</trans-unit>
-			<trans-unit id="datatype_168" resname="datatype_168">
-				<source>datatype_168</source>
-				<target>Intensity forehands slice during a match</target>
-			</trans-unit>
-			<trans-unit id="datatype_169" resname="datatype_169">
-				<source>datatype_169</source>
-				<target>Intensity forehands flat during a match</target>
-			</trans-unit>
-			<trans-unit id="datatype_170" resname="datatype_170">
-				<source>datatype_170</source>
-				<target>Intensity backhands topspin during a match</target>
-			</trans-unit>
-			<trans-unit id="datatype_171" resname="datatype_171">
-				<source>datatype_171</source>
-				<target>Intensity backhands slice during a match</target>
-			</trans-unit>
-			<trans-unit id="datatype_172" resname="datatype_172">
-				<source>datatype_172</source>
-				<target>Intensity backhands flat during a match</target>
-			</trans-unit>
-			<trans-unit id="datatype_173" resname="datatype_173">
-				<source>datatype_173</source>
-				<target>Intensity max forehands</target>
-			</trans-unit>
-			<trans-unit id="datatype_174" resname="datatype_174">
-				<source>datatype_174</source>
-				<target>Intensity max backhands</target>
-			</trans-unit>
-			<trans-unit id="datatype_175" resname="datatype_175">
-				<source>datatype_175</source>
-				<target>Percentage of VMA</target>
-			</trans-unit>
-			<trans-unit id="datatype_176" resname="datatype_176">
-				<source>datatype_176</source>
-				<target>Percentage of HRMAX current</target>
-			</trans-unit>
-			<trans-unit id="datatype_177" resname="datatype_177">
-				<source>datatype_177</source>
-				<target>Bike trainer resistance</target>
-			</trans-unit>
-			<trans-unit id="datatype_178" resname="datatype_178">
-				<source>datatype_178</source>
-				<target>Current home trainer power</target>
-			</trans-unit>
-			<trans-unit id="datatype_179" resname="datatype_179">
-				<source>datatype_179</source>
-				<target>Maximum home trainer power</target>
-			</trans-unit>
-			<trans-unit id="datatype_180" resname="datatype_180">
-				<source>datatype_180</source>
-				<target>Average home trainer power</target>
-			</trans-unit>
-			<trans-unit id="datatype_181" resname="datatype_181">
-				<source>datatype_181</source>
-				<target>Weight</target>
-			</trans-unit>
-			<trans-unit id="datatype_182" resname="datatype_182">
-				<source>datatype_182</source>
-				<target>Body fat percentage</target>
-			</trans-unit>
-			<trans-unit id="datatype_183" resname="datatype_183">
-				<source>datatype_183</source>
-				<target>Percentage of PMA</target>
-			</trans-unit>
-			<trans-unit id="datatype_184" resname="datatype_184">
-				<source>datatype_184</source>
-				<target>Body muscle percentage</target>
-			</trans-unit>
-			<trans-unit id="datatype_185" resname="datatype_185">
-				<source>datatype_185</source>
-				<target>Body bone percentage</target>
-			</trans-unit>
-			<trans-unit id="datatype_186" resname="datatype_186">
-				<source>datatype_186</source>
-				<target>Body water percentage</target>
-			</trans-unit>
-			<trans-unit id="datatype_1_with_unit" resname="datatype_1_with_unit">
-				<source>datatype_1_with_unit</source>
-				<target>Rythme cardiaque (bpm)</target>
-			</trans-unit>
-			<trans-unit id="datatype_2_with_unit" resname="datatype_2_with_unit">
-				<source>datatype_2_with_unit</source>
-				<target>HR min (bpm)</target>
-			</trans-unit>
-			<trans-unit id="datatype_3_with_unit" resname="datatype_3_with_unit">
-				<source>datatype_3_with_unit</source>
-				<target>HR max (bpm)</target>
-			</trans-unit>
-			<trans-unit id="datatype_4_with_unit" resname="datatype_4_with_unit">
-				<source>datatype_4_with_unit</source>
-				<target>Cardio moy. (bpm)</target>
-			</trans-unit>
-			<trans-unit id="datatype_5_with_unit" resname="datatype_5_with_unit">
-				<source>datatype_5_with_unit</source>
-				<target>Distance (m)</target>
-			</trans-unit>
-			<trans-unit id="datatype_6_with_unit" resname="datatype_6_with_unit">
-				<source>datatype_6_with_unit</source>
-				<target>Vitesse (m/h)</target>
-			</trans-unit>
-			<trans-unit id="datatype_7_with_unit" resname="datatype_7_with_unit">
-				<source>datatype_7_with_unit</source>
-				<target>Speed max (m/h)</target>
-			</trans-unit>
-			<trans-unit id="datatype_8_with_unit" resname="datatype_8_with_unit">
-				<source>datatype_8_with_unit</source>
-				<target>Speed min (m/h)</target>
-			</trans-unit>
-			<trans-unit id="datatype_9_with_unit" resname="datatype_9_with_unit">
-				<source>datatype_9_with_unit</source>
-				<target>Vitesse moy.</target>
-			</trans-unit>
-			<trans-unit id="datatype_10_with_unit" resname="datatype_10_with_unit">
-				<source>datatype_10_with_unit</source>
-				<target>Cadence current (steps/min)</target>
-			</trans-unit>
-			<trans-unit id="datatype_11_with_unit" resname="datatype_11_with_unit">
-				<source>datatype_11_with_unit</source>
-				<target>Cadence max (steps/min)</target>
-			</trans-unit>
-			<trans-unit id="datatype_12_with_unit" resname="datatype_12_with_unit">
-				<source>datatype_12_with_unit</source>
-				<target>Cadence min (steps/min)</target>
-			</trans-unit>
-			<trans-unit id="datatype_13_with_unit" resname="datatype_13_with_unit">
-				<source>datatype_13_with_unit</source>
-				<target>Cadence avg (steps/min)</target>
-			</trans-unit>
-			<trans-unit id="datatype_14_with_unit" resname="datatype_14_with_unit">
-				<source>datatype_14_with_unit</source>
-				<target>Altitude (m)</target>
-			</trans-unit>
-			<trans-unit id="datatype_15_with_unit" resname="datatype_15_with_unit">
-				<source>datatype_15_with_unit</source>
-				<target>Altitude max (m)</target>
-			</trans-unit>
-			<trans-unit id="datatype_16_with_unit" resname="datatype_16_with_unit">
-				<source>datatype_16_with_unit</source>
-				<target>Altitude min (m)</target>
-			</trans-unit>
-			<trans-unit id="datatype_17_with_unit" resname="datatype_17_with_unit">
-				<source>datatype_17_with_unit</source>
-				<target>Elevation avg (m)</target>
-			</trans-unit>
-			<trans-unit id="datatype_18_with_unit" resname="datatype_18_with_unit">
-				<source>datatype_18_with_unit</source>
-				<target>Dénivelé en montée (m)</target>
-			</trans-unit>
-			<trans-unit id="datatype_19_with_unit" resname="datatype_19_with_unit">
-				<source>datatype_19_with_unit</source>
-				<target>Dénivelé en descente (m)</target>
-			</trans-unit>
-			<trans-unit id="datatype_20_with_unit" resname="datatype_20_with_unit">
-				<source>datatype_20_with_unit</source>
-				<target>Lap</target>
-			</trans-unit>
-			<trans-unit id="datatype_21_with_unit" resname="datatype_21_with_unit">
-				<source>datatype_21_with_unit</source>
-				<target>Break Time (s)</target>
-			</trans-unit>
-			<trans-unit id="datatype_22_with_unit" resname="datatype_22_with_unit">
-				<source>datatype_22_with_unit</source>
-				<target>Weight, in kilograms (kg)</target>
-			</trans-unit>
-			<trans-unit id="datatype_23_with_unit" resname="datatype_23_with_unit">
-				<source>datatype_23_with_unit</source>
-				<target>Calories brûlées</target>
-			</trans-unit>
-			<trans-unit id="datatype_24_with_unit" resname="datatype_24_with_unit">
-				<source>datatype_24_with_unit</source>
-				<target>Durée</target>
-			</trans-unit>
-			<trans-unit id="datatype_25_with_unit" resname="datatype_25_with_unit">
-				<source>datatype_25_with_unit</source>
-				<target>Pourcentage cardio min.</target>
-			</trans-unit>
-			<trans-unit id="datatype_26_with_unit" resname="datatype_26_with_unit">
-				<source>datatype_26_with_unit</source>
-				<target>Pourcentage cardio max.</target>
-			</trans-unit>
-			<trans-unit id="datatype_27_with_unit" resname="datatype_27_with_unit">
-				<source>datatype_27_with_unit</source>
-				<target>Height (cm)</target>
-			</trans-unit>
-			<trans-unit id="datatype_28_with_unit" resname="datatype_28_with_unit">
-				<source>datatype_28_with_unit</source>
-				<target>HR Rest (bpm)</target>
-			</trans-unit>
-			<trans-unit id="datatype_29_with_unit" resname="datatype_29_with_unit">
-				<source>datatype_29_with_unit</source>
-				<target>Nombre de pas</target>
-			</trans-unit>
-			<trans-unit id="datatype_30_with_unit" resname="datatype_30_with_unit">
-				<source>datatype_30_with_unit</source>
-				<target>Temps d'activité</target>
-			</trans-unit>
-			<trans-unit id="datatype_32_with_unit" resname="datatype_32_with_unit">
-				<source>datatype_32_with_unit</source>
-				<target>Average Lap Time (s)</target>
-			</trans-unit>
-			<trans-unit id="datatype_33_with_unit" resname="datatype_33_with_unit">
-				<source>datatype_33_with_unit</source>
-				<target>Length Number ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_34_with_unit" resname="datatype_34_with_unit">
-				<source>datatype_34_with_unit</source>
-				<target>Lap Length ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_35_with_unit" resname="datatype_35_with_unit">
-				<source>datatype_35_with_unit</source>
-				<target>Stairs number (stairs)</target>
-			</trans-unit>
-			<trans-unit id="datatype_36_with_unit" resname="datatype_36_with_unit">
-				<source>datatype_36_with_unit</source>
-				<target>Mode ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_37_with_unit" resname="datatype_37_with_unit">
-				<source>datatype_37_with_unit</source>
-				<target>Walking time (s)</target>
-			</trans-unit>
-			<trans-unit id="datatype_38_with_unit" resname="datatype_38_with_unit">
-				<source>datatype_38_with_unit</source>
-				<target>Running time (s)</target>
-			</trans-unit>
-			<trans-unit id="datatype_39_with_unit" resname="datatype_39_with_unit">
-				<source>datatype_39_with_unit</source>
-				<target>Music Track ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_40_with_unit" resname="datatype_40_with_unit">
-				<source>datatype_40_with_unit</source>
-				<target>Laps Number ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_41_with_unit" resname="datatype_41_with_unit">
-				<source>datatype_41_with_unit</source>
-				<target>Fat burn (g)</target>
-			</trans-unit>
-			<trans-unit id="datatype_42_with_unit" resname="datatype_42_with_unit">
-				<source>datatype_42_with_unit</source>
-				<target>Time in zone (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_43_with_unit" resname="datatype_43_with_unit">
-				<source>datatype_43_with_unit</source>
-				<target>Exercise type ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_44_with_unit" resname="datatype_44_with_unit">
-				<source>datatype_44_with_unit</source>
-				<target>Total strokes ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_45_with_unit" resname="datatype_45_with_unit">
-				<source>datatype_45_with_unit</source>
-				<target>Total serves ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_46_with_unit" resname="datatype_46_with_unit">
-				<source>datatype_46_with_unit</source>
-				<target>Total forehands ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_47_with_unit" resname="datatype_47_with_unit">
-				<source>datatype_47_with_unit</source>
-				<target>Total backhands ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_48_with_unit" resname="datatype_48_with_unit">
-				<source>datatype_48_with_unit</source>
-				<target>Stroke type ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_49_with_unit" resname="datatype_49_with_unit">
-				<source>datatype_49_with_unit</source>
-				<target>Strokes in zone 1 ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_50_with_unit" resname="datatype_50_with_unit">
-				<source>datatype_50_with_unit</source>
-				<target>Strokes in zone 2 ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_51_with_unit" resname="datatype_51_with_unit">
-				<source>datatype_51_with_unit</source>
-				<target>Strokes in zone 3 ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_52_with_unit" resname="datatype_52_with_unit">
-				<source>datatype_52_with_unit</source>
-				<target>Stroke zone ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_53_with_unit" resname="datatype_53_with_unit">
-				<source>datatype_53_with_unit</source>
-				<target>Winning or loosing point ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_54_with_unit" resname="datatype_54_with_unit">
-				<source>datatype_54_with_unit</source>
-				<target>Ball Speed - current (m/h)</target>
-			</trans-unit>
-			<trans-unit id="datatype_55_with_unit" resname="datatype_55_with_unit">
-				<source>datatype_55_with_unit</source>
-				<target>Ball Speed - Min (m/h)</target>
-			</trans-unit>
-			<trans-unit id="datatype_56_with_unit" resname="datatype_56_with_unit">
-				<source>datatype_56_with_unit</source>
-				<target>Ball Speed - Max (m/h)</target>
-			</trans-unit>
-			<trans-unit id="datatype_57_with_unit" resname="datatype_57_with_unit">
-				<source>datatype_57_with_unit</source>
-				<target>Ball Speed - Avg (m/h)</target>
-			</trans-unit>
-			<trans-unit id="datatype_58_with_unit" resname="datatype_58_with_unit">
-				<source>datatype_58_with_unit</source>
-				<target>Consecutive walking time (s)</target>
-			</trans-unit>
-			<trans-unit id="datatype_59_with_unit" resname="datatype_59_with_unit">
-				<source>datatype_59_with_unit</source>
-				<target>Centered forehands ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_60_with_unit" resname="datatype_60_with_unit">
-				<source>datatype_60_with_unit</source>
-				<target>Centered backhands ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_61_with_unit" resname="datatype_61_with_unit">
-				<source>datatype_61_with_unit</source>
-				<target>Centered serves ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_62_with_unit" resname="datatype_62_with_unit">
-				<source>datatype_62_with_unit</source>
-				<target>Total winning forehands ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_63_with_unit" resname="datatype_63_with_unit">
-				<source>datatype_63_with_unit</source>
-				<target>Total loosing forehands ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_64_with_unit" resname="datatype_64_with_unit">
-				<source>datatype_64_with_unit</source>
-				<target>Total winning backhands ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_65_with_unit" resname="datatype_65_with_unit">
-				<source>datatype_65_with_unit</source>
-				<target>Total loosing backhands ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_66_with_unit" resname="datatype_66_with_unit">
-				<source>datatype_66_with_unit</source>
-				<target>Total winning first serves ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_67_with_unit" resname="datatype_67_with_unit">
-				<source>datatype_67_with_unit</source>
-				<target>Total winning second serves ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_68_with_unit" resname="datatype_68_with_unit">
-				<source>datatype_68_with_unit</source>
-				<target>Total loosing second serves ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_69_with_unit" resname="datatype_69_with_unit">
-				<source>datatype_69_with_unit</source>
-				<target>Total loosing first serves ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_70_with_unit" resname="datatype_70_with_unit">
-				<source>datatype_70_with_unit</source>
-				<target>Total winning points ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_71_with_unit" resname="datatype_71_with_unit">
-				<source>datatype_71_with_unit</source>
-				<target>Total loosing points ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_72_with_unit" resname="datatype_72_with_unit">
-				<source>datatype_72_with_unit</source>
-				<target>Max consecutive winning point ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_73_with_unit" resname="datatype_73_with_unit">
-				<source>datatype_73_with_unit</source>
-				<target>Total first serves ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_74_with_unit" resname="datatype_74_with_unit">
-				<source>datatype_74_with_unit</source>
-				<target>Total second serves ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_75_with_unit" resname="datatype_75_with_unit">
-				<source>datatype_75_with_unit</source>
-				<target>Total centered first serves ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_76_with_unit" resname="datatype_76_with_unit">
-				<source>datatype_76_with_unit</source>
-				<target>Total centered second serves ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_77_with_unit" resname="datatype_77_with_unit">
-				<source>datatype_77_with_unit</source>
-				<target>First serve ball Speed - Max (m/h)</target>
-			</trans-unit>
-			<trans-unit id="datatype_78_with_unit" resname="datatype_78_with_unit">
-				<source>datatype_78_with_unit</source>
-				<target>Second serve ball Speed - Max (m/h)</target>
-			</trans-unit>
-			<trans-unit id="datatype_79_with_unit" resname="datatype_79_with_unit">
-				<source>datatype_79_with_unit</source>
-				<target>First serve ball Speed - Avg (m/h)</target>
-			</trans-unit>
-			<trans-unit id="datatype_80_with_unit" resname="datatype_80_with_unit">
-				<source>datatype_80_with_unit</source>
-				<target>Second serve ball Speed - Avg (m/h)</target>
-			</trans-unit>
-			<trans-unit id="datatype_81_with_unit" resname="datatype_81_with_unit">
-				<source>datatype_81_with_unit</source>
-				<target>Total winning points on first serve ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_82_with_unit" resname="datatype_82_with_unit">
-				<source>datatype_82_with_unit</source>
-				<target>Total winning points on second serve ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_83_with_unit" resname="datatype_83_with_unit">
-				<source>datatype_83_with_unit</source>
-				<target>Successful First serve ball speed - Max (m/h)</target>
-			</trans-unit>
-			<trans-unit id="datatype_84_with_unit" resname="datatype_84_with_unit">
-				<source>datatype_84_with_unit</source>
-				<target>Successful First serve ball speed - Avg (m/h)</target>
-			</trans-unit>
-			<trans-unit id="datatype_85_with_unit" resname="datatype_85_with_unit">
-				<source>datatype_85_with_unit</source>
-				<target>Total successful first serve ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_86_with_unit" resname="datatype_86_with_unit">
-				<source>datatype_86_with_unit</source>
-				<target>Total successful centered first serve ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_87_with_unit" resname="datatype_87_with_unit">
-				<source>datatype_87_with_unit</source>
-				<target>Match time (s)</target>
-			</trans-unit>
-			<trans-unit id="datatype_88_with_unit" resname="datatype_88_with_unit">
-				<source>datatype_88_with_unit</source>
-				<target>Training time (s)</target>
-			</trans-unit>
-			<trans-unit id="datatype_89_with_unit" resname="datatype_89_with_unit">
-				<source>datatype_89_with_unit</source>
-				<target>Total games ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_90_with_unit" resname="datatype_90_with_unit">
-				<source>datatype_90_with_unit</source>
-				<target>Total break points ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_91_with_unit" resname="datatype_91_with_unit">
-				<source>datatype_91_with_unit</source>
-				<target>Total break points won ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_92_with_unit" resname="datatype_92_with_unit">
-				<source>datatype_92_with_unit</source>
-				<target>Total victory ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_93_with_unit" resname="datatype_93_with_unit">
-				<source>datatype_93_with_unit</source>
-				<target>Total defeat ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_94_with_unit" resname="datatype_94_with_unit">
-				<source>datatype_94_with_unit</source>
-				<target>Laterality ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_95_with_unit" resname="datatype_95_with_unit">
-				<source>datatype_95_with_unit</source>
-				<target>Total match ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_96_with_unit" resname="datatype_96_with_unit">
-				<source>datatype_96_with_unit</source>
-				<target>Total training ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_97_with_unit" resname="datatype_97_with_unit">
-				<source>datatype_97_with_unit</source>
-				<target>Manual points (Ons)</target>
-			</trans-unit>
-			<trans-unit id="datatype_98_with_unit" resname="datatype_98_with_unit">
-				<source>datatype_98_with_unit</source>
-				<target>Nombre de séances</target>
-			</trans-unit>
-			<trans-unit id="datatype_99_with_unit" resname="datatype_99_with_unit">
-				<source>datatype_99_with_unit</source>
-				<target>Points gagnés</target>
-			</trans-unit>
-			<trans-unit id="datatype_100_with_unit" resname="datatype_100_with_unit">
-				<source>datatype_100_with_unit</source>
-				<target>RPM</target>
-			</trans-unit>
-			<trans-unit id="datatype_101_with_unit" resname="datatype_101_with_unit">
-				<source>datatype_101_with_unit</source>
-				<target>RPM max (rpm)</target>
-			</trans-unit>
-			<trans-unit id="datatype_102_with_unit" resname="datatype_102_with_unit">
-				<source>datatype_102_with_unit</source>
-				<target>RPM min (rpm)</target>
-			</trans-unit>
-			<trans-unit id="datatype_103_with_unit" resname="datatype_103_with_unit">
-				<source>datatype_103_with_unit</source>
-				<target>RPM avg (rpm)</target>
-			</trans-unit>
-			<trans-unit id="datatype_104_with_unit" resname="datatype_104_with_unit">
-				<source>datatype_104_with_unit</source>
-				<target>Total forehands during a match ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_105_with_unit" resname="datatype_105_with_unit">
-				<source>datatype_105_with_unit</source>
-				<target>Total backhands during a match ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_106_with_unit" resname="datatype_106_with_unit">
-				<source>datatype_106_with_unit</source>
-				<target>Total forehands during a training ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_107_with_unit" resname="datatype_107_with_unit">
-				<source>datatype_107_with_unit</source>
-				<target>Total backhands during a training ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_108_with_unit" resname="datatype_108_with_unit">
-				<source>datatype_108_with_unit</source>
-				<target>Total serves during a training ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_109_with_unit" resname="datatype_109_with_unit">
-				<source>datatype_109_with_unit</source>
-				<target>Total centered forehands during a match ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_110_with_unit" resname="datatype_110_with_unit">
-				<source>datatype_110_with_unit</source>
-				<target>Total centered backhands during a match ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_111_with_unit" resname="datatype_111_with_unit">
-				<source>datatype_111_with_unit</source>
-				<target>Total centered forehands during a training ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_112_with_unit" resname="datatype_112_with_unit">
-				<source>datatype_112_with_unit</source>
-				<target>Total centered backhands during a training ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_113_with_unit" resname="datatype_113_with_unit">
-				<source>datatype_113_with_unit</source>
-				<target>Total centered serves during a training ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_114_with_unit" resname="datatype_114_with_unit">
-				<source>datatype_114_with_unit</source>
-				<target>Total Trophies ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_115_with_unit" resname="datatype_115_with_unit">
-				<source>datatype_115_with_unit</source>
-				<target>Serve ball speed average during a training (m/h)</target>
-			</trans-unit>
-			<trans-unit id="datatype_116_with_unit" resname="datatype_116_with_unit">
-				<source>datatype_116_with_unit</source>
-				<target>Serve ball speed max during a training (m/h)</target>
-			</trans-unit>
-			<trans-unit id="datatype_117_with_unit" resname="datatype_117_with_unit">
-				<source>datatype_117_with_unit</source>
-				<target>Max strokes during a point ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_118_with_unit" resname="datatype_118_with_unit">
-				<source>datatype_118_with_unit</source>
-				<target>Max consecutive winning serves ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_119_with_unit" resname="datatype_119_with_unit">
-				<source>datatype_119_with_unit</source>
-				<target>Walking duration (s)</target>
-			</trans-unit>
-			<trans-unit id="datatype_120_with_unit" resname="datatype_120_with_unit">
-				<source>datatype_120_with_unit</source>
-				<target>Vitesse pilotée (m/h)</target>
-			</trans-unit>
-			<trans-unit id="datatype_121_with_unit" resname="datatype_121_with_unit">
-				<source>datatype_121_with_unit</source>
-				<target>Inclinaison (deg)</target>
-			</trans-unit>
-			<trans-unit id="datatype_122_with_unit" resname="datatype_122_with_unit">
-				<source>datatype_122_with_unit</source>
-				<target>Pumps ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_123_with_unit" resname="datatype_123_with_unit">
-				<source>datatype_123_with_unit</source>
-				<target>High knees ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_124_with_unit" resname="datatype_124_with_unit">
-				<source>datatype_124_with_unit</source>
-				<target>Squats ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_125_with_unit" resname="datatype_125_with_unit">
-				<source>datatype_125_with_unit</source>
-				<target>Introduction's duration (s)</target>
-			</trans-unit>
-			<trans-unit id="datatype_126_with_unit" resname="datatype_126_with_unit">
-				<source>datatype_126_with_unit</source>
-				<target>Exercice's duration (s)</target>
-			</trans-unit>
-			<trans-unit id="datatype_127_with_unit" resname="datatype_127_with_unit">
-				<source>datatype_127_with_unit</source>
-				<target>Stroke intensity (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_128_with_unit" resname="datatype_128_with_unit">
-				<source>datatype_128_with_unit</source>
-				<target>Total serve without effect ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_129_with_unit" resname="datatype_129_with_unit">
-				<source>datatype_129_with_unit</source>
-				<target>Total serve with effect ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_130_with_unit" resname="datatype_130_with_unit">
-				<source>datatype_130_with_unit</source>
-				<target>Total forehands topspin ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_131_with_unit" resname="datatype_131_with_unit">
-				<source>datatype_131_with_unit</source>
-				<target>Total forehands slice ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_132_with_unit" resname="datatype_132_with_unit">
-				<source>datatype_132_with_unit</source>
-				<target>Total forehands flat ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_133_with_unit" resname="datatype_133_with_unit">
-				<source>datatype_133_with_unit</source>
-				<target>Total backhands topspin ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_134_with_unit" resname="datatype_134_with_unit">
-				<source>datatype_134_with_unit</source>
-				<target>Total backhands slice ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_135_with_unit" resname="datatype_135_with_unit">
-				<source>datatype_135_with_unit</source>
-				<target>Total backhands flat ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_136_with_unit" resname="datatype_136_with_unit">
-				<source>datatype_136_with_unit</source>
-				<target>Stroke type effect ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_137_with_unit" resname="datatype_137_with_unit">
-				<source>datatype_137_with_unit</source>
-				<target>Total first serve without effect ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_138_with_unit" resname="datatype_138_with_unit">
-				<source>datatype_138_with_unit</source>
-				<target>Total first serve with effect ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_139_with_unit" resname="datatype_139_with_unit">
-				<source>datatype_139_with_unit</source>
-				<target>Total second serve without effect ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_140_with_unit" resname="datatype_140_with_unit">
-				<source>datatype_140_with_unit</source>
-				<target>Total second serve with effect ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_141_with_unit" resname="datatype_141_with_unit">
-				<source>datatype_141_with_unit</source>
-				<target>Intensity forehands topspin (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_142_with_unit" resname="datatype_142_with_unit">
-				<source>datatype_142_with_unit</source>
-				<target>Intensity forehands slice (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_143_with_unit" resname="datatype_143_with_unit">
-				<source>datatype_143_with_unit</source>
-				<target>Intensity forehands flat (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_144_with_unit" resname="datatype_144_with_unit">
-				<source>datatype_144_with_unit</source>
-				<target>Intensity backhands topspin (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_145_with_unit" resname="datatype_145_with_unit">
-				<source>datatype_145_with_unit</source>
-				<target>Intensity backhands slice (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_146_with_unit" resname="datatype_146_with_unit">
-				<source>datatype_146_with_unit</source>
-				<target>Intensity backhands flat (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_147_with_unit" resname="datatype_147_with_unit">
-				<source>datatype_147_with_unit</source>
-				<target>Total serves without effect during a training (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_148_with_unit" resname="datatype_148_with_unit">
-				<source>datatype_148_with_unit</source>
-				<target>Total serves with effect during a training (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_149_with_unit" resname="datatype_149_with_unit">
-				<source>datatype_149_with_unit</source>
-				<target>Total forehands topspin during a training (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_150_with_unit" resname="datatype_150_with_unit">
-				<source>datatype_150_with_unit</source>
-				<target>Total forehands slice during a training (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_151_with_unit" resname="datatype_151_with_unit">
-				<source>datatype_151_with_unit</source>
-				<target>Total forehands flat during a training (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_152_with_unit" resname="datatype_152_with_unit">
-				<source>datatype_152_with_unit</source>
-				<target>Total backhands topspin during a training (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_153_with_unit" resname="datatype_153_with_unit">
-				<source>datatype_153_with_unit</source>
-				<target>Total backhands slice during a training (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_154_with_unit" resname="datatype_154_with_unit">
-				<source>datatype_154_with_unit</source>
-				<target>Total backhands flat during a training (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_155_with_unit" resname="datatype_155_with_unit">
-				<source>datatype_155_with_unit</source>
-				<target>Total forehands topspin during a match (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_156_with_unit" resname="datatype_156_with_unit">
-				<source>datatype_156_with_unit</source>
-				<target>Total forehands slice during a match (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_157_with_unit" resname="datatype_157_with_unit">
-				<source>datatype_157_with_unit</source>
-				<target>Total forehands flat during a match (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_158_with_unit" resname="datatype_158_with_unit">
-				<source>datatype_158_with_unit</source>
-				<target>Total backhands topspin during a match (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_159_with_unit" resname="datatype_159_with_unit">
-				<source>datatype_159_with_unit</source>
-				<target>Total backhands slice during a match (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_160_with_unit" resname="datatype_160_with_unit">
-				<source>datatype_160_with_unit</source>
-				<target>Total backhands flat during a match (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_161_with_unit" resname="datatype_161_with_unit">
-				<source>datatype_161_with_unit</source>
-				<target>Intensity forehands topspin during a training (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_162_with_unit" resname="datatype_162_with_unit">
-				<source>datatype_162_with_unit</source>
-				<target>Intensity forehands slice during a training (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_163_with_unit" resname="datatype_163_with_unit">
-				<source>datatype_163_with_unit</source>
-				<target>Intensity forehands flat during a training (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_164_with_unit" resname="datatype_164_with_unit">
-				<source>datatype_164_with_unit</source>
-				<target>Intensity backhands topspin during a training (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_165_with_unit" resname="datatype_165_with_unit">
-				<source>datatype_165_with_unit</source>
-				<target>Intensity backhands slice during a training (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_166_with_unit" resname="datatype_166_with_unit">
-				<source>datatype_166_with_unit</source>
-				<target>Intensity backhands flat during a training (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_167_with_unit" resname="datatype_167_with_unit">
-				<source>datatype_167_with_unit</source>
-				<target>Intensity forehands topspin during a match (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_168_with_unit" resname="datatype_168_with_unit">
-				<source>datatype_168_with_unit</source>
-				<target>Intensity forehands slice during a match (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_169_with_unit" resname="datatype_169_with_unit">
-				<source>datatype_169_with_unit</source>
-				<target>Intensity forehands flat during a match (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_170_with_unit" resname="datatype_170_with_unit">
-				<source>datatype_170_with_unit</source>
-				<target>Intensity backhands topspin during a match (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_171_with_unit" resname="datatype_171_with_unit">
-				<source>datatype_171_with_unit</source>
-				<target>Intensity backhands slice during a match (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_172_with_unit" resname="datatype_172_with_unit">
-				<source>datatype_172_with_unit</source>
-				<target>Intensity backhands flat during a match (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_173_with_unit" resname="datatype_173_with_unit">
-				<source>datatype_173_with_unit</source>
-				<target>Intensity max forehands (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_174_with_unit" resname="datatype_174_with_unit">
-				<source>datatype_174_with_unit</source>
-				<target>Intensity max backhands (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_175_with_unit" resname="datatype_175_with_unit">
-				<source>datatype_175_with_unit</source>
-				<target>Vitesse (%VMA)</target>
-			</trans-unit>
-			<trans-unit id="datatype_176_with_unit" resname="datatype_176_with_unit">
-				<source>datatype_176_with_unit</source>
-				<target>Cardio (%HRM)</target>
-			</trans-unit>
-			<trans-unit id="datatype_177_with_unit" resname="datatype_177_with_unit">
-				<source>datatype_177_with_unit</source>
-				<target>Bike trainer resistance ()</target>
-			</trans-unit>
-			<trans-unit id="datatype_178_with_unit" resname="datatype_178_with_unit">
-				<source>datatype_178_with_unit</source>
-				<target>Current home trainer power (W)</target>
-			</trans-unit>
-			<trans-unit id="datatype_179_with_unit" resname="datatype_179_with_unit">
-				<source>datatype_179_with_unit</source>
-				<target>Maximum home trainer power (W)</target>
-			</trans-unit>
-			<trans-unit id="datatype_180_with_unit" resname="datatype_180_with_unit">
-				<source>datatype_180_with_unit</source>
-				<target>Average home trainer power (W)</target>
-			</trans-unit>
-			<trans-unit id="datatype_181_with_unit" resname="datatype_181_with_unit">
-				<source>datatype_181_with_unit</source>
-				<target>Weight (g)</target>
-			</trans-unit>
-			<trans-unit id="datatype_182_with_unit" resname="datatype_182_with_unit">
-				<source>datatype_182_with_unit</source>
-				<target>Body fat percentage (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_183_with_unit" resname="datatype_183_with_unit">
-				<source>datatype_183_with_unit</source>
-				<target>Percentage of PMA (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_184_with_unit" resname="datatype_184_with_unit">
-				<source>datatype_184_with_unit</source>
-				<target>Body muscle percentage (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_185_with_unit" resname="datatype_185_with_unit">
-				<source>datatype_185_with_unit</source>
-				<target>Body bone percentage (%)</target>
-			</trans-unit>
-			<trans-unit id="datatype_186_with_unit" resname="datatype_186_with_unit">
-				<source>datatype_186_with_unit</source>
-				<target>Body water percentage (%)</target>
-			</trans-unit>
-		</body>
-	</file>
+    <file source-language="fr" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="datatype_1" resname="datatype_1">
+                <source>datatype_1</source>
+                <target>Rythme cardiaque</target>
+            </trans-unit>
+            <trans-unit id="datatype_2" resname="datatype_2">
+                <source>datatype_2</source>
+                <target>Cardio min.</target>
+            </trans-unit>
+            <trans-unit id="datatype_3" resname="datatype_3">
+                <source>datatype_3</source>
+                <target>Cardio max.</target>
+            </trans-unit>
+            <trans-unit id="datatype_4" resname="datatype_4">
+                <source>datatype_4</source>
+                <target>Cardio moy.</target>
+            </trans-unit>
+            <trans-unit id="datatype_5" resname="datatype_5">
+                <source>datatype_5</source>
+                <target>Distance</target>
+            </trans-unit>
+            <trans-unit id="datatype_6" resname="datatype_6">
+                <source>datatype_6</source>
+                <target>Vitesse</target>
+            </trans-unit>
+            <trans-unit id="datatype_7" resname="datatype_7">
+                <source>datatype_7</source>
+                <target>Vitesse max.</target>
+            </trans-unit>
+            <trans-unit id="datatype_8" resname="datatype_8">
+                <source>datatype_8</source>
+                <target>Vitesse min.</target>
+            </trans-unit>
+            <trans-unit id="datatype_9" resname="datatype_9">
+                <source>datatype_9</source>
+                <target>Vitesse moy.</target>
+            </trans-unit>
+            <trans-unit id="datatype_10" resname="datatype_10">
+                <source>datatype_10</source>fmin
+                <target>Cadence current</target>
+            </trans-unit>
+            <trans-unit id="datatype_11" resname="datatype_11">
+                <source>datatype_11</source>
+                <target>Cadence max</target>
+            </trans-unit>
+            <trans-unit id="datatype_12" resname="datatype_12">
+                <source>datatype_12</source>
+                <target>Cadence min</target>
+            </trans-unit>
+            <trans-unit id="datatype_13" resname="datatype_13">
+                <source>datatype_13</source>
+                <target>Cadence avg</target>
+            </trans-unit>
+            <trans-unit id="datatype_14" resname="datatype_14">
+                <source>datatype_14</source>
+                <target>Altitude</target>
+            </trans-unit>
+            <trans-unit id="datatype_15" resname="datatype_15">
+                <source>datatype_15</source>
+                <target>Altitude max</target>
+            </trans-unit>
+            <trans-unit id="datatype_16" resname="datatype_16">
+                <source>datatype_16</source>
+                <target>Altitude min</target>
+            </trans-unit>
+            <trans-unit id="datatype_17" resname="datatype_17">
+                <source>datatype_17</source>
+                <target>Elevation avg</target>
+            </trans-unit>
+            <trans-unit id="datatype_18" resname="datatype_18">
+                <source>datatype_18</source>
+                <target>Dénivelé en montée</target>
+            </trans-unit>
+            <trans-unit id="datatype_19" resname="datatype_19">
+                <source>datatype_19</source>
+                <target>Dénivelé en descente</target>
+            </trans-unit>
+            <trans-unit id="datatype_20" resname="datatype_20">
+                <source>datatype_20</source>
+                <target>Lap</target>
+            </trans-unit>
+            <trans-unit id="datatype_21" resname="datatype_21">
+                <source>datatype_21</source>
+                <target>Break Time</target>
+            </trans-unit>
+            <trans-unit id="datatype_22" resname="datatype_22">
+                <source>datatype_22</source>
+                <target>Weight, in kilograms</target>
+            </trans-unit>
+            <trans-unit id="datatype_23" resname="datatype_23">
+                <source>datatype_23</source>
+                <target>Calories brûlées</target>
+            </trans-unit>
+            <trans-unit id="datatype_24" resname="datatype_24">
+                <source>datatype_24</source>
+                <target>Durée</target>
+            </trans-unit>
+            <trans-unit id="datatype_25" resname="datatype_25">
+                <source>datatype_25</source>
+                <target>Pourcentage cardio min.</target>
+            </trans-unit>
+            <trans-unit id="datatype_26" resname="datatype_26">
+                <source>datatype_26</source>
+                <target>Pourcentage cardio max.</target>
+            </trans-unit>
+            <trans-unit id="datatype_27" resname="datatype_27">
+                <source>datatype_27</source>
+                <target>Height</target>
+            </trans-unit>
+            <trans-unit id="datatype_28" resname="datatype_28">
+                <source>datatype_28</source>
+                <target>HR Rest</target>
+            </trans-unit>
+            <trans-unit id="datatype_29" resname="datatype_29">
+                <source>datatype_29</source>
+                <target>Nombre de pas</target>
+            </trans-unit>
+            <trans-unit id="datatype_30" resname="datatype_30">
+                <source>datatype_30</source>
+                <target>Temps d'activité</target>
+            </trans-unit>
+            <trans-unit id="datatype_32" resname="datatype_32">
+                <source>datatype_32</source>
+                <target>Average Lap Time</target>
+            </trans-unit>
+            <trans-unit id="datatype_33" resname="datatype_33">
+                <source>datatype_33</source>
+                <target>Length Number</target>
+            </trans-unit>
+            <trans-unit id="datatype_34" resname="datatype_34">
+                <source>datatype_34</source>
+                <target>Lap Length</target>
+            </trans-unit>
+            <trans-unit id="datatype_35" resname="datatype_35">
+                <source>datatype_35</source>
+                <target>Stairs number</target>
+            </trans-unit>
+            <trans-unit id="datatype_36" resname="datatype_36">
+                <source>datatype_36</source>
+                <target>Mode</target>
+            </trans-unit>
+            <trans-unit id="datatype_37" resname="datatype_37">
+                <source>datatype_37</source>
+                <target>Walking time</target>
+            </trans-unit>
+            <trans-unit id="datatype_38" resname="datatype_38">
+                <source>datatype_38</source>
+                <target>Running time</target>
+            </trans-unit>
+            <trans-unit id="datatype_39" resname="datatype_39">
+                <source>datatype_39</source>
+                <target>Music Track</target>
+            </trans-unit>
+            <trans-unit id="datatype_40" resname="datatype_40">
+                <source>datatype_40</source>
+                <target>Laps Number</target>
+            </trans-unit>
+            <trans-unit id="datatype_41" resname="datatype_41">
+                <source>datatype_41</source>
+                <target>Fat burn</target>
+            </trans-unit>
+            <trans-unit id="datatype_42" resname="datatype_42">
+                <source>datatype_42</source>
+                <target>Time in zone</target>
+            </trans-unit>
+            <trans-unit id="datatype_43" resname="datatype_43">
+                <source>datatype_43</source>
+                <target>Exercise type</target>
+            </trans-unit>
+            <trans-unit id="datatype_44" resname="datatype_44">
+                <source>datatype_44</source>
+                <target>Total strokes</target>
+            </trans-unit>
+            <trans-unit id="datatype_45" resname="datatype_45">
+                <source>datatype_45</source>
+                <target>Total serves</target>
+            </trans-unit>
+            <trans-unit id="datatype_46" resname="datatype_46">
+                <source>datatype_46</source>
+                <target>Total forehands</target>
+            </trans-unit>
+            <trans-unit id="datatype_47" resname="datatype_47">
+                <source>datatype_47</source>
+                <target>Total backhands</target>
+            </trans-unit>
+            <trans-unit id="datatype_48" resname="datatype_48">
+                <source>datatype_48</source>
+                <target>Stroke type</target>
+            </trans-unit>
+            <trans-unit id="datatype_49" resname="datatype_49">
+                <source>datatype_49</source>
+                <target>Strokes in zone 1</target>
+            </trans-unit>
+            <trans-unit id="datatype_50" resname="datatype_50">
+                <source>datatype_50</source>
+                <target>Strokes in zone 2</target>
+            </trans-unit>
+            <trans-unit id="datatype_51" resname="datatype_51">
+                <source>datatype_51</source>
+                <target>Strokes in zone 3</target>
+            </trans-unit>
+            <trans-unit id="datatype_52" resname="datatype_52">
+                <source>datatype_52</source>
+                <target>Stroke zone</target>
+            </trans-unit>
+            <trans-unit id="datatype_53" resname="datatype_53">
+                <source>datatype_53</source>
+                <target>Winning or loosing point</target>
+            </trans-unit>
+            <trans-unit id="datatype_54" resname="datatype_54">
+                <source>datatype_54</source>
+                <target>Ball Speed - current</target>
+            </trans-unit>
+            <trans-unit id="datatype_55" resname="datatype_55">
+                <source>datatype_55</source>
+                <target>Ball Speed - Min</target>
+            </trans-unit>
+            <trans-unit id="datatype_56" resname="datatype_56">
+                <source>datatype_56</source>
+                <target>Ball Speed - Max</target>
+            </trans-unit>
+            <trans-unit id="datatype_57" resname="datatype_57">
+                <source>datatype_57</source>
+                <target>Ball Speed - Avg</target>
+            </trans-unit>
+            <trans-unit id="datatype_58" resname="datatype_58">
+                <source>datatype_58</source>
+                <target>Consecutive walking time</target>
+            </trans-unit>
+            <trans-unit id="datatype_59" resname="datatype_59">
+                <source>datatype_59</source>
+                <target>Centered forehands</target>
+            </trans-unit>
+            <trans-unit id="datatype_60" resname="datatype_60">
+                <source>datatype_60</source>
+                <target>Centered backhands</target>
+            </trans-unit>
+            <trans-unit id="datatype_61" resname="datatype_61">
+                <source>datatype_61</source>
+                <target>Centered serves</target>
+            </trans-unit>
+            <trans-unit id="datatype_62" resname="datatype_62">
+                <source>datatype_62</source>
+                <target>Total winning forehands</target>
+            </trans-unit>
+            <trans-unit id="datatype_63" resname="datatype_63">
+                <source>datatype_63</source>
+                <target>Total loosing forehands</target>
+            </trans-unit>
+            <trans-unit id="datatype_64" resname="datatype_64">
+                <source>datatype_64</source>
+                <target>Total winning backhands</target>
+            </trans-unit>
+            <trans-unit id="datatype_65" resname="datatype_65">
+                <source>datatype_65</source>
+                <target>Total loosing backhands</target>
+            </trans-unit>
+            <trans-unit id="datatype_66" resname="datatype_66">
+                <source>datatype_66</source>
+                <target>Total winning first serves</target>
+            </trans-unit>
+            <trans-unit id="datatype_67" resname="datatype_67">
+                <source>datatype_67</source>
+                <target>Total winning second serves</target>
+            </trans-unit>
+            <trans-unit id="datatype_68" resname="datatype_68">
+                <source>datatype_68</source>
+                <target>Total loosing second serves</target>
+            </trans-unit>
+            <trans-unit id="datatype_69" resname="datatype_69">
+                <source>datatype_69</source>
+                <target>Total loosing first serves</target>
+            </trans-unit>
+            <trans-unit id="datatype_70" resname="datatype_70">
+                <source>datatype_70</source>
+                <target>Total winning points</target>
+            </trans-unit>
+            <trans-unit id="datatype_71" resname="datatype_71">
+                <source>datatype_71</source>
+                <target>Total loosing points</target>
+            </trans-unit>
+            <trans-unit id="datatype_72" resname="datatype_72">
+                <source>datatype_72</source>
+                <target>Max consecutive winning point</target>
+            </trans-unit>
+            <trans-unit id="datatype_73" resname="datatype_73">
+                <source>datatype_73</source>
+                <target>Total first serves</target>
+            </trans-unit>
+            <trans-unit id="datatype_74" resname="datatype_74">
+                <source>datatype_74</source>
+                <target>Total second serves</target>
+            </trans-unit>
+            <trans-unit id="datatype_75" resname="datatype_75">
+                <source>datatype_75</source>
+                <target>Total centered first serves</target>
+            </trans-unit>
+            <trans-unit id="datatype_76" resname="datatype_76">
+                <source>datatype_76</source>
+                <target>Total centered second serves</target>
+            </trans-unit>
+            <trans-unit id="datatype_77" resname="datatype_77">
+                <source>datatype_77</source>
+                <target>First serve ball Speed - Max</target>
+            </trans-unit>
+            <trans-unit id="datatype_78" resname="datatype_78">
+                <source>datatype_78</source>
+                <target>Second serve ball Speed - Max</target>
+            </trans-unit>
+            <trans-unit id="datatype_79" resname="datatype_79">
+                <source>datatype_79</source>
+                <target>First serve ball Speed - Avg</target>
+            </trans-unit>
+            <trans-unit id="datatype_80" resname="datatype_80">
+                <source>datatype_80</source>
+                <target>Second serve ball Speed - Avg</target>
+            </trans-unit>
+            <trans-unit id="datatype_81" resname="datatype_81">
+                <source>datatype_81</source>
+                <target>Total winning points on first serve</target>
+            </trans-unit>
+            <trans-unit id="datatype_82" resname="datatype_82">
+                <source>datatype_82</source>
+                <target>Total winning points on second serve</target>
+            </trans-unit>
+            <trans-unit id="datatype_83" resname="datatype_83">
+                <source>datatype_83</source>
+                <target>Successful First serve ball speed - Max</target>
+            </trans-unit>
+            <trans-unit id="datatype_84" resname="datatype_84">
+                <source>datatype_84</source>
+                <target>Successful First serve ball speed - Avg</target>
+            </trans-unit>
+            <trans-unit id="datatype_85" resname="datatype_85">
+                <source>datatype_85</source>
+                <target>Total successful first serve</target>
+            </trans-unit>
+            <trans-unit id="datatype_86" resname="datatype_86">
+                <source>datatype_86</source>
+                <target>Total successful centered first serve</target>
+            </trans-unit>
+            <trans-unit id="datatype_87" resname="datatype_87">
+                <source>datatype_87</source>
+                <target>Match time</target>
+            </trans-unit>
+            <trans-unit id="datatype_88" resname="datatype_88">
+                <source>datatype_88</source>
+                <target>Training time</target>
+            </trans-unit>
+            <trans-unit id="datatype_89" resname="datatype_89">
+                <source>datatype_89</source>
+                <target>Total games</target>
+            </trans-unit>
+            <trans-unit id="datatype_90" resname="datatype_90">
+                <source>datatype_90</source>
+                <target>Total break points</target>
+            </trans-unit>
+            <trans-unit id="datatype_91" resname="datatype_91">
+                <source>datatype_91</source>
+                <target>Total break points won</target>
+            </trans-unit>
+            <trans-unit id="datatype_92" resname="datatype_92">
+                <source>datatype_92</source>
+                <target>Total victory</target>
+            </trans-unit>
+            <trans-unit id="datatype_93" resname="datatype_93">
+                <source>datatype_93</source>
+                <target>Total defeat</target>
+            </trans-unit>
+            <trans-unit id="datatype_94" resname="datatype_94">
+                <source>datatype_94</source>
+                <target>Laterality</target>
+            </trans-unit>
+            <trans-unit id="datatype_95" resname="datatype_95">
+                <source>datatype_95</source>
+                <target>Total match</target>
+            </trans-unit>
+            <trans-unit id="datatype_96" resname="datatype_96">
+                <source>datatype_96</source>
+                <target>Total training</target>
+            </trans-unit>
+            <trans-unit id="datatype_97" resname="datatype_97">
+                <source>datatype_97</source>
+                <target>Manual points</target>
+            </trans-unit>
+            <trans-unit id="datatype_98" resname="datatype_98">
+                <source>datatype_98</source>
+                <target>Nombre de séances</target>
+            </trans-unit>
+            <trans-unit id="datatype_99" resname="datatype_99">
+                <source>datatype_99</source>
+                <target>Points gagnés</target>
+            </trans-unit>
+            <trans-unit id="datatype_100" resname="datatype_100">
+                <source>datatype_100</source>
+                <target>RPM</target>
+            </trans-unit>
+            <trans-unit id="datatype_101" resname="datatype_101">
+                <source>datatype_101</source>
+                <target>RPM max</target>
+            </trans-unit>
+            <trans-unit id="datatype_102" resname="datatype_102">
+                <source>datatype_102</source>
+                <target>RPM min</target>
+            </trans-unit>
+            <trans-unit id="datatype_103" resname="datatype_103">
+                <source>datatype_103</source>
+                <target>RPM moy.</target>
+            </trans-unit>
+            <trans-unit id="datatype_104" resname="datatype_104">
+                <source>datatype_104</source>
+                <target>Total forehands during a match</target>
+            </trans-unit>
+            <trans-unit id="datatype_105" resname="datatype_105">
+                <source>datatype_105</source>
+                <target>Total backhands during a match</target>
+            </trans-unit>
+            <trans-unit id="datatype_106" resname="datatype_106">
+                <source>datatype_106</source>
+                <target>Total forehands during a training</target>
+            </trans-unit>
+            <trans-unit id="datatype_107" resname="datatype_107">
+                <source>datatype_107</source>
+                <target>Total backhands during a training</target>
+            </trans-unit>
+            <trans-unit id="datatype_108" resname="datatype_108">
+                <source>datatype_108</source>
+                <target>Total serves during a training</target>
+            </trans-unit>
+            <trans-unit id="datatype_109" resname="datatype_109">
+                <source>datatype_109</source>
+                <target>Total centered forehands during a match</target>
+            </trans-unit>
+            <trans-unit id="datatype_110" resname="datatype_110">
+                <source>datatype_110</source>
+                <target>Total centered backhands during a match</target>
+            </trans-unit>
+            <trans-unit id="datatype_111" resname="datatype_111">
+                <source>datatype_111</source>
+                <target>Total centered forehands during a training</target>
+            </trans-unit>
+            <trans-unit id="datatype_112" resname="datatype_112">
+                <source>datatype_112</source>
+                <target>Total centered backhands during a training</target>
+            </trans-unit>
+            <trans-unit id="datatype_113" resname="datatype_113">
+                <source>datatype_113</source>
+                <target>Total centered serves during a training</target>
+            </trans-unit>
+            <trans-unit id="datatype_114" resname="datatype_114">
+                <source>datatype_114</source>
+                <target>Total Trophies</target>
+            </trans-unit>
+            <trans-unit id="datatype_115" resname="datatype_115">
+                <source>datatype_115</source>
+                <target>Serve ball speed average during a training</target>
+            </trans-unit>
+            <trans-unit id="datatype_116" resname="datatype_116">
+                <source>datatype_116</source>
+                <target>Serve ball speed max during a training</target>
+            </trans-unit>
+            <trans-unit id="datatype_117" resname="datatype_117">
+                <source>datatype_117</source>
+                <target>Max strokes during a point</target>
+            </trans-unit>
+            <trans-unit id="datatype_118" resname="datatype_118">
+                <source>datatype_118</source>
+                <target>Max consecutive winning serves</target>
+            </trans-unit>
+            <trans-unit id="datatype_119" resname="datatype_119">
+                <source>datatype_119</source>
+                <target>Walking duration</target>
+            </trans-unit>
+            <trans-unit id="datatype_120" resname="datatype_120">
+                <source>datatype_120</source>
+                <target>Speed Device</target>
+            </trans-unit>
+            <trans-unit id="datatype_121" resname="datatype_121">
+                <source>datatype_121</source>
+                <target>Slope Device</target>
+            </trans-unit>
+            <trans-unit id="datatype_122" resname="datatype_122">
+                <source>datatype_122</source>
+                <target>Pumps</target>
+            </trans-unit>
+            <trans-unit id="datatype_123" resname="datatype_123">
+                <source>datatype_123</source>
+                <target>High knees</target>
+            </trans-unit>
+            <trans-unit id="datatype_124" resname="datatype_124">
+                <source>datatype_124</source>
+                <target>Squats</target>
+            </trans-unit>
+            <trans-unit id="datatype_125" resname="datatype_125">
+                <source>datatype_125</source>
+                <target>Introduction's duration</target>
+            </trans-unit>
+            <trans-unit id="datatype_126" resname="datatype_126">
+                <source>datatype_126</source>
+                <target>Exercice's duration</target>
+            </trans-unit>
+            <trans-unit id="datatype_127" resname="datatype_127">
+                <source>datatype_127</source>
+                <target>Stroke intensity</target>
+            </trans-unit>
+            <trans-unit id="datatype_128" resname="datatype_128">
+                <source>datatype_128</source>
+                <target>Total serve without effect</target>
+            </trans-unit>
+            <trans-unit id="datatype_129" resname="datatype_129">
+                <source>datatype_129</source>
+                <target>Total serve with effect</target>
+            </trans-unit>
+            <trans-unit id="datatype_130" resname="datatype_130">
+                <source>datatype_130</source>
+                <target>Total forehands topspin</target>
+            </trans-unit>
+            <trans-unit id="datatype_131" resname="datatype_131">
+                <source>datatype_131</source>
+                <target>Total forehands slice</target>
+            </trans-unit>
+            <trans-unit id="datatype_132" resname="datatype_132">
+                <source>datatype_132</source>
+                <target>Total forehands flat</target>
+            </trans-unit>
+            <trans-unit id="datatype_133" resname="datatype_133">
+                <source>datatype_133</source>
+                <target>Total backhands topspin</target>
+            </trans-unit>
+            <trans-unit id="datatype_134" resname="datatype_134">
+                <source>datatype_134</source>
+                <target>Total backhands slice</target>
+            </trans-unit>
+            <trans-unit id="datatype_135" resname="datatype_135">
+                <source>datatype_135</source>
+                <target>Total backhands flat</target>
+            </trans-unit>
+            <trans-unit id="datatype_136" resname="datatype_136">
+                <source>datatype_136</source>
+                <target>Stroke type effect</target>
+            </trans-unit>
+            <trans-unit id="datatype_137" resname="datatype_137">
+                <source>datatype_137</source>
+                <target>Total first serve without effect</target>
+            </trans-unit>
+            <trans-unit id="datatype_138" resname="datatype_138">
+                <source>datatype_138</source>
+                <target>Total first serve with effect</target>
+            </trans-unit>
+            <trans-unit id="datatype_139" resname="datatype_139">
+                <source>datatype_139</source>
+                <target>Total second serve without effect</target>
+            </trans-unit>
+            <trans-unit id="datatype_140" resname="datatype_140">
+                <source>datatype_140</source>
+                <target>Total second serve with effect</target>
+            </trans-unit>
+            <trans-unit id="datatype_141" resname="datatype_141">
+                <source>datatype_141</source>
+                <target>Intensity forehands topspin</target>
+            </trans-unit>
+            <trans-unit id="datatype_142" resname="datatype_142">
+                <source>datatype_142</source>
+                <target>Intensity forehands slice</target>
+            </trans-unit>
+            <trans-unit id="datatype_143" resname="datatype_143">
+                <source>datatype_143</source>
+                <target>Intensity forehands flat</target>
+            </trans-unit>
+            <trans-unit id="datatype_144" resname="datatype_144">
+                <source>datatype_144</source>
+                <target>Intensity backhands topspin</target>
+            </trans-unit>
+            <trans-unit id="datatype_145" resname="datatype_145">
+                <source>datatype_145</source>
+                <target>Intensity backhands slice</target>
+            </trans-unit>
+            <trans-unit id="datatype_146" resname="datatype_146">
+                <source>datatype_146</source>
+                <target>Intensity backhands flat</target>
+            </trans-unit>
+            <trans-unit id="datatype_147" resname="datatype_147">
+                <source>datatype_147</source>
+                <target>Total serves without effect during a training</target>
+            </trans-unit>
+            <trans-unit id="datatype_148" resname="datatype_148">
+                <source>datatype_148</source>
+                <target>Total serves with effect during a training</target>
+            </trans-unit>
+            <trans-unit id="datatype_149" resname="datatype_149">
+                <source>datatype_149</source>
+                <target>Total forehands topspin during a training</target>
+            </trans-unit>
+            <trans-unit id="datatype_150" resname="datatype_150">
+                <source>datatype_150</source>
+                <target>Total forehands slice during a training</target>
+            </trans-unit>
+            <trans-unit id="datatype_151" resname="datatype_151">
+                <source>datatype_151</source>
+                <target>Total forehands flat during a training</target>
+            </trans-unit>
+            <trans-unit id="datatype_152" resname="datatype_152">
+                <source>datatype_152</source>
+                <target>Total backhands topspin during a training</target>
+            </trans-unit>
+            <trans-unit id="datatype_153" resname="datatype_153">
+                <source>datatype_153</source>
+                <target>Total backhands slice during a training</target>
+            </trans-unit>
+            <trans-unit id="datatype_154" resname="datatype_154">
+                <source>datatype_154</source>
+                <target>Total backhands flat during a training</target>
+            </trans-unit>
+            <trans-unit id="datatype_155" resname="datatype_155">
+                <source>datatype_155</source>
+                <target>Total forehands topspin during a match</target>
+            </trans-unit>
+            <trans-unit id="datatype_156" resname="datatype_156">
+                <source>datatype_156</source>
+                <target>Total forehands slice during a match</target>
+            </trans-unit>
+            <trans-unit id="datatype_157" resname="datatype_157">
+                <source>datatype_157</source>
+                <target>Total forehands flat during a match</target>
+            </trans-unit>
+            <trans-unit id="datatype_158" resname="datatype_158">
+                <source>datatype_158</source>
+                <target>Total backhands topspin during a match</target>
+            </trans-unit>
+            <trans-unit id="datatype_159" resname="datatype_159">
+                <source>datatype_159</source>
+                <target>Total backhands slice during a match</target>
+            </trans-unit>
+            <trans-unit id="datatype_160" resname="datatype_160">
+                <source>datatype_160</source>
+                <target>Total backhands flat during a match</target>
+            </trans-unit>
+            <trans-unit id="datatype_161" resname="datatype_161">
+                <source>datatype_161</source>
+                <target>Intensity forehands topspin during a training</target>
+            </trans-unit>
+            <trans-unit id="datatype_162" resname="datatype_162">
+                <source>datatype_162</source>
+                <target>Intensity forehands slice during a training</target>
+            </trans-unit>
+            <trans-unit id="datatype_163" resname="datatype_163">
+                <source>datatype_163</source>
+                <target>Intensity forehands flat during a training</target>
+            </trans-unit>
+            <trans-unit id="datatype_164" resname="datatype_164">
+                <source>datatype_164</source>
+                <target>Intensity backhands topspin during a training</target>
+            </trans-unit>
+            <trans-unit id="datatype_165" resname="datatype_165">
+                <source>datatype_165</source>
+                <target>Intensity backhands slice during a training</target>
+            </trans-unit>
+            <trans-unit id="datatype_166" resname="datatype_166">
+                <source>datatype_166</source>
+                <target>Intensity backhands flat during a training</target>
+            </trans-unit>
+            <trans-unit id="datatype_167" resname="datatype_167">
+                <source>datatype_167</source>
+                <target>Intensity forehands topspin during a match</target>
+            </trans-unit>
+            <trans-unit id="datatype_168" resname="datatype_168">
+                <source>datatype_168</source>
+                <target>Intensity forehands slice during a match</target>
+            </trans-unit>
+            <trans-unit id="datatype_169" resname="datatype_169">
+                <source>datatype_169</source>
+                <target>Intensity forehands flat during a match</target>
+            </trans-unit>
+            <trans-unit id="datatype_170" resname="datatype_170">
+                <source>datatype_170</source>
+                <target>Intensity backhands topspin during a match</target>
+            </trans-unit>
+            <trans-unit id="datatype_171" resname="datatype_171">
+                <source>datatype_171</source>
+                <target>Intensity backhands slice during a match</target>
+            </trans-unit>
+            <trans-unit id="datatype_172" resname="datatype_172">
+                <source>datatype_172</source>
+                <target>Intensity backhands flat during a match</target>
+            </trans-unit>
+            <trans-unit id="datatype_173" resname="datatype_173">
+                <source>datatype_173</source>
+                <target>Intensity max forehands</target>
+            </trans-unit>
+            <trans-unit id="datatype_174" resname="datatype_174">
+                <source>datatype_174</source>
+                <target>Intensity max backhands</target>
+            </trans-unit>
+            <trans-unit id="datatype_175" resname="datatype_175">
+                <source>datatype_175</source>
+                <target>Percentage of VMA</target>
+            </trans-unit>
+            <trans-unit id="datatype_176" resname="datatype_176">
+                <source>datatype_176</source>
+                <target>Percentage of HRMAX current</target>
+            </trans-unit>
+            <trans-unit id="datatype_177" resname="datatype_177">
+                <source>datatype_177</source>
+                <target>Résistance</target>
+            </trans-unit>
+            <trans-unit id="datatype_178" resname="datatype_178">
+                <source>datatype_178</source>
+                <target>Puissance</target>
+            </trans-unit>
+            <trans-unit id="datatype_179" resname="datatype_179">
+                <source>datatype_179</source>
+                <target>Puissance max.</target>
+            </trans-unit>
+            <trans-unit id="datatype_180" resname="datatype_180">
+                <source>datatype_180</source>
+                <target>Puissance moy.</target>
+            </trans-unit>
+            <trans-unit id="datatype_181" resname="datatype_181">
+                <source>datatype_181</source>
+                <target>Weight</target>
+            </trans-unit>
+            <trans-unit id="datatype_182" resname="datatype_182">
+                <source>datatype_182</source>
+                <target>Body fat percentage</target>
+            </trans-unit>
+            <trans-unit id="datatype_183" resname="datatype_183">
+                <source>datatype_183</source>
+                <target>Percentage of PMA</target>
+            </trans-unit>
+            <trans-unit id="datatype_184" resname="datatype_184">
+                <source>datatype_184</source>
+                <target>Body muscle percentage</target>
+            </trans-unit>
+            <trans-unit id="datatype_185" resname="datatype_185">
+                <source>datatype_185</source>
+                <target>Body bone percentage</target>
+            </trans-unit>
+            <trans-unit id="datatype_186" resname="datatype_186">
+                <source>datatype_186</source>
+                <target>Body water percentage</target>
+            </trans-unit>
+            <trans-unit id="datatype_10000" resname="datatype_10000">
+              <source>datatype_10000</source>
+              <target>Temps</target>
+            </trans-unit>
+            <trans-unit id="datatype_10001" resname="datatype_10001">
+              <source>datatype_10001</source>
+              <target>Allure</target>
+            </trans-unit>
+            <trans-unit id="datatype_10005" resname="datatype_10005">
+              <source>datatype_10005</source>
+              <target>Heure</target>
+            </trans-unit>
+            <trans-unit id="datatype_10009" resname="datatype_10009">
+              <source>datatype_10009</source>
+              <target>Allure moy.</target>
+            </trans-unit>
+            <trans-unit id="datatype_1_with_unit" resname="datatype_1_with_unit">
+                <source>datatype_1_with_unit</source>
+                <target>Rythme cardiaque (bpm)</target>
+            </trans-unit>
+            <trans-unit id="datatype_2_with_unit" resname="datatype_2_with_unit">
+                <source>datatype_2_with_unit</source>
+                <target>Cardio min (bpm)</target>
+            </trans-unit>
+            <trans-unit id="datatype_3_with_unit" resname="datatype_3_with_unit">
+                <source>datatype_3_with_unit</source>
+                <target>Cardio max (bpm)</target>
+            </trans-unit>
+            <trans-unit id="datatype_4_with_unit" resname="datatype_4_with_unit">
+                <source>datatype_4_with_unit</source>
+                <target>Cardio moy. (bpm)</target>
+            </trans-unit>
+            <trans-unit id="datatype_5_with_unit" resname="datatype_5_with_unit">
+                <source>datatype_5_with_unit</source>
+                <target>Distance (m)</target>
+            </trans-unit>
+            <trans-unit id="datatype_6_with_unit" resname="datatype_6_with_unit">
+                <source>datatype_6_with_unit</source>
+                <target>Vitesse (m/h)</target>
+            </trans-unit>
+            <trans-unit id="datatype_7_with_unit" resname="datatype_7_with_unit">
+                <source>datatype_7_with_unit</source>
+                <target>Vitesse max (m/h)</target>
+            </trans-unit>
+            <trans-unit id="datatype_8_with_unit" resname="datatype_8_with_unit">
+                <source>datatype_8_with_unit</source>
+                <target>Vitesse min (m/h)</target>
+            </trans-unit>
+            <trans-unit id="datatype_9_with_unit" resname="datatype_9_with_unit">
+                <source>datatype_9_with_unit</source>
+                <target>Vitesse moy.</target>
+            </trans-unit>
+            <trans-unit id="datatype_10_with_unit" resname="datatype_10_with_unit">
+                <source>datatype_10_with_unit</source>
+                <target>Cadence current (steps/min)</target>
+            </trans-unit>
+            <trans-unit id="datatype_11_with_unit" resname="datatype_11_with_unit">
+                <source>datatype_11_with_unit</source>
+                <target>Cadence max (steps/min)</target>
+            </trans-unit>
+            <trans-unit id="datatype_12_with_unit" resname="datatype_12_with_unit">
+                <source>datatype_12_with_unit</source>
+                <target>Cadence min (steps/min)</target>
+            </trans-unit>
+            <trans-unit id="datatype_13_with_unit" resname="datatype_13_with_unit">
+                <source>datatype_13_with_unit</source>
+                <target>Cadence avg (steps/min)</target>
+            </trans-unit>
+            <trans-unit id="datatype_14_with_unit" resname="datatype_14_with_unit">
+                <source>datatype_14_with_unit</source>
+                <target>Altitude (m)</target>
+            </trans-unit>
+            <trans-unit id="datatype_15_with_unit" resname="datatype_15_with_unit">
+                <source>datatype_15_with_unit</source>
+                <target>Altitude max (m)</target>
+            </trans-unit>
+            <trans-unit id="datatype_16_with_unit" resname="datatype_16_with_unit">
+                <source>datatype_16_with_unit</source>
+                <target>Altitude min (m)</target>
+            </trans-unit>
+            <trans-unit id="datatype_17_with_unit" resname="datatype_17_with_unit">
+                <source>datatype_17_with_unit</source>
+                <target>Elevation avg (m)</target>
+            </trans-unit>
+            <trans-unit id="datatype_18_with_unit" resname="datatype_18_with_unit">
+                <source>datatype_18_with_unit</source>
+                <target>Dénivelé en montée (m)</target>
+            </trans-unit>
+            <trans-unit id="datatype_19_with_unit" resname="datatype_19_with_unit">
+                <source>datatype_19_with_unit</source>
+                <target>Dénivelé en descente (m)</target>
+            </trans-unit>
+            <trans-unit id="datatype_20_with_unit" resname="datatype_20_with_unit">
+                <source>datatype_20_with_unit</source>
+                <target>Lap</target>
+            </trans-unit>
+            <trans-unit id="datatype_21_with_unit" resname="datatype_21_with_unit">
+                <source>datatype_21_with_unit</source>
+                <target>Break Time (s)</target>
+            </trans-unit>
+            <trans-unit id="datatype_22_with_unit" resname="datatype_22_with_unit">
+                <source>datatype_22_with_unit</source>
+                <target>Weight, in kilograms (kg)</target>
+            </trans-unit>
+            <trans-unit id="datatype_23_with_unit" resname="datatype_23_with_unit">
+                <source>datatype_23_with_unit</source>
+                <target>Calories brûlées</target>
+            </trans-unit>
+            <trans-unit id="datatype_24_with_unit" resname="datatype_24_with_unit">
+                <source>datatype_24_with_unit</source>
+                <target>Durée</target>
+            </trans-unit>
+            <trans-unit id="datatype_25_with_unit" resname="datatype_25_with_unit">
+                <source>datatype_25_with_unit</source>
+                <target>Pourcentage cardio min.</target>
+            </trans-unit>
+            <trans-unit id="datatype_26_with_unit" resname="datatype_26_with_unit">
+                <source>datatype_26_with_unit</source>
+                <target>Pourcentage cardio max.</target>
+            </trans-unit>
+            <trans-unit id="datatype_27_with_unit" resname="datatype_27_with_unit">
+                <source>datatype_27_with_unit</source>
+                <target>Height (cm)</target>
+            </trans-unit>
+            <trans-unit id="datatype_28_with_unit" resname="datatype_28_with_unit">
+                <source>datatype_28_with_unit</source>
+                <target>HR Rest (bpm)</target>
+            </trans-unit>
+            <trans-unit id="datatype_29_with_unit" resname="datatype_29_with_unit">
+                <source>datatype_29_with_unit</source>
+                <target>Nombre de pas</target>
+            </trans-unit>
+            <trans-unit id="datatype_30_with_unit" resname="datatype_30_with_unit">
+                <source>datatype_30_with_unit</source>
+                <target>Temps d'activité</target>
+            </trans-unit>
+            <trans-unit id="datatype_32_with_unit" resname="datatype_32_with_unit">
+                <source>datatype_32_with_unit</source>
+                <target>Average Lap Time (s)</target>
+            </trans-unit>
+            <trans-unit id="datatype_33_with_unit" resname="datatype_33_with_unit">
+                <source>datatype_33_with_unit</source>
+                <target>Length Number ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_34_with_unit" resname="datatype_34_with_unit">
+                <source>datatype_34_with_unit</source>
+                <target>Lap Length ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_35_with_unit" resname="datatype_35_with_unit">
+                <source>datatype_35_with_unit</source>
+                <target>Stairs number (stairs)</target>
+            </trans-unit>
+            <trans-unit id="datatype_36_with_unit" resname="datatype_36_with_unit">
+                <source>datatype_36_with_unit</source>
+                <target>Mode ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_37_with_unit" resname="datatype_37_with_unit">
+                <source>datatype_37_with_unit</source>
+                <target>Walking time (s)</target>
+            </trans-unit>
+            <trans-unit id="datatype_38_with_unit" resname="datatype_38_with_unit">
+                <source>datatype_38_with_unit</source>
+                <target>Running time (s)</target>
+            </trans-unit>
+            <trans-unit id="datatype_39_with_unit" resname="datatype_39_with_unit">
+                <source>datatype_39_with_unit</source>
+                <target>Music Track ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_40_with_unit" resname="datatype_40_with_unit">
+                <source>datatype_40_with_unit</source>
+                <target>Laps Number ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_41_with_unit" resname="datatype_41_with_unit">
+                <source>datatype_41_with_unit</source>
+                <target>Fat burn (g)</target>
+            </trans-unit>
+            <trans-unit id="datatype_42_with_unit" resname="datatype_42_with_unit">
+                <source>datatype_42_with_unit</source>
+                <target>Time in zone (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_43_with_unit" resname="datatype_43_with_unit">
+                <source>datatype_43_with_unit</source>
+                <target>Exercise type ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_44_with_unit" resname="datatype_44_with_unit">
+                <source>datatype_44_with_unit</source>
+                <target>Total strokes ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_45_with_unit" resname="datatype_45_with_unit">
+                <source>datatype_45_with_unit</source>
+                <target>Total serves ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_46_with_unit" resname="datatype_46_with_unit">
+                <source>datatype_46_with_unit</source>
+                <target>Total forehands ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_47_with_unit" resname="datatype_47_with_unit">
+                <source>datatype_47_with_unit</source>
+                <target>Total backhands ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_48_with_unit" resname="datatype_48_with_unit">
+                <source>datatype_48_with_unit</source>
+                <target>Stroke type ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_49_with_unit" resname="datatype_49_with_unit">
+                <source>datatype_49_with_unit</source>
+                <target>Strokes in zone 1 ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_50_with_unit" resname="datatype_50_with_unit">
+                <source>datatype_50_with_unit</source>
+                <target>Strokes in zone 2 ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_51_with_unit" resname="datatype_51_with_unit">
+                <source>datatype_51_with_unit</source>
+                <target>Strokes in zone 3 ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_52_with_unit" resname="datatype_52_with_unit">
+                <source>datatype_52_with_unit</source>
+                <target>Stroke zone ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_53_with_unit" resname="datatype_53_with_unit">
+                <source>datatype_53_with_unit</source>
+                <target>Winning or loosing point ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_54_with_unit" resname="datatype_54_with_unit">
+                <source>datatype_54_with_unit</source>
+                <target>Ball Speed - current (m/h)</target>
+            </trans-unit>
+            <trans-unit id="datatype_55_with_unit" resname="datatype_55_with_unit">
+                <source>datatype_55_with_unit</source>
+                <target>Ball Speed - Min (m/h)</target>
+            </trans-unit>
+            <trans-unit id="datatype_56_with_unit" resname="datatype_56_with_unit">
+                <source>datatype_56_with_unit</source>
+                <target>Ball Speed - Max (m/h)</target>
+            </trans-unit>
+            <trans-unit id="datatype_57_with_unit" resname="datatype_57_with_unit">
+                <source>datatype_57_with_unit</source>
+                <target>Ball Speed - Avg (m/h)</target>
+            </trans-unit>
+            <trans-unit id="datatype_58_with_unit" resname="datatype_58_with_unit">
+                <source>datatype_58_with_unit</source>
+                <target>Consecutive walking time (s)</target>
+            </trans-unit>
+            <trans-unit id="datatype_59_with_unit" resname="datatype_59_with_unit">
+                <source>datatype_59_with_unit</source>
+                <target>Centered forehands ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_60_with_unit" resname="datatype_60_with_unit">
+                <source>datatype_60_with_unit</source>
+                <target>Centered backhands ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_61_with_unit" resname="datatype_61_with_unit">
+                <source>datatype_61_with_unit</source>
+                <target>Centered serves ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_62_with_unit" resname="datatype_62_with_unit">
+                <source>datatype_62_with_unit</source>
+                <target>Total winning forehands ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_63_with_unit" resname="datatype_63_with_unit">
+                <source>datatype_63_with_unit</source>
+                <target>Total loosing forehands ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_64_with_unit" resname="datatype_64_with_unit">
+                <source>datatype_64_with_unit</source>
+                <target>Total winning backhands ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_65_with_unit" resname="datatype_65_with_unit">
+                <source>datatype_65_with_unit</source>
+                <target>Total loosing backhands ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_66_with_unit" resname="datatype_66_with_unit">
+                <source>datatype_66_with_unit</source>
+                <target>Total winning first serves ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_67_with_unit" resname="datatype_67_with_unit">
+                <source>datatype_67_with_unit</source>
+                <target>Total winning second serves ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_68_with_unit" resname="datatype_68_with_unit">
+                <source>datatype_68_with_unit</source>
+                <target>Total loosing second serves ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_69_with_unit" resname="datatype_69_with_unit">
+                <source>datatype_69_with_unit</source>
+                <target>Total loosing first serves ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_70_with_unit" resname="datatype_70_with_unit">
+                <source>datatype_70_with_unit</source>
+                <target>Total winning points ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_71_with_unit" resname="datatype_71_with_unit">
+                <source>datatype_71_with_unit</source>
+                <target>Total loosing points ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_72_with_unit" resname="datatype_72_with_unit">
+                <source>datatype_72_with_unit</source>
+                <target>Max consecutive winning point ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_73_with_unit" resname="datatype_73_with_unit">
+                <source>datatype_73_with_unit</source>
+                <target>Total first serves ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_74_with_unit" resname="datatype_74_with_unit">
+                <source>datatype_74_with_unit</source>
+                <target>Total second serves ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_75_with_unit" resname="datatype_75_with_unit">
+                <source>datatype_75_with_unit</source>
+                <target>Total centered first serves ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_76_with_unit" resname="datatype_76_with_unit">
+                <source>datatype_76_with_unit</source>
+                <target>Total centered second serves ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_77_with_unit" resname="datatype_77_with_unit">
+                <source>datatype_77_with_unit</source>
+                <target>First serve ball Speed - Max (m/h)</target>
+            </trans-unit>
+            <trans-unit id="datatype_78_with_unit" resname="datatype_78_with_unit">
+                <source>datatype_78_with_unit</source>
+                <target>Second serve ball Speed - Max (m/h)</target>
+            </trans-unit>
+            <trans-unit id="datatype_79_with_unit" resname="datatype_79_with_unit">
+                <source>datatype_79_with_unit</source>
+                <target>First serve ball Speed - Avg (m/h)</target>
+            </trans-unit>
+            <trans-unit id="datatype_80_with_unit" resname="datatype_80_with_unit">
+                <source>datatype_80_with_unit</source>
+                <target>Second serve ball Speed - Avg (m/h)</target>
+            </trans-unit>
+            <trans-unit id="datatype_81_with_unit" resname="datatype_81_with_unit">
+                <source>datatype_81_with_unit</source>
+                <target>Total winning points on first serve ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_82_with_unit" resname="datatype_82_with_unit">
+                <source>datatype_82_with_unit</source>
+                <target>Total winning points on second serve ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_83_with_unit" resname="datatype_83_with_unit">
+                <source>datatype_83_with_unit</source>
+                <target>Successful First serve ball speed - Max (m/h)</target>
+            </trans-unit>
+            <trans-unit id="datatype_84_with_unit" resname="datatype_84_with_unit">
+                <source>datatype_84_with_unit</source>
+                <target>Successful First serve ball speed - Avg (m/h)</target>
+            </trans-unit>
+            <trans-unit id="datatype_85_with_unit" resname="datatype_85_with_unit">
+                <source>datatype_85_with_unit</source>
+                <target>Total successful first serve ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_86_with_unit" resname="datatype_86_with_unit">
+                <source>datatype_86_with_unit</source>
+                <target>Total successful centered first serve ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_87_with_unit" resname="datatype_87_with_unit">
+                <source>datatype_87_with_unit</source>
+                <target>Match time (s)</target>
+            </trans-unit>
+            <trans-unit id="datatype_88_with_unit" resname="datatype_88_with_unit">
+                <source>datatype_88_with_unit</source>
+                <target>Training time (s)</target>
+            </trans-unit>
+            <trans-unit id="datatype_89_with_unit" resname="datatype_89_with_unit">
+                <source>datatype_89_with_unit</source>
+                <target>Total games ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_90_with_unit" resname="datatype_90_with_unit">
+                <source>datatype_90_with_unit</source>
+                <target>Total break points ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_91_with_unit" resname="datatype_91_with_unit">
+                <source>datatype_91_with_unit</source>
+                <target>Total break points won ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_92_with_unit" resname="datatype_92_with_unit">
+                <source>datatype_92_with_unit</source>
+                <target>Total victory ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_93_with_unit" resname="datatype_93_with_unit">
+                <source>datatype_93_with_unit</source>
+                <target>Total defeat ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_94_with_unit" resname="datatype_94_with_unit">
+                <source>datatype_94_with_unit</source>
+                <target>Laterality ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_95_with_unit" resname="datatype_95_with_unit">
+                <source>datatype_95_with_unit</source>
+                <target>Total match ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_96_with_unit" resname="datatype_96_with_unit">
+                <source>datatype_96_with_unit</source>
+                <target>Total training ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_97_with_unit" resname="datatype_97_with_unit">
+                <source>datatype_97_with_unit</source>
+                <target>Manual points (Ons)</target>
+            </trans-unit>
+            <trans-unit id="datatype_98_with_unit" resname="datatype_98_with_unit">
+                <source>datatype_98_with_unit</source>
+                <target>Nombre de séances</target>
+            </trans-unit>
+            <trans-unit id="datatype_99_with_unit" resname="datatype_99_with_unit">
+                <source>datatype_99_with_unit</source>
+                <target>Points gagnés</target>
+            </trans-unit>
+            <trans-unit id="datatype_100_with_unit" resname="datatype_100_with_unit">
+                <source>datatype_100_with_unit</source>
+                <target>RPM</target>
+            </trans-unit>
+            <trans-unit id="datatype_101_with_unit" resname="datatype_101_with_unit">
+                <source>datatype_101_with_unit</source>
+                <target>RPM max (rpm)</target>
+            </trans-unit>
+            <trans-unit id="datatype_102_with_unit" resname="datatype_102_with_unit">
+                <source>datatype_102_with_unit</source>
+                <target>RPM min (rpm)</target>
+            </trans-unit>
+            <trans-unit id="datatype_103_with_unit" resname="datatype_103_with_unit">
+                <source>datatype_103_with_unit</source>
+                <target>RPM moy. (rpm)</target>
+            </trans-unit>
+            <trans-unit id="datatype_104_with_unit" resname="datatype_104_with_unit">
+                <source>datatype_104_with_unit</source>
+                <target>Total forehands during a match ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_105_with_unit" resname="datatype_105_with_unit">
+                <source>datatype_105_with_unit</source>
+                <target>Total backhands during a match ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_106_with_unit" resname="datatype_106_with_unit">
+                <source>datatype_106_with_unit</source>
+                <target>Total forehands during a training ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_107_with_unit" resname="datatype_107_with_unit">
+                <source>datatype_107_with_unit</source>
+                <target>Total backhands during a training ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_108_with_unit" resname="datatype_108_with_unit">
+                <source>datatype_108_with_unit</source>
+                <target>Total serves during a training ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_109_with_unit" resname="datatype_109_with_unit">
+                <source>datatype_109_with_unit</source>
+                <target>Total centered forehands during a match ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_110_with_unit" resname="datatype_110_with_unit">
+                <source>datatype_110_with_unit</source>
+                <target>Total centered backhands during a match ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_111_with_unit" resname="datatype_111_with_unit">
+                <source>datatype_111_with_unit</source>
+                <target>Total centered forehands during a training ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_112_with_unit" resname="datatype_112_with_unit">
+                <source>datatype_112_with_unit</source>
+                <target>Total centered backhands during a training ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_113_with_unit" resname="datatype_113_with_unit">
+                <source>datatype_113_with_unit</source>
+                <target>Total centered serves during a training ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_114_with_unit" resname="datatype_114_with_unit">
+                <source>datatype_114_with_unit</source>
+                <target>Total Trophies ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_115_with_unit" resname="datatype_115_with_unit">
+                <source>datatype_115_with_unit</source>
+                <target>Serve ball speed average during a training (m/h)</target>
+            </trans-unit>
+            <trans-unit id="datatype_116_with_unit" resname="datatype_116_with_unit">
+                <source>datatype_116_with_unit</source>
+                <target>Serve ball speed max during a training (m/h)</target>
+            </trans-unit>
+            <trans-unit id="datatype_117_with_unit" resname="datatype_117_with_unit">
+                <source>datatype_117_with_unit</source>
+                <target>Max strokes during a point ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_118_with_unit" resname="datatype_118_with_unit">
+                <source>datatype_118_with_unit</source>
+                <target>Max consecutive winning serves ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_119_with_unit" resname="datatype_119_with_unit">
+                <source>datatype_119_with_unit</source>
+                <target>Walking duration (s)</target>
+            </trans-unit>
+            <trans-unit id="datatype_120_with_unit" resname="datatype_120_with_unit">
+                <source>datatype_120_with_unit</source>
+                <target>Vitesse pilotée (m/h)</target>
+            </trans-unit>
+            <trans-unit id="datatype_121_with_unit" resname="datatype_121_with_unit">
+                <source>datatype_121_with_unit</source>
+                <target>Inclinaison (deg)</target>
+            </trans-unit>
+            <trans-unit id="datatype_122_with_unit" resname="datatype_122_with_unit">
+                <source>datatype_122_with_unit</source>
+                <target>Pumps ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_123_with_unit" resname="datatype_123_with_unit">
+                <source>datatype_123_with_unit</source>
+                <target>High knees ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_124_with_unit" resname="datatype_124_with_unit">
+                <source>datatype_124_with_unit</source>
+                <target>Squats ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_125_with_unit" resname="datatype_125_with_unit">
+                <source>datatype_125_with_unit</source>
+                <target>Introduction's duration (s)</target>
+            </trans-unit>
+            <trans-unit id="datatype_126_with_unit" resname="datatype_126_with_unit">
+                <source>datatype_126_with_unit</source>
+                <target>Exercice's duration (s)</target>
+            </trans-unit>
+            <trans-unit id="datatype_127_with_unit" resname="datatype_127_with_unit">
+                <source>datatype_127_with_unit</source>
+                <target>Stroke intensity (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_128_with_unit" resname="datatype_128_with_unit">
+                <source>datatype_128_with_unit</source>
+                <target>Total serve without effect ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_129_with_unit" resname="datatype_129_with_unit">
+                <source>datatype_129_with_unit</source>
+                <target>Total serve with effect ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_130_with_unit" resname="datatype_130_with_unit">
+                <source>datatype_130_with_unit</source>
+                <target>Total forehands topspin ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_131_with_unit" resname="datatype_131_with_unit">
+                <source>datatype_131_with_unit</source>
+                <target>Total forehands slice ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_132_with_unit" resname="datatype_132_with_unit">
+                <source>datatype_132_with_unit</source>
+                <target>Total forehands flat ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_133_with_unit" resname="datatype_133_with_unit">
+                <source>datatype_133_with_unit</source>
+                <target>Total backhands topspin ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_134_with_unit" resname="datatype_134_with_unit">
+                <source>datatype_134_with_unit</source>
+                <target>Total backhands slice ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_135_with_unit" resname="datatype_135_with_unit">
+                <source>datatype_135_with_unit</source>
+                <target>Total backhands flat ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_136_with_unit" resname="datatype_136_with_unit">
+                <source>datatype_136_with_unit</source>
+                <target>Stroke type effect ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_137_with_unit" resname="datatype_137_with_unit">
+                <source>datatype_137_with_unit</source>
+                <target>Total first serve without effect ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_138_with_unit" resname="datatype_138_with_unit">
+                <source>datatype_138_with_unit</source>
+                <target>Total first serve with effect ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_139_with_unit" resname="datatype_139_with_unit">
+                <source>datatype_139_with_unit</source>
+                <target>Total second serve without effect ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_140_with_unit" resname="datatype_140_with_unit">
+                <source>datatype_140_with_unit</source>
+                <target>Total second serve with effect ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_141_with_unit" resname="datatype_141_with_unit">
+                <source>datatype_141_with_unit</source>
+                <target>Intensity forehands topspin (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_142_with_unit" resname="datatype_142_with_unit">
+                <source>datatype_142_with_unit</source>
+                <target>Intensity forehands slice (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_143_with_unit" resname="datatype_143_with_unit">
+                <source>datatype_143_with_unit</source>
+                <target>Intensity forehands flat (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_144_with_unit" resname="datatype_144_with_unit">
+                <source>datatype_144_with_unit</source>
+                <target>Intensity backhands topspin (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_145_with_unit" resname="datatype_145_with_unit">
+                <source>datatype_145_with_unit</source>
+                <target>Intensity backhands slice (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_146_with_unit" resname="datatype_146_with_unit">
+                <source>datatype_146_with_unit</source>
+                <target>Intensity backhands flat (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_147_with_unit" resname="datatype_147_with_unit">
+                <source>datatype_147_with_unit</source>
+                <target>Total serves without effect during a training (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_148_with_unit" resname="datatype_148_with_unit">
+                <source>datatype_148_with_unit</source>
+                <target>Total serves with effect during a training (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_149_with_unit" resname="datatype_149_with_unit">
+                <source>datatype_149_with_unit</source>
+                <target>Total forehands topspin during a training (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_150_with_unit" resname="datatype_150_with_unit">
+                <source>datatype_150_with_unit</source>
+                <target>Total forehands slice during a training (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_151_with_unit" resname="datatype_151_with_unit">
+                <source>datatype_151_with_unit</source>
+                <target>Total forehands flat during a training (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_152_with_unit" resname="datatype_152_with_unit">
+                <source>datatype_152_with_unit</source>
+                <target>Total backhands topspin during a training (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_153_with_unit" resname="datatype_153_with_unit">
+                <source>datatype_153_with_unit</source>
+                <target>Total backhands slice during a training (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_154_with_unit" resname="datatype_154_with_unit">
+                <source>datatype_154_with_unit</source>
+                <target>Total backhands flat during a training (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_155_with_unit" resname="datatype_155_with_unit">
+                <source>datatype_155_with_unit</source>
+                <target>Total forehands topspin during a match (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_156_with_unit" resname="datatype_156_with_unit">
+                <source>datatype_156_with_unit</source>
+                <target>Total forehands slice during a match (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_157_with_unit" resname="datatype_157_with_unit">
+                <source>datatype_157_with_unit</source>
+                <target>Total forehands flat during a match (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_158_with_unit" resname="datatype_158_with_unit">
+                <source>datatype_158_with_unit</source>
+                <target>Total backhands topspin during a match (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_159_with_unit" resname="datatype_159_with_unit">
+                <source>datatype_159_with_unit</source>
+                <target>Total backhands slice during a match (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_160_with_unit" resname="datatype_160_with_unit">
+                <source>datatype_160_with_unit</source>
+                <target>Total backhands flat during a match (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_161_with_unit" resname="datatype_161_with_unit">
+                <source>datatype_161_with_unit</source>
+                <target>Intensity forehands topspin during a training (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_162_with_unit" resname="datatype_162_with_unit">
+                <source>datatype_162_with_unit</source>
+                <target>Intensity forehands slice during a training (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_163_with_unit" resname="datatype_163_with_unit">
+                <source>datatype_163_with_unit</source>
+                <target>Intensity forehands flat during a training (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_164_with_unit" resname="datatype_164_with_unit">
+                <source>datatype_164_with_unit</source>
+                <target>Intensity backhands topspin during a training (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_165_with_unit" resname="datatype_165_with_unit">
+                <source>datatype_165_with_unit</source>
+                <target>Intensity backhands slice during a training (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_166_with_unit" resname="datatype_166_with_unit">
+                <source>datatype_166_with_unit</source>
+                <target>Intensity backhands flat during a training (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_167_with_unit" resname="datatype_167_with_unit">
+                <source>datatype_167_with_unit</source>
+                <target>Intensity forehands topspin during a match (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_168_with_unit" resname="datatype_168_with_unit">
+                <source>datatype_168_with_unit</source>
+                <target>Intensity forehands slice during a match (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_169_with_unit" resname="datatype_169_with_unit">
+                <source>datatype_169_with_unit</source>
+                <target>Intensity forehands flat during a match (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_170_with_unit" resname="datatype_170_with_unit">
+                <source>datatype_170_with_unit</source>
+                <target>Intensity backhands topspin during a match (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_171_with_unit" resname="datatype_171_with_unit">
+                <source>datatype_171_with_unit</source>
+                <target>Intensity backhands slice during a match (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_172_with_unit" resname="datatype_172_with_unit">
+                <source>datatype_172_with_unit</source>
+                <target>Intensity backhands flat during a match (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_173_with_unit" resname="datatype_173_with_unit">
+                <source>datatype_173_with_unit</source>
+                <target>Intensity max forehands (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_174_with_unit" resname="datatype_174_with_unit">
+                <source>datatype_174_with_unit</source>
+                <target>Intensity max backhands (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_175_with_unit" resname="datatype_175_with_unit">
+                <source>datatype_175_with_unit</source>
+                <target>Vitesse (%VMA)</target>
+            </trans-unit>
+            <trans-unit id="datatype_176_with_unit" resname="datatype_176_with_unit">
+                <source>datatype_176_with_unit</source>
+                <target>Cardio (%HRM)</target>
+            </trans-unit>
+            <trans-unit id="datatype_177_with_unit" resname="datatype_177_with_unit">
+                <source>datatype_177_with_unit</source>
+                <target>Resistance ()</target>
+            </trans-unit>
+            <trans-unit id="datatype_178_with_unit" resname="datatype_178_with_unit">
+                <source>datatype_178_with_unit</source>
+                <target>Puissance (W)</target>
+            </trans-unit>
+            <trans-unit id="datatype_179_with_unit" resname="datatype_179_with_unit">
+                <source>datatype_179_with_unit</source>
+                <target>Puissance max. (W)</target>
+            </trans-unit>
+            <trans-unit id="datatype_180_with_unit" resname="datatype_180_with_unit">
+                <source>datatype_180_with_unit</source>
+                <target>Puissance min. (W)</target>
+            </trans-unit>
+            <trans-unit id="datatype_181_with_unit" resname="datatype_181_with_unit">
+                <source>datatype_181_with_unit</source>
+                <target>Weight (g)</target>
+            </trans-unit>
+            <trans-unit id="datatype_182_with_unit" resname="datatype_182_with_unit">
+                <source>datatype_182_with_unit</source>
+                <target>Body fat percentage (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_183_with_unit" resname="datatype_183_with_unit">
+                <source>datatype_183_with_unit</source>
+                <target>Percentage of PMA (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_184_with_unit" resname="datatype_184_with_unit">
+                <source>datatype_184_with_unit</source>
+                <target>Body muscle percentage (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_185_with_unit" resname="datatype_185_with_unit">
+                <source>datatype_185_with_unit</source>
+                <target>Body bone percentage (%)</target>
+            </trans-unit>
+            <trans-unit id="datatype_186_with_unit" resname="datatype_186_with_unit">
+                <source>datatype_186_with_unit</source>
+                <target>Body water percentage (%)</target>
+            </trans-unit>
+        </body>
+    </file>
 </xliff>

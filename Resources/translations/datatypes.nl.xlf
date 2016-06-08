@@ -6,6 +6,10 @@
         <source>datatype_1</source>
         <target>Hartslagfrequentie</target>
       </trans-unit>
+      <trans-unit id="datatype_3" resname="datatype_3">
+        <source>datatype_3</source>
+        <target>Cardio max.</target>
+      </trans-unit>
       <trans-unit id="datatype_4" resname="datatype_4">
         <source>datatype_4</source>
         <target>Cardio gem.</target>
@@ -81,6 +85,38 @@
       <trans-unit id="datatype_100" resname="datatype_100">
         <source>datatype_100</source>
         <target>RPM</target>
+      </trans-unit>
+      <trans-unit id="datatype_103" resname="datatype_103">
+        <source>datatype_103</source>
+        <target>Gem. RPM</target>
+      </trans-unit>
+      <trans-unit id="datatype_177" resname="datatype_177">
+        <source>datatype_177</source>
+        <target>Weerstand</target>
+      </trans-unit>
+      <trans-unit id="datatype_178" resname="datatype_178">
+        <source>datatype_178</source>
+        <target>Kracht</target>
+      </trans-unit>
+      <trans-unit id="datatype_180" resname="datatype_180">
+        <source>datatype_180</source>
+        <target>Gem. kracht</target>
+      </trans-unit>
+      <trans-unit id="datatype_10000" resname="datatype_10000">
+        <source>datatype_10000</source>
+        <target>Tijd</target>
+      </trans-unit>
+      <trans-unit id="datatype_10001" resname="datatype_10001">
+        <source>datatype_10001</source>
+        <target>Tempo</target>
+      </trans-unit>
+      <trans-unit id="datatype_10005" resname="datatype_10005">
+        <source>datatype_10005</source>
+        <target>Tijd</target>
+      </trans-unit>
+      <trans-unit id="datatype_10009" resname="datatype_10009">
+        <source>datatype_10009</source>
+        <target>Tempo gem.</target>
       </trans-unit>
     </body>
   </file>
