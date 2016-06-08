@@ -9,7 +9,6 @@
         "operations/reference.json",
         "operations/route.json",
         "operations/shares.json",
-        "operations/statistics.json",
         "operations/tag.json",
         "operations/tracks.json",
         "operations/training.json",
