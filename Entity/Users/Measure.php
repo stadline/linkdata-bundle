@@ -35,7 +35,7 @@ class Measure
         $this->values = [];
 
         foreach ($values as $value) {
-            $date = isset($value->date) ? (string) $value->getDate() : substr($value->getUpdatedTime(), 0, 10);
+            $date = !is_null($value->getDate()) ? (string) $value->getDate() : substr($value->getUpdatedTime(), 0, 10);
             $this->values[$date] = (int) $value->getValue();
         }
 
