@@ -39,7 +39,7 @@
                 <target>Vitesse moy.</target>
             </trans-unit>
             <trans-unit id="datatype_10" resname="datatype_10">
-                <source>datatype_10</source>fmin
+                <source>datatype_10</source>
                 <target>Cadence current</target>
             </trans-unit>
             <trans-unit id="datatype_11" resname="datatype_11">
