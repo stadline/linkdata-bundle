@@ -170,18 +170,7 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface
      * @var array
      */
     protected $tags = [];
-
-    /**
-     * @Serializer\PostDeserialize
-     */
-    public function defineAboutForDeserialization()
-    {
-        if ($this->about) {
-            $this->about = $this->about->toArray();
-        } else {
-            $this->about = [];
-        }
-    }
+    
     /**
      * @return string
      */
@@ -363,7 +352,7 @@ class SummaryActivity extends BaseActivity implements ActivityToStringInterface
 
         // return requested value
         if ($key) {
-            return $this->about->offsetGet($key);
+            return $this->about->toArray()[$key];
         } else {
             return $this->about;
         }

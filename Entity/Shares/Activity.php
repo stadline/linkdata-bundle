@@ -161,12 +161,6 @@ class Activity
         $this->about->setLap($lap);
         $this->about->setSpeed($speed);
         $this->about->setTrack($track);
-
-        if ($this->about) {
-            $this->about = $this->about->toArray();
-        } else {
-            $this->about = [];
-        }
     }
 
     /**
@@ -257,7 +251,7 @@ class Activity
      */
     public function getAbout($key)
     {
-        if (array_key_exists($key, $this->about)) {
+        if (array_key_exists($key, $this->about->toArray())) {
             return $this->about[$key];
         } else {
             return false;
