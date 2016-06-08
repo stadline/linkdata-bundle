@@ -49,7 +49,7 @@ class ResponseTest extends ResponseTestCase
         $this->assertObjectHasAttribute('tags', $object);
 
         $this->assertInternalType('array', $object->getTags());
-        $this->assertInternalType('array', $object->getAbout());
+        $this->assertIsAbout($object->getAbout());
     }
 
 }
