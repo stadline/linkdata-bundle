@@ -16,7 +16,7 @@ class Response extends BaseResponse
      *
      * @var array<Measure>
      */
-    private $measures;
+    protected $measures;
 
     /**
      * @return array<Measure>
