@@ -2,7 +2,7 @@
 
 namespace Geonaute\LinkdataBundle\Entity\Shares;
 
-use Geonaute\LinkdataBundle\Utils\Datatype;
+use JMS\Serializer\Annotation as Serializer;
 
 class About
 {
