@@ -43,6 +43,23 @@ class Measure
     }
 
     /**
+     * @Serializer\PreSerialize
+     */
+    public function defineValuesForSerialization()
+    {
+        $values = $this->getValues();
+
+        $this->values = [];
+
+        foreach ($values as $key => $value) {
+            $newValue =  new Value();
+            $newValue->setDate($key);
+            $newValue->setValue($value);
+            $this->values[$key] = $newValue;
+        }
+    }
+
+    /**
      * @return array<Value>
      */
     public function getValues()
