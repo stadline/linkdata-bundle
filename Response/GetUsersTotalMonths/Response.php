@@ -16,7 +16,7 @@ class Response extends BaseResponse
      *
      * @var array<TotalMonth>
      */
-    private $totalMonths;
+    protected $totalMonths;
 
     /**
      * @return array<TotalMonth>

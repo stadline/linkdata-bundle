@@ -16,7 +16,7 @@ class Response extends BaseResponse
      *
      * @var array<UsersTotalYearTotalYear>>
      */
-    private $totalYears;
+    protected $totalYears;
 
     /**
      * @return array<UsersTotalYearTotalYear>>
