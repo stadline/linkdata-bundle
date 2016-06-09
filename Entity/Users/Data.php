@@ -84,7 +84,7 @@ class Data
      */
     public function getCountry()
     {
-        return $this->sportId;
+        return $this->country;
     }
 
     /**
@@ -92,7 +92,7 @@ class Data
      */
     public function getGender()
     {
-        return $this->sportId;
+        return $this->gender;
     }
 
     /**
@@ -100,7 +100,7 @@ class Data
      */
     public function getActiveUsers()
     {
-        return $this->sportId;
+        return $this->activeUsers;
     }
 
 }
