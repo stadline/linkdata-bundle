@@ -42,8 +42,6 @@ class Response extends BaseResponse
         $this->params["datatype_id"] = $this->params["datatypeid"];
         $this->params["sport_id"] = $this->params["sportid"];
         $this->params["active_users"] = $this->params["activeusers"];
-
-        $this->ranking = $this->ranking->getUsers();
     }
 
     /**
