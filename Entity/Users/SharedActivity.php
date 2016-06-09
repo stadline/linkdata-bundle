@@ -53,6 +53,7 @@ class SharedActivity extends BaseActivity
 
     /**
      * @Serializer\PostDeserialize
+     * @todo fix me 
      */
     public function defineSummaryForDeserialization()
     {
