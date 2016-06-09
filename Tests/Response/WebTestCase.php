@@ -212,6 +212,22 @@ class WebTestCase extends \PHPUnit_Framework_TestCase
         $this->assertIsTotalProfileUser($object->getUser());
     }
 
+    public function assertIsRanking($object)
+    {
+        $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Users\Ranking", $object);
+
+        $this->assertObjectHasAttribute('data', $object);
+        $this->assertObjectHasAttribute('users', $object);
+
+        $usersCollection = $object->getUsers();
+
+        $this->assertInstanceOf("Doctrine\Common\Collections\ArrayCollection", $usersCollection);
+
+        $firstUserOfCollection = $usersCollection->first();
+
+        $this->assertIsRankingUser($firstUserOfCollection);
+    }
+
     public function assertIsRankingUser($object)
     {
         $this->assertInstanceOf("Geonaute\LinkdataBundle\Entity\Users\RankingUser", $object);

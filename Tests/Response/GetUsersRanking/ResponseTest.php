@@ -24,13 +24,7 @@ class ResponseTest extends ResponseTestCase
 
         $this->assertNotEmpty($response->getParams());
 
-        $usersRankingCollection = $response->getRanking();
-
-        $this->assertInstanceOf("Doctrine\Common\Collections\ArrayCollection", $usersRankingCollection);
-
-        $firstRankingUserOfCollection = $usersRankingCollection->first();
-
-        $this->assertIsRankingUser($firstRankingUserOfCollection);
+        $this->assertIsRanking($response->getRanking());
     }
 
 }

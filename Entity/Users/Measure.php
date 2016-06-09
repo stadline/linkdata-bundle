@@ -27,37 +27,19 @@ class Measure
 
     /**
      * @Serializer\PostDeserialize
-     * @todo fix me 
      */
     public function defineValuesForDeserialization()
     {
-        $values = $this->getValues();
+        $values = $this->values;
 
         $this->values = [];
 
         foreach ($values as $value) {
             $date = !is_null($value->getDate()) ? (string) $value->getDate() : substr($value->getUpdatedTime(), 0, 10);
-            $this->values[$date] = (int) $value->getValue();
+            $this->values[$date] = $value;
         }
 
         krsort($this->values);
-    }
-
-    /**
-     * @Serializer\PreSerialize
-     */
-    public function defineValuesForSerialization()
-    {
-        $values = $this->getValues();
-
-        $this->values = [];
-
-        foreach ($values as $key => $value) {
-            $newValue =  new Value();
-            $newValue->setDate($key);
-            $newValue->setValue($value);
-            $this->values[$key] = $newValue;
-        }
     }
 
     /**
@@ -65,7 +47,13 @@ class Measure
      */
     public function getValues()
     {
-        return $this->values;
+        $values = [];
+
+        foreach ($this->values as $k => $v){
+            $values[$k] = $v->getValue();
+        }
+
+        return $values;
     }
 
     /**
@@ -82,7 +70,7 @@ class Measure
     public function getLastValue()
     {
         foreach ($this->values as $value) {
-            return $value;
+            return $value->getValue();
         }
     }
 

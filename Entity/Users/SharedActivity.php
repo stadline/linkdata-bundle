@@ -52,21 +52,6 @@ class SharedActivity extends BaseActivity
     protected $summary;
 
     /**
-     * @Serializer\PostDeserialize
-     * @todo fix me 
-     */
-    public function defineSummaryForDeserialization()
-    {
-        $summary = $this->summary;
-
-        $this->summary = [];
-
-        foreach ($summary as $value) {
-            $this->summary[$value->getId()] = $value->getValue();
-        }
-    }
-
-    /**
      * @return string
      */
     public function __toString()
@@ -124,12 +109,18 @@ class SharedActivity extends BaseActivity
 
     /**
      * @param integer $datatypeId
-     * @return Value
+     * @return integer
      */
     public function getSummary($datatypeId)
     {
-        if (array_key_exists($datatypeId, $this->summary)) {
-            return $this->summary[$datatypeId];
+        $summary = [];
+
+        foreach ($this->summary as $k => $v) {
+            $summary[$k] = $v->getValue();
+        }
+
+        if (array_key_exists($datatypeId, $summary)) {
+            return $summary[$datatypeId];
         } else {
             return false;
         }
