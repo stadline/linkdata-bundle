@@ -40,15 +40,6 @@ class Record
     protected $activityToken;
 
     /**
-     * @Serializer\PostDeserialize
-     */
-    public function defineIdAndValueForDeserialization()
-    {
-        $this->id = $this->value->getId();
-        $this->value = $this->value->getValue();
-    }
-
-    /**
      * @return string
      */
     public function __toString()
@@ -61,7 +52,7 @@ class Record
      */
     public function getId()
     {
-        return $this->id;
+        return $this->value->getId();
     }
 
     /**
@@ -85,7 +76,7 @@ class Record
      */
     public function getValue()
     {
-        return $this->value;
+        return $this->value->getValue();
     }
 
     /**
