@@ -92,6 +92,20 @@
                 "location": "query"
             }
         },
+        "getUsersChallenges": {
+            "httpMethod": "GET",
+            "uri": "users/{ldid}/challenges.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetUsersChallenges\\Response",
+            "parameters": {
+                "ldid": {
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
+        },
         "getUsersConnectedDevices": {
             "httpMethod": "GET",
             "uri": "users/{ldid}/connecteddevices.xml",
