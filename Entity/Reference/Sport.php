@@ -36,6 +36,14 @@ class Sport extends BaseSport
     /**
      * @return string
      */
+    public function __toString()
+    {
+        return $this->getName();
+    }
+
+    /**
+     * @return string
+     */
     public function getName()
     {
         return $this->name;
