@@ -15,7 +15,7 @@ class User extends BaseUser
      *
      * @var integer
      */
-    private $gender;
+    protected $gender;
 
     /**
      * @Serializer\SerializedName("MEASURES")
@@ -24,7 +24,7 @@ class User extends BaseUser
      *
      * @var array<Measure>
      */
-    private $measures;
+    protected $measures;
 
     /**
      * @return integer
