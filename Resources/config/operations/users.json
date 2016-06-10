@@ -371,7 +371,7 @@
         "putUsersMeasuresGoal": {
             "httpMethod": "PUT",
             "uri": "users/{ldid}/measuresgoal.xml",
-            "responseClass": "Geonaute\\LinkdataBundle\\Service\\GetUsersMeasuresGoal\\Response",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetUsersMeasuresGoal\\Response",
             "parameters": {
                 "ldid": {
                     "location": "uri"
