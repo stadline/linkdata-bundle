@@ -29,7 +29,7 @@ class ActivitiesTag
      */
     public function __toString()
     {
-        return $this->getCardinality();
+        return $this->getName();
     }
 
     /**
