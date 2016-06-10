@@ -18,7 +18,7 @@ class Ranking
     /**
      * @Serializer\SerializedName("USERS")
      * @Serializer\XmlList(entry = "USER")
-     * @Serializer\Type("ArrayCollection<Geonaute\LinkdataBundle\Entity\Users\RankingUser>")
+     * @Serializer\Type("ArrayCollection<string, Geonaute\LinkdataBundle\Entity\Users\RankingUser, LDID>")
      *
      * @var Data
      */
