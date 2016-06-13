@@ -8,6 +8,7 @@
         "operations/ons.json",
         "operations/reference.json",
         "operations/route.json",
+        "operations/session.json",
         "operations/shares.json",
         "operations/tag.json",
         "operations/tracks.json",
