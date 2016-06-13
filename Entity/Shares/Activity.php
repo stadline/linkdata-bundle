@@ -126,11 +126,19 @@ class Activity
     protected $about;
 
     /**
+     * Cannot use the About from Linkdata so we have to build it again
+     */
+    protected function createAbout()
+    {
+        $this->about = new About();
+    }
+
+    /**
      * @Serializer\PostDeserialize
      */
     public function defineAboutAndItsValuesForDeserialization()
     {
-        $this->about = new About();
+        $this->createAbout();
 
         $dataStreamMeasures = $this->getDataStream()->getMeasures();
         $dataStream = $this->getDataStream() && count($dataStreamMeasures) > 0;
