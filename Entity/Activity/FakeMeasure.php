@@ -9,9 +9,11 @@ class FakeMeasure extends Measure
 
     public function __construct()
     {
-        parent::setElapsedTime(0);
-        parent::setValues([new FakeValue()]);
-        parent::defineDatatypesForSerialization();
+        $fakeValue = new FakeValue();
+
+        $this->setElapsedTime(0);
+        $this->setValues([$fakeValue->getId() => $fakeValue]);
+        $this->defineDatatypesForSerialization();
     }
 
 }
