@@ -6,7 +6,6 @@ use JMS\Serializer\Annotation as Serializer;
 
 class Track
 {
-
     /**
      * @Serializer\SerializedName("LOCATION")
      * @Serializer\XmlMap(inline = true, entry = "LOCATION", keyAttribute="elapsed_time")

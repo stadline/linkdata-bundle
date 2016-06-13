@@ -23,5 +23,4 @@ class DataSummaryActivity extends BaseActivity
     {
         return $this->dataSummary;
     }
-
 }
