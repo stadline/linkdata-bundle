@@ -12,7 +12,7 @@ class Response extends BaseResponse
     /**
      * @Serializer\SerializedName("TAGS")
      * @Serializer\XmlList(entry = "TAG")
-     * @Serializer\Type("ArrayCollection<string, Geonaute\LinkdataBundle\Entity\Users\Tag, _HIMSELF_>")
+     * @Serializer\Type("ArrayCollection<string, Geonaute\LinkdataBundle\Entity\Users\Tag, _>")
      *
      * @var array<Tag>
      */

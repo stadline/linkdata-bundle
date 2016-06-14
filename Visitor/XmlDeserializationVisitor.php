@@ -12,6 +12,16 @@ use JMS\Serializer\GraphNavigator;
 use JMS\Serializer\Metadata\PropertyMetadata;
 use JMS\Serializer\Metadata\ClassMetadata;
 
+/**
+ * We wanted to facilitate indexation of arrays and ArrayCollections so
+ * we changed the visitArray method.
+ *
+ * The JMS XmlDeserializationVisitor has all its properties marked as private
+ * and has not a setter on his $result property (function setResult not implemented).
+ *
+ * We made the choice of copy/paste the "base" Visitor and add our custom logic
+ * in the visitArray method until doing an illogic/hacked method.
+ */
 class XmlDeserializationVisitor extends AbstractVisitor
 {
 
@@ -129,7 +139,7 @@ class XmlDeserializationVisitor extends AbstractVisitor
     }
 
     /**
-     * Rewrited
+     * Custom visitArray method (accept 3 parameters now)
      */
     public function visitArray($data, array $type, Context $context)
     {
@@ -195,6 +205,7 @@ class XmlDeserializationVisitor extends AbstractVisitor
 
                 foreach ($data->$entryName as $v) {
                     // Index = value of XML Element
+                    // See comments of getIndexElement function
                     $indexElement = $this->getIndexElement($v, $indexType['name']);
 
                     $k = $this->navigator->accept($indexElement, $keyType, $context);
@@ -395,12 +406,12 @@ class XmlDeserializationVisitor extends AbstractVisitor
     /**
      * Get the index Element for custom visitArray method
      *
-     * Chosen "_" in annotation to indicate that we want to access to subchild of XML Element
-     * And _HIMSELF_ for current element value
+     * Chosen "\" in annotation to indicate that we want to access to subchild of XML Element
+     * And _ for current element value
      *
      * Examples :
-     * If "_HIMSELF_" in annotation, it returns $xml
-     * If "a_b" in annotation, it returns $xml->a->b
+     * If "_" in annotation, it returns $xml
+     * If "a\b" in annotation, it returns $xml->a->b
      * If "c" in annotation, it returns $xml->c
      * 
      * @param \SimpleXMLElement $xml
@@ -409,14 +420,14 @@ class XmlDeserializationVisitor extends AbstractVisitor
      */
     private function getIndexElement(\SimpleXMLElement $xml, $indexTypeName)
     {
-        if ($indexTypeName === "_HIMSELF_") {
+        if ($indexTypeName === "_") {
             $indexElement = $xml;
 
             return $indexElement;
         }
 
-        if (strpos($indexTypeName, '_')) {
-            $indexArray = explode("_", $indexTypeName);
+        if (strpos($indexTypeName, '\\')) {
+            $indexArray = explode('\\', $indexTypeName);
             $indexElement = $this->findIndexElementInXml($xml, $indexArray);
         } else {
             $indexElement = $xml->$indexTypeName;
@@ -428,7 +439,7 @@ class XmlDeserializationVisitor extends AbstractVisitor
     /**
      * Finds the index element in XML
      *
-     * Search priority is value / attribute
+     * Search priority is value (->$variable) / attribute ([$variable])
      *
      * @param \SimpleXMLElement $xml
      * @param array $indexArray

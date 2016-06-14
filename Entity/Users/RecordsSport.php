@@ -11,7 +11,7 @@ class RecordsSport extends BaseSport
     /**
      * @Serializer\SerializedName("RECORDS")
      * @Serializer\XmlList(entry = "RECORD")
-     * @Serializer\Type("ArrayCollection<string, Geonaute\LinkdataBundle\Entity\Users\Record, VALUE_id>")
+     * @Serializer\Type("ArrayCollection<string, Geonaute\LinkdataBundle\Entity\Users\Record, VALUE\id>")
      *
      * @var array<Record>
      */
