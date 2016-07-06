@@ -53,7 +53,10 @@ class User extends BaseUser
      */
     protected $measures;
 
-    /** @var mixed */
+    /**
+     * @Serializer\Exclude()
+     * @var mixed
+     */
     protected $level;
 
     /**
