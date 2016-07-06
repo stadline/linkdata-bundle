@@ -26,6 +26,22 @@ class TotalProfileUser extends UsersUser
     protected $totalOns;
 
     /**
+     * @Serializer\SerializedName("IMAGE_URL")
+     * @Serializer\Type("string")
+     *
+     * @var string
+     */
+    protected $imageUrl;
+
+    /**
+     * @return string
+     */
+    public function getImageUrl()
+    {
+        return $this->imageUrl;
+    }
+
+    /**
      * @return string
      */
     public function getGender()

@@ -100,13 +100,12 @@
             "uri": "users/{ldid}/friends.xml",
             "parameters": {
                 "ldid": {
-                    "location": "uri",
-                    "required": true
-                },
-                "friend": {
-                    "location": "postField",
-                    "required": true
+                  "location": "uri",
+                  "required": true
                 }
+            },
+            "additionalParameters": {
+                "location": "postField"
             }
         }
     }

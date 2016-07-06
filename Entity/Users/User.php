@@ -7,7 +7,6 @@ use JMS\Serializer\Annotation as Serializer;
 
 class User extends BaseUser
 {
-
     /**
      * @Serializer\SerializedName("LDID")
      * @Serializer\Type("string")

@@ -3,12 +3,10 @@
 namespace Geonaute\LinkdataBundle\Response\GetUsersMeasures;
 
 use Geonaute\LinkdataBundle\Response\Response as BaseResponse;
-use Geonaute\LinkdataBundle\Entity\Users\Measure;
 use JMS\Serializer\Annotation as Serializer;
 
 class Response extends BaseResponse
 {
-
     /**
      * @Serializer\SerializedName("MEASURES")
      * @Serializer\XmlMap(entry = "MEASURE", keyAttribute = "unitid")
@@ -25,5 +23,4 @@ class Response extends BaseResponse
     {
         return $this->measures;
     }
-
 }

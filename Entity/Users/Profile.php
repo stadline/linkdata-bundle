@@ -4,7 +4,6 @@ namespace Geonaute\LinkdataBundle\Entity\Users;
 
 use Geonaute\LinkdataBundle\Utils\Datatype;
 use Geonaute\LinkdataBundle\Utils\Level;
-use Geonaute\LinkdataBundle\Entity\Users\TotalProfileUser;
 use JMS\Serializer\Annotation as Serializer;
 
 class Profile

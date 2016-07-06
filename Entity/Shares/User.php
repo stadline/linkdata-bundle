@@ -8,6 +8,33 @@ use JMS\Serializer\Annotation as Serializer;
 
 class User extends BaseUser
 {
+    /**
+     * @Serializer\SerializedName("LDID")
+     * @Serializer\Type("string")
+     * @var string
+     */
+    private $ldid;
+    /**
+     * @Serializer\SerializedName("STACK")
+     * @Serializer\Type("string")
+     *
+     * @var string
+     */
+    private $stack;
+    /**
+     * @Serializer\SerializedName("COUNTRY")
+     * @Serializer\Type("string")
+     *
+     * @var string
+     */
+    private $country;
+    /**
+     * @Serializer\SerializedName("IMAGE_URL")
+     * @Serializer\Type("string")
+     *
+     * @var string
+     */
+    private $imageUrl;
 
     /**
      * @Serializer\SerializedName("GENDER")
@@ -25,6 +52,9 @@ class User extends BaseUser
      * @var array<Measure>
      */
     protected $measures;
+
+    /** @var mixed */
+    protected $level;
 
     /**
      * @return integer
@@ -58,4 +88,35 @@ class User extends BaseUser
         $this->level = $level;
     }
 
+    /**
+     * @return string
+     */
+    public function getLdid()
+    {
+        return $this->ldid;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStack()
+    {
+        return $this->stack;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+    /**
+     * @return string
+     */
+    public function getImageUrl()
+    {
+        return $this->imageUrl;
+    }
 }

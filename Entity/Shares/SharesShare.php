@@ -57,6 +57,14 @@ class SharesShare extends BaseShare
     protected $statistics;
 
     /**
+     * @Serializer\SerializedName("USER")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Shares\User")
+     *
+     * @var User
+     */
+    protected $user;
+
+    /**
      * @return string
      */
     public function getType()
@@ -104,4 +112,11 @@ class SharesShare extends BaseShare
         return $this->statistics;
     }
 
+    /**
+     * @return User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
 }
