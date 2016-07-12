@@ -93,9 +93,11 @@ class PluginsCompilerPass extends SimpleCompilerPass
         // plugin
         $this->define('geonaute_linkdata.plugin.auth', array(
             'class' => 'Geonaute\LinkdataBundle\Plugin\AuthPlugin',
+            'arguments' => array($this->get('security.token_storage'), $this->get('geonaute_linkdata.request_injector')),
             'calls' => array(
                 array('addProvider', array($this->get('geonaute_linkdata.auth.request_provider'))),
                 array('addProvider', array($this->get('geonaute_linkdata.auth.security_context_provider'))),
+                array('setLogger', array($this->get('logger')))
             )
         ));
 
