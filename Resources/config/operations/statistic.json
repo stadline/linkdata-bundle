@@ -12,6 +12,14 @@
             "parameters": {
                 "statisticId": { "location": "uri", "required": true }
             }
+        },
+        "getStatisticsSimpleSessions": {
+            "httpMethod": "GET",
+            "uri": "statistics/{statisticId}/simple_sessions.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\Statistic\\SimpleSessionsStatistics",
+            "parameters": {
+                "statisticId": { "location": "uri", "required": true }
+            }
         }
     }
 }
