@@ -10,6 +10,7 @@
         "operations/route.json",
         "operations/session.json",
         "operations/shares.json",
+        "operations/sleep.json",
         "operations/tag.json",
         "operations/tracks.json",
         "operations/training.json",

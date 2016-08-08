@@ -1,0 +1,18 @@
+{
+    "operations": {
+        "getSleep": {
+            "httpMethod": "GET",
+            "uri": "sleep/{token}.xml",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetSleep\\Response",
+            "parameters": {
+                "token": {
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
+        }
+    }
+}
