@@ -21,10 +21,10 @@ class SimpleSession
     protected $totals;
 
     /**
-     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Statistic\MonthlyStarted")
-     * @Serializer\SerializedName("MONTHLY_STARTED")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Statistic\MonthActivities")
+     * @Serializer\SerializedName("MONTH_ACTIVITIES")
      */
-    protected $monthlyStarted;
+    protected $monthActivities;
 
 
     public function __construct()
@@ -37,9 +37,9 @@ class SimpleSession
         return $this->totals;
     }
 
-    public function getMonthlyStarted()
+    public function getMonthActivities()
     {
-        return $this->monthlyStarted;
+        return $this->monthActivities;
     }
 
     public function getModelId()
