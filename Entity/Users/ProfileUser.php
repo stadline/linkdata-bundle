@@ -7,7 +7,6 @@ use JMS\Serializer\Annotation as Serializer;
 
 class ProfileUser extends UsersUser
 {
-
     /**
      * @Serializer\SerializedName("LANGUAGE")
      * @Serializer\Type("string")
@@ -17,6 +16,14 @@ class ProfileUser extends UsersUser
     protected $language;
 
     /**
+     * @Serializer\SerializedName("GENDER")
+     * @Serializer\Type("string")
+     *
+     * @var string
+     */
+    protected $gender;
+
+    /**
      * @return string
      */
     public function getLanguage()
@@ -24,4 +31,11 @@ class ProfileUser extends UsersUser
         return $this->language;
     }
 
+    /**
+     * @return string
+     */
+    public function getGender()
+    {
+        return $this->gender;
+    }
 }
