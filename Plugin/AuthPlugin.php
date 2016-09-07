@@ -69,6 +69,11 @@ class AuthPlugin implements EventSubscriberInterface
         // get request object
         $request = $event['request'];
 
+        // Add header only if not currently defined
+        if (!empty($request->getHeader('Authorization'))) {
+            return;
+        }
+
         $this->logger->debug("[Guzzle Linkdata ] call : URI : ".$request->getUrl().' METHOD : '.$request->getMethod());
 
         // add HTTP authentification header
