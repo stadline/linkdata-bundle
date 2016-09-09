@@ -66,7 +66,7 @@ class Configuration implements ConfigurationInterface
                     ->canBeDisabled()
                     ->children()
                         ->scalarNode('service')->defaultValue('geonaute_linkdata.cache.storage')->end()
-                        ->scalarNode('adapter')->defaultValue('doctrine.orm.default_result_cache')->end()
+                        ->scalarNode('adapter')->defaultValue('misd_guzzle.cache.doctrine.filesystem.adapter')->end()
                     ->end()
                 ->end()
                 ->arrayNode('can_cache')
