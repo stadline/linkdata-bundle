@@ -5,7 +5,7 @@ namespace Geonaute\LinkdataBundle\DependencyInjection\Compiler;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
-class LinkdataJwtAutoSignCompiler implements CompilerPassInterface
+class LinkdataJwtAutoSignCompilerPass implements CompilerPassInterface
 {
     public function process(ContainerBuilder $container)
     {

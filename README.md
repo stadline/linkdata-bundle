@@ -137,7 +137,7 @@ Modifier le fichier *MyBundle.php*  pour qu'il lance la compilerPass.
     
     use Symfony\Component\DependencyInjection\ContainerBuilder;
     use Symfony\Component\HttpKernel\Bundle\Bundle;
-    use Geonaute\LinkdataBundle\DependencyInjection\Compiler\LinkdataJwtAutoSignCompiler;
+    use Geonaute\LinkdataBundle\DependencyInjection\Compiler\LinkdataJwtAutoSignCompilerPass;
     
     class MyBundle extends Bundle
     {
@@ -145,7 +145,7 @@ Modifier le fichier *MyBundle.php*  pour qu'il lance la compilerPass.
         {
             parent::build($container);
             
-            $container->addCompilerPass(new LinkdataJwtAutoSignCompiler());
+            $container->addCompilerPass(new LinkdataJwtAutoSignCompilerPass());
         }
     
     }
