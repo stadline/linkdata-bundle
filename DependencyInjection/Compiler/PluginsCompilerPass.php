@@ -32,7 +32,7 @@ class PluginsCompilerPass extends SimpleCompilerPass
         $options = array();
 
         /* If adapter service not available, use basic adapter */
-        if (!$this->container->hasDefinition($config["storage"]["adapter"])) {
+        if (!$this->get($config["storage"]["adapter"])) {
             $config["storage"]["adapter"] = 'misd_guzzle.cache.doctrine.filesystem.adapter';
         }
 
