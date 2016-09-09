@@ -114,3 +114,38 @@ You just have to create your {commandName}Mock.php file into <code>Mock/Model</c
                 ');
             }
         }
+
+## Auto-sign JWT
+
+Pour utiliser une authentification JWT autosignée, il faut que le projet inclu le bundle : 
+
+    stadline/jwtsecurity-bundle
+    
+Pour configurer ce bundle, il faut définir une clé privée d'authentification. 
+
+config.yml :
+
+    # JwtSecurity
+    stadline_jwt_security:
+        private_key: '%jwt_security_private_key%'
+
+Modifier le fichier *MyBundle.php*  pour qu'il lance la compilerPass.
+
+    <?php
+    
+    namespace MyBundle;
+    
+    use Symfony\Component\DependencyInjection\ContainerBuilder;
+    use Symfony\Component\HttpKernel\Bundle\Bundle;
+    use Geonaute\LinkdataBundle\DependencyInjection\Compiler\LinkdataJwtAutoSignCompiler;
+    
+    class MyBundle extends Bundle
+    {
+        public function build(ContainerBuilder $container)
+        {
+            parent::build($container);
+            
+            $container->addCompilerPass(new LinkdataJwtAutoSignCompiler());
+        }
+    
+    }
