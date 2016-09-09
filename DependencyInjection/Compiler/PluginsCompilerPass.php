@@ -31,6 +31,11 @@ class PluginsCompilerPass extends SimpleCompilerPass
     {
         $options = array();
 
+        /* If adapter service not available, use basic adapter */
+        if (!$this->container->hasDefinition($config["storage"]["adapter"])) {
+            $config["storage"]["adapter"] = 'misd_guzzle.cache.doctrine.filesystem.adapter';
+        }
+
         // storage
         $this->define('geonaute_linkdata.cache.doctrine_adapter', array(
             'class' => '%guzzle.cache.doctrine.class%',
