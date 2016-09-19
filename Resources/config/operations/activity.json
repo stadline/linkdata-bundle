@@ -97,7 +97,7 @@
         "getActivitySummary": {
             "httpMethod": "GET",
             "uri": "activity/{id}/summary.xml",
-            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetActivityFullActivity\\Response",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetActivitySummary\\Response",
             "parameters": {
                 "id": {
                     "location": "uri",
