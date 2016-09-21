@@ -6,6 +6,7 @@ use Geonaute\LinkdataBundle\Auth\RequestKeyProvider;
 use Geonaute\LinkdataBundle\Injector\RequestInjector;
 use Guzzle\Common\Event;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use Symfony\Component\HttpKernel\Tests\Logger;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 
 class AuthPlugin implements EventSubscriberInterface
@@ -16,6 +17,10 @@ class AuthPlugin implements EventSubscriberInterface
     private $securityContext;
     private $requestInjector;
 
+    /** @var string */
+    private $jwtToken = null;
+
+    /** @var Logger */
     private $logger;
 
     /**
@@ -27,6 +32,14 @@ class AuthPlugin implements EventSubscriberInterface
     {
         $this->securityContext = $securityContext;
         $this->requestInjector = $requestInjector;
+    }
+
+    /**
+     * @param string $jwtToken
+     */
+    public function setJwtToken($jwtToken)
+    {
+        $this->jwtToken = $jwtToken;
     }
 
     /**
@@ -74,24 +87,27 @@ class AuthPlugin implements EventSubscriberInterface
             return;
         }
 
-        $this->logger->debug("[Guzzle Linkdata ] call : URI : ".$request->getUrl().' METHOD : '.$request->getMethod());
+        $this->logger->debug("[Guzzle Linkdata ] call : URI : " . $request->getUrl() . ' METHOD : ' . $request->getMethod());
 
         // add HTTP authentification header
-        if ($securityToken = $this->securityContext->getToken()) {
+        if ($this->jwtToken !== null) {
+            $request->setHeader('x-linkdata-requestkey', $this->jwtToken);
+        } elseif ($securityToken = $this->securityContext->getToken()) {
 
             if ($securityToken instanceof AuthPluginInterface) {
                 $requestKey = $securityToken->getSwarmRequestKey();
 
-                $request->setHeader('Authorization', "Bearer ".$requestKey);
+                $request->setHeader('Authorization', "Bearer " . $requestKey);
             }
         } elseif ($this->requestInjector->getRequest()) {
             $user = $this->requestInjector->getRequest()->get('user');
 
-            $request->setHeader('Authorization', isset($user['token']) ? "Bearer ".$user['token'] : null);
+            $request->setHeader('Authorization', isset($user['token']) ? "Bearer " . $user['token'] : null);
         }
     }
 
-    public function setLogger($logger) {
+    public function setLogger($logger)
+    {
         $this->logger = $logger;
     }
 }
