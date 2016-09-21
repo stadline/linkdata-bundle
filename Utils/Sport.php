@@ -65,6 +65,7 @@ class Sport
     const SKI_DE_FOND_SKATING = 184;
     const SKI_DE_FOND_ALTERNATIF = 183;
     const CHAR_A_VOILE = 366;
+    const ACTIVITY_QUOTIDIENNE = 402;
 
     protected static $slug_table = array(
         self::ALPINISME => "alpinisme",
