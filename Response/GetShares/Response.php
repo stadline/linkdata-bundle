@@ -24,15 +24,4 @@ class Response extends BaseResponse
     {
         return $this->share;
     }
-
-    /**
-     * @Serializer\PostDeserialize
-     */
-    public function defineShareActivityUserLevelForDeserialization()
-    {
-        $level = $this->getShare()->getLevel();
-
-        $this->getShare()->getActivity()->getUser()->setLevel($level);
-    }
-
 }

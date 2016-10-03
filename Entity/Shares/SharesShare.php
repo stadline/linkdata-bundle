@@ -65,6 +65,16 @@ class SharesShare extends BaseShare
     protected $user;
 
     /**
+     * @Serializer\PostDeserialize
+     */
+    public function defineShareActivityUserLevelForDeserialization()
+    {
+        if ($this->getUser() instanceof User) {
+            $this->getUser()->setLevel($this->getLevel());
+        }
+    }
+
+    /**
      * @return string
      */
     public function getType()
