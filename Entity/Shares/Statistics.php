@@ -35,7 +35,7 @@ class Statistics
 
     /**
      * @Serializer\SerializedName("RECORDS")
-     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Shares\Records")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Response\GetUsersRecords\Response")
      *
      * @var Records
      */
