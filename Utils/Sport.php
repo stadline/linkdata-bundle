@@ -87,7 +87,7 @@ class Sport
         self::HANDBALL => "handball",
         self::HOCKEY => "hockey",
         self::KITESURF => "kitesurf",
-        self::MARCHE => "marche",
+        self::MARCHE => "marche-rapide",
         self::MUSCULATION_EN_SALLE => "musculation-en-salle",
         self::NATATION => "natation",
         self::PLANCHE_A_VOILE => "planche-a-voile",
@@ -127,7 +127,8 @@ class Sport
         self::HOME_TRAINER => 'home-trainer',
         self::SKI_DE_FOND_ALTERNATIF => 'skidefond-alternatif',
         self::SKI_DE_FOND_SKATING => 'skidefond-skating',
-        self::CHAR_A_VOILE => 'charavoile'
+        self::CHAR_A_VOILE => 'charavoile',
+        self::ACTIVITY_QUOTIDIENNE => 'marche'
     );
 
     public static $iconNames = array(
@@ -190,7 +191,8 @@ class Sport
         self::HOME_TRAINER => "icon-home-trainer",
         self::SKI_DE_FOND_ALTERNATIF => 'icon-skidefond-alternatif',
         self::SKI_DE_FOND_SKATING => 'icon-skidefond-skating',
-        self::CHAR_A_VOILE => 'icon-charavoile'
+        self::CHAR_A_VOILE => 'icon-charavoile',
+        self::ACTIVITY_QUOTIDIENNE => 'icon-marche'
     );
 
     /**
