@@ -151,7 +151,7 @@ class Sport
         self::HANDBALL => "icon-handball",
         self::HOCKEY => "icon-hockey",
         self::KITESURF => "icon-kitesurf",
-        self::MARCHE => "icon-marche",
+        self::MARCHE => "icon-marche-rapide",
         self::MUSCULATION_EN_SALLE => "icon-musculation-en-salle",
         self::NATATION => "icon-natation",
         self::PLANCHE_A_VOILE => "icon-planche-a-voile",
