@@ -31,6 +31,13 @@ class PluginsCompilerPass extends SimpleCompilerPass
     {
         $options = array();
 
+        // cache adapters
+        $this->define('geonaute_linkdata.cache.array_adapter', array(
+            'class' => 'Doctrine\Common\Cache\ArrayCache',
+        ));
+
+        $this->alias('geonaute_linkdata.cache.filesystem_adapter', 'misd_guzzle.cache.doctrine.filesystem.adapter');
+
         // storage
         $this->define('geonaute_linkdata.cache.doctrine_adapter', array(
             'class' => '%guzzle.cache.doctrine.class%',
