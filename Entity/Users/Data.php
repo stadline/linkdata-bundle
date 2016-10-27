@@ -48,7 +48,7 @@ class Data
     public $gender;
 
     /**
-     * @Serializer\SerializedName("ACTIVE_USERS")
+     * @Serializer\SerializedName("ACTIVE_USER")
      * @Serializer\Type("integer")
      *
      * @var integer
