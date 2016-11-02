@@ -8,10 +8,38 @@ use Guzzle\Service\Command\OperationCommand;
 class CachedClient extends Client
 {
     private $storage = array();
+    /** @var RequestSerializerInterface */
+    private static $requestSerializer;
+
+    /**
+     * @return RequestSerializerInterface
+     */
+    private function getRequestSerializer()
+    {
+        if (self::$requestSerializer === null) {
+            self::$requestSerializer = new DefaultRequestSerializer(new VisitorFlyweight());
+        }
+        return self::$requestSerializer;
+    }
 
     public function getCommand($name, array $args = array())
     {
-        $command = parent::getCommand($name, $args);
+        // Add global client options to the command
+        if ($options = $this->getConfig(self::COMMAND_PARAMS)) {
+            $args += $options;
+        }
+
+        if (!($command = $this->getCommandFactory()->factory($name, $args))) {
+            throw new InvalidArgumentException("Command was not found matching {$name}");
+        }
+
+        $command->setClient($this);
+
+        if ($command instanceof OperationCommand) {
+            $command->setRequestSerializer($this->getRequestSerializer());
+        }
+
+        $this->dispatch('client.command.create', array('client' => $this, 'command' => $command));
 
         // skip cache retrieval if command is not expected type
         if (!$command instanceof OperationCommand) {
