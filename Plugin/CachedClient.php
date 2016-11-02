@@ -2,7 +2,10 @@
 
 namespace Geonaute\LinkdataBundle\Plugin;
 
+use Guzzle\Common\Exception\InvalidArgumentException;
 use Guzzle\Service\Client;
+use Guzzle\Service\Command\DefaultRequestSerializer;
+use Guzzle\Service\Command\LocationVisitor\VisitorFlyweight;
 use Guzzle\Service\Command\OperationCommand;
 
 class CachedClient extends Client
