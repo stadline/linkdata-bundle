@@ -11,7 +11,7 @@
         "getReferenceDeviceModels": {
             "httpMethod": "GET",
             "uri": "reference/devicemodels.xml",
-            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetReferenceDevicesModels\\Response",
+            "responseClass": "Geonaute\\LinkdataBundle\\Response\\GetReferenceDeviceModels\\Response",
             "additionalParameters": {
                 "location": "query"
             }
