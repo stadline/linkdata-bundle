@@ -12,7 +12,7 @@ class GetUsersActivitiesSportsMock implements LinkdataMockInterface
      */
     public function getCommandName()
     {
-        return 'getUserActivitiesSports';
+        return 'getUsersActivitiesSports';
     }
 
     /**
@@ -27,10 +27,10 @@ class GetUsersActivitiesSportsMock implements LinkdataMockInterface
 		<MESSAGE>OK : Done</MESSAGE>
 	</META>
 	<SPORTS>
-		<SPORT id="12">17</SPORT>
-		<SPORT id="10">25</SPORT>
-		<SPORT id="9">1</SPORT>
-		<SPORT id="8">4</SPORT>
+		<SPORT id="358">17</SPORT>
+		<SPORT id="401">25</SPORT>
+		<SPORT id="366">1</SPORT>
+		<SPORT id="177">4</SPORT>
 	</SPORTS>
 </RESPONSE>
 ', 'Geonaute\LinkdataBundle\Response\GetUsersActivitiesSports\Response', 'xml');
