@@ -91,7 +91,7 @@ class AuthPlugin implements EventSubscriberInterface
 
         // add HTTP authentification header
         if ($this->jwtToken !== null) {
-            $request->setHeader('x-linkdata-requestkey', $this->jwtToken);
+            $request->setHeader('Authorization', 'Bearer ' .$this->jwtToken);
         } elseif ($securityToken = $this->securityContext->getToken()) {
 
             if ($securityToken instanceof AuthPluginInterface) {
@@ -101,8 +101,12 @@ class AuthPlugin implements EventSubscriberInterface
             }
         } elseif ($this->requestInjector->getRequest()) {
             $user = $this->requestInjector->getRequest()->get('user');
+            $token = $this->requestInjector->getRequest()->get('token');
+            if (empty($token) && isset($user['token'])) {
+                $token = $user['token'];
+            }
 
-            $request->setHeader('Authorization', isset($user['token']) ? "Bearer " . $user['token'] : null);
+            $request->setHeader('Authorization', isset($token) ? "Bearer " . $token : null);
         }
     }
 
