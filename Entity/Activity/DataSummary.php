@@ -97,22 +97,10 @@ class DataSummary
     /**
      * Return only the public value present in the table
      *
-     * @param boolean preloadElevation|false
      * @return array
      */
-    public function getPublicValues($preloadElevation = false)
+    public function getPublicValues()
     {
-        //Preload Elevation values for templating purpose
-        $elevationIds = array(Datatype::ASCENT, Datatype::DESCENT);
-
-        if ($preloadElevation && count(array_intersect(array_keys($this->values), $elevationIds)) != 2) {
-            foreach ($elevationIds as $id) {
-                $xml = simplexml_load_string("<VALUE id='$id'>0</VALUE>");
-                $value = new Value($this->response, $xml);
-                $this->values[$value->getId()] = $value;
-            }
-        }
-
         // filter and sort values
         $publicValues = [];
 
@@ -124,5 +112,4 @@ class DataSummary
 
         return $publicValues;
     }
-
 }
