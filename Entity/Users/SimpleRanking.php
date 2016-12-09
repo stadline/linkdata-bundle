@@ -33,7 +33,7 @@ class SimpleRanking
     /**
      * @return array<User>
      */
-    public function getUser()
+    public function getSimpleUser()
     {
         return $this->simpleUser;
     }

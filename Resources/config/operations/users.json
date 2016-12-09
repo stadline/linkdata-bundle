@@ -187,7 +187,7 @@
       "additionalParameters": {
         "location": "query"
       }
-    }
+    },
     "getUsersRanking": {
       "httpMethod": "GET",
       "uri": "users/{ldid}/ranking.xml",

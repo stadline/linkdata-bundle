@@ -5,7 +5,7 @@ namespace Geonaute\LinkdataBundle\Mock\Model;
 use Geonaute\LinkdataBundle\Mock\LinkdataMockInterface;
 use JMS\Serializer\SerializerInterface;
 
-class GetUsersRankingFriendsMock implements LinkdataMockInterface
+class GetUsersSimpleRankingMock implements LinkdataMockInterface
 {
     /**
      * {@inheritdoc}
@@ -21,7 +21,6 @@ class GetUsersRankingFriendsMock implements LinkdataMockInterface
     public function getResponse(SerializerInterface $serializer, $data)
     {
         return $serializer->deserialize('
-<?xml version="1.0" encoding="utf-8" ?>
 <RESPONSE>
 	<META>
 		<STATUSCODE>200</STATUSCODE>
@@ -30,7 +29,7 @@ class GetUsersRankingFriendsMock implements LinkdataMockInterface
 	<RANKING>
 	<DATA>
 		<PERIOD>201612</PERIOD>
-		<ACTIVE_USERS>12</ACTIVE_USERS>
+		<ACTIVE_USER>12</ACTIVE_USER>
 	</DATA>
     <USER>
         <LDID>1d866abc104bea790991</LDID>
