@@ -4,9 +4,8 @@ namespace Geonaute\LinkdataBundle\Entity\Users;
 
 use JMS\Serializer\Annotation as Serializer;
 
-class Ranking
+class SimpleRanking
 {
-
     /**
      * @Serializer\SerializedName("DATA")
      * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Users\Data")
@@ -16,13 +15,12 @@ class Ranking
     protected $data;
 
     /**
-     * @Serializer\SerializedName("USERS")
-     * @Serializer\XmlList(entry = "USER")
-     * @Serializer\Type("ArrayCollection<string, Geonaute\LinkdataBundle\Entity\Users\RankingUser, LDID>")
+     * @Serializer\SerializedName("USER")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Users\SimpleUserRanking")
      *
      * @var Data
      */
-    protected $users;
+    protected $simpleUser;
 
     /**
      * @return Data
@@ -35,8 +33,8 @@ class Ranking
     /**
      * @return array<User>
      */
-    public function getUsers()
+    public function getUser()
     {
-        return $this->users;
+        return $this->simpleUser;
     }
 }
