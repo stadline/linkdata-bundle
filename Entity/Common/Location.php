@@ -71,4 +71,11 @@ class Location
         return $this->elevation;
     }
 
+    /**
+     * @param int $elapsedTime
+     */
+    public function setElapsedTime($elapsedTime)
+    {
+        $this->elapsedTime = $elapsedTime;
+    }
 }
