@@ -29,6 +29,7 @@ class DeviceModel
     const EDGE_800 = 45;
     const EDGE_810 = 46;
     const GARMIN_COMMUNICATOR = 47;
+    const ONCOACH100 = 61;
 
     /**
      * Try to get deviceId from deviceName
