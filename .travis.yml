@@ -10,7 +10,7 @@ matrix:
     - php: 7.0
 
 before_script:
-    - composer install
+    - SYMFONY_ENV=test composer install -n --prefer-source --no-suggest --no-progress
 
 script: 
     - phpunit
