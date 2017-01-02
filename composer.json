@@ -11,7 +11,8 @@
     ],
     "require": {
         "symfony/dependency-injection": "~2.6",
-        "misd/guzzle-bundle": "~1.0"
+        "misd/guzzle-bundle": "~1.0",
+        "jms/serializer-bundle": "^1.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^4.8|^5.7",
