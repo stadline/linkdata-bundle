@@ -117,7 +117,7 @@ class Sport
         self::MARCHE_NORDIQUE => "marchenordique",
         self::RUN_AND_BIKE => "runandbike",
         self::YOGA => "yoga",
-        self::SKI_DE_RANDONNEE => "skiderandonnee",
+        self::SKI_DE_RANDONNEE => "skidefond-alternatif",
         self::PARAPENTE => "parapente",
         self::TIR_A_L_ARC => "tiralarc",
         self::STAND_UP_PADDLE => "standuppaddle",
@@ -125,8 +125,8 @@ class Sport
         self::SQUASH => "squash",
         self::TENNIS_DE_TABLE => "tennisdetable",
         self::HOME_TRAINER => 'home-trainer',
-        self::SKI_DE_FOND_ALTERNATIF => 'skidefond-alternatif',
-        self::SKI_DE_FOND_SKATING => 'skidefond-skating',
+        self::SKI_DE_FOND_ALTERNATIF => 'skidefond-skating',
+        self::SKI_DE_FOND_SKATING => 'skiderandonnee',
         self::CHAR_A_VOILE => 'charavoile',
         self::ACTIVITY_QUOTIDIENNE => 'marche'
     );
