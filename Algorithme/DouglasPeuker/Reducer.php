@@ -7,8 +7,11 @@ class Reducer
 
     /**
      * Reduce the number of points in a shape using the Douglas-Peucker algorithm
+     * @param $collection
+     * @param int $maxPoints
+     * @return array
      */
-    public function reduceWithTolerance($collection, $tolerance)
+    public function reduceWithTolerance($collection, $maxPoints)
     {
         //If it's an array, load a collection
         if (!is_object($collection) && is_array($collection)) {
@@ -16,7 +19,7 @@ class Reducer
         }
 
         // if a shape has 2 or less points it cannot be reduced
-        if ($tolerance <= 0 || count($collection->getVectors()) < 3) {
+        if ($maxPoints <= 0 || count($collection->getVectors()) < $maxPoints) {
             return $collection->getVectors();
         }
 
@@ -32,7 +35,7 @@ class Reducer
         $this->douglasPeuckerReduction(
             $collection, // original shape
             $newCollection, // reduced shape
-            $tolerance, // tolerance
+            $maxPoints, // tolerance
             0, // index of first point
             count($vectors) - 1  // index of last point
         );
@@ -84,8 +87,13 @@ class Reducer
     /**
      * Reduce the points in $shape between the specified first and last
      * index. Add the shapes to keep to $newShape
+     * @param VectorCollectionInterface $collection
+     * @param VectorCollectionInterface $newCollection
+     * @param $maxPoints
+     * @param $firstIdx
+     * @param $lastIdx
      */
-    public function douglasPeuckerReduction(VectorCollectionInterface $collection, VectorCollectionInterface $newCollection, $tolerance, $firstIdx, $lastIdx)
+    public function douglasPeuckerReduction(VectorCollectionInterface $collection, VectorCollectionInterface $newCollection, $maxPoints, $firstIdx, $lastIdx)
     {
         if ($lastIdx <= $firstIdx + 1) {
             // overlapping indexes, just return
@@ -101,10 +109,14 @@ class Reducer
         $maxDistance = 0.0;
         $indexFarthest = 0;
 
+        $PointsSegment1 = 0;
+        $TotalPoints=0;
+
         $firstVector = $vectors[$firstIdx];
         $lastVector = $vectors[$lastIdx];
 
         for ($idx = $firstIdx + 1; $idx < $lastIdx; $idx++) {
+            $TotalPoints = $TotalPoints + 1;
             $vector = $vectors[$idx];
 
             $distance = $this->orthogonalDistance($vector, $firstVector, $lastVector);
@@ -113,20 +125,23 @@ class Reducer
             if ($distance > $maxDistance) {
                 $maxDistance = $distance;
                 $indexFarthest = $idx;
+                //We keep index for maxdistance point
+                $PointsSegment1 = $TotalPoints;
             }
         }
+        $PointsSegment2 = $TotalPoints - $PointsSegment1;
 
         // if the point that is furthest away is within the tolerance,
         // it is simply discarded. Otherwise, it's added to the reduced
         // shape and the algorithm continues
-        if ($maxDistance > $tolerance) {
+        if ($maxPoints > 0) {
             $newCollection->addVector($vectors[$indexFarthest]);
 
             // reduce the shape between the starting point to newly found point
-            $this->douglasPeuckerReduction($collection, $newCollection, $tolerance, $firstIdx, $indexFarthest);
+            $this->douglasPeuckerReduction($collection, $newCollection, round(($maxPoints-1)*$PointsSegment1/$TotalPoints), $firstIdx, $indexFarthest);
 
             // reduce the shape between the newly found point and the finishing point
-            $this->douglasPeuckerReduction($collection, $newCollection, $tolerance, $indexFarthest, $lastIdx);
+            $this->douglasPeuckerReduction($collection, $newCollection, round(($maxPoints-1)*$PointsSegment2/$TotalPoints), $indexFarthest, $lastIdx);
         }
     }
 
