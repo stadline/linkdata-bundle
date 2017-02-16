@@ -112,7 +112,7 @@
       </trans-unit>
       <trans-unit id="datatype_10005" resname="datatype_10005">
         <source>datatype_10005</source>
-        <target>Time</target>
+        <target>Hour</target>
       </trans-unit>
       <trans-unit id="datatype_10009" resname="datatype_10009">
         <source>datatype_10009</source>
