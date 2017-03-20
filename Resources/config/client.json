@@ -2,18 +2,18 @@
     "name": "Linkdata",
     "description": "Linkdata REST API client",
     "includes": [
-        "operations/activity.json",
-        "operations/friends.json",
-        "operations/globalchallenge.json",
-        "operations/ons.json",
-        "operations/reference.json",
-        "operations/route.json",
-        "operations/session.json",
-        "operations/shares.json",
-        "operations/sleep.json",
-        "operations/tag.json",
-        "operations/tracks.json",
-        "operations/training.json",
-        "operations/users.json"
+        "operations/linkdata/activity.json",
+        "operations/linkdata/friends.json",
+        "operations/linkdata/globalchallenge.json",
+        "operations/linkdata/ons.json",
+        "operations/linkdata/reference.json",
+        "operations/linkdata/route.json",
+        "operations/linkdata/session.json",
+        "operations/linkdata/shares.json",
+        "operations/linkdata/sleep.json",
+        "operations/linkdata/tag.json",
+        "operations/linkdata/tracks.json",
+        "operations/linkdata/training.json",
+        "operations/linkdata/users.json"
     ]
 }
