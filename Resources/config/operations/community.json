@@ -1,0 +1,22 @@
+{
+    "operations": {
+        "getCommunityRanking": {
+            "httpMethod": "GET",
+            "uri": "ranking/{ldid}/{period}",
+            "responseClass": "Geonaute\\LinkdataBundle\\Entity\\Community\\Ranking",
+            "parameters": {
+                "ldid": {
+                    "location": "uri",
+                    "required": true
+                },
+                "period": {
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
+        }
+    }
+}

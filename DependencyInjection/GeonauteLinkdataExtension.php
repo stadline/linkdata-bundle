@@ -39,6 +39,24 @@ class GeonauteLinkdataExtension extends SimpleExtension
 
         $this->alias('linkdata_rest_client', 'geonaute_linkdata.client');
 
+        // community rest client
+        $this->define('geonaute_linkdata_community.service_description', array(
+            'class' => '%guzzle.service_description.class%',
+            'factory' => array('%guzzle.service_description.class%', 'factory'),
+            'arguments' => array($config['comunity_service_description']),
+        ));
+
+        $this->define('geonaute_linkdata_community.client', array(
+            'class' => 'Geonaute\LinkdataBundle\Plugin\CachedClient',
+            'tags' => array(
+                array('name' => 'guzzle.client'),
+            ),
+            'calls' => array(
+                array('setBaseUrl', array($config['community_base_url'])),
+                array('setDescription', array($this->get('geonaute_linkdata_community.service_description'))),
+            )
+        ));
+
         // form types
         $this->define('geonaute_linkdata.type.linkdata_choice', array(
             'class' => 'Geonaute\LinkdataBundle\Form\Type\LinkdataChoiceType',

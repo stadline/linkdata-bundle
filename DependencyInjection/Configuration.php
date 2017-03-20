@@ -23,7 +23,9 @@ class Configuration implements ConfigurationInterface
         $rootNode
             ->children()
                 ->scalarNode('base_url')->cannotBeEmpty()->end()
+                ->scalarNode('community_base_url')->cannotBeEmpty()->end()
                 ->scalarNode('service_description')->defaultValue(__DIR__.'/../Resources/config/client.json')->end()
+                ->scalarNode('comunity_service_description')->defaultValue(__DIR__.'/../Resources/config/community_client.json')->end()
                 ->append($this->getFormatterNode())
                 ->arrayNode('plugins')
                     ->append($this->getCachePluginNode())

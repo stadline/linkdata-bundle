@@ -1,0 +1,7 @@
+{
+    "name": "Linkdata Community",
+    "description": "Linkdata Community REST API client",
+    "includes": [
+        "operations/community.json"
+    ]
+}
