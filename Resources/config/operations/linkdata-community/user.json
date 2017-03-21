@@ -18,6 +18,21 @@
                     "required": true
                 }
             }
+        },
+        "postUser": {
+            "httpMethod": "POST",
+            "uri": "users",
+            "parameters": {
+                "json": {
+                    "location": "body",
+                    "required": true
+                },
+                "type": {
+                    "location": "header",
+                    "sentAs": "Content-Type",
+                    "required": true
+                }
+            }
         }
     }
 }
