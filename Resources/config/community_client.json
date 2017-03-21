@@ -3,6 +3,7 @@
     "description": "Linkdata Community REST API client",
     "includes": [
         "operations/linkdata-community/ranking.json",
-        "operations/linkdata-community/user.json"
+        "operations/linkdata-community/user.json",
+        "operations/linkdata-community/user_data.json"
     ]
 }
