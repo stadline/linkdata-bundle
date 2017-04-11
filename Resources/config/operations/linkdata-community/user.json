@@ -33,6 +33,15 @@
                     "required": true
                 }
             }
+        },
+        "deleteUser": {
+            "httpMethod": "DELETE",
+            "uri": "users/{ldid}",
+            "parameters": {
+                "ldid": {
+                    "location": "uri"
+                }
+            }
         }
     }
 }
