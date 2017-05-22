@@ -63,6 +63,14 @@ class FriendsRanking
     protected $previousPosition;
 
     /**
+     * @Serializer\SerializedName("position")
+     * @Serializer\Type("integer")
+     *
+     * @var string
+     */
+    protected $position;
+
+    /**
      * @return string
      */
     public function getPeriod()
@@ -172,5 +180,21 @@ class FriendsRanking
     public function setPreviousPosition($previousPosition)
     {
         $this->previousPosition = $previousPosition;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPosition()
+    {
+        return $this->position;
+    }
+
+    /**
+     * @param string $position
+     */
+    public function setPosition($position)
+    {
+        $this->position = $position;
     }
 }
