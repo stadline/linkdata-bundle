@@ -17,6 +17,24 @@
             "additionalParameters": {
                 "location": "query"
             }
+        },
+        "getFriendsRanking": {
+            "httpMethod": "GET",
+            "uri": "ranking/friends/{ldid}/{period}",
+            "responseClass": "ArrayCollection<Geonaute\\LinkdataBundle\\Entity\\Community\\Ranking>",
+            "parameters": {
+                "ldid": {
+                    "location": "uri",
+                    "required": true
+                },
+                "period": {
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
         }
     }
 }
