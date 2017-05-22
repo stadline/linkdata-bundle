@@ -4,8 +4,40 @@ namespace Geonaute\LinkdataBundle\Entity\Community;
 
 use JMS\Serializer\Annotation as Serializer;
 
-class FriendsRanking extends Ranking
+class FriendsRanking
 {
+    /**
+     * @Serializer\SerializedName("period")
+     * @Serializer\Type("string")
+     *
+     * @var string
+     */
+    protected $period;
+
+    /**
+     * @Serializer\SerializedName("ons")
+     * @Serializer\Type("integer")
+     *
+     * @var string
+     */
+    protected $ons;
+
+    /**
+     * @Serializer\SerializedName("datatype")
+     * @Serializer\Type("string")
+     *
+     * @var string
+     */
+    protected $datatype;
+
+    /**
+     * @Serializer\SerializedName("ldid")
+     * @Serializer\Type("string")
+     *
+     * @var string
+     */
+    protected $ldid;
+
     /**
      * @Serializer\SerializedName("firstName")
      * @Serializer\Type("string")
@@ -21,6 +53,78 @@ class FriendsRanking extends Ranking
      * @var string
      */
     protected $lastName;
+
+    /**
+     * @Serializer\SerializedName("previousPosition")
+     * @Serializer\Type("integer")
+     *
+     * @var string
+     */
+    protected $previousPosition;
+
+    /**
+     * @return string
+     */
+    public function getPeriod()
+    {
+        return $this->period;
+    }
+
+    /**
+     * @param string $period
+     */
+    public function setPeriod($period)
+    {
+        $this->period = $period;
+    }
+
+    /**
+     * @return string
+     */
+    public function getOns()
+    {
+        return $this->ons;
+    }
+
+    /**
+     * @param string $ons
+     */
+    public function setOns($ons)
+    {
+        $this->ons = $ons;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDatatype()
+    {
+        return $this->datatype;
+    }
+
+    /**
+     * @param string $datatype
+     */
+    public function setDatatype($datatype)
+    {
+        $this->datatype = $datatype;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLdid()
+    {
+        return $this->ldid;
+    }
+
+    /**
+     * @param string $ldid
+     */
+    public function setLdid($ldid)
+    {
+        $this->ldid = $ldid;
+    }
 
     /**
      * @return string
@@ -52,5 +156,21 @@ class FriendsRanking extends Ranking
     public function setLastName($lastName)
     {
         $this->lastName = $lastName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPreviousPosition()
+    {
+        return $this->previousPosition;
+    }
+
+    /**
+     * @param string $previousPosition
+     */
+    public function setPreviousPosition($previousPosition)
+    {
+        $this->previousPosition = $previousPosition;
     }
 }

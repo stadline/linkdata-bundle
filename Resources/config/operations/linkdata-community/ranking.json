@@ -21,7 +21,7 @@
         "getFriendsRanking": {
             "httpMethod": "GET",
             "uri": "ranking/friends/{ldid}/{period}",
-            "responseClass": "ArrayCollection<Geonaute\\LinkdataBundle\\Entity\\Community\\Ranking>",
+            "responseClass": "ArrayCollection<Geonaute\\LinkdataBundle\\Entity\\Community\\FriendsRanking>",
             "parameters": {
                 "ldid": {
                     "location": "uri",
