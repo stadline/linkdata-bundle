@@ -164,6 +164,8 @@ class Reducer
 
         $bottom = sqrt(pow($firstVector->getX() - $lastPoint->getX(), 2) + pow($firstVector->getY() - $lastPoint->getY(), 2));
 
+        if ($bottom == 0) { return 0; }
+
         return $area / $bottom * 2.0;
     }
 
