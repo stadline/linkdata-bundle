@@ -523,5 +523,21 @@
         }
       }
     }
+  },
+  "recalculateSumup": {
+    "httpMethod": "POST",
+    "uri": "users/{ldid}/recalculateSumup.xml",
+    "parameters": {
+      "ldid": {
+        "location": "uri"
+      },
+      "key": {
+        "location": "uri"
+      },
+      "xml": {
+        "location": "body",
+        "required": false
+      }
+    }
   }
 }
