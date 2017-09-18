@@ -522,21 +522,15 @@
           "location": "uri"
         }
       }
-    }
-  },
-  "recalculateSumup": {
-    "httpMethod": "POST",
-    "uri": "users/{ldid}/recalculateSumup.xml",
-    "parameters": {
-      "ldid": {
-        "location": "uri"
-      },
-      "key": {
-        "location": "uri"
-      },
-      "xml": {
-        "location": "body",
-        "required": false
+    },
+    "recalculateSumup": {
+      "httpMethod": "POST",
+      "uri": "users/{ldid}/recalculate_sumup.xml",
+      "parameters": {
+        "ldid": {
+          "location": "uri",
+          "required": true
+        }
       }
     }
   }
