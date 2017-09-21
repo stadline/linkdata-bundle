@@ -4,6 +4,7 @@
     "includes": [
         "operations/linkdata-community/ranking.json",
         "operations/linkdata-community/user.json",
-        "operations/linkdata-community/user_data.json"
+        "operations/linkdata-community/user_data.json",
+        "operations/linkdata-community/friends.json"
     ]
 }

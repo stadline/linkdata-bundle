@@ -1,0 +1,18 @@
+{
+    "operations": {
+        "getFriends": {
+            "httpMethod": "GET",
+            "uri": "friends/{ldid}",
+            "responseClass": "ArrayCollection<Geonaute\\LinkdataBundle\\Entity\\Community\\User>",
+            "parameters": {
+                "ldid": {
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
+        }
+    }
+}
