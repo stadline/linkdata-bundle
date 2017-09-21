@@ -2,8 +2,22 @@
     "operations": {
         "getFriends": {
             "httpMethod": "GET",
-            "uri": "friends/{ldid}",
+            "uri": "users/{ldid}/friends",
             "responseClass": "ArrayCollection<Geonaute\\LinkdataBundle\\Entity\\Community\\User>",
+            "parameters": {
+                "ldid": {
+                    "location": "uri",
+                    "required": true
+                }
+            },
+            "additionalParameters": {
+                "location": "query"
+            }
+        },
+        "getFriend": {
+            "httpMethod": "GET",
+            "uri": "friends/{ldid}",
+            "responseClass": "Geonaute\\LinkdataBundle\\Entity\\Community\\User",
             "parameters": {
                 "ldid": {
                     "location": "uri",
