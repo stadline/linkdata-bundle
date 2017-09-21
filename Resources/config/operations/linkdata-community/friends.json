@@ -2,7 +2,7 @@
     "operations": {
         "getFriends": {
             "httpMethod": "GET",
-            "uri": "users/{ldid}/friends",
+            "uri": "users/{ldid}/friends.json",
             "responseClass": "ArrayCollection<Geonaute\\LinkdataBundle\\Entity\\Community\\User>",
             "parameters": {
                 "ldid": {
