@@ -39,6 +39,14 @@ class User
     protected $imageUrl;
 
     /**
+     * @Serializer\SerializedName("privacy")
+     * @Serializer\Type("boolean")
+     *
+     * @var boolean
+     */
+    private $privacy;
+
+    /**
      * @return string
      */
     public function getLdid()
@@ -68,5 +76,21 @@ class User
     public function getImageUrl()
     {
         return $this->imageUrl;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getPrivacy()
+    {
+        return $this->privacy;
+    }
+
+    /**
+     * @param boolean $privacy
+     */
+    public function setPrivacy($privacy)
+    {
+        $this->privacy = $privacy;
     }
 }

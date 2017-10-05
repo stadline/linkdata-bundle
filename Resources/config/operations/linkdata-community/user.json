@@ -34,6 +34,21 @@
                 }
             }
         },
+        "putUser": {
+            "httpMethod": "PUT",
+            "uri": "users",
+            "parameters": {
+                "json": {
+                    "location": "body",
+                    "required": true
+                },
+                "type": {
+                    "location": "header",
+                    "sentAs": "Content-Type",
+                    "required": true
+                }
+            }
+        },
         "deleteUser": {
             "httpMethod": "DELETE",
             "uri": "users/{ldid}",
