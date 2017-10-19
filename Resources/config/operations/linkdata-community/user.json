@@ -36,8 +36,12 @@
         },
         "putUser": {
             "httpMethod": "PUT",
-            "uri": "users",
+            "uri": "users/{ldid}",
             "parameters": {
+                "ldid": {
+                    "location": "uri",
+                    "required": true
+                },
                 "json": {
                     "location": "body",
                     "required": true
