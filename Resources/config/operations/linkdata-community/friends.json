@@ -27,6 +27,18 @@
             "additionalParameters": {
                 "location": "query"
             }
+        },
+        "deleteFriend": {
+            "httpMethod": "DELETE",
+            "uri": "users/friends/{idFrom}/{idTo}",
+            "parameters": {
+                "idFrom": {
+                    "location": "uri"
+                },
+                "idTo": {
+                    "location" : "uri"
+                }
+            }
         }
     }
 }
