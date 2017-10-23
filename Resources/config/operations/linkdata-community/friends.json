@@ -57,6 +57,11 @@
                 "json": {
                     "location": "body",
                     "required": true
+                },
+                "type": {
+                    "location": "header",
+                    "sentAs": "Content-Type",
+                    "required": true
                 }
             }
         }
