@@ -39,6 +39,26 @@
                     "location" : "uri"
                 }
             }
+        },
+        "acceptFriendRequest": {
+            "httpMethod": "POST",
+            "uri": "friend_requests/{token}/accept",
+            "parameters": {
+                "token": {
+                    "location": "uri",
+                    "required": true
+                }
+            }
+        },
+        "postFriendRequest": {
+            "httpMethod": "POST",
+            "uri": "friend_requests",
+            "parameters": {
+                "json": {
+                    "location": "body",
+                    "required": true
+                }
+            }
         }
     }
 }
