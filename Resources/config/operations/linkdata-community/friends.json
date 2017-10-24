@@ -65,12 +65,18 @@
                 }
             }
         },
-        "getFriendRequests": {
+        "getFriendRequest": {
             "httpMethod": "GET",
-            "uri": "friend_requests",
-            "responseClass": "ArrayCollection<Geonaute\\LinkdataBundle\\Entity\\Community\\FriendRequest>",
+            "uri": "friend_requests/{token}",
+            "responseClass": "Geonaute\\LinkdataBundle\\Entity\\Community\\FriendRequest",
             "additionalParameters": {
                 "location": "query"
+            },
+            "parameters": {
+                "token": {
+                    "location": "uri",
+                    "required": true
+                }
             }
         }
     }
