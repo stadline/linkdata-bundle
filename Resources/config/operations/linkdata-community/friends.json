@@ -64,6 +64,14 @@
                     "required": true
                 }
             }
+        },
+        "getFriendRequests": {
+            "httpMethod": "GET",
+            "uri": "friend_requests",
+            "responseClass": "ArrayCollection<Geonaute\\LinkdataBundle\\Entity\\Community\\FriendRequest>",
+            "additionalParameters": {
+                "location": "query"
+            }
         }
     }
 }
