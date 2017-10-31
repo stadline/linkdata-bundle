@@ -109,6 +109,9 @@ class PluginsCompilerPass extends SimpleCompilerPass
         ));
 
         $client = $this->container->getDefinition('geonaute_linkdata.client');
+        $communityClient = $this->container->getDefinition('geonaute_community.client');
+
+        $communityClient->addMethodCall('addSubscriber', array($this->get('geonaute_linkdata.plugin.auth')));
         $client->addMethodCall('addSubscriber', array($this->get('geonaute_linkdata.plugin.auth')));
     }
 
