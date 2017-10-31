@@ -10,5 +10,6 @@ class LinkdataJwtAutoSignCompilerPass implements CompilerPassInterface
     public function process(ContainerBuilder $container)
     {
         $container->getDefinition('geonaute_linkdata.client')->addTag('jwt.security.guzzle.client');
+        $container->getDefinition('geonaute_linkdata_community.client')->addTag('jwt.security.guzzle.client');
     }
 }
