@@ -53,6 +53,7 @@
         "postFriendRequest": {
             "httpMethod": "POST",
             "uri": "friend_requests",
+            "responseClass": "Geonaute\\LinkdataBundle\\Entity\\Community\\FriendRequest",
             "parameters": {
                 "json": {
                     "location": "body",
