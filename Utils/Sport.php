@@ -66,6 +66,7 @@ class Sport
     const SKI_DE_FOND_ALTERNATIF = 183;
     const CHAR_A_VOILE = 366;
     const ACTIVITY_QUOTIDIENNE = 402;
+    const PILATES = 109;
 
     protected static $slug_table = array(
         self::ALPINISME => "alpinisme",
@@ -128,7 +129,8 @@ class Sport
         self::SKI_DE_FOND_ALTERNATIF => 'skiderandonnee',
         self::SKI_DE_FOND_SKATING => 'skidefond-alternatif',
         self::CHAR_A_VOILE => 'charavoile',
-        self::ACTIVITY_QUOTIDIENNE => 'marche'
+        self::ACTIVITY_QUOTIDIENNE => 'marche',
+        self::PILATES => 'pilates',
     );
 
     public static $iconNames = array(
@@ -192,7 +194,8 @@ class Sport
         self::SKI_DE_FOND_ALTERNATIF => 'icon-skiderandonnee',
         self::SKI_DE_FOND_SKATING => 'icon-skidefond-alternatif',
         self::CHAR_A_VOILE => 'icon-charavoile',
-        self::ACTIVITY_QUOTIDIENNE => 'icon-marche'
+        self::ACTIVITY_QUOTIDIENNE => 'icon-marche',
+        self::PILATES => 'icon-pilates'
     );
 
     /**
