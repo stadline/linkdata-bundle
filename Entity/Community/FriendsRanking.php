@@ -47,7 +47,7 @@ class FriendsRanking
     protected $firstName;
 
     /**
-     * @Serializer\SerializedName("firstName")
+     * @Serializer\SerializedName("lastName")
      * @Serializer\Type("string")
      *
      * @var string
