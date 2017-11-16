@@ -8,9 +8,9 @@ class FriendRequest
 {
     /**
      * @Serializer\SerializedName("userFrom")
-     * @Serializer\Type("string")
+     * @Serializer\Type("Geonaute\LinkdataBundle\Entity\Community\User")
      *
-     * @var string
+     * @var User
      */
     protected $userFrom;
 
@@ -23,7 +23,7 @@ class FriendRequest
     protected $token;
 
     /**
-     * @return string
+     * @return User
      */
     public function getUserFrom()
     {
@@ -31,7 +31,7 @@ class FriendRequest
     }
 
     /**
-     * @param string $userFrom
+     * @param User $userFrom
      */
     public function setUserFrom($userFrom)
     {
