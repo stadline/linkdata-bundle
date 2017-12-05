@@ -61,6 +61,25 @@
                     "location": "uri"
                 }
             }
+        },
+        "putUserData": {
+            "httpMethod": "PUT",
+            "uri": "users/{ldid}/data",
+            "parameters": {
+                "ldid": {
+                    "location": "uri",
+                    "required": true
+                },
+                "json": {
+                    "location": "body",
+                    "required": true
+                },
+                "type": {
+                    "location": "header",
+                    "sentAs": "Content-Type",
+                    "required": true
+                }
+            }
         }
     }
 }
