@@ -2,13 +2,9 @@
     "operations": {
         "putUserData": {
             "httpMethod": "PUT",
-            "uri": "user_datas/{ldid}/{period}",
+            "uri": "user_datas/{ldid}/data",
             "parameters": {
                 "ldid": {
-                    "location": "uri",
-                    "required": true
-                },
-                "period": {
                     "location": "uri",
                     "required": true
                 },
