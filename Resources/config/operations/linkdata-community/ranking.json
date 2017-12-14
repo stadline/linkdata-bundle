@@ -30,6 +30,14 @@
                 "period": {
                     "location": "uri",
                     "required": true
+                },
+                "datatype": {
+                    "location": "query",
+                    "required": true
+                },
+                "sport": {
+                    "location": "query",
+                    "required": true
                 }
             },
             "additionalParameters": {

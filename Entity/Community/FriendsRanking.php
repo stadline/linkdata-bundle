@@ -15,12 +15,20 @@ class FriendsRanking
     protected $period;
 
     /**
-     * @Serializer\SerializedName("ons")
+     * @Serializer\SerializedName("value")
      * @Serializer\Type("integer")
      *
      * @var string
      */
-    protected $ons;
+    protected $value;
+
+    /**
+     * @Serializer\SerializedName("sport")
+     * @Serializer\Type("integer")
+     *
+     * @var string
+     */
+    protected $sport;
 
     /**
      * @Serializer\SerializedName("datatype")
@@ -84,22 +92,6 @@ class FriendsRanking
     public function setPeriod($period)
     {
         $this->period = $period;
-    }
-
-    /**
-     * @return string
-     */
-    public function getOns()
-    {
-        return $this->ons;
-    }
-
-    /**
-     * @param string $ons
-     */
-    public function setOns($ons)
-    {
-        $this->ons = $ons;
     }
 
     /**
@@ -196,5 +188,37 @@ class FriendsRanking
     public function setPosition($position)
     {
         $this->position = $position;
+    }
+
+    /**
+     * @return string
+     */
+    public function getValue()
+    {
+        return $this->value;
+    }
+
+    /**
+     * @param string $value
+     */
+    public function setValue($value)
+    {
+        $this->value = $value;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSport()
+    {
+        return $this->sport;
+    }
+
+    /**
+     * @param string $sport
+     */
+    public function setSport($sport)
+    {
+        $this->sport = $sport;
     }
 }
