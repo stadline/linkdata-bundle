@@ -419,6 +419,19 @@
         }
       }
     },
+    "putUsersStack": {
+      "httpMethod": "PUT",
+      "uri": "users/{ldid}/stack.xml",
+      "parameters": {
+        "ldid": {
+          "location": "uri"
+        },
+        "stack": {
+          "location": "postField",
+          "required": false
+        }
+      }
+    },
     "putUsersMeasures": {
       "httpMethod": "PUT",
       "uri": "users/{ldid}/measures.xml",
