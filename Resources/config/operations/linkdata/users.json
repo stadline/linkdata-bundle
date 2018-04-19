@@ -1,5 +1,14 @@
 {
   "operations": {
+    "deleteUser": {
+      "httpMethod": "DELETE",
+      "uri": "users/{ldid}",
+      "parameters": {
+        "ldid": {
+          "location": "uri"
+        }
+      }
+    },
     "deleteUsersMeasures": {
       "httpMethod": "DELETE",
       "uri": "users/{ldid}/measures.xml",
