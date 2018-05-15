@@ -2,7 +2,7 @@
   "operations": {
     "deleteUser": {
       "httpMethod": "DELETE",
-      "uri": "users/{ldid}",
+      "uri": "users/{ldid}.xml",
       "parameters": {
         "ldid": {
           "location": "uri"
