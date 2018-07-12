@@ -1482,6 +1482,14 @@
 				<source>datatype_186_with_unit</source>
 				<target>Body water percentage (%)</target>
 			</trans-unit>
+			<trans-unit id="datatype_211_with_unit" resname="datatype_211_with_unit">
+				<source>datatype_211_with_unit</source>
+				<target>T/500m</target>
+			</trans-unit>
+			<trans-unit id="datatype_212_with_unit" resname="datatype_212_with_unit">
+				<source>datatype_212_with_unit</source>
+				<target>SPM</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

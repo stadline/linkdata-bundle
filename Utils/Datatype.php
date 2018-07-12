@@ -42,6 +42,8 @@ class Datatype
     const RPM_CURRENT = 100;
     const PERCENTAGE_OF_VMA = 175;
     const PERCENTAGE_OF_HRMAX_CURRENT = 176;
+    const TIME_PER_500_M = 211;
+    const SHOT_PER_MINUTE = 212;
 
     // special cases : datatypes that doesn't exist
     const ELAPSED_TIME = 10000;
