@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "symfony/dependency-injection": "~2.6",
+        "symfony/dependency-injection": "~2.6|~3.0|~4.0",
         "misd/guzzle-bundle": "~1.0",
         "jms/serializer-bundle": "^0.13|^1.1",
         "phpunit/phpunit": "^4.8|~5.7",
