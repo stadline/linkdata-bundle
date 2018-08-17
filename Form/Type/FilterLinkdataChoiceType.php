@@ -4,11 +4,6 @@ namespace Geonaute\LinkdataBundle\Form\Type;
 
 use Geonaute\LinkdataBundle\Form\ChoiceList\LinkdataChoiceList;
 use Guzzle\Http\ClientInterface;
-use Lexik\Bundle\FormFilterBundle\Filter\Query\QueryInterface;
-use Symfony\Component\Form\AbstractType;
-use Symfony\Component\HttpKernel\Client;
-use Symfony\Component\OptionsResolver\Options;
-use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 /**
  * Choice type to use reference from linkdata.
@@ -53,7 +48,7 @@ class FilterLinkdataChoiceType extends AbstractType
 
     public function getParent()
     {
-        return 'filter_choice';
+        return LinkdataChoiceType::class;
     }
 
     public function getName()
