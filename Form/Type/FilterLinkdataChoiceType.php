@@ -21,7 +21,7 @@ class FilterLinkdataChoiceType extends AbstractType
      */
     protected $client;
 
-    public function setDefaultOptions(OptionsResolver $resolver)
+    public function configureOptions(OptionsResolver $resolver)
     {
         $choiceList = function (Options $options) {
             return new LinkdataChoiceList($this->getClient(), $options);
