@@ -5,8 +5,10 @@ namespace Geonaute\LinkdataBundle\Form\Type;
 use Geonaute\LinkdataBundle\Form\ChoiceList\LinkdataChoiceList;
 use Guzzle\Http\ClientInterface;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 use Symfony\Component\OptionsResolver\Options;
+use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+
 
 /**
  * Choice type to use reference from linkdata.
@@ -19,7 +21,7 @@ class LinkdataChoiceType extends AbstractType
      */
     protected $client;
 
-    public function setDefaultOptions(OptionsResolverInterface $resolver)
+    public function configureOptions(OptionsResolver $resolver)
     {
         $choiceList = function (Options $options) {
             return new LinkdataChoiceList($this->getClient(), $options);
@@ -50,7 +52,7 @@ class LinkdataChoiceType extends AbstractType
 
     public function getParent()
     {
-        return 'choice';
+        return ChoiceType::class;
     }
 
     public function getName()

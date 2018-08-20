@@ -8,7 +8,7 @@ use Lexik\Bundle\FormFilterBundle\Filter\Query\QueryInterface;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\HttpKernel\Client;
 use Symfony\Component\OptionsResolver\Options;
-use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
  * Choice type to use reference from linkdata.
@@ -21,7 +21,7 @@ class FilterLinkdataChoiceType extends AbstractType
      */
     protected $client;
 
-    public function setDefaultOptions(OptionsResolverInterface $resolver)
+    public function configureOptions(OptionsResolver $resolver)
     {
         $choiceList = function (Options $options) {
             return new LinkdataChoiceList($this->getClient(), $options);
@@ -53,7 +53,7 @@ class FilterLinkdataChoiceType extends AbstractType
 
     public function getParent()
     {
-        return 'filter_choice';
+        return LinkdataChoiceType::class;
     }
 
     public function getName()
