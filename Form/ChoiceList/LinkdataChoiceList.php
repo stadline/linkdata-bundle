@@ -4,8 +4,8 @@ namespace Geonaute\LinkdataBundle\Form\ChoiceList;
 
 use Geonaute\LinkdataBundle\Entity\LinkdataTransversableEntity;
 use Guzzle\Http\Client;
-use Symfony\Component\Form\Extension\Core\ChoiceList\LazyChoiceList;
-use Symfony\Component\Form\Extension\Core\ChoiceList\SimpleChoiceList;
+use Symfony\Component\Form\ChoiceList\ArrayChoiceList;
+use Symfony\Component\Form\ChoiceList\LazyChoiceList;
 
 /**
  * Choice list that is wrapping webservice from linkdata.
