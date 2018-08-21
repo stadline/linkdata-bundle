@@ -22,7 +22,7 @@ class Datatype
     const DESCENT = 19;
     const LAP = 20;
     const BREAK_TIME = 21;
-    const WEIGHT_KILOGRAMS = 22;
+    const WEIGHT = 22;
     const CALORIES_BURNT = 23;
     const DURATION = 24;
     const HR_PERCENTAGE_MIN = 25;
@@ -40,42 +40,10 @@ class Datatype
     const ACTIVITY_NUMBER = 98;
     const POINTS_EARNED = 99;
     const RPM_CURRENT = 100;
-    const RPM_AVG = 103;
-    const BIKE_TRAINER_RESISTANCE = 177;
-    const CURRENT_HOME_TRAINER_POWER = 178;
-    const MAXIMUM_HOME_TRAINER_POWER = 179;
-    const AVERAGE_HOME_TRAINER_POWER = 180;
-    const WEIGHT = 181;
-    const BODY_FAT_PERCENTAGE = 182;
-    const BODY_MUSCLE_PERCENTAGE = 184;
-    const BODY_BONE_PERCENTAGE = 185;
-    const BODY_WATER_PERCENTAGE = 186;
-    const PMA_PERCENTAGE = 183;
-    const EXERCISE_FLAG = 187;
-    const EXERCISE_PHASE_FLAG = 188;
-    const BORG_SCALE_SLOTS = 189;
-    const BALANCE_INDICATOR = 190;
-    const FLEXIBILITY_INDICATOR = 191;
-    const PUMPS_INDICATOR = 192;
-    const SQUATS_INDICATOR = 193;
-    const LINING_INDICATOR = 194;
-    const CARDIO_INDICATOR = 195;
-    // Daily activity
-    const SLEEPING_TIME = 196;
-    const LIGHT_SLEEPING_TIME = 197;
-    const DEEP_SLEEPING_TIME = 198;
-    const BED_TIME = 199;
-    const WAKEUP_TIME = 200;
-    const VMA = 201;
-    const PMA = 202;
-    const SCORE_FIT_TEST = 203;
-    const MAX_SLOPE_DEVICE = 204;
-    const AVG_SLOPE_DEVICE = 205;
-    const MAX_BIKE_TRAINER_RESISTANCE = 206;
-    const AVG_BIKE_TRAINER_RESISTANCE = 207;
-    const STRIDE_LENGTH = 208;
-    const STEPS_OBJECTIVE = 209;
-    const SLEEP_OBJECTIVE = 210;
+    const PERCENTAGE_OF_VMA = 175;
+    const PERCENTAGE_OF_HRMAX_CURRENT = 176;
+    const TIME_PER_500_M = 211;
+    const SHOT_PER_MINUTE = 212;
 
     // special cases : datatypes that doesn't exist
     const ELAPSED_TIME = 10000;
