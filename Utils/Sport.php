@@ -67,6 +67,10 @@ class Sport
     const CHAR_A_VOILE = 366;
     const ACTIVITY_QUOTIDIENNE = 402;
     const PILATES = 109;
+    public const CROSS_TRAINING = 404;
+    public const TROTINETTE = 380;
+    public const ZUMBA = 403;
+    public const HOCKEY_SUR_GLACE = 21;
 
     protected static $slug_table = array(
         self::ALPINISME => "alpinisme",
@@ -198,15 +202,22 @@ class Sport
         self::PILATES => 'icon-pilates'
     );
 
+    protected static $matchingIcons = [
+        self::HOCKEY => self::HOCKEY_SUR_GLACE,
+        self::SKI_ALPIN => self::SKI,
+        self::ALPINISME => self::ESCALADE,
+        self::MARCHE => self::MARCHE_NORDIQUE
+    ];
+
     /**
      * @return integer
      */
     public static function getIcon($id)
     {
-        if (isset(self::$slug_table[$id])) {
-            return self::$slug_table[$id];
-        } else {
-            return '';
+        $id = (int)$id;
+        if (isset(self::$matchingIcons[$id])) {
+            return "sports" . self::$matchingIcons[$id];
         }
+        return "sports" . $id;
     }
 }
